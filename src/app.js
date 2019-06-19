@@ -19,6 +19,10 @@ const routes = {
     , '/vehicles'   : Vehicles
 };
 
+//load background
+particlesJS.load('particles-js', 'config/particlesjs-config.json', function() {
+    console.log('callback - particles.js config loaded');
+});
 
 // The router code. Takes a URL, checks against the list of supported routes and then renders the corresponding content page.
 const router = async () => {
@@ -34,10 +38,7 @@ const router = async () => {
     footer.innerHTML = await Bottombar.render();
     await Bottombar.after_render();
 
-    //load background
-    particlesJS.load('particles-js', 'config/particlesjs-config.json', function() {
-        console.log('callback - particles.js config loaded');
-    });
+
 
 
     // Get the parsed URl from the addressbar

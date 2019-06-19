@@ -363,7 +363,7 @@ main {
 
 // main browse grid thing
 .browseGrid {
-
+    margin-top: 15px;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-auto-rows: minmax(250px, auto);
@@ -444,6 +444,47 @@ h4 {
     font-size: 100%;
     font-weight: 500;
     display: inline-block;
+}
+
+.center {
+    text-align: center;
+}
+
+.white {
+color: white;
+}
+#page_container {
+    margin-top: 30px;
+}
+
+.welcome {
+    h3 {
+        padding-top: 10px;
+        
+    }
+}
+
+//footer styling
+#footer_container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    height: 40px;
+    width: 100%;
+    justify-content: space-between;
+    .logo {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        &:first-child {
+            margin-left: 10px;
+        }
+        &:last-child {
+            margin-right: 10px;
+        }
+    }
 }
 
 //keep this at the bottom! used to hide content when switching between tabs
