@@ -10,7 +10,7 @@ let getDroid = async (id) => {
     try {
         const response = await fetch(`../../content/droids.json`, options)
         const json = await response.json();
-        console.log(json);
+        //console.log(json);
         return json[id];
     } catch (err) {
         console.log('Error getting documents', err);

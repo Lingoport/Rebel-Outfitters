@@ -38,11 +38,8 @@ const router = async () => {
     footer.innerHTML = await Bottombar.render();
     await Bottombar.after_render();
 
-
-
-
     // Get the parsed URl from the addressbar
-    let request = Utils.parseRequestURL()
+    let request = Utils.parseRequestURL();
 
     // Parse the URL and if it has an id part, change it with the string ":id"
     let parsedURL = (request.resource ? '/' + request.resource : '/') + (request.id ? '/:id' : '') + (request.verb ? '/' + request.verb : '')

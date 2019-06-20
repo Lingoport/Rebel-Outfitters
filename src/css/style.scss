@@ -244,7 +244,7 @@ header {
         width: 25%;
         top: 0;
         left: 100%;
-        transition: left .3s ease;
+        transition: left .5s ease;
         display: none;
         border: 1px solid $blue;
         background-color: $dkgrey;
@@ -322,7 +322,7 @@ nav {
                   }
                 
             }
-            a[aria-selected="true"] {
+            .activeLink {
                 font-size: 160%;
                 color: $blue;
                 &::after  {

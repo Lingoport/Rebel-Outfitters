@@ -1,3 +1,5 @@
+import Utils from "../../services/Utils.js";
+
 let Navbar = {
     render: async () => {
         let view =  /*html*/`
@@ -39,9 +41,9 @@ let Navbar = {
     <nav>
         <!-- nav links here -->
         <ul>
-            <li><a href="/#/">HOME</a></li>
-            <li><a href="/#/droids">DROIDS</a></li>
-            <li><a href="/#/vehicles">VEHICLES</a></li>
+            <li><a href="/#/" class="navLink" id="">HOME</a></li>
+            <li><a href="/#/droids" class="navLink" id="droids">DROIDS</a></li>
+            <li><a href="/#/vehicles" class="navLink" id="vehicles">VEHICLES</a></li>
         </ul>
     </nav>
         `
@@ -54,12 +56,21 @@ let Navbar = {
 
         for(let icon of cartIcons) {
             icon.addEventListener("click", function() {
-                if (slider.classList.contains('showCart')) {
-                    slider.classList.remove('showCart');
-                } else {
-                    slider.classList.add('showCart');
-                }
+                slider.classList.toggle('showCart');
             }, false);
+        }
+
+        //underline active link
+        let request = Utils.parseRequestURL();
+        //figure out what resource path we're at and add the activeLink class so it can be styled in css
+
+        //TODO: need to make sure that active link doesn't get the underline animation...
+        let navLinks = document.querySelectorAll(".navLink");
+        for(let cur of navLinks) {
+            cur.classList.remove("activeLink");
+            if(cur.id == request.resource) {
+                cur.classList.add("activeLink");
+            }
         }
     }
 }

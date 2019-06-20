@@ -8,7 +8,7 @@ let getDroidsList = async () => {
    try {
        const response = await fetch(`../../content/droids.json`, options)
        const json = await response.json();
-       console.log(json)
+       //console.log(json)
        return json
    } catch (err) {
        console.log('Error getting documents', err)
@@ -53,7 +53,7 @@ let Droids = {
 
 
         for(let cur of articles) {
-            console.log(cur);
+            //console.log(cur);
             cur.addEventListener("click", function() {
                 location.href="/#/droids/" + cur.id;
             }, false);

@@ -205,7 +205,7 @@ header section h2 {
   width: 25%;
   top: 0;
   left: 100%;
-  transition: left 0.3s ease;
+  transition: left 0.5s ease;
   display: none;
   border: 1px solid #bffff1;
   background-color: #2d2d2a;
@@ -272,11 +272,11 @@ nav ul li a::after {
   transition: width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
   background: #bffff1;
 }
-nav ul li a[aria-selected=true] {
+nav ul li .activeLink {
   font-size: 160%;
   color: #bffff1;
 }
-nav ul li a[aria-selected=true]::after {
+nav ul li .activeLink::after {
   content: "";
   position: absolute;
   top: calc(100% - 1px);
