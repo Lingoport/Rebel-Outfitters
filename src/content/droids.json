@@ -1,4 +1,5 @@
 [{
+    "id": 0,
     "class": 2,
     "title": "3P0 Droid",
     "price": 3000,
@@ -6,6 +7,7 @@
     "desc": "Each droid is equipped with a SyntheTech AA-1 VerboBrain making them capable of storing enormous amounts of information, the additional memory space is often used to keep communication modules in the active memory so that long delays could be avoided while searching for linguistic information on mid-translation. A TranLang III communications module allows them to be fluent in over six million forms of communication. They also have the skills necessary to quickly analyze new unregistered languages and translate them into more well-known ones."
 },
 {
+    "id": 1,
     "class": 4,
     "title": "DUM-series Droid",
     "price": 800,
@@ -13,6 +15,7 @@
     "desc": "Designed for maintaining podracers, pit droids are affordable, durable repair droids. Pit droids stand at a height of 1.19 meters but have the ability to fold into a compact form when not in use. This feature can be toggled by tapping their nose."
 },
 {
+    "id":2,
     "class": 1,
     "title": "2-1B Surgical Droid",
     "price": 4300,

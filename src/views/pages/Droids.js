@@ -15,16 +15,19 @@ let getDroidsList = async () => {
    }
 }
 
+var droidList;
+let curEl;
+
 let Droids = {
     render : async () => {
-        let droids = await getDroidsList();
+        droidList = await getDroidsList();
         let view =  /*html*/`
             <section class="browsePage" id="droidBrowse">
                 <h1>All Droids</h1>
                 <div class="browseGrid" id="droidGrid">
-                ${droids.map(droid => 
+                ${droidList.map(droid => 
                     /*html*/
-                    `<article>
+                    `<article id="${droid.id}">
                         <img src="${droid.imageURL}" class="gridImage">
                         <div class="gridDes">
                             <h3>${droid.title}</h3>
@@ -39,10 +42,23 @@ let Droids = {
                 }
                 </div>
             </section>
-        `
+            `   
         return view
     },
-    after_render: async () => {}
+    after_render: async () => {
+
+        let grid = document.querySelector("#droidGrid");
+
+        let articles = grid.querySelectorAll("article");
+
+
+        for(let cur of articles) {
+            console.log(cur);
+            cur.addEventListener("click", function() {
+                location.href="/#/droids/" + cur.id;
+            }, false);
+        }
+    }
         
 }
 

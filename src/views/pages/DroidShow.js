@@ -1,39 +1,39 @@
 import Utils        from '../../services/Utils.js'
 
-let getPost = async (id) => {
+let getDroid = async (id) => {
     const options = {
-       method: 'GET',
-       headers: {
-           'Content-Type': 'application/json'
-       }
-   };
-   try {
-       const response = await fetch(`https://5bb634f6695f8d001496c082.mockapi.io/api/posts/` + id, options)
-       const json = await response.json();
-       // console.log(json)
-       return json
-   } catch (err) {
-       console.log('Error getting documents', err)
-   }
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    };
+    try {
+        const response = await fetch(`../../content/droids.json`, options)
+        const json = await response.json();
+        console.log(json);
+        return json[id];
+    } catch (err) {
+        console.log('Error getting documents', err);
+    }
 }
 
-let PostShow = {
+
+
+let DroidShow = {
 
     render : async () => {
-        let request = Utils.parseRequestURL()
-        let post = await getPost(request.id)
-        
+        let request = Utils.parseRequestURL();
+        let droid = await getDroid(request.id);
+
         return /*html*/`
-            <section class="section">
-                <h1> Post Id : ${post.id}</h1>
-                <p> Post Title : ${post.title} </p>
-                <p> Post Content : ${post.content} </p>
-                <p> Post Author : ${post.name} </p>
+            <section>
+                <h1> Droid: ${droid.title}</h1>
             </section>
         `
     }
     , after_render: async () => {
+
     }
 }
 
-export default PostShow;
+export default DroidShow;
