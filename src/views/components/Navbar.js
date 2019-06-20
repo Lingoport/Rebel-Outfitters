@@ -68,8 +68,12 @@ let Navbar = {
         let navLinks = document.querySelectorAll(".navLink");
         for(let cur of navLinks) {
             cur.classList.remove("activeLink");
+            cur.classList.remove("inactiveLink");
             if(cur.id == request.resource) {
                 cur.classList.add("activeLink");
+            }
+            else {
+                cur.classList.add("inactiveLink");
             }
         }
     }

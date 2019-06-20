@@ -285,41 +285,41 @@ nav {
                 transition: color 0.2s ease, font-size 0.3s ease;
                 padding: 10px;
                 display: inline-block;
+                 
+                    &:focus.inactiveLink {
+                        outline: none;
+                    }
 
-                &:focus {
-                    outline: none;
-                }
-
-                &:hover {
-                    color: $blue;
-                     
-                    &::after,
-                    &::before {
-                      width: 100%;
-                      left: 0;
+                    &:hover.inactiveLink {
+                        color: $blue;
+                        
+                        &::after,
+                        &::before {
+                        width: 100%;
+                        left: 0;
+                        }
+                        
                     }
                     
-                  }
-                  
-                  &::after,
-                  &::before {
-                    content: ''; 
-                    position: absolute;
-                    top: calc(100% - 3px);
-                    width: 0;
-                    right: 0;
-                    height: 3px;
-                  }
-                  
-                  &::before {
-                    transition: width .3s cubic-bezier(0.51, 0.18, 0, 0.88) .1s;
-                    background: white;
-                  }
-                  
-                  &::after {
-                    transition: width .2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
-                    background: $blue;
-                  }
+                    &::after,
+                    &::before {
+                        content: ''; 
+                        position: absolute;
+                        top: calc(100% - 3px);
+                        width: 0;
+                        right: 0;
+                        height: 3px;
+                    }
+                    
+                    &::before {
+                        transition: width .3s cubic-bezier(0.51, 0.18, 0, 0.88) .1s;
+                        background: white;
+                    }
+                    
+                    &::after {
+                        transition: width .2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+                        background: $blue;
+                    }
                 
             }
             .activeLink {

@@ -246,13 +246,13 @@ nav ul li a {
   padding: 10px;
   display: inline-block;
 }
-nav ul li a:focus {
+nav ul li a:focus.inactiveLink {
   outline: none;
 }
-nav ul li a:hover {
+nav ul li a:hover.inactiveLink {
   color: #bffff1;
 }
-nav ul li a:hover::after, nav ul li a:hover::before {
+nav ul li a:hover.inactiveLink::after, nav ul li a:hover.inactiveLink::before {
   width: 100%;
   left: 0;
 }
