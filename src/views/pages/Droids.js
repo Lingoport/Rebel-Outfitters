@@ -15,7 +15,7 @@ let getDroidsList = async () => {
    }
 }
 
-let About = {
+let Droids = {
     render : async () => {
         let droids = await getDroidsList();
         let view =  /*html*/`
@@ -46,4 +46,4 @@ let About = {
         
 }
 
-export default About;
+export default Droids;
