@@ -15,15 +15,23 @@ import Utils        from './services/Utils.js'
 
 //global variables
 var currentProduct = {};
-var shoppingCart = ["Empty Cart"];
+var shoppingCart = [{title: "Empty Cart"}];
 var addToCart = async item =>  {
     const header = null || document.getElementById('header_container');
     console.log(item);
-    if(shoppingCart[0] == "Empty Cart") {
+    if(shoppingCart[0].title == "Empty Cart") {
         shoppingCart[0] = item;
     }
     else {
-        shoppingCart.push(item);
+        for(let cur of shoppingCart) {
+            if(item.title == cur.title) {
+                cur = item;
+                header.innerHTML = await Navbar.render();
+                await Navbar.after_render();
+                return;
+            }
+            shoppingCart.push(item);
+        } 
     }
     console.log(shoppingCart);
     //re-render nav
