@@ -1,9 +1,9 @@
-let Vehicles = {
+let Profile = {
 
     render: async () => {
         return /*html*/ `
             <section>
-                <h1>All Vehicles</h1>
+                <h1>Profile</h1>
             </section>
         `
     }
@@ -12,4 +12,4 @@ let Vehicles = {
     }
 }
 
-export default Vehicles;
+export default Profile;

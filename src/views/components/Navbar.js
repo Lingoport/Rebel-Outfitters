@@ -24,8 +24,8 @@ let Navbar = {
                     <img src="img/arrow-down.svg" id="downArrow">
                 </div>
                 <div class="dropdown-content">
-                    <a href="#">PROFILE</a>
-                    <a href="#">ORDER HISTORY</a>
+                    <a href="/#/profile" class=".profileButt">PROFILE</a>
+                    <a href="/#/profile" class=".historyButt">ORDER HISTORY</a>
                 </div>
             </div>
             <img src="img/cart.svg" class="cartIcon">
@@ -61,6 +61,11 @@ let Navbar = {
         //cart slider functionality
         var cartIcons = document.querySelectorAll(".cartIcon");
         var slider = document.querySelector(".cartSlider")
+        var checkoutButt = document.querySelector(".checkoutButt");
+
+        checkoutButt.addEventListener("click", function() {
+            location.href="/#/checkout";
+        }, false);
 
         for(let icon of cartIcons) {
             icon.addEventListener("click", function() {
@@ -72,7 +77,7 @@ let Navbar = {
         let request = Utils.parseRequestURL();
         //figure out what resource path we're at and add the activeLink class so it can be styled in css
 
-        //TODO: need to make sure that active link doesn't get the underline animation...
+        //link animation stuff
         let navLinks = document.querySelectorAll(".navLink");
         for(let cur of navLinks) {
             cur.classList.remove("activeLink");

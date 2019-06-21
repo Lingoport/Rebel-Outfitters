@@ -5,6 +5,8 @@ import {Droids}        from './views/pages/Droids.js'
 import Error404     from './views/pages/Error404.js'
 import DroidShow     from './views/pages/DroidShow.js'
 import Vehicles     from './views/pages/Vehicles.js'
+import Profile     from './views/pages/Profile.js'
+import Checkout     from './views/pages/Checkout.js'
 
 import Navbar       from './views/components/Navbar.js'
 import Bottombar    from './views/components/Bottombar.js' 
@@ -32,10 +34,12 @@ export { shoppingCart, addToCart };
 
 // List of supported routes. Any url other than these routes will throw a 404 error
 const routes = {
-    '/'             : Home
-    , '/droids'      : Droids
-    , '/droids/:id'      : DroidShow
-    , '/vehicles'   : Vehicles
+    '/' : Home, 
+    '/droids' : Droids,
+    '/droids/:id' : DroidShow,
+    '/vehicles' : Vehicles,
+    '/profile' :  Profile,
+    '/checkout' : Checkout
 };
 
 //load background
