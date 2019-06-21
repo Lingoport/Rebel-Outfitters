@@ -51,12 +51,12 @@ let Droids = {
 
         let articles = grid.querySelectorAll("article");
 
-
         for(let cur of articles) {
             //console.log(cur);
             cur.addEventListener("click", function() {
                 location.href="/#/droids/" + cur.id;
             }, false);
+            cur.classList.add("zoom");
         }
     }
         

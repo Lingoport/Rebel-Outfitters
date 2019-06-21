@@ -8,9 +8,9 @@ let Home = {
         let view =  /*html*/`
             <section class="welcome">
                 <h1 class="center">Welcome to Rebel Outfitters!</h1>
-                <h3 class="center white">We can provide everything you need to take on the Empire (and win).</h3>
+                <h3 class="center white">We provide everything you need to take on the Empire (and win).</h3>
             </section>
-            <div class="browseGrid">
+            <div class="browseGrid homeGrid">
                 <article>
                 </article>
                 <article>

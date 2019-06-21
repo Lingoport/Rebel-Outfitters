@@ -60,7 +60,7 @@ $light: #D1D5DE;
 
 //blue shadow mixin
 @mixin blueShadow {
-    box-shadow: 0 0 8px 0 $blue;
+    box-shadow: 0 0 6px 0 $blue;
 }
 
 //mixin for light bg and shadow?
@@ -238,6 +238,11 @@ header {
     .cartIcon{
         width: 32px;
         height: 32px;
+        cursor: pointer;
+        &:hover {
+            width: 33px;
+            height: 33px;
+        }
     }
     .cartSlider {
         position: absolute;
@@ -246,9 +251,11 @@ header {
         left: 100%;
         transition: left .5s ease;
         display: none;
-        border: 1px solid $blue;
+        //border: 1px solid $blue;
         background-color: $dkgrey;
         padding: 15px;
+        border-radius: 0 0 0 10px;
+        box-shadow: -2px 2px 6px 2px $blue;
     }
 
     .showCart {
@@ -348,17 +355,24 @@ main {
     height: 100%;
 }
 
-//browse page style
-// .browsePage {
-//     margin-top: 20px;
-//     display: grid;
-//     grid-template-columns: 25% 75%;
-// }
-
 .sidebar {
 
     background-color: $ltgrey;
     border-radius: 0 10px 10px 0;
+}
+
+.browsePage {
+    width: 95%;
+    margin: auto;
+    
+    h1 {
+        margin-left: 10px;
+    }
+}
+
+.homeGrid {
+    margin: auto;
+    width: 95%;
 }
 
 // main browse grid thing
@@ -367,15 +381,28 @@ main {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-auto-rows: minmax(250px, auto);
+
+    //individual products within grid
     article {
         @include blueShadow();
         margin: 10px;
         border-radius: 10px;
-        // border: 1px solid $blue;
+        cursor: pointer;
         display: grid;
         grid-template-rows: 66% 34%;
         background-color: $light;
         justify-content: center;
+        transition: 
+            box-shadow .2s ease, 
+            -webkit-transform .3s ease-in-out;
+        -webkit-transform: translateZ(100px);
+        transform: translateZ(100px);
+        &:hover {
+            box-shadow: 0 0 8px 2px $blue;
+        }
+    }
+    .zoom {
+        //transform: translate3d(0,0,0);
     }
 }
 
@@ -402,6 +429,43 @@ main {
     margin-top: 10px;
 }
 
+.productShow {
+    @include blueShadow();
+    display: grid;
+    grid-template-columns: 30% 70%;
+    width: 75%;
+    margin: auto;
+    border-radius: 10px;
+    background-color: $light;
+    .leftDetailPane {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        .detailImage {
+            width: 70%;
+        }
+    }
+    .detailContent {
+        padding: 10px;
+        h1 {
+            color: $dkgrey;
+        }
+        .qty {
+            margin-top: 10px;
+            display: flex;
+        }
+        .addToCart {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        h3 {
+            display: block;
+            margin-bottom: 10px;
+        }
+    }
+}
+
 button {
     color: black;
     background-color: $yellow;
@@ -411,6 +475,7 @@ button {
     border-radius: 5px;
     font-family: $linkFont;
     font-size: 120%;
+    cursor: pointer;
     &:hover {
         box-shadow: 0 2px 10px 0 black;
     }
@@ -444,6 +509,11 @@ h4 {
     font-size: 100%;
     font-weight: 500;
     display: inline-block;
+}
+
+p {
+    font-family: $bodyFont;
+    line-height: 130%;
 }
 
 .center {

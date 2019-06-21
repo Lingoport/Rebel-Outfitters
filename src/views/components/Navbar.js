@@ -33,6 +33,9 @@ let Navbar = {
                 <img src="img/cart.svg" class="cartIcon">
                 <div class="cartContents">
                     <!-- populate contents here -->
+                    <div class="cartObject">
+                        <h4>${shoppingCart}</h4>
+                    </div>
                 </div>
                 <button class="checkoutButt">CHECKOUT</button>
             </div>
