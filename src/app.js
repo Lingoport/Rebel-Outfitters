@@ -1,11 +1,7 @@
 "use strict";
 
-//global variables
-var currentProduct = {};
-var shoppingCart = "Cart is empty";
-
 import Home         from './views/pages/Home.js'
-import Droids        from './views/pages/Droids.js'
+import {Droids}        from './views/pages/Droids.js'
 import Error404     from './views/pages/Error404.js'
 import DroidShow     from './views/pages/DroidShow.js'
 import Vehicles     from './views/pages/Vehicles.js'
@@ -15,7 +11,24 @@ import Bottombar    from './views/components/Bottombar.js'
 
 import Utils        from './services/Utils.js'
 
-
+//global variables
+var currentProduct = {};
+var shoppingCart = ["Empty Cart"];
+var addToCart = async item =>  {
+    const header = null || document.getElementById('header_container');
+    console.log(item);
+    if(shoppingCart[0] == "Empty Cart") {
+        shoppingCart[0] = item;
+    }
+    else {
+        shoppingCart.push(item);
+    }
+    console.log(shoppingCart);
+    //re-render nav
+    header.innerHTML = await Navbar.render();
+    await Navbar.after_render();
+}
+export { shoppingCart, addToCart };
 
 // List of supported routes. Any url other than these routes will throw a 404 error
 const routes = {

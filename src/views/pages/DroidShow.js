@@ -1,4 +1,6 @@
-import Utils        from '../../services/Utils.js'
+import Utils        from '../../services/Utils.js';
+import {addToCart} from '../../app.js';
+import {droidView} from './Droids.js';
 
 let getDroid = async (id) => {
     const options = {
@@ -8,7 +10,7 @@ let getDroid = async (id) => {
         }
     };
     try {
-        const response = await fetch(`../../content/droids.json`, options)
+        const response = await fetch(`../../content/droids.json`, options);
         const json = await response.json();
         //console.log(json);
         return json[id];
@@ -17,14 +19,14 @@ let getDroid = async (id) => {
     }
 }
 
-
+var droid;
 
 let DroidShow = {
 
     render : async () => {
         let request = Utils.parseRequestURL();
-        let droid = await getDroid(request.id);
-
+        droid = await getDroid(request.id);
+        //droid = droidView;
         return /*html*/`
             <section class="productShow">
                 <article class="leftDetailPane">
@@ -53,7 +55,11 @@ let DroidShow = {
         `
     }
     , after_render: async () => {
+        const addButt = document.querySelector(".addToCart");
 
+        addButt.addEventListener("click", function() {
+            addToCart(droid);
+        }, false); //add callback for success message or something
     }
 }
 

@@ -1,4 +1,5 @@
 import Utils from "../../services/Utils.js";
+import {shoppingCart} from "../../app.js";
 
 let Navbar = {
     render: async () => {
@@ -34,7 +35,7 @@ let Navbar = {
                 <div class="cartContents">
                     <!-- populate contents here -->
                     <div class="cartObject">
-                        <h4>${shoppingCart}</h4>
+                        <h2>${shoppingCart[0].title}</h2>
                     </div>
                 </div>
                 <button class="checkoutButt">CHECKOUT</button>

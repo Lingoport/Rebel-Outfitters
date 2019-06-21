@@ -16,7 +16,7 @@ let getDroidsList = async () => {
 }
 
 var droidList;
-let curEl;
+let droidView;
 
 let Droids = {
     render : async () => {
@@ -51,15 +51,16 @@ let Droids = {
 
         let articles = grid.querySelectorAll("article");
 
-        for(let cur of articles) {
+        for(let curDroid of articles) {
             //console.log(cur);
-            cur.addEventListener("click", function() {
-                location.href="/#/droids/" + cur.id;
+            curDroid.addEventListener("click", function() {
+                droidView = curDroid;
+                location.href="/#/droids/" + curDroid.id;
             }, false);
-            cur.classList.add("zoom");
+            curDroid.classList.add("zoom");
         }
     }
         
 }
 
-export default Droids;
+export { Droids, droidView};
