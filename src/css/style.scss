@@ -256,6 +256,14 @@ header {
         padding: 15px;
         border-radius: 0 0 0 10px;
         box-shadow: -2px 2px 6px 2px $blue;
+
+        .cartContents {
+            .cartItem {
+                h3 {
+                    color: white;
+                }
+            }
+        }
     }
 
     .showCart {

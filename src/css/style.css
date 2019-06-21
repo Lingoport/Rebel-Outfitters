@@ -217,6 +217,9 @@ header section h2 {
   border-radius: 0 0 0 10px;
   box-shadow: -2px 2px 6px 2px #bffff1;
 }
+#headOptions .cartSlider .cartContents .cartItem h3 {
+  color: white;
+}
 #headOptions .showCart {
   display: inline-block;
   left: 75%;

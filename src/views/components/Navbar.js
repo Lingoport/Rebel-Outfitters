@@ -34,9 +34,13 @@ let Navbar = {
                 <img src="img/cart.svg" class="cartIcon">
                 <div class="cartContents">
                     <!-- populate contents here -->
-                    <div class="cartObject">
-                        <h2>${shoppingCart[0].title}</h2>
-                    </div>
+                    ${shoppingCart.map(item =>
+                        // html
+                        `<div class="cartItem">
+                            <h3>${item.qty} x ${item.title}</h3>
+                        </div>
+                        `
+                        ).join('\n ')}
                 </div>
                 <button class="checkoutButt">CHECKOUT</button>
             </div>

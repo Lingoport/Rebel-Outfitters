@@ -54,7 +54,6 @@ let Droids = {
         for(let curDroid of articles) {
             //console.log(cur);
             curDroid.addEventListener("click", function() {
-                droidView = curDroid;
                 location.href="/#/droids/" + curDroid.id;
             }, false);
             curDroid.classList.add("zoom");

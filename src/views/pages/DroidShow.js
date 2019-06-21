@@ -40,7 +40,7 @@ let DroidShow = {
                     </div>
                     <div class="qty">
                         <h3>Qty:</h3>
-                        <select>
+                        <select class="qtyDrop">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -58,6 +58,10 @@ let DroidShow = {
         const addButt = document.querySelector(".addToCart");
 
         addButt.addEventListener("click", function() {
+            //get the qty and modify selected item
+            const qty = document.querySelector(".qtyDrop");
+            droid.qty = parseInt(qty.options[qty.selectedIndex].value);
+            //pass item to cart
             addToCart(droid);
         }, false); //add callback for success message or something
     }
