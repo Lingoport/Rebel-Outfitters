@@ -11,7 +11,7 @@ import Checkout     from './views/pages/Checkout.js';
 
 import Navbar       from './views/components/Navbar.js';
 import Bottombar    from './views/components/Bottombar.js';
-import Cart from './views/components/Cart.js';
+import Cart from    './views/components/Cart.js';
 
 import Utils        from './services/Utils.js';
 
@@ -25,26 +25,29 @@ var addToCart = async item =>  {
         shoppingCart[0] = item;
     }
     else {
-        for(let cur of shoppingCart) {
-            if(cur.title == item.title) {
-                cur.qty++;
-                cart.innerHTML = await Cart.render();
-                await Cart.after_render();
-                return;
+        let duplicate = false;
+        for(let i = 0; i < shoppingCart.length && duplicate == false ; i++) {
+            if(shoppingCart[i].title == item.title) {
+                console.log("duplicate item!");
+                shoppingCart[i].qty += item.qty;
+                duplicate = true;
+            }
+            else if(i == shoppingCart.length - 1) {
+                console.log('new item!');
+                shoppingCart.push(item);
             }
         }
-        shoppingCart.push(item);
+        
     }
     console.log(shoppingCart);
     //re-render the cart
     cart.innerHTML = await Cart.render();
-    await Cart.after_render();
     //display cart
-    //TODO: cart won't collapsed afterthis is called
+    //TODO: cart won't collapsed after this is called
     showCart();
-    await Navbar.after_render();
 }
 
+//TODO: there's something buggy going on - try adding item to cart, closing cart, then opening cart again
 //show the cart and fade the other elements
 var showCart = async () => {
     var slider = document.querySelector(".cartSlider")

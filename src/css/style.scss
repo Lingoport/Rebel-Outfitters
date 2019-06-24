@@ -274,6 +274,7 @@ header {
         margin-top: 6px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
     h3 {
         text-align: center;
@@ -284,6 +285,7 @@ header {
        
         .cartItem {
             h3 {
+                text-align: left;
                 color: white;
             }
         }

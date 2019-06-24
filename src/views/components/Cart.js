@@ -17,7 +17,10 @@ let Cart = {
                     ${shoppingCart.map(item =>
                         // html
                         `<div class="cartItem">
-                            <h3>${item.qty} x ${item.title}</h3>
+                            <div class="cartQtyTitle">
+                                <input type="number" class="cartQty" name="qty" min="1" max="10" size="0" value="${item.qty}">
+                                <h3> x ${item.title}</h3>
+                            </div>
                         </div>
                         `
                         ).join('\n ')}
