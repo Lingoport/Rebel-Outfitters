@@ -89,6 +89,11 @@ body {
     }
 }
 
+.loading {
+    text-align: center;
+    margin-top: 33%;
+}
+
 header {
     background-color: $dkgrey;
     position: relative;
@@ -108,8 +113,14 @@ header {
     
 }
 
+.fade {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
 #logo {
     width: 100%;
+    cursor: pointer;
 }
 
 #search {
@@ -192,7 +203,7 @@ header {
         .dropdown-content {
             display: none;
             position: absolute;
-            background-color: $light;
+            background-color: $ltgrey;
             min-width: 170px;
             box-shadow: 0px 2px 4px 0 black;
             border-radius: 0 5px 5px 5px;
@@ -203,7 +214,7 @@ header {
                 font-family: $linkFont;
                 font-size: 110%;
                 text-decoration: none;
-                color: $dkgrey;
+                color: white;
                 display: block;
                 &:first-child {
                     padding-top: 5px;
@@ -213,7 +224,7 @@ header {
                     padding-bottom: 10px;
                 }
                 &:hover {
-                    color: $yellow;
+                    color: $blue;
                 }
                 
             }
@@ -235,43 +246,82 @@ header {
         }
 
     }
-    .cartIcon{
-        width: 32px;
-        height: 32px;
-        cursor: pointer;
-        &:hover {
-            width: 33px;
-            height: 33px;
-        }
-    }
-    .cartSlider {
-        position: absolute;
-        width: 25%;
-        top: 0;
-        left: 100%;
-        transition: left .5s ease;
-        display: none;
-        //border: 1px solid $blue;
-        background-color: $dkgrey;
-        padding: 15px;
-        border-radius: 0 0 0 10px;
-        box-shadow: -2px 2px 6px 2px $blue;
+}
 
-        .cartContents {
-            .cartItem {
-                h3 {
-                    color: white;
-                }
+.cartIcon{
+    width: 32px;
+    height: 32px;
+    padding-bottom: 1px;
+    cursor: pointer;
+    &:hover {
+        border-bottom: solid 1px $blue;
+        padding-bottom: 0;
+    }
+}
+
+.cartSlider {
+    position: absolute;
+    width: 33%;
+    top: 0;
+    left: 100%;
+    transition: left .5s ease;
+    display: none;
+    background-color: $dkgrey;
+    padding: 10px;
+    border-radius: 0 0 0 10px;
+    box-shadow: -2px 2px 4px 0px $blue;
+    .cartHead {
+        margin-top: 6px;
+        display: flex;
+        justify-content: space-between;
+    }
+    h3 {
+        text-align: center;
+        margin-top: 10px;
+        color: white;
+    }
+    .cartContents {
+       
+        .cartItem {
+            h3 {
+                color: white;
             }
         }
     }
+    a {
+        margin: auto;
+        margin-top: 15px;
+        margin-bottom: 5px;
+        text-align: center;
+        display: block;
+        text-decoration: none;
+        color: black;
+        background-color: $yellow;
+        padding: 5px;
+        width: 50%;
+        border: 1px solid black;
+        border-radius: 5px;
+        font-family: $linkFont;
+        font-size: 120%;
+        cursor: pointer;
+        &:hover {
+            box-shadow: 0 2px 10px 0 black;
+        }
+        &:focus {
+            outline: none;
+        }
 
-    .showCart {
-        display: inline-block;
-        left: 75%;
-        z-index: 1000;
     }
 }
+
+.showCart {
+    opacity: 1;
+    display: block;
+    //take padding into accout here
+    left: calc(67% - 20px);
+    z-index: 1000;
+}
+
 //nav
 nav {
     height: calc(auto + 10px);
