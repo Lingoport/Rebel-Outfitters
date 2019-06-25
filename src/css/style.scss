@@ -284,8 +284,41 @@ header {
     .cartContents {
        
         .cartItem {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            .cartQtyTitle {
+                display: flex;
+                align-items: center;
+            }
+            .cartPrice {
+                display: flex;
+                align-items: center;
+                .gridPrice {
+                    margin-top: 0;
+                    .symbol {
+                        margin-right: 0;
+                    }
+                }
+                .delete {
+                    cursor: pointer;
+                    margin-left: 8px;
+                    height: 20px;
+                    width: 20px;
+                    padding-bottom: 1px;
+                    &:hover {
+                        padding-bottom: 0;
+                        border-bottom: 1px solid $blue;
+                    }
+                }
+            }
+
             h3 {
+                margin-top: 0;
                 text-align: left;
+                color: white;
+            }
+            h4 {
                 color: white;
             }
         }

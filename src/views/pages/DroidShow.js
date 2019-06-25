@@ -59,14 +59,21 @@ let DroidShow = {
         const addButt = document.querySelector(".addToCart");
 
         //there's a bug where adding same item with different
-        addButt.addEventListener("click", function() {
-            //get the qty and modify selected item
-            const qty = document.querySelector(".qtyDrop");
-            droid.qty += parseInt(qty.options[qty.selectedIndex].value);
-            //pass item to cart
-            addToCart(droid);
-        }, false); //add callback for success message or something
+        addButt.addEventListener("click", getQty, false); //add callback for success message or something?s
     }
 }
+
+var getQty = () => {
+     //get the qty and modify selected item
+     let qtySel = document.querySelector(".qtyDrop");
+     let qty = parseInt(qtySel.options[qtySel.selectedIndex].value)
+     console.log(`adding droid`)
+     droid.qty += qty;
+     console.log(`adding droid with droid.qty: ${droid.qty} and qty: ${qty}`);
+     //pass item to cart
+     addToCart(droid);
+
+}
+
 
 export default DroidShow;

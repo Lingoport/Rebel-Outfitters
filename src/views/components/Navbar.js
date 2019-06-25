@@ -47,10 +47,7 @@ let Navbar = {
         var cartIcons = document.querySelectorAll(".cartIcon");
         //show/hide the cart when cart icon is clicked
         for(let icon of cartIcons) {
-            icon.addEventListener("click", function() {
-                //call function to show/hide the cart (imported from app.js)
-                showCart();
-            }, false);
+            icon.addEventListener("click", showCart, false);
         }
         
         var logo = document.querySelector("#logo");

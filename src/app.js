@@ -16,38 +16,36 @@ import Cart from    './views/components/Cart.js';
 import Utils        from './services/Utils.js';
 
 //global variables
-var currentProduct = {};
-var shoppingCart = [{title: "Empty Cart"}];
+var shoppingCart = new Map();
+
+//function for anytime an object is added to cart
 var addToCart = async item =>  {
     const cart = null || document.querySelector('.cartSlider');
     console.log(item);
-    if(shoppingCart[0].title == "Empty Cart") {
-        shoppingCart[0] = item;
+    if(shoppingCart.size == 0) {
+        shoppingCart.set(0, item);
     }
     else {
         let duplicate = false;
-        for(let i = 0; i < shoppingCart.length && duplicate == false ; i++) {
-            if(shoppingCart[i].title == item.title) {
+        for(let [key, value] of shoppingCart) {
+            if(value.title == item.title) {
                 console.log("duplicate item!");
-                shoppingCart[i].qty += item.qty;
-                duplicate = true;
-            }
-            else if(i == shoppingCart.length - 1) {
-                console.log('new item!');
-                shoppingCart.push(item);
+                duplicate = true;  
             }
         }
-        
+        if(!duplicate) {
+            //not a duplicate so add it in
+            shoppingCart.set(shoppingCart.length, item);
+        }
     }
     console.log(shoppingCart);
-    //re-render the cart
+    //re-render the cart and navbar (for click listener)
     cart.innerHTML = await Cart.render();
+    await Navbar.after_render();
     //display cart
-    //TODO: cart won't collapsed after this is called
     showCart();
 }
 
-//TODO: there's something buggy going on - try adding item to cart, closing cart, then opening cart again
 //show the cart and fade the other elements
 var showCart = async () => {
     var slider = document.querySelector(".cartSlider")

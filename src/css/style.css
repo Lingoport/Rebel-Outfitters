@@ -242,8 +242,42 @@ header section h2 {
   margin-top: 10px;
   color: white;
 }
+.cartSlider .cartContents .cartItem {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.cartSlider .cartContents .cartItem .cartQtyTitle {
+  display: flex;
+  align-items: center;
+}
+.cartSlider .cartContents .cartItem .cartPrice {
+  display: flex;
+  align-items: center;
+}
+.cartSlider .cartContents .cartItem .cartPrice .gridPrice {
+  margin-top: 0;
+}
+.cartSlider .cartContents .cartItem .cartPrice .gridPrice .symbol {
+  margin-right: 0;
+}
+.cartSlider .cartContents .cartItem .cartPrice .delete {
+  cursor: pointer;
+  margin-left: 8px;
+  height: 20px;
+  width: 20px;
+  padding-bottom: 1px;
+}
+.cartSlider .cartContents .cartItem .cartPrice .delete:hover {
+  padding-bottom: 0;
+  border-bottom: 1px solid #bffff1;
+}
 .cartSlider .cartContents .cartItem h3 {
+  margin-top: 0;
   text-align: left;
+  color: white;
+}
+.cartSlider .cartContents .cartItem h4 {
   color: white;
 }
 .cartSlider a {
