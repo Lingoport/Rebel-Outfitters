@@ -278,15 +278,16 @@ header {
     }
     h3 {
         text-align: center;
-        margin-top: 10px;
         color: white;
     }
     .cartContents {
        
         .cartItem {
-            margin-top: 10px;
+            margin-top: 20px;
             display: flex;
             justify-content: space-between;
+            padding-bottom: 10px;
+            border-bottom: 1px solid white;
             .cartQtyTitle {
                 display: flex;
                 align-items: center;
@@ -321,6 +322,17 @@ header {
             h4 {
                 color: white;
             }
+        }
+    }
+    .cartTotal {
+        margin-top: 15px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        .totalPrice {
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
         }
     }
     a {

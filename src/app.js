@@ -17,30 +17,34 @@ import Utils        from './services/Utils.js';
 
 //global variables
 var shoppingCart = new Map();
+//shoppingCart.set(0, "empty");
 
 //function for anytime an object is added to cart
-var addToCart = async item =>  {
+var addToCart = async (item) =>  {
     const cart = null || document.querySelector('.cartSlider');
     console.log(item);
+    //if cart is empty then set the value of the first key (0) to our new item
     if(shoppingCart.size == 0) {
         shoppingCart.set(0, item);
     }
     else {
         let duplicate = false;
-        for(let [key, value] of shoppingCart) {
+        //check if object already exists in map
+        for(let value of shoppingCart.values()) {
             if(value.title == item.title) {
-                console.log("duplicate item!");
+                //it's a duplicate so do nothing
                 duplicate = true;  
             }
         }
         if(!duplicate) {
             //not a duplicate so add it in
-            shoppingCart.set(shoppingCart.length, item);
+            shoppingCart.set(shoppingCart.size, item);
         }
     }
     console.log(shoppingCart);
     //re-render the cart and navbar (for click listener)
     cart.innerHTML = await Cart.render();
+    await Cart.after_render();
     await Navbar.after_render();
     //display cart
     showCart();
@@ -58,7 +62,7 @@ var showCart = async () => {
     }
 }
 
-export { shoppingCart, addToCart, showCart };
+export { shoppingCart, addToCart, showCart, router };
 
 // List of supported routes. Any url other than these routes will throw a 404 error
 const routes = {

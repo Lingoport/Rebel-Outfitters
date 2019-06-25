@@ -1,37 +1,46 @@
-import {shoppingCart} from "../../app.js";
+import {shoppingCart, router} from "../../app.js";
 
 let Cart = {
     render: async () => {
+        let total = 0;
         let view =  /*html*/
         `
                 <div class="cartHead">
                     <h1>Shopping Cart</h1>
                     <img src="img/close.svg" class="cartIcon">
                 </div>
-                `
+                `;
                 //show cart contents or display message if no contents
-                if(shoppingCart.length == 0) {
-                    view += `<h3>No Items in Cart.</h3>`
+                if(shoppingCart.size == 0) {
+                    view += `<h3>No Items in Cart.</h3>`;
                 }else  {
                     view += `<div class="cartContents">`;
                     shoppingCart.forEach((value, key) => {
                         // html
+                        total += value.price * value.qty;
                         view += `
                         <div class="cartItem">
                             <div class="cartQtyTitle">
-                                <input type="number" class="cartQty" name="qty" min="1" max="10" size="0" value="${value.qty}">
+                                <input type="number" class="cartQty" name="qty" id="${key}" min="1" max="10" size="0" value="${value.qty}">
                                 <h3> x ${value.title}</h3>
                             </div>
                             <div class="cartPrice">
                                 <div class="gridPrice">
                                     <img src="../../img/wSymbol.svg" class="symbol">
-                                    <h4>${value.price}</h4>
+                                    <h4>${value.price * value.qty}</h4>
                                 </div>
                                 <img src="img/delete.svg" class="delete ${key}">
                             </div>
                         </div>`
                     });
                     view += `
+                </div>
+                <div class="cartTotal">
+                    <h3>Total: </h3>
+                    <div class="totalPrice">
+                        <img src="../../img/wSymbol.svg" class="symbol">
+                        <h3>${total}</h3>
+                    </div>
                 </div>
                 <a class="checkoutButt" href="/#/checkout">CHECKOUT</a>
                 `
@@ -40,7 +49,38 @@ let Cart = {
     },
     after_render: async () => {
 
+        var qtyInputs = document.querySelectorAll(".cartQty");
+        var deleteIcons = document.querySelectorAll(".delete");
+
+        for(let input of qtyInputs) {
+            input.addEventListener('input', updateQty, false);
+        }
+        for(let icon of deleteIcons) {
+            icon.addEventListener('click', deleteItem, false);
+        }
+        
     }
+}
+
+var updateQty = (e) => {
+    if(e.srcElement.value != "") {
+        let changedQtyID = parseInt(e.srcElement.id);
+        let newQty = parseInt(e.srcElement.value);
+        console.log(newQty);
+        let product = shoppingCart.get(changedQtyID);
+        product.qty = newQty;
+        if(product.qty < 1) {
+            shoppingCart.delete(changedQtyID);
+        }
+        router();
+    }
+}
+
+var deleteItem = (e) => {
+    console.log(e);
+    var deleteKey = parseInt(e.srcElement.classList[1]);
+    shoppingCart.delete(deleteKey);
+    router();
 }
 
 export default Cart;

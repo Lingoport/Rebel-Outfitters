@@ -239,13 +239,14 @@ header section h2 {
 }
 .cartSlider h3 {
   text-align: center;
-  margin-top: 10px;
   color: white;
 }
 .cartSlider .cartContents .cartItem {
-  margin-top: 10px;
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid white;
 }
 .cartSlider .cartContents .cartItem .cartQtyTitle {
   display: flex;
@@ -279,6 +280,17 @@ header section h2 {
 }
 .cartSlider .cartContents .cartItem h4 {
   color: white;
+}
+.cartSlider .cartTotal {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.cartSlider .cartTotal .totalPrice {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
 }
 .cartSlider a {
   margin: auto;
