@@ -17,7 +17,7 @@ import Utils        from './services/Utils.js';
 
 //global variables
 var shoppingCart = new Map();
-//shoppingCart.set(0, "empty");
+var locale = "En";
 
 //function for anytime an object is added to cart
 var addToCart = async (item) =>  {
@@ -62,7 +62,7 @@ var showCart = async () => {
     }
 }
 
-export { shoppingCart, addToCart, showCart, router };
+export { shoppingCart, addToCart, showCart, router, locale };
 
 // List of supported routes. Any url other than these routes will throw a 404 error
 const routes = {

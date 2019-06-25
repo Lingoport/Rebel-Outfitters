@@ -1,5 +1,5 @@
 import Utils from "../../services/Utils.js";
-import {shoppingCart, showCart} from "../../app.js";
+import { showCart, locale } from "../../app.js";
 
 let Navbar = {
     render: async () => {
@@ -37,6 +37,19 @@ let Navbar = {
             <li><a href="/#/" class="navLink" id="">HOME</a></li>
             <li><a href="/#/droids" class="navLink" id="droids">DROIDS</a></li>
             <li><a href="/#/vehicles" class="navLink" id="vehicles">VEHICLES</a></li>
+            <li>
+                <div class="dropdown">
+                    <div class="dropbtn">
+                        <h3>Lang: ${locale}</h3>
+                        <img src="img/globe.svg" id="downArrow">
+                    </div>
+                    <div class="dropdown-content">
+                        <h3 class="localOption">En</h3>
+                        <h3 class="localOption">Sith</h3>
+                        <h3 class="localOption">Other</h3>
+                    </div>
+                </div>
+            </li>
         </ul>
     </nav>
         `

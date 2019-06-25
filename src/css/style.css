@@ -152,22 +152,23 @@ header section h2 {
   display: flex;
   justify-content: space-between;
 }
-#headOptions .dropdown {
+
+.dropdown {
   position: relative;
   display: inline-block;
 }
-#headOptions .dropdown .dropbtn {
+.dropdown .dropbtn {
   display: flex;
   align-items: baseline;
   cursor: pointer;
   padding: 5px;
 }
-#headOptions .dropdown .dropbtn #downArrow {
+.dropdown .dropbtn #downArrow {
   margin-left: 8px;
   width: 18px;
   height: 14px;
 }
-#headOptions .dropdown .dropdown-content {
+.dropdown .dropdown-content {
   display: none;
   position: absolute;
   background-color: #6d7275;
@@ -177,37 +178,33 @@ header section h2 {
   z-index: 1;
   padding: 5px;
 }
-#headOptions .dropdown .dropdown-content a {
+.dropdown .dropdown-content a, .dropdown .dropdown-content h3 {
   font-family: "Major Mono Display", monospace;
   font-size: 110%;
   text-decoration: none;
   color: white;
   display: block;
 }
-#headOptions .dropdown .dropdown-content a:first-child {
+.dropdown .dropdown-content a:first-child, .dropdown .dropdown-content h3:first-child {
   padding-top: 5px;
   padding-bottom: 10px;
 }
-#headOptions .dropdown .dropdown-content a:last-child {
+.dropdown .dropdown-content a:last-child, .dropdown .dropdown-content h3:last-child {
   padding-bottom: 10px;
 }
-#headOptions .dropdown .dropdown-content a:hover {
+.dropdown .dropdown-content a:hover, .dropdown .dropdown-content h3:hover {
   color: #bffff1;
 }
-#headOptions .dropdown:hover .dropbtn {
+.dropdown:hover .dropbtn {
   position: relative;
   z-index: 1;
   box-shadow: 0 2px 4px 0 black;
   border-radius: 5px 5px 0 0;
-  border-top: 1px solid #bffff1;
-  border-left: 1px solid #bffff1;
-  border-right: 1px solid #bffff1;
 }
-#headOptions .dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content {
   display: inline-block;
   border: 1px solid #bffff1;
 }
-
 .cartIcon {
   width: 32px;
   height: 32px;
@@ -337,7 +334,7 @@ nav ul {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
   list-style: none;
 }
 nav ul li a {
