@@ -1,10 +1,10 @@
 import Utils from "../../services/Utils.js";
-import {shoppingCart} from "../../app.js";
+import {shoppingCart, showCart} from "../../app.js";
 
 let Navbar = {
     render: async () => {
-        let view =  /*html*/`
-        <header>
+        let view =  /*html*/
+        `<header>
         <!-- logo, search bar, local, profile drop down -->
         <section>
             <img src="img/logo.svg" id="logo">
@@ -29,21 +29,6 @@ let Navbar = {
                 </div>
             </div>
             <img src="img/cart.svg" class="cartIcon">
-            <div class="cartSlider">
-                <h1>Shopping Cart</h1>
-                <img src="img/cart.svg" class="cartIcon">
-                <div class="cartContents">
-                    <!-- populate contents here -->
-                    ${shoppingCart.map(item =>
-                        // html
-                        `<div class="cartItem">
-                            <h3>${item.qty} x ${item.title}</h3>
-                        </div>
-                        `
-                        ).join('\n ')}
-                </div>
-                <button class="checkoutButt">CHECKOUT</button>
-            </div>
         </section>
     </header>
     <nav>
@@ -60,23 +45,26 @@ let Navbar = {
     after_render: async () => {
         //cart slider functionality
         var cartIcons = document.querySelectorAll(".cartIcon");
-        var slider = document.querySelector(".cartSlider")
-        var checkoutButt = document.querySelector(".checkoutButt");
-
-        checkoutButt.addEventListener("click", function() {
-            location.href="/#/checkout";
-        }, false);
-
+        //show/hide the cart when cart icon is clicked
         for(let icon of cartIcons) {
             icon.addEventListener("click", function() {
-                slider.classList.toggle('showCart');
+                //call function to show/hide the cart (imported from app.js)
+                showCart();
             }, false);
         }
+        
+        var logo = document.querySelector("#logo");
 
-        //underline active link
-        let request = Utils.parseRequestURL();
+        //redirect to home on logo click
+        logo.addEventListener("click", function() {
+            location.href="/";
+        }, false);
+
+        
+
+        //underline active lin
         //figure out what resource path we're at and add the activeLink class so it can be styled in css
-
+        let request = Utils.parseRequestURL();
         //link animation stuff
         let navLinks = document.querySelectorAll(".navLink");
         for(let cur of navLinks) {

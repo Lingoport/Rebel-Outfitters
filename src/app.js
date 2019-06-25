@@ -1,44 +1,66 @@
 "use strict";
 
-import Home         from './views/pages/Home.js'
-import {Droids}        from './views/pages/Droids.js'
-import Error404     from './views/pages/Error404.js'
-import DroidShow     from './views/pages/DroidShow.js'
-import Vehicles     from './views/pages/Vehicles.js'
-import Profile     from './views/pages/Profile.js'
-import Checkout     from './views/pages/Checkout.js'
+import Home         from './views/pages/Home.js';
+import {Droids}        from './views/pages/Droids.js';
+import Error404     from './views/pages/Error404.js';
+import DroidShow     from './views/pages/DroidShow.js';
+import Vehicles     from './views/pages/Vehicles.js';
+import Profile     from './views/pages/Profile.js';
+import Checkout     from './views/pages/Checkout.js';
 
-import Navbar       from './views/components/Navbar.js'
-import Bottombar    from './views/components/Bottombar.js' 
 
-import Utils        from './services/Utils.js'
+import Navbar       from './views/components/Navbar.js';
+import Bottombar    from './views/components/Bottombar.js';
+import Cart from    './views/components/Cart.js';
+
+import Utils        from './services/Utils.js';
 
 //global variables
 var currentProduct = {};
 var shoppingCart = [{title: "Empty Cart"}];
 var addToCart = async item =>  {
-    const header = null || document.getElementById('header_container');
+    const cart = null || document.querySelector('.cartSlider');
     console.log(item);
     if(shoppingCart[0].title == "Empty Cart") {
         shoppingCart[0] = item;
     }
     else {
-        for(let cur of shoppingCart) {
-            if(item.title == cur.title) {
-                cur = item;
-                header.innerHTML = await Navbar.render();
-                await Navbar.after_render();
-                return;
+        let duplicate = false;
+        for(let i = 0; i < shoppingCart.length && duplicate == false ; i++) {
+            if(shoppingCart[i].title == item.title) {
+                console.log("duplicate item!");
+                shoppingCart[i].qty += item.qty;
+                duplicate = true;
             }
-            shoppingCart.push(item);
-        } 
+            else if(i == shoppingCart.length - 1) {
+                console.log('new item!');
+                shoppingCart.push(item);
+            }
+        }
+        
     }
     console.log(shoppingCart);
-    //re-render nav
-    header.innerHTML = await Navbar.render();
-    await Navbar.after_render();
+    //re-render the cart
+    cart.innerHTML = await Cart.render();
+    //display cart
+    //TODO: cart won't collapsed after this is called
+    showCart();
 }
-export { shoppingCart, addToCart };
+
+//TODO: there's something buggy going on - try adding item to cart, closing cart, then opening cart again
+//show the cart and fade the other elements
+var showCart = async () => {
+    var slider = document.querySelector(".cartSlider")
+    var content = document.querySelectorAll('.content');
+
+    console.log("show cart toggled");
+    slider.classList.toggle('showCart');
+    for (let section of content) {
+        section.classList.toggle('fade');
+    }
+}
+
+export { shoppingCart, addToCart, showCart };
 
 // List of supported routes. Any url other than these routes will throw a 404 error
 const routes = {
@@ -62,8 +84,11 @@ const router = async () => {
     const header = null || document.getElementById('header_container');
     const content = null || document.getElementById('page_container');
     const footer = null || document.getElementById('footer_container');
+    const cart = null || document.querySelector('.cartSlider')
     
     // Render the Header and footer of the page
+    cart.innerHTML = await Cart.render();
+    await Cart.after_render();
     header.innerHTML = await Navbar.render();
     await Navbar.after_render();
     footer.innerHTML = await Bottombar.render();
@@ -80,7 +105,6 @@ const router = async () => {
     let page = routes[parsedURL] ? routes[parsedURL] : Error404
     content.innerHTML = await page.render();
     await page.after_render();
-  
 }
 
 

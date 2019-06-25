@@ -1,6 +1,10 @@
+import {shoppingCart, showCart} from "../../app.js";
+
 let Checkout = {
 
     render: async () => {
+        //hide the cart initially
+        showCart();
         return /*html*/ `
             <section>
                 <h1>Checkout</h1>
