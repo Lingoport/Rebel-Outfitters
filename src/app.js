@@ -20,7 +20,11 @@ import Utils        from './services/Utils.js';
 //schema: id (int), item (object)
 var shoppingCart = new Map();
 //used to store info about selected locale
-var locale = "En";
+var locale = "EN";
+var updateLocale = (newLocale) => {
+    locale = newLocale;
+    router();
+}
 
 //map of maps to hold both vehicles and droids
 var productList = new Map();
@@ -81,7 +85,7 @@ var showCart = async () => {
     }
 }
 
-export { shoppingCart, addToCart, showCart, router, locale, productList };
+export { shoppingCart, addToCart, showCart, router, locale, productList, updateLocale };
 
 // List of supported routes. Any url other than these routes will throw a 404 error
 const routes = {

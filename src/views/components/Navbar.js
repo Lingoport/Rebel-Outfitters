@@ -1,5 +1,5 @@
 import Utils from "../../services/Utils.js";
-import { showCart, locale } from "../../app.js";
+import { showCart, locale, updateLocale } from "../../app.js";
 
 let Navbar = {
     render: async () => {
@@ -37,20 +37,20 @@ let Navbar = {
             <li><a href="/#/" class="navLink" id="">HOME</a></li>
             <li><a href="/#/droids" class="navLink" id="droids">DROIDS</a></li>
             <li><a href="/#/vehicles" class="navLink" id="vehicles">VEHICLES</a></li>
-            <li>
-                <div class="dropdown">
-                    <div class="dropbtn">
-                        <h3>Lang: ${locale}</h3>
-                        <img src="img/globe.svg" id="downArrow">
-                    </div>
-                    <div class="dropdown-content">
-                        <h3 class="localOption">En</h3>
-                        <h3 class="localOption">Sith</h3>
-                        <h3 class="localOption">Other</h3>
-                    </div>
-                </div>
-            </li>
         </ul>
+        <div class="right">
+            <div class="locale-dropdown">
+                <div class="locale-dropbtn">
+                    <h3>${locale}</h3>
+                    <img src="img/globe.svg" class="globe">
+                </div>
+                <div class="locale-dropdown-content">
+                    <h3 class="localeOption">EN</h3>
+                    <h3 class="localeOption">SITH</h3>
+                    <h3 class="localeOption">OTHER</h3>
+                </div>
+            </div>
+        </div>
     </nav>
         `
         return view
@@ -64,15 +64,19 @@ let Navbar = {
         }
         
         var logo = document.querySelector("#logo");
-
         //redirect to home on logo click
         logo.addEventListener("click", function() {
             location.href="/";
         }, false);
 
+        //change locale
+        var localeOptions = document.querySelectorAll(".localeOption");
+        for(let option of localeOptions) {
+            option.addEventListener('click', changeLocale, false);
+        }
         
 
-        //underline active lin
+        //underline active link
         //figure out what resource path we're at and add the activeLink class so it can be styled in css
         let request = Utils.parseRequestURL();
         //link animation stuff
@@ -88,6 +92,12 @@ let Navbar = {
             }
         }
     }
+}
+
+//function to change locale and reload page
+var changeLocale = (e) => {
+    let newLocale = e.srcElement.innerText;
+    updateLocale(newLocale);
 }
 
 export default Navbar;
