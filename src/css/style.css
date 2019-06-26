@@ -85,6 +85,7 @@ header section h2 {
 }
 
 .fade {
+  transition: opacity 0.5s ease;
   opacity: 0.5;
   pointer-events: none;
 }
@@ -220,9 +221,8 @@ header section h2 {
   position: absolute;
   width: 33%;
   top: 0;
-  left: 100%;
+  left: 110%;
   transition: left 0.5s ease;
-  display: none;
   background-color: #2d2d2a;
   padding: 10px;
   border-radius: 0 0 0 10px;

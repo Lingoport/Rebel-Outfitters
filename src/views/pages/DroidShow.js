@@ -1,32 +1,20 @@
 import Utils        from '../../services/Utils.js';
-import {addToCart} from '../../app.js';
-import {droidView} from './Droids.js';
+import {productList, addToCart} from '../../app.js';
 
-let getDroid = async (id) => {
-    const options = {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    };
-    try {
-        const response = await fetch(`../../content/droids.json`, options);
-        const json = await response.json();
-        //console.log(json);
-        return json[id];
-    } catch (err) {
-        console.log('Error getting documents', err);
-    }
-}
-
-var droid;
+let droid;
+let droidID;
 
 let DroidShow = {
 
     render : async () => {
+        //get the id
         let request = Utils.parseRequestURL();
-        droid = await getDroid(request.id);
-        droid.qty = 0;
+        droidID = parseInt(request.id);
+        //get a reference to the droids Map
+        let droidMap = productList.get('droids');
+        //get the droid from the droid Map based on ID
+        droid = droidMap.get(droidID);
+        console.log(droid);
         //droid = droidView;
         return /*html*/`
             <section class="productShow">
@@ -59,15 +47,14 @@ let DroidShow = {
         const addButt = document.querySelector(".addToCart");
 
         //there's a bug where adding same item with different
-        addButt.addEventListener("click", getQty, false); //add callback for success message or something?s
+        addButt.addEventListener("click", getQtyandAddToCart, false); //add callback for success message or something?s
     }
 }
 
-var getQty = () => {
+var getQtyandAddToCart = () => {
      //get the qty and modify selected item
      let qtySel = document.querySelector(".qtyDrop");
      let qty = parseInt(qtySel.options[qtySel.selectedIndex].value)
-     console.log(`adding droid`)
      droid.qty += qty;
      console.log(`adding droid with droid.qty: ${droid.qty} and qty: ${qty}`);
      //pass item to cart

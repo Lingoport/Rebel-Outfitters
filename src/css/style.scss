@@ -114,6 +114,7 @@ header {
 }
 
 .fade {
+    transition: opacity .5s ease;
     opacity: 0.5;
     pointer-events: none;
 }
@@ -268,9 +269,9 @@ header {
     position: absolute;
     width: 33%;
     top: 0;
-    left: 100%;
+    left: 110%;
     transition: left .5s ease;
-    display: none;
+    //display: none;
     background-color: $dkgrey;
     padding: 10px;
     border-radius: 0 0 0 10px;

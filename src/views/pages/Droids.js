@@ -1,33 +1,16 @@
-let getDroidsList = async () => {
-    const options = {
-       method: 'GET',
-       headers: {
-           'Content-Type': 'application/json'
-       }
-   };
-   try {
-       const response = await fetch(`../../content/droids.json`, options)
-       const json = await response.json();
-       //console.log(json)
-       return json
-   } catch (err) {
-       console.log('Error getting documents', err)
-   }
-}
-
-var droidList;
-let droidView;
+import {productList} from "../../app.js";
 
 let Droids = {
     render : async () => {
-        droidList = await getDroidsList();
+        let droidMap = productList.get('droids');
+
         let view =  /*html*/`
             <section class="browsePage" id="droidBrowse">
                 <h1>All Droids</h1>
-                <div class="browseGrid" id="droidGrid">
-                ${droidList.map(droid => 
+                <div class="browseGrid" id="droidGrid">`;
+                droidMap.forEach((droid, key) => {
                     /*html*/
-                    `<article id="${droid.id}">
+                    view += `<article id="${key}">
                         <img src="${droid.imageURL}" class="gridImage">
                         <div class="gridDes">
                             <h3>${droid.title}</h3>
@@ -37,13 +20,14 @@ let Droids = {
                             </div>
                         </div>
                     </article>
-                    `
-                    ).join('\n ')
-                }
+                    `;
+                    
+                });
+                view += `
                 </div>
             </section>
-            `   
-        return view
+            `;   
+        return view;
     },
     after_render: async () => {
 
@@ -62,4 +46,4 @@ let Droids = {
         
 }
 
-export { Droids, droidView};
+export { Droids };

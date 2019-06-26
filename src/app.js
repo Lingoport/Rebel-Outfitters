@@ -15,32 +15,51 @@ import Cart from    './views/components/Cart.js';
 
 import Utils        from './services/Utils.js';
 
-//global variables
+//global variables//
+
+//schema: id (int), item (object)
 var shoppingCart = new Map();
+//used to store info about selected locale
 var locale = "En";
+
+//map of maps to hold both vehicles and droids
+var productList = new Map();
+productList.set("droids", new Map());
+productList.set("vehicles", new Map());
+
+//function to get droids and push to map
+let getDroidsList = async () => {
+    const options = {
+       method: 'GET',
+       headers: {
+           'Content-Type': 'application/json'
+       }
+   };
+   try {
+       const response = await fetch('content/droids.json', options)
+       const json = await response.json();
+
+       let droidMap = productList.get("droids");
+
+       for(let droid of json) {
+           droidMap.set(droidMap.size, droid);
+       }
+       console.log(productList);
+
+   } catch (err) {
+       console.log('Error getting droids', err)
+   }
+}
 
 //function for anytime an object is added to cart
 var addToCart = async (item) =>  {
     const cart = null || document.querySelector('.cartSlider');
     console.log(item);
     //if cart is empty then set the value of the first key (0) to our new item
-    if(shoppingCart.size == 0) {
-        shoppingCart.set(0, item);
+    if(!shoppingCart.has(item.title)) {
+        shoppingCart.set(item.title, item);
     }
-    else {
-        let duplicate = false;
-        //check if object already exists in map
-        for(let value of shoppingCart.values()) {
-            if(value.title == item.title) {
-                //it's a duplicate so do nothing
-                duplicate = true;  
-            }
-        }
-        if(!duplicate) {
-            //not a duplicate so add it in
-            shoppingCart.set(shoppingCart.size, item);
-        }
-    }
+
     console.log(shoppingCart);
     //re-render the cart and navbar (for click listener)
     cart.innerHTML = await Cart.render();
@@ -62,7 +81,7 @@ var showCart = async () => {
     }
 }
 
-export { shoppingCart, addToCart, showCart, router, locale };
+export { shoppingCart, addToCart, showCart, router, locale, productList };
 
 // List of supported routes. Any url other than these routes will throw a 404 error
 const routes = {
@@ -88,13 +107,18 @@ const router = async () => {
     const footer = null || document.getElementById('footer_container');
     const cart = null || document.querySelector('.cartSlider')
     
-    // Render the Header and footer of the page
+    // Render the Header, footer, and empty cart of the page
     cart.innerHTML = await Cart.render();
     await Cart.after_render();
     header.innerHTML = await Navbar.render();
     await Navbar.after_render();
     footer.innerHTML = await Bottombar.render();
     await Bottombar.after_render();
+
+    //fetch the products if we don't already have them 
+    if(productList.get("droids").size == 0 && productList.get("vehicles").size == 0) {
+        await getDroidsList();
+    }
 
     // Get the parsed URl from the addressbar
     let request = Utils.parseRequestURL();

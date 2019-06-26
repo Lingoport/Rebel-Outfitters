@@ -29,7 +29,7 @@ let Cart = {
                                     <img src="../../img/wSymbol.svg" class="symbol">
                                     <h4>${value.price * value.qty}</h4>
                                 </div>
-                                <img src="img/delete.svg" class="delete ${key}">
+                                <img src="img/delete.svg" class="delete" id="${key}">
                             </div>
                         </div>`
                     });
@@ -64,13 +64,14 @@ let Cart = {
 
 var updateQty = (e) => {
     if(e.srcElement.value != "") {
-        let changedQtyID = parseInt(e.srcElement.id);
+        let changedQtyKey = e.srcElement.id;
         let newQty = parseInt(e.srcElement.value);
         console.log(newQty);
-        let product = shoppingCart.get(changedQtyID);
+        let product = shoppingCart.get(changedQtyKey);
         product.qty = newQty;
         if(product.qty < 1) {
-            shoppingCart.delete(changedQtyID);
+            product.qty = 0;
+            shoppingCart.delete(changedQtyKey);
         }
         router();
     }
@@ -78,7 +79,9 @@ var updateQty = (e) => {
 
 var deleteItem = (e) => {
     console.log(e);
-    var deleteKey = parseInt(e.srcElement.classList[1]);
+    var deleteKey = e.srcElement.id;
+    console.log(deleteKey);
+    shoppingCart.get(deleteKey).qty = 0;
     shoppingCart.delete(deleteKey);
     router();
 }
