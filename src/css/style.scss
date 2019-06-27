@@ -651,6 +651,14 @@ nav {
         .qty {
             margin-top: 10px;
             display: flex;
+            align-items: center;
+            .qtyDrop {
+                color: $dkgrey;
+                margin-left: 10px;
+                padding: 3px;
+                background-color: white;
+                border-color: $dkgrey;
+            }
         }
         .addToCart {
             margin-top: 10px;
@@ -658,7 +666,6 @@ nav {
         }
         h3 {
             display: block;
-            margin-bottom: 10px;
         }
     }
 }
@@ -728,22 +735,44 @@ nav {
     }
 }
 
+
+
+.qtyDrop {
+
+}
+
 label {
     font-family: $bodyFont
 }
 
+.checkoutInput {
+    color: white;
+    font-family: $bodyFont;
+    font-size: 95%;
+    display:block;
+    background-color: $dkgrey;
+    border: 1px solid $yellow;
+    padding: 5px;
+    border-radius: 5px;
+    padding-left: 5px;
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 2px 0 $yellow;
+    }
+}
+
 button {
-    color: black;
+    color: $dkgrey;
     background-color: $yellow;
     padding: 5px;
     width: 50%;
-    border: 1px solid black;
+    border: 1px solid $dkgrey;
     border-radius: 5px;
     font-family: $linkFont;
     font-size: 120%;
     cursor: pointer;
     &:hover {
-        box-shadow: 0 1px 5px 0 black;
+        box-shadow: 0 1px 5px 0 $dkgrey;
     }
     &:focus {
         outline: none;

@@ -21,17 +21,36 @@ let Checkout = {
                     <h2>Shipping Info</h2>
                     <div class="form">
                         <label for="fullName">Full Name</label>
-                        <input type="text" id="fullName" name="name">
+                        <input type="text" id="fullName" name="name" class="checkoutInput" placeholder="Luke Skywalker">
+
                         <label for="coordinates">Coordinates</label>
-                        <input type="text" id="coordinates" name="coordinates">
+                        <input type="text" id="coordinates" name="coordinates" class="checkoutInput" placeholder="0,0,0">
+
                         <label for="sector">Sector</label>
-                        <input type="text" id="sector" name="sector">
+                        <input type="text" id="sector" name="sector" class="checkoutInput" placeholder="Core">
+
+                        <label for="shipMethod">Shipping Method</label>
+                        <select id="shipMethod" class="checkoutInput">
+                            <option value="lightspeed">Lightspeed</option>
+                            <option value="overnight">Overnight</option>
+                            <option value="standard">Standard</option>
+                        </select>
                     </div>
                 </div>
                 <div class="paymentInfo">
                     <h2>Payment</h2>
+                    <div class="form">
+                        <label for="account">Imperial Credit Account Number</label>
+                        <input type="text" id="account" name="account" class="checkoutInput">
+                        
+                        <label for="code">Security Code</label>
+                        <input type="text" id="code" name="code" class="checkoutInput">
+                        
+                        <label for="expDate">Expiration Date</label>
+                        <input type="date" id="expDate" name=expDate" class="checkoutInput">
+                    </div>
                 </div>
-                <button class="orderButt">CONFIRM ORDER</button>
+                <button class="orderButt">PLACE ORDER</button>
             </div>
             <div class="checkoutCart">
                 <h1>Shopping Cart</h1>

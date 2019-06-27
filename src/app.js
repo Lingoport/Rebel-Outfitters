@@ -1,9 +1,9 @@
 "use strict";
 
 import Home         from './views/pages/Home.js';
-import {Droids}        from './views/pages/Droids.js';
+import {Browse}        from './views/pages/Droids.js';
 import Error404     from './views/pages/Error404.js';
-import DroidShow     from './views/pages/DroidShow.js';
+import ProductShow     from './views/pages/DroidShow.js';
 import Vehicles     from './views/pages/Vehicles.js';
 import Profile     from './views/pages/Profile.js';
 import Checkout     from './views/pages/Checkout.js';
@@ -40,22 +40,28 @@ let getDroidsList = async () => {
        }
    };
    try {
-       const response = await fetch('content/droids.json', options)
+       const response = await fetch('content/products.json', options)
        const json = await response.json();
 
        let droidMap = productList.get("droids");
-
-       for(let droid of json) {
-           droidMap.set(droidMap.size, droid);
+        let vehicleMap = productList.get("vehicles");
+       for(let item of json) {
+           //loop through parsed json and add to either droid Map or vehicle Map
+           if(item.type == "droid") {
+                droidMap.set(droidMap.size, item);
+           }
+           else if(item.type == "vehicle") {
+                vehicleMap.set(vehicleMap.size, item);
+           }
        }
        
        //THIS IS JUSt FOr DEV
-       addToCart(droidMap.get(0));
+       //addToCart(droidMap.get(0));
 
        console.log(productList);
 
    } catch (err) {
-       console.log('Error getting droids', err)
+       console.log('Error getting products', err)
    }
 }
 
@@ -94,9 +100,10 @@ export { shoppingCart, addToCart, showCart, router, locale, productList, updateL
 // List of supported routes. Any url other than these routes will throw a 404 error
 const routes = {
     '/' : Home, 
-    '/droids' : Droids,
-    '/droids/:id' : DroidShow,
-    '/vehicles' : Vehicles,
+    '/droids' : Browse,
+    '/droids/:id' : ProductShow,
+    '/vehicles' : Browse,
+    '/vehicles/:id' : ProductShow,
     '/profile' :  Profile,
     '/checkout' : Checkout
 };

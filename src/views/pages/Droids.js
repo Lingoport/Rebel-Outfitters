@@ -1,22 +1,36 @@
+import Utils from '../../services/Utils.js'
 import {productList} from "../../app.js";
 
-let Droids = {
+let type;
+
+let Browse = {
+    
     render : async () => {
-        let droidMap = productList.get('droids');
+        let request = Utils.parseRequestURL();
+        type = request.resource;
+
+        let productMap = null;
+
+        if(type == "droids") {
+            productMap = productList.get('droids');
+        }
+        else if(type == "vehicles") {
+            productMap = productList.get('vehicles');
+        }
 
         let view =  /*html*/`
-            <section class="browsePage" id="droidBrowse">
-                <h1>All Droids</h1>
-                <div class="browseGrid" id="droidGrid">`;
-                droidMap.forEach((droid, key) => {
+            <section class="browsePage">
+                <h1>All ${type}</h1>
+                <div class="browseGrid">`;
+                productMap.forEach((product, key) => {
                     /*html*/
                     view += `<article id="${key}">
-                        <img src="${droid.imageURL}" class="gridImage">
+                        <img src="${product.imageURL}" class="gridImage">
                         <div class="gridDes">
-                            <h3>${droid.title}</h3>
+                            <h3>${product.title}</h3>
                             <div class="gridPrice">
                                 <img src="../../img/bSymbol.svg" class="symbol">
-                                <h4>${droid.price}</h4>
+                                <h4>${product.price}</h4>
                             </div>
                         </div>
                     </article>
@@ -31,19 +45,19 @@ let Droids = {
     },
     after_render: async () => {
 
-        let grid = document.querySelector("#droidGrid");
+        let grid = document.querySelector(".browseGrid");
 
         let articles = grid.querySelectorAll("article");
 
-        for(let curDroid of articles) {
+        for(let curProduct of articles) {
             //console.log(cur);
-            curDroid.addEventListener("click", function() {
-                location.href="/#/droids/" + curDroid.id;
+            curProduct.addEventListener("click", function() {
+                location.href=`/#/${type}/` + curProduct.id;
             }, false);
-            curDroid.classList.add("zoom");
+            curProduct.classList.add("zoom");
         }
     }
         
 }
 
-export { Droids };
+export { Browse };

@@ -4,7 +4,7 @@ import {productList, addToCart} from '../../app.js';
 let droid;
 let droidID;
 
-let DroidShow = {
+let ProductShow = {
 
     render : async () => {
         //get the id
@@ -29,7 +29,7 @@ let DroidShow = {
                     </div>
                     <div class="qty">
                         <h3>Qty:</h3>
-                        <select class="qtyDrop">
+                        <select class="qtyDrop checkoutInput">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -37,7 +37,6 @@ let DroidShow = {
                         </select>
                     </div>
                     <button class="addToCart">ADD TO CART</button>
-                    <h3>Class: ${droid.class}</h3>
                     <p>${droid.desc}</p>
                 </article>
             </section>
@@ -63,4 +62,4 @@ var getQtyandAddToCart = () => {
 }
 
 
-export default DroidShow;
+export default ProductShow;

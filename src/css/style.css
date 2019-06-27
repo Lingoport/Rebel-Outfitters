@@ -572,6 +572,14 @@ nav ul li .activeLink::after {
 .productShow .detailContent .qty {
   margin-top: 10px;
   display: flex;
+  align-items: center;
+}
+.productShow .detailContent .qty .qtyDrop {
+  color: #2d2d2a;
+  margin-left: 10px;
+  padding: 3px;
+  background-color: white;
+  border-color: #2d2d2a;
 }
 .productShow .detailContent .addToCart {
   margin-top: 10px;
@@ -579,7 +587,6 @@ nav ul li .activeLink::after {
 }
 .productShow .detailContent h3 {
   display: block;
-  margin-bottom: 10px;
 }
 
 .checkout {
@@ -648,19 +655,35 @@ label {
   font-family: "Montserrat", sans-serif;
 }
 
+.checkoutInput {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 95%;
+  display: block;
+  background-color: #2d2d2a;
+  border: 1px solid #fff200;
+  padding: 5px;
+  border-radius: 5px;
+  padding-left: 5px;
+}
+.checkoutInput:focus {
+  outline: none;
+  box-shadow: 0 0 2px 0 #fff200;
+}
+
 button {
-  color: black;
+  color: #2d2d2a;
   background-color: #fff200;
   padding: 5px;
   width: 50%;
-  border: 1px solid black;
+  border: 1px solid #2d2d2a;
   border-radius: 5px;
   font-family: "Major Mono Display", monospace;
   font-size: 120%;
   cursor: pointer;
 }
 button:hover {
-  box-shadow: 0 1px 5px 0 black;
+  box-shadow: 0 1px 5px 0 #2d2d2a;
 }
 button:focus {
   outline: none;
