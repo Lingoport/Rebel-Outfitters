@@ -42,36 +42,36 @@
     "desc": "Several new features have been added to the original Sphyrna structure, including two extra modules mounted to the port and starboard of the craft, six escape pods in place of the cargo bay, and a fourth sublight drive mounted on top of the primary three, giving it enough power to single-handedly move a disabled Star Destroyer. 315 meters in length with a maximum acceleration of 900 kilometers per hour. Equipped with a hyper drive system."
 },
 {
-    "type": "",
-    "title": "",
-    "price": 1,
+    "type": "vehicle",
+    "title": "VCX-100 Freighter",
+    "price": 700000,
     "qty": 0,
-    "imageURL": "../../img/",
-    "desc": ""
+    "imageURL": "../../img/VCX-100.png",
+    "desc": "The VCX-100 has sleeping quarters and even a galley. Its armament is comprised of a dorsal turret and a frontal-turret, the latter being controlled by a gunner in its seat or from the cockpit. The cargo bay and main entrance ramp of the VCX-100 are located in the front of the freighter, below the forward-turret. VCX-100s also has a slot in between its main engines, into which a VCX-series auxiliary starfighter can dock. The VCX-100 is also outfitted with a magnetic cargo clamp on its ventral plating, capable of holding several bulk containers. Max speed of 1, 025 killometers per hour."
 },
 {
-    "type": "",
-    "title": "",
-    "price": 1,
+    "type": "droid",
+    "title": "G2 Repair",
+    "price": 5210,
     "qty": 0,
-    "imageURL": "../../img/",
-    "desc": ""
+    "imageURL": "../../img/G2.png",
+    "desc": "Intended to assist with shipboard repairs, the second-degree G2 repair droid is short in stature, standing 0.8 meters in height. It is also squat, with a wide, bottom-heavy stance that forces it to waddle when it walked. These traits, combined with its long, multi-jointed neck and widely spaced, weight-distributing feet, earns it the nickname 'goose droid.' Each G2 unit has a stripped-down, silver-and-brass-colored skeletal frame with exposed joints and wiring, with a colored trim. The droid's three-digit heavy manipulators can grasp most repair tools, while splayed feet aided in stabilizing its low center of gravity and gives the G2 extra stability when dealing with large, heavy equipment."
 },
 {
-    "type": "",
-    "title": "",
-    "price": 1,
+    "type": "vehicle",
+    "title": "CR90 Corvette",
+    "price": 1500000,
     "qty": 0,
-    "imageURL": "../../img/",
-    "desc": ""
+    "imageURL": "../../img/CR90.png",
+    "desc": "Measuring 150 meters in length, it features two dual and four single turbolaser turrets, and has the ability to reach a maximum speed of 950 kph. According to Luke Skywalker, some combat-outfitted CR90 ships can be equipped with six dual turbolasers. Capable of carrying an entire diplomatic escort, it has a passenger capacity in the hundreds. Although the ships are not built as carriers, three RZ-1 A-wing interceptors can be attached to the docking rings, allowing for a small escort. They serve as the backbone of the early rebellion and Alliance. Though not particularly heavily armed, CR90s possess enough forward firepower to destroy a Gozanti-class cruiser quite easily."
 },
 {
-    "type": "",
-    "title": "",
-    "price": 1,
+    "type": "vehicle",
+    "title": "74-Z Speeder Bike",
+    "price": 8000,
     "qty": 0,
-    "imageURL": "../../img/",
-    "desc": ""
+    "imageURL": "../../img/74-Z.png",
+    "desc": "The 74-Z Speeder Bike is capable of reaching speeds up to and beyond five hundred kilometers per hour, and has a flight ceiling of twenty-five meters. 74-Zs are the military variant of the civilian 74-Y. They are controlled by handlebars located towards the front of the vehicle, and foot pedals slung underneath adjust speed and altitude. The highly maneuverable vehicles are equipped with sensor and communications devices located between the handlebars, including a comlink and a comlink-jamming device. The speeder is equipped with terrain-following sensors that link up with the HUD in the driver's helmet. They are armed with a forward rotating blaster cannon for combat."
 },
 {
     "type": "",

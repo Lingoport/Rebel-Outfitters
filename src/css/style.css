@@ -66,6 +66,12 @@ body canvas {
   margin-top: 33%;
 }
 
+#header_container {
+  z-index: 500;
+  top: 0;
+  position: sticky;
+}
+
 header {
   background-color: #2d2d2a;
   position: relative;
@@ -486,7 +492,7 @@ nav ul li .activeLink::after {
 }
 
 .browsePage {
-  width: 95%;
+  width: calc(100% - 100px);
   margin: auto;
 }
 .browsePage h1 {
@@ -526,7 +532,7 @@ nav ul li .activeLink::after {
   margin: auto;
   padding: 10px;
   height: 60%;
-  width: 100%;
+  width: 90%;
 }
 
 .gridDes {

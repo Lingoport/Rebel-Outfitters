@@ -94,6 +94,12 @@ body {
     margin-top: 33%;
 }
 
+#header_container {
+    z-index: 500;
+    top: 0;
+    position: sticky;
+}
+
 header {
     background-color: $dkgrey;
     position: relative;
@@ -559,7 +565,7 @@ nav {
 }
 
 .browsePage {
-    width: 95%;
+    width: calc(100% - 100px);
     margin: auto;
     
     h1 {
@@ -609,7 +615,7 @@ nav {
     margin: auto;
     padding: 10px;
     height: 60%;
-    width: 100%;
+    width: 90%;
 }
 
 .gridDes {

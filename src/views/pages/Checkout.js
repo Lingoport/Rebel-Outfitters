@@ -1,5 +1,8 @@
 import {shoppingCart, showCart} from "../../app.js";
 
+//neet to add click listeners for updating qty or deleting items from cart
+
+
 let Checkout = {
 
     render: async () => {
@@ -78,7 +81,7 @@ let Checkout = {
                     <h3>Total: </h3>
                     <div class="totalPrice">
                         <img src="../../img/wSymbol.svg" class="symbol">
-                        <h3>${total}</h3>
+                        <h3>${commas(total)}</h3>
                     </div>
                 </div>
             </div>
