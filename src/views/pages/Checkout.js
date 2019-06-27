@@ -67,7 +67,7 @@ let Checkout = {
                     <div class="cartPrice">
                         <div class="gridPrice">
                             <img src="../../img/wSymbol.svg" class="symbol">
-                            <h4>${value.price * value.qty}</h4>
+                            <h4>${commas(value.price * value.qty)}</h4>
                         </div>
                         <img src="img/delete.svg" class="delete" id="${key}">
                     </div>
@@ -90,6 +90,10 @@ let Checkout = {
     , after_render: async () => {
 
     }
+}
+
+var commas = (x) => {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 export default Checkout;

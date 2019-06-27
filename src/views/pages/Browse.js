@@ -30,7 +30,7 @@ let Browse = {
                             <h3>${product.title}</h3>
                             <div class="gridPrice">
                                 <img src="../../img/bSymbol.svg" class="symbol">
-                                <h4>${product.price}</h4>
+                                <h4>${numberWithCommas(product.price)}</h4>
                             </div>
                         </div>
                     </article>
@@ -58,6 +58,10 @@ let Browse = {
         }
     }
         
+}
+
+var numberWithCommas = (x) => {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 export { Browse };

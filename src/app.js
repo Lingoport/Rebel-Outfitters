@@ -1,10 +1,9 @@
 "use strict";
 
 import Home         from './views/pages/Home.js';
-import {Browse}        from './views/pages/Droids.js';
+import {Browse}        from './views/pages/Browse.js';
 import Error404     from './views/pages/Error404.js';
-import ProductShow     from './views/pages/DroidShow.js';
-import Vehicles     from './views/pages/Vehicles.js';
+import ProductShow     from './views/pages/ProductShow.js';
 import Profile     from './views/pages/Profile.js';
 import Checkout     from './views/pages/Checkout.js';
 

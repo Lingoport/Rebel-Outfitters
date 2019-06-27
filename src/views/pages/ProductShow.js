@@ -1,31 +1,33 @@
 import Utils        from '../../services/Utils.js';
 import {productList, addToCart} from '../../app.js';
 
-let droid;
-let droidID;
+let product;
+let productID;
+let type;
 
 let ProductShow = {
 
     render : async () => {
         //get the id
         let request = Utils.parseRequestURL();
-        droidID = parseInt(request.id);
-        //get a reference to the droids Map
-        let droidMap = productList.get('droids');
-        //get the droid from the droid Map based on ID
-        droid = droidMap.get(droidID);
-        console.log(droid);
+        productID = parseInt(request.id);
+        type = request.resource;
+        //get a reference to the correct porduct Map based on type
+        let productMap = productList.get(type);
+        //get the correct product from the product Map based on ID and type
+        product = productMap.get(productID);
+        console.log(product);
         //droid = droidView;
         return /*html*/`
             <section class="productShow">
                 <article class="leftDetailPane">
-                    <img src="${droid.imageURL}" class="detailImage">
+                    <img src="${product.imageURL}" class="detailImage">
                 </article>
                 <article class="detailContent">
-                    <h1>${droid.title}</h1>
+                    <h1>${product.title}</h1>
                     <div class="gridPrice">
                         <img src="../../img/bSymbol.svg" class="symbol">
-                        <h4>${droid.price}</h4>
+                        <h4>${commas(product.price)}</h4>
                     </div>
                     <div class="qty">
                         <h3>Qty:</h3>
@@ -37,7 +39,7 @@ let ProductShow = {
                         </select>
                     </div>
                     <button class="addToCart">ADD TO CART</button>
-                    <p>${droid.desc}</p>
+                    <p>${product.desc}</p>
                 </article>
             </section>
         `
@@ -54,11 +56,15 @@ var getQtyandAddToCart = () => {
      //get the qty and modify selected item
      let qtySel = document.querySelector(".qtyDrop");
      let qty = parseInt(qtySel.options[qtySel.selectedIndex].value)
-     droid.qty += qty;
-     console.log(`adding droid with droid.qty: ${droid.qty} and qty: ${qty}`);
+     product.qty += qty;
+     console.log(`adding product with droid.qty: ${product.qty} and qty: ${qty}`);
      //pass item to cart
-     addToCart(droid);
+     addToCart(product);
 
+}
+
+var commas = (x) => {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 

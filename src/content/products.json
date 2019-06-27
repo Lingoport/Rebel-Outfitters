@@ -24,4 +24,117 @@
     "qty": 0,
     "imageURL": "../../img/2-1B.png",
     "desc": "The 2-1B droid model is highly advanced and intelligent with its programming being further advanced by some of the top physicians in the galaxy at the Rhinnal State Medical Academy, which also integrate heuristic processors. The most useful characteristic of the 2-1B droids is the ease with which owners can update their programming and appendages. A 2-1B droid can easily become a specialist in neurosurgery, podiatry, pediatrics, cybernetic limb replacement, and alien biology with a trip to a certified service center."
-}]
+},
+{
+    "type": "droid",
+    "title": "IG-88B",
+    "price": 4500,
+    "qty": 0,
+    "imageURL": "../../img/IG-88.png",
+    "desc": "A battered chrome war droid, IG-88 stands 1.96 meters in height. His steady aim, along with his ability to track targets with advanced sensors that ring his head and allow him to see in all directions, earns him great success. These sensors include multiple red photoreceptors, a heat sensor, and a sound sensor IG-88 also has a vocoder at the base of his head. His torso is able to fully rotate on the battlefield, allowing him to blast enemies on all sides. His tough metal body allows him to survive most attacks without taking any damage and features acid-proof servo wires."
+},
+{
+    "type": "vehicle",
+    "title": "Sphyrna Corvette",
+    "price": 1000000,
+    "qty": 0,
+    "imageURL": "../../img/Sphyrna_Corevette.png",
+    "desc": "Several new features have been added to the original Sphyrna structure, including two extra modules mounted to the port and starboard of the craft, six escape pods in place of the cargo bay, and a fourth sublight drive mounted on top of the primary three, giving it enough power to single-handedly move a disabled Star Destroyer. 315 meters in length with a maximum acceleration of 900 kilometers per hour. Equipped with a hyper drive system."
+},
+{
+    "type": "",
+    "title": "",
+    "price": 1,
+    "qty": 0,
+    "imageURL": "../../img/",
+    "desc": ""
+},
+{
+    "type": "",
+    "title": "",
+    "price": 1,
+    "qty": 0,
+    "imageURL": "../../img/",
+    "desc": ""
+},
+{
+    "type": "",
+    "title": "",
+    "price": 1,
+    "qty": 0,
+    "imageURL": "../../img/",
+    "desc": ""
+},
+{
+    "type": "",
+    "title": "",
+    "price": 1,
+    "qty": 0,
+    "imageURL": "../../img/",
+    "desc": ""
+},
+{
+    "type": "",
+    "title": "",
+    "price": 1,
+    "qty": 0,
+    "imageURL": "../../img/",
+    "desc": ""
+},
+{
+    "type": "",
+    "title": "",
+    "price": 1,
+    "qty": 0,
+    "imageURL": "../../img/",
+    "desc": ""
+},
+{
+    "type": "",
+    "title": "",
+    "price": 1,
+    "qty": 0,
+    "imageURL": "../../img/",
+    "desc": ""
+},
+{
+    "type": "",
+    "title": "",
+    "price": 1,
+    "qty": 0,
+    "imageURL": "../../img/",
+    "desc": ""
+},
+{
+    "type": "",
+    "title": "",
+    "price": 1,
+    "qty": 0,
+    "imageURL": "../../img/",
+    "desc": ""
+},
+{
+    "type": "",
+    "title": "",
+    "price": 1,
+    "qty": 0,
+    "imageURL": "../../img/",
+    "desc": ""
+},
+{
+    "type": "",
+    "title": "",
+    "price": 1,
+    "qty": 0,
+    "imageURL": "../../img/",
+    "desc": ""
+},
+{
+    "type": "",
+    "title": "",
+    "price": 1,
+    "qty": 0,
+    "imageURL": "../../img/",
+    "desc": ""
+}
+]
