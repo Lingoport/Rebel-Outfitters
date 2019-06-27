@@ -52,7 +52,7 @@ let Navbar = {
             </div>
         </div>
     </nav>
-        `
+    `
         return view
     },
     after_render: async () => {

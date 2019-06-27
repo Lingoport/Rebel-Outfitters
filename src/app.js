@@ -48,6 +48,10 @@ let getDroidsList = async () => {
        for(let droid of json) {
            droidMap.set(droidMap.size, droid);
        }
+       
+       //THIS IS JUSt FOr DEV
+       addToCart(droidMap.get(0));
+
        console.log(productList);
 
    } catch (err) {

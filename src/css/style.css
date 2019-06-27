@@ -261,6 +261,29 @@ header section h2 {
   border: 1px solid #bffff1;
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.cartQty {
+  background-color: #2d2d2a;
+  border: solid 1px #fff200;
+  color: white;
+  border-radius: 5px;
+  padding: 3px;
+  width: 45px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 110%;
+  text-align: center;
+  margin-right: 5px;
+}
+.cartQty:focus {
+  outline: none;
+  box-shadow: 0 0 3px 0 #fff200;
+}
+
 .cartIcon {
   width: 32px;
   height: 32px;
@@ -274,10 +297,11 @@ header section h2 {
 
 .cartSlider {
   position: absolute;
-  width: 33%;
+  width: 420px;
   top: 0;
   left: 110%;
-  transition: left 0.5s ease;
+  transition: left 0.3s ease;
+  z-index: 1000;
   background-color: #2d2d2a;
   padding: 10px;
   border-radius: 0 0 0 10px;
@@ -314,17 +338,6 @@ header section h2 {
 .cartSlider .cartContents .cartItem .cartPrice .gridPrice .symbol {
   margin-right: 0;
 }
-.cartSlider .cartContents .cartItem .cartPrice .delete {
-  cursor: pointer;
-  margin-left: 8px;
-  height: 20px;
-  width: 20px;
-  padding-bottom: 1px;
-}
-.cartSlider .cartContents .cartItem .cartPrice .delete:hover {
-  padding-bottom: 0;
-  border-bottom: 1px solid #bffff1;
-}
 .cartSlider .cartContents .cartItem h3 {
   margin-top: 0;
   text-align: left;
@@ -332,17 +345,6 @@ header section h2 {
 }
 .cartSlider .cartContents .cartItem h4 {
   color: white;
-}
-.cartSlider .cartTotal {
-  margin-top: 15px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-.cartSlider .cartTotal .totalPrice {
-  margin-left: 10px;
-  display: flex;
-  align-items: center;
 }
 .cartSlider a {
   margin: auto;
@@ -368,10 +370,37 @@ header section h2 {
   outline: none;
 }
 
+.cartTotal {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.cartTotal h3 {
+  color: white;
+}
+.cartTotal .totalPrice {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.delete {
+  cursor: pointer;
+  margin-left: 8px;
+  height: 18px;
+  width: 18px;
+  padding-bottom: 1px;
+}
+.delete:hover {
+  padding-bottom: 0;
+  border-bottom: 1px solid #bffff1;
+}
+
 .showCart {
   opacity: 1;
   display: block;
-  left: calc(67% - 20px);
+  left: calc(100% - 440px);
   z-index: 1000;
 }
 
@@ -553,6 +582,72 @@ nav ul li .activeLink::after {
   margin-bottom: 10px;
 }
 
+.checkout {
+  display: grid;
+  grid-template-columns: 1fr 440px;
+}
+.checkout .checkoutDetails {
+  box-shadow: 0 0 6px 0 #bffff1;
+  border-radius: 10px;
+  background-color: #6d7275;
+  width: 90%;
+  margin: auto;
+  padding: 10px;
+}
+.checkout .checkoutDetails h2 {
+  color: #2d2d2a;
+}
+.checkout .checkoutDetails .shippingInfo {
+  margin-top: 15px;
+  background-color: #D1D5DE;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+.checkout .checkoutDetails .paymentInfo {
+  background-color: #D1D5DE;
+  border-radius: 10px;
+  padding: 10px;
+}
+.checkout .checkoutCart {
+  height: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: auto;
+  background-color: #2d2d2a;
+  box-shadow: 0 0 6px 0 #bffff1;
+  border-radius: 10px;
+  padding: 10px;
+}
+.checkout .checkoutCart .cartItem {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid white;
+}
+.checkout .checkoutCart .cartItem h3, .checkout .checkoutCart .cartItem h4 {
+  color: white;
+}
+.checkout .checkoutCart .cartItem .cartQtyTitle {
+  display: flex;
+  align-items: center;
+}
+.checkout .checkoutCart .cartItem .cartPrice {
+  display: flex;
+  align-items: center;
+}
+.checkout .checkoutCart .cartItem .cartPrice .gridPrice {
+  margin-top: 0;
+}
+.checkout .checkoutCart .cartItem .cartPrice .gridPrice .symbol {
+  margin-right: 0;
+}
+
+label {
+  font-family: "Montserrat", sans-serif;
+}
+
 button {
   color: black;
   background-color: #fff200;
@@ -565,7 +660,7 @@ button {
   cursor: pointer;
 }
 button:hover {
-  box-shadow: 0 2px 10px 0 black;
+  box-shadow: 0 1px 5px 0 black;
 }
 button:focus {
   outline: none;

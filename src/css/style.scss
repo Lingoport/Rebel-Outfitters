@@ -310,6 +310,29 @@ header {
     }
 }
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.cartQty {
+    background-color : $dkgrey;
+    border: solid 1px $yellow;
+    color: white;
+    border-radius: 5px;
+    padding: 3px;
+    width: 45px;
+    font-family: $bodyFont;
+    font-size: 110%;
+    text-align: center;
+    margin-right: 5px;
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 3px 0 $yellow;
+    }
+}
+
 .cartIcon{
     width: 32px;
     height: 32px;
@@ -323,10 +346,11 @@ header {
 
 .cartSlider {
     position: absolute;
-    width: 33%;
+    width: 420px;
     top: 0;
     left: 110%;
-    transition: left .5s ease;
+    transition: left .3s ease;
+    z-index: 1000;
     //display: none;
     background-color: $dkgrey;
     padding: 10px;
@@ -363,17 +387,7 @@ header {
                         margin-right: 0;
                     }
                 }
-                .delete {
-                    cursor: pointer;
-                    margin-left: 8px;
-                    height: 20px;
-                    width: 20px;
-                    padding-bottom: 1px;
-                    &:hover {
-                        padding-bottom: 0;
-                        border-bottom: 1px solid $blue;
-                    }
-                }
+                
             }
 
             h3 {
@@ -386,17 +400,7 @@ header {
             }
         }
     }
-    .cartTotal {
-        margin-top: 15px;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        .totalPrice {
-            margin-left: 10px;
-            display: flex;
-            align-items: center;
-        }
-    }
+    
     a {
         margin: auto;
         margin-top: 15px;
@@ -423,11 +427,38 @@ header {
     }
 }
 
+.cartTotal {
+    h3{
+        color: white;
+    }
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .totalPrice {
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.delete {
+    cursor: pointer;
+    margin-left: 8px;
+    height: 18px;
+    width: 18px;
+    padding-bottom: 1px;
+    &:hover {
+        padding-bottom: 0;
+        border-bottom: 1px solid $blue;
+    }
+}
+
 .showCart {
     opacity: 1;
     display: block;
     //take padding into accout here
-    left: calc(67% - 20px);
+    left: calc(100% - 440px);
     z-index: 1000;
 }
 
@@ -515,9 +546,6 @@ nav {
     }
 }
 
-main {
-
-}
 //homepage styles
 #homeScreen {
     width: 100%;
@@ -635,6 +663,75 @@ main {
     }
 }
 
+.checkout {
+    display: grid;
+    grid-template-columns: 1fr 440px;
+
+    .checkoutDetails {
+        @include blueShadow();
+        border-radius: 10px;
+        background-color: $ltgrey;
+        width: 90%;
+        margin: auto;
+        padding: 10px;
+        h2 {
+            color: $dkgrey;
+        }
+        .shippingInfo {
+            margin-top: 15px;
+            background-color: $light;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            padding: 10px;
+        }
+        .paymentInfo {
+            background-color: $light;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+    }
+    .checkoutCart {
+        height: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: auto;
+        background-color: $dkgrey;
+        @include blueShadow();
+        border-radius: 10px;
+        padding: 10px;
+        .cartItem {
+            h3, h4 {
+                color: white;
+            }
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 10px;
+            border-bottom: 1px solid white;
+            .cartQtyTitle {
+                display: flex;
+                align-items: center;
+            }
+            .cartPrice {
+                display: flex;
+                align-items: center;
+                .gridPrice {
+                    margin-top: 0;
+                    .symbol {
+                        margin-right: 0;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+label {
+    font-family: $bodyFont
+}
+
 button {
     color: black;
     background-color: $yellow;
@@ -646,7 +743,7 @@ button {
     font-size: 120%;
     cursor: pointer;
     &:hover {
-        box-shadow: 0 2px 10px 0 black;
+        box-shadow: 0 1px 5px 0 black;
     }
     &:focus {
         outline: none;
