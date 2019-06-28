@@ -122,7 +122,22 @@ header {
 .fade {
     transition: opacity .5s ease;
     opacity: 0.5;
-    pointer-events: none;
+    //pointer-events: none;
+}
+.bg {
+    background-color: $dkgrey;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 999;
+}
+
+.overlay {
+    display: inline;
 }
 
 #logo {
@@ -827,6 +842,7 @@ color: white;
 }
 #page_container {
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .welcome {
@@ -857,10 +873,4 @@ color: white;
             margin-right: 10px;
         }
     }
-}
-
-//keep this at the bottom! used to hide content when switching between tabs
-
-[hidden] {
-    display: none;
 }

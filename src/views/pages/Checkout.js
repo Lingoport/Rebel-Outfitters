@@ -10,10 +10,8 @@ let Checkout = {
         //hide cart initially
         var slider = document.querySelector(".cartSlider")
         slider.classList.remove('showCart');
-        var content = document.querySelectorAll('.content');
-        for (let section of content) {
-            section.classList.remove('fade');
-        }
+        var overlayBG = document.querySelector('.bg');
+        overlayBG.classList.remove('overlay');
 
         let view = `
         <section class="checkout">

@@ -57,13 +57,18 @@ let Navbar = {
         return view
     },
     after_render: async () => {
+
         //cart slider functionality
         var cartIcons = document.querySelectorAll(".cartIcon");
         //show/hide the cart when cart icon is clicked
         for(let icon of cartIcons) {
             icon.addEventListener("click", showCart, false);
         }
-        
+
+        var overlayBG = document.querySelector('.bg');
+        overlayBG.addEventListener('click', hideCart, false);
+
+
         var logo = document.querySelector("#logo");
         //redirect to home on logo click
         logo.addEventListener("click", function() {
@@ -93,6 +98,16 @@ let Navbar = {
             }
         }
     }
+}
+
+//function to hide cart (only when it's currently visible)
+var hideCart = e => {
+    console.log('click to hide triggered');
+    var slider = document.querySelector(".cartSlider")
+    var bg = document.querySelector('.bg');
+
+    slider.classList.remove('showCart');
+    bg.classList.remove('overlay');
 }
 
 //function to change locale and reload page

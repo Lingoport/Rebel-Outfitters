@@ -93,7 +93,22 @@ header section h2 {
 .fade {
   transition: opacity 0.5s ease;
   opacity: 0.5;
-  pointer-events: none;
+}
+
+.bg {
+  background-color: #2d2d2a;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 999;
+}
+
+.overlay {
+  display: inline;
 }
 
 #logo {
@@ -739,6 +754,7 @@ p {
 
 #page_container {
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .welcome h3 {
@@ -765,10 +781,6 @@ p {
 }
 #footer_container .logo:last-child {
   margin-right: 10px;
-}
-
-[hidden] {
-  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

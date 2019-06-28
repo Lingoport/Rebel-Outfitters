@@ -83,15 +83,12 @@ var addToCart = async (item) =>  {
 }
 
 //show the cart and fade the other elements
-var showCart = async () => {
+var showCart = () => {
+    console.log('cart toggled');
     var slider = document.querySelector(".cartSlider")
-    var content = document.querySelectorAll('.content');
-
-    console.log("show cart toggled");
+    var overlayBG = document.querySelector('.bg');
+    overlayBG.classList.toggle('overlay');
     slider.classList.toggle('showCart');
-    for (let section of content) {
-        section.classList.toggle('fade');
-    }
 }
 
 export { shoppingCart, addToCart, showCart, router, locale, productList, updateLocale };
