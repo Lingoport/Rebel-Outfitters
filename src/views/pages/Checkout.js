@@ -1,16 +1,35 @@
-import {shoppingCart, showCart} from "../../app.js";
+import {shoppingCart, orderHistory} from "../../app.js";
 
 //neet to add click listeners for updating qty or deleting items from cart
 
+class Order {
+    constructor(total) {
+        this.orderDate = new Date();
+        this.orderNumber = Math.floor(Math.random() * (99999 - 10000) + 10000);
+        this.total = total;
+        this.status = "Processing";
+    }
+    formatDate() {
+        var dd = String(this.orderDate.getDate()).padStart(2, '0');
+        var mm = String(this.orderDate.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = this.orderDate.getFullYear();
+
+        date = mm + '/' + dd + '/' + yyyy;
+        return date;
+    }
+
+}
+
+var total;
 
 let Checkout = {
 
     render: async () => {
-        let total = 0;
+        total = 0;
         //hide cart initially
-        var slider = document.querySelector(".cartSlider")
+        let slider = document.querySelector(".cartSlider")
         slider.classList.remove('showCart');
-        var overlayBG = document.querySelector('.bg');
+        let overlayBG = document.querySelector('.bg');
         overlayBG.classList.remove('overlay');
 
         let view = `
@@ -90,7 +109,16 @@ let Checkout = {
     }
     , after_render: async () => {
 
+        var orderButt = document.querySelector('.orderButt');
+        orderButt.addEventListener('click', placeOrder, false);
+
     }
+}
+
+var placeOrder = () => {
+    let order = new Order(total);
+    orderHistory.push(order);
+    location.href="/#/history";
 }
 
 var commas = (x) => {

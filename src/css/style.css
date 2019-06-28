@@ -184,6 +184,7 @@ header section h2 {
   align-items: center;
   cursor: pointer;
   padding: 5px;
+  margin-bottom: -1px;
 }
 .dropdown .dropbtn #downArrow {
   margin-left: 8px;
@@ -215,12 +216,16 @@ header section h2 {
   color: #fff200;
 }
 .dropdown:hover .dropbtn {
+  background-color: #6d7275;
   position: relative;
-  z-index: 1;
-  box-shadow: 0 2px 4px 0 black;
+  z-index: 500;
+  border-top: 1px solid #bffff1;
+  border-left: 1px solid #bffff1;
+  border-right: 1px solid #bffff1;
   border-radius: 5px 5px 0 0;
 }
 .dropdown:hover .dropdown-content {
+  z-index: 1;
   display: inline-block;
   border: 1px solid #bffff1;
 }

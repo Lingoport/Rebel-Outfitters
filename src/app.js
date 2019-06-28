@@ -6,6 +6,7 @@ import Error404     from './views/pages/Error404.js';
 import ProductShow     from './views/pages/ProductShow.js';
 import Profile     from './views/pages/Profile.js';
 import Checkout     from './views/pages/Checkout.js';
+import OrderHistory     from './views/pages/OrderHistory.js';
 
 
 import Navbar       from './views/components/Navbar.js';
@@ -18,6 +19,9 @@ import Utils        from './services/Utils.js';
 
 //schema: id (int), item (object)
 var shoppingCart = new Map();
+
+var orderHistory = [];
+
 //used to store info about selected locale
 var locale = "EN";
 var updateLocale = (newLocale) => {
@@ -91,7 +95,7 @@ var showCart = () => {
     slider.classList.toggle('showCart');
 }
 
-export { shoppingCart, addToCart, showCart, router, locale, productList, updateLocale };
+export { shoppingCart, addToCart, showCart, router, locale, productList, updateLocale, orderHistory };
 
 // List of supported routes. Any url other than these routes will throw a 404 error
 const routes = {
@@ -101,6 +105,7 @@ const routes = {
     '/vehicles' : Browse,
     '/vehicles/:id' : ProductShow,
     '/profile' :  Profile,
+    '/history' : OrderHistory,
     '/checkout' : Checkout
 };
 

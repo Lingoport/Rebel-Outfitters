@@ -49,6 +49,7 @@ let Browse = {
 
         let articles = grid.querySelectorAll("article");
 
+        //click listener to redirect on product click
         for(let curProduct of articles) {
             //console.log(cur);
             curProduct.addEventListener("click", function() {

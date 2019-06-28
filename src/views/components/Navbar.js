@@ -25,7 +25,7 @@ let Navbar = {
                 </div>
                 <div class="dropdown-content">
                     <a href="/#/profile" class=".profileButt">PROFILE</a>
-                    <a href="/#/profile" class=".historyButt">ORDER HISTORY</a>
+                    <a href="/#/history" class=".historyButt">ORDER HISTORY</a>
                 </div>
             </div>
             <img src="img/cart.svg" class="cartIcon">
