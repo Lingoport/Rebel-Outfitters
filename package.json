@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.1.2",
+    "postcss-cli": "^6.1.2",
     "services": "0.0.3"
   }
 }

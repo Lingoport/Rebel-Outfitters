@@ -40,21 +40,36 @@ let Checkout = {
                 <div class="shippingInfo">
                     <h2>Shipping Info</h2>
                     <div class="form">
-                        <label for="fullName">Full Name</label>
-                        <input type="text" id="fullName" name="name" class="checkoutInput" placeholder="Luke Skywalker">
+                        <div class="formInline">
+                            <div class="formElement">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" class="checkoutInput" placeholder="Luke">
+                            </div>
+                            <div class="formElement">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" class="checkoutInput" placeholder="Skywalker">
+                            </div>
+                        </div>
 
-                        <label for="coordinates">Coordinates</label>
-                        <input type="text" id="coordinates" name="coordinates" class="checkoutInput" placeholder="0,0,0">
-
-                        <label for="sector">Sector</label>
-                        <input type="text" id="sector" name="sector" class="checkoutInput" placeholder="Core">
-
-                        <label for="shipMethod">Shipping Method</label>
-                        <select id="shipMethod" class="checkoutInput">
-                            <option value="lightspeed">Lightspeed</option>
-                            <option value="overnight">Overnight</option>
-                            <option value="standard">Standard</option>
-                        </select>
+                        <div class="formInline">
+                            <div class="formElement">
+                                <label for="coordinates">Coordinates</label>
+                                <input type="text" id="coordinates" name="coordinates" class="checkoutInput" placeholder="0,0,0">
+                            </div>
+                            <div class="formElement">
+                                <label for="sector">Sector</label>
+                                <input type="text" id="sector" name="sector" class="checkoutInput" placeholder="Core">
+                            </div>
+                        </div>
+                        
+                        <div class="formElement">
+                            <label for="shipMethod">Shipping Method</label>
+                            <select id="shipMethod" class="checkoutInput">
+                                <option value="lightspeed">Lightspeed</option>
+                                <option value="overnight">Overnight</option>
+                                <option value="standard">Standard</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
                 <div class="paymentInfo">

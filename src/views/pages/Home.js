@@ -4,18 +4,14 @@ let featuredProducts = [];
 
 let getFeaturedProducts = async () => {
     featuredProducts = [];
+
     let vehicleMap = productList.get('vehicles');
-    let randVehicle =  Math.floor(Math.random() * (vehicleMap.size - 1));
-
     let droidMap = productList.get('droids');
-    let randDroid =  Math.floor(Math.random() * (droidMap.size - 1));
-
-    featuredProducts.push(vehicleMap.get(randVehicle));
-    featuredProducts.push(droidMap.get(randDroid));
-    featuredProducts.push(vehicleMap.get(randVehicle + 1));
-    featuredProducts.push(droidMap.get(randDroid + 1));
-
-    console.log(randVehicle, randDroid);
+   
+    featuredProducts.push(vehicleMap.get(0));
+    featuredProducts.push(droidMap.get(1));
+    featuredProducts.push(vehicleMap.get(2));
+    featuredProducts.push(droidMap.get(3));
 
     console.log(featuredProducts);
 }
@@ -55,7 +51,6 @@ let Home = {
 
         //click listener to redirect on product click
         for(let curProduct of articles) {
-            //console.log(cur);
             curProduct.addEventListener("click", function() {
                 location.href=`/#/${curProduct.classList[0]}s/` + curProduct.id;
             }, false);
