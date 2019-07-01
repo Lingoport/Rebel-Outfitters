@@ -601,7 +601,7 @@ nav {
     margin-top: 15px;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-auto-rows: minmax(250px, auto);
+    grid-auto-rows: 275px;
 
     //individual products within grid
     article {
@@ -714,13 +714,29 @@ nav {
         .form {
             .formElement {
                 margin-top: 10px;
+                
+            }
+            .halfWidth {
+                width: 50%;
+                input {
+                    width: 100%;
+                }
             }
             .formInline {
                 display: flex;
-
-                &:last-child {
-                    margin-left: 10px;
+                .formElement:last-child {
+                    margin-left: 20px;
                 }
+                .name {
+                    width: 40%;
+                    input {
+                        width: 100%;
+                    }
+                }
+                
+            }
+            .margin {
+                margin-left: 20px;
             }
         }
         
@@ -730,15 +746,15 @@ nav {
             border-radius: 10px;
             margin-bottom: 15px;
             padding: 10px;
-            #fullName {
-                width:80%
-            }
+            
+    
         }
         .paymentInfo {
             background-color: $light;
             border-radius: 10px;
             padding: 10px;
         }
+
 
     }
     .checkoutCart {
@@ -820,6 +836,11 @@ button {
     &:focus {
         outline: none;
     }
+}
+
+.orderButt {
+    margin: 0 auto;
+    margin-top: 15px;
 }
 
 //character tag styles

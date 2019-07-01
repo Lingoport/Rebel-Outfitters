@@ -528,7 +528,7 @@ nav ul li .activeLink::after {
   margin-top: 15px;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  grid-auto-rows: minmax(250px, auto);
+  grid-auto-rows: 275px;
 }
 .browseGrid article {
   box-shadow: 0 0 6px 0 #bffff1;
@@ -636,11 +636,26 @@ nav ul li .activeLink::after {
 .checkout .checkoutDetails .form .formElement {
   margin-top: 10px;
 }
+.checkout .checkoutDetails .form .halfWidth {
+  width: 50%;
+}
+.checkout .checkoutDetails .form .halfWidth input {
+  width: 100%;
+}
 .checkout .checkoutDetails .form .formInline {
   display: flex;
 }
-.checkout .checkoutDetails .form .formInline:last-child {
-  margin-left: 10px;
+.checkout .checkoutDetails .form .formInline .formElement:last-child {
+  margin-left: 20px;
+}
+.checkout .checkoutDetails .form .formInline .name {
+  width: 40%;
+}
+.checkout .checkoutDetails .form .formInline .name input {
+  width: 100%;
+}
+.checkout .checkoutDetails .form .margin {
+  margin-left: 20px;
 }
 .checkout .checkoutDetails .shippingInfo {
   margin-top: 15px;
@@ -648,9 +663,6 @@ nav ul li .activeLink::after {
   border-radius: 10px;
   margin-bottom: 15px;
   padding: 10px;
-}
-.checkout .checkoutDetails .shippingInfo #fullName {
-  width: 80%;
 }
 .checkout .checkoutDetails .paymentInfo {
   background-color: #D1D5DE;
@@ -728,6 +740,11 @@ button:hover {
 }
 button:focus {
   outline: none;
+}
+
+.orderButt {
+  margin: 0 auto;
+  margin-top: 15px;
 }
 
 h1 {

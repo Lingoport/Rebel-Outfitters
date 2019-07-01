@@ -5,7 +5,7 @@ import {shoppingCart, orderHistory} from "../../app.js";
 class Order {
     constructor(total) {
         this.orderDate = new Date();
-        this.orderNumber = Math.floor(Math.random() * (99999 - 10000) + 10000);
+        this.orderNumber = Math.floor(Math.random() * (99999999 - 10000000) + 10000);
         this.total = total;
         this.status = "Processing";
     }
@@ -14,7 +14,7 @@ class Order {
         var mm = String(this.orderDate.getMonth() + 1).padStart(2, '0'); //January is 0!
         var yyyy = this.orderDate.getFullYear();
 
-        date = mm + '/' + dd + '/' + yyyy;
+        let date = mm + '/' + dd + '/' + yyyy;
         return date;
     }
 
@@ -41,11 +41,11 @@ let Checkout = {
                     <h2>Shipping Info</h2>
                     <div class="form">
                         <div class="formInline">
-                            <div class="formElement">
+                            <div class="formElement name">
                                 <label for="firstName">First Name</label>
                                 <input type="text" id="firstName" name="firstName" class="checkoutInput" placeholder="Luke">
                             </div>
-                            <div class="formElement">
+                            <div class="formElement name">
                                 <label for="lastName">Last Name</label>
                                 <input type="text" id="lastName" name="lastName" class="checkoutInput" placeholder="Skywalker">
                             </div>
@@ -75,14 +75,25 @@ let Checkout = {
                 <div class="paymentInfo">
                     <h2>Payment</h2>
                     <div class="form">
-                        <label for="account">Imperial Credit Account Number</label>
-                        <input type="text" id="account" name="account" class="checkoutInput">
+                        <div class="formElement halfWidth">
+                            <label for="cardName">Name on Card</label>
+                            <input type="text" id="carName" name="cardName" class="checkoutInput" placeholder="Luke Skywalker">
+                        </div>
                         
-                        <label for="code">Security Code</label>
-                        <input type="text" id="code" name="code" class="checkoutInput">
-                        
-                        <label for="expDate">Expiration Date</label>
-                        <input type="date" id="expDate" name=expDate" class="checkoutInput">
+                        <div class="formInline">
+                            <div class="formElement">
+                                <label for="account">Imperial Credit Number</label>
+                                <input type="text" id="account" name="account" class="checkoutInput" placeholder="1234567-9876-00">
+                            </div>
+                            <div class="formElement margin">
+                                <label for="code">Security Code</label>
+                                <input type="text" id="code" name="code" class="checkoutInput" placeholder="1234">
+                            </div>
+                            <div class="formElement">
+                                <label for="expDate">Expiration Date</label>
+                                <input type="date" id="expDate" name=expDate" class="checkoutInput">
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <button class="orderButt">PLACE ORDER</button>
