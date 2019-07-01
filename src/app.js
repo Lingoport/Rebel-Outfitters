@@ -34,8 +34,9 @@ var productList = new Map();
 productList.set("droids", new Map());
 productList.set("vehicles", new Map());
 
-//function to get droids and push to map
-let getDroidsList = async () => {
+//function to get products and push to map
+let getProductsList = async () => {
+    console.log("fetching products");
     const options = {
        method: 'GET',
        headers: {
@@ -116,7 +117,7 @@ particlesJS.load('particles-js', 'config/particlesjs-config.json', function() {
 
 // The router code. Takes a URL, checks against the list of supported routes and then renders the corresponding content page.
 const router = async () => {
-
+    console.log("DOMContentLoad event called");
     // Lazy load view element:
     const header = null || document.getElementById('header_container');
     const content = null || document.getElementById('page_container');
@@ -131,9 +132,9 @@ const router = async () => {
     footer.innerHTML = await Bottombar.render();
     await Bottombar.after_render();
 
-    //fetch the products if we don't already have them 
+    //grab products from JSON file
     if(productList.get("droids").size == 0 && productList.get("vehicles").size == 0) {
-        await getDroidsList();
+        await getProductsList();
     }
 
     // Get the parsed URl from the addressbar
@@ -154,4 +155,4 @@ const router = async () => {
 window.addEventListener('hashchange', router);
 
 // Listen on page load:
-window.addEventListener('load', router);
+document.addEventListener('DOMContentLoaded', router);
