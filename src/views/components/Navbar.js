@@ -45,10 +45,10 @@ let Navbar = {
                     <img src="img/globe.svg" class="globe">
                 </div>
                 <div class="locale-dropdown-content">
-                    <h3 class="localeOption">EN</h3>
-                    <h3 class="localeOption">SITH</h3>
+                    <h3 class="localeOption">ENGLISH</h3>
+                    <h3 class="localeOption">FRENCH</h3>
+                    <h3 class="localeOption">MANDARIN</h3>
                     <h3 class="localeOption">YODA</h3>
-                    <h3 class="localeOption">GUNGAN</h3>
                 </div>
             </div>
         </div>

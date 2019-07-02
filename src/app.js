@@ -23,7 +23,7 @@ var shoppingCart = new Map();
 var orderHistory = [];
 
 //used to store info about selected locale
-var locale = "EN";
+var locale = "ENGLISH";
 var updateLocale = (newLocale) => {
     locale = newLocale;
     router();

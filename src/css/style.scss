@@ -593,7 +593,7 @@ nav {
 
 .homeGrid {
     margin: auto;
-    width: 95%;
+    width: calc(100% - 100px);
 }
 
 // main browse grid thing
@@ -817,6 +817,27 @@ label {
     &:focus {
         outline: none;
         box-shadow: 0 0 2px 0 $yellow;
+    }
+}
+
+.orderHistory {
+    width: calc(100% - 100px);
+    margin: auto;
+    .orderItem {
+        background-color: $light;
+        @include blueShadow();
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        padding: 10px;
+        margin-top: 10px;
+        justify-content: center;
+        .gridPrice {
+            margin-top: 0;
+        }
+        h3 {
+            display: inline-block;
+        }
     }
 }
 

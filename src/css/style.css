@@ -521,7 +521,7 @@ nav ul li .activeLink::after {
 
 .homeGrid {
   margin: auto;
-  width: 95%;
+  width: calc(100% - 100px);
 }
 
 .browseGrid {
@@ -722,6 +722,27 @@ label {
 .checkoutInput:focus {
   outline: none;
   box-shadow: 0 0 2px 0 #fff200;
+}
+
+.orderHistory {
+  width: calc(100% - 100px);
+  margin: auto;
+}
+.orderHistory .orderItem {
+  background-color: #D1D5DE;
+  box-shadow: 0 0 6px 0 #bffff1;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  padding: 10px;
+  margin-top: 10px;
+  justify-content: center;
+}
+.orderHistory .orderItem .gridPrice {
+  margin-top: 0;
+}
+.orderHistory .orderItem h3 {
+  display: inline-block;
 }
 
 button {

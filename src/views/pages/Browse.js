@@ -2,6 +2,7 @@ import Utils from '../../services/Utils.js'
 import {productList} from "../../app.js";
 
 let type;
+let title;
 
 let Browse = {
     
@@ -13,14 +14,16 @@ let Browse = {
 
         if(type == "droids") {
             productMap = productList.get('droids');
+            title = "Droids";
         }
         else if(type == "vehicles") {
             productMap = productList.get('vehicles');
+            title = "Vehicles";
         }
 
         let view =  /*html*/`
             <section class="browsePage">
-                <h1>All ${type}</h1>
+                <h1>All ${title}</h1>
                 <div class="browseGrid">`;
                 productMap.forEach((product, key) => {
                     /*html*/

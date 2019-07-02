@@ -74,20 +74,20 @@
     "desc": "The 74-Z Speeder Bike is capable of reaching speeds up to and beyond five hundred kilometers per hour, and has a flight ceiling of twenty-five meters. 74-Zs are the military variant of the civilian 74-Y. They are controlled by handlebars located towards the front of the vehicle, and foot pedals slung underneath adjust speed and altitude. The highly maneuverable vehicles are equipped with sensor and communications devices located between the handlebars, including a comlink and a comlink-jamming device. The speeder is equipped with terrain-following sensors that link up with the HUD in the driver's helmet. They are armed with a forward rotating blaster cannon for combat."
 },
 {
-    "type": "",
-    "title": "",
-    "price": 1,
+    "type": "vehicle",
+    "title": "ETA-2 Interceptor",
+    "price": 100000,
     "qty": 0,
-    "imageURL": "../../img/",
-    "desc": ""
+    "imageURL": "../../img/ETA-2.png",
+    "desc": "Measuring 5.47 meters in length, the ETA-2 is a highly maneuverable combat-oriented starfighter and is faster than its Aethersprite predecessor, with twin ion engines providing a maximum acceleration of 5,200G and a max speed of 1,500 kph. The Eta-2 features wings with upper and lower radiator panels, S-foils, that are opened to shed excess heat from the ship's engines. The radiator wings are primarily opened during intense combat. For defense, the ship featured two laser cannons and two ion cannons. Unlike laser cannons, the ship's ion cannons fire bursts of plasma that cause temporary electrical disruptions to their target upon impact."
 },
 {
-    "type": "",
-    "title": "",
-    "price": 1,
+    "type": "droid",
+    "title": "R3-Series Droid",
+    "price": 3450,
     "qty": 0,
-    "imageURL": "../../img/",
-    "desc": ""
+    "imageURL": "../../img/R3.png",
+    "desc": "The R3-series astromech droid features much of the same hardware as its predecessor, the R2 unit, lacking only the earlier droid's extendible video sensor. The R3's chassis is largely cylindrical, appearing as an upright tube with a short, truncated cone at its base. Keeping the droid upright are two narrow legs, each of which terminate in a treaded foot shaped like trapezoidal prisms; a third leg is housed within the droid body and could be extended when necessary to afford greater stability. Capping the unit's design is a hardy, rotating, plastex or transparisteel dome. The astromech is sealed to allow for functionality in the vacuum of space."
 },
 {
     "type": "",

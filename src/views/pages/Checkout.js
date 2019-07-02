@@ -144,6 +144,7 @@ let Checkout = {
 var placeOrder = () => {
     let order = new Order(total);
     orderHistory.push(order);
+    shoppingCart.clear();
     location.href="/#/history";
 }
 

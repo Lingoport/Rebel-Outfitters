@@ -10,7 +10,7 @@ let getFeaturedProducts = async () => {
    
     featuredProducts.push(vehicleMap.get(0));
     featuredProducts.push(droidMap.get(1));
-    featuredProducts.push(vehicleMap.get(2));
+    featuredProducts.push(vehicleMap.get(3));
     featuredProducts.push(droidMap.get(3));
 
     console.log(featuredProducts);
