@@ -76,7 +76,7 @@
 {
     "type": "vehicle",
     "title": "ETA-2 Interceptor",
-    "price": 100000,
+    "price": 200000,
     "qty": 0,
     "imageURL": "../../img/ETA-2.png",
     "desc": "Measuring 5.47 meters in length, the ETA-2 is a highly maneuverable combat-oriented starfighter and is faster than its Aethersprite predecessor, with twin ion engines providing a maximum acceleration of 5,200G and a max speed of 1,500 kph. The Eta-2 features wings with upper and lower radiator panels, S-foils, that are opened to shed excess heat from the ship's engines. The radiator wings are primarily opened during intense combat. For defense, the ship featured two laser cannons and two ion cannons. Unlike laser cannons, the ship's ion cannons fire bursts of plasma that cause temporary electrical disruptions to their target upon impact."
@@ -90,12 +90,12 @@
     "desc": "The R3-series astromech droid features much of the same hardware as its predecessor, the R2 unit, lacking only the earlier droid's extendible video sensor. The R3's chassis is largely cylindrical, appearing as an upright tube with a short, truncated cone at its base. Keeping the droid upright are two narrow legs, each of which terminate in a treaded foot shaped like trapezoidal prisms; a third leg is housed within the droid body and could be extended when necessary to afford greater stability. Capping the unit's design is a hardy, rotating, plastex or transparisteel dome. The astromech is sealed to allow for functionality in the vacuum of space."
 },
 {
-    "type": "",
-    "title": "",
-    "price": 1,
+    "type": "vehicle",
+    "title": "T-70 X-Wing",
+    "price": 150000,
     "qty": 0,
-    "imageURL": "../../img/",
-    "desc": ""
+    "imageURL": "../../img/T70.png",
+    "desc": "The T-70 X-wing starfighter is a cruciform starfighter measuring 12.48 meters in length with a maximum capacity of a single pilot and bottom-loaded astromech droid, which fits into a socket and can be variably configured for different models. If needed, the droid can fly the starfighter without the aid of a pilot, and can even do so remotely. The vessel's targeting computer, flight controls and other essential piloting instruments are located inside an armored cockpit module, under which a removable liquid-cooled flight computer further aids the pilot in ship-based operations. Access panels for computer access and storage exist inside the 'nose' of the vessel, along with an auxiliary generator and storage area typically used for stashing survival gear. A small sensor window marks the location of the ships primary sensor array at the very tip of the nosecone, located behind an emergency beacon. Behind the pilot, a built-in life support system allows the occupant to breathe in an oxygenated atmosphere."
 },
 {
     "type": "",

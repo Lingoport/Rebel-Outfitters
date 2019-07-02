@@ -2,7 +2,7 @@ let Bottombar = {
     render: async () => {
         let view =  /*html*/`
             <div>
-                <img src="../../img/github_logo.png" class="logo">
+            <a href="https://github.com/Lingoport/demo-app-spa"><img src="../../img/github_logo.png" class="logo"></a>
             </div>
             <div>
                 <img src="../../img/lingoport_logo.png" class="logo">
