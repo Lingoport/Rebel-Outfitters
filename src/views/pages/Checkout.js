@@ -1,24 +1,8 @@
 import {shoppingCart, orderHistory} from "../../app.js";
 
+import {Order} from "../classes/Order.js";
+
 //neet to add click listeners for updating qty or deleting items from cart
-
-class Order {
-    constructor(total) {
-        this.orderDate = new Date();
-        this.orderNumber = Math.floor(Math.random() * (99999999 - 10000000) + 10000);
-        this.total = total;
-        this.status = "Processing";
-    }
-    formatDate() {
-        var dd = String(this.orderDate.getDate()).padStart(2, '0');
-        var mm = String(this.orderDate.getMonth() + 1).padStart(2, '0'); //January is 0!
-        var yyyy = this.orderDate.getFullYear();
-
-        let date = mm + '/' + dd + '/' + yyyy;
-        return date;
-    }
-
-}
 
 var total;
 
@@ -142,8 +126,8 @@ let Checkout = {
 }
 
 var placeOrder = () => {
-    let order = new Order(total);
-    orderHistory.push(order);
+    let order = new Order(new Date(), total, "Processing");
+    orderHistory.unshift(order);
     shoppingCart.clear();
     location.href="/#/history";
 }
@@ -152,4 +136,4 @@ var commas = (x) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-export default Checkout;
+export { Checkout };

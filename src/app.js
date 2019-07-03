@@ -4,14 +4,15 @@ import Home         from './views/pages/Home.js';
 import {Browse}        from './views/pages/Browse.js';
 import Error404     from './views/pages/Error404.js';
 import ProductShow     from './views/pages/ProductShow.js';
-import Profile     from './views/pages/Profile.js';
-import Checkout     from './views/pages/Checkout.js';
+import {Checkout}     from './views/pages/Checkout.js';
 import OrderHistory     from './views/pages/OrderHistory.js';
 
 
 import Navbar       from './views/components/Navbar.js';
 import Bottombar    from './views/components/Bottombar.js';
 import Cart from    './views/components/Cart.js';
+
+import {Order} from './views/classes/Order.js';
 
 import Utils        from './services/Utils.js';
 
@@ -96,6 +97,14 @@ var showCart = () => {
     slider.classList.toggle('showCart');
 }
 
+//adds some dummy orders to the history on startup
+let dummyOrders = () => {
+    let order1 = new Order(new Date('May 13, 2019 03:24:00'), 68500, "Delivered");
+    let order2 = new Order(new Date('July 1, 2019 03:24:00'), 68500, "Shipped");
+    orderHistory.push(order2);
+    orderHistory.push(order1);
+}
+
 export { shoppingCart, addToCart, showCart, router, locale, productList, updateLocale, orderHistory };
 
 // List of supported routes. Any url other than these routes will throw a 404 error
@@ -105,7 +114,6 @@ const routes = {
     '/droids/:id' : ProductShow,
     '/vehicles' : Browse,
     '/vehicles/:id' : ProductShow,
-    '/profile' :  Profile,
     '/history' : OrderHistory,
     '/checkout' : Checkout
 };
@@ -137,6 +145,9 @@ const router = async () => {
         await getProductsList();
     }
 
+    if(orderHistory.length == 0) {
+        dummyOrders();
+    }
     // Get the parsed URl from the addressbar
     let request = Utils.parseRequestURL();
 

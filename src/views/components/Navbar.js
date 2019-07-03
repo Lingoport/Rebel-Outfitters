@@ -24,7 +24,6 @@ let Navbar = {
                     <img src="img/arrow-down.svg" id="downArrow">
                 </div>
                 <div class="dropdown-content">
-                    <a href="/#/profile" class=".profileButt">PROFILE</a>
                     <a href="/#/history" class=".historyButt">ORDER HISTORY</a>
                 </div>
             </div>
