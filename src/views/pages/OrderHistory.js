@@ -6,7 +6,14 @@ let OrderHistory = {
 
         let view = `
         <section class="orderHistory">
-            <h1>Order History</h1>`;
+            <h1>Order History</h1>
+            <div class="headings">
+                <h3>Date</h3>
+                <h3>Order Number</h3>
+                <h3>Total</h3>
+                <h3>Status</h3>
+            </div>`;
+            
             orderHistory.forEach((order, key) => {
                 view += `
                 <article class="orderItem">

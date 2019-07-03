@@ -5,7 +5,7 @@ class Order {
         this.orderDate = newDate;
         this.orderNumber = Math.floor(Math.random() * (99999999 - 10000000) + 10000);
         this.total = total;
-        this.status = "Processing";
+        this.status = newStatus;
     }
     formatDate() {
         var dd = String(this.orderDate.getDate()).padStart(2, '0');

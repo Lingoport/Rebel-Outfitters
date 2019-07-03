@@ -129,6 +129,7 @@ var placeOrder = () => {
     let order = new Order(new Date(), total, "Processing");
     orderHistory.unshift(order);
     shoppingCart.clear();
+    window.alert('Order placed successfully!');
     location.href="/#/history";
 }
 

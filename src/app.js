@@ -100,7 +100,7 @@ var showCart = () => {
 //adds some dummy orders to the history on startup
 let dummyOrders = () => {
     let order1 = new Order(new Date('May 13, 2019 03:24:00'), 68500, "Delivered");
-    let order2 = new Order(new Date('July 1, 2019 03:24:00'), 68500, "Shipped");
+    let order2 = new Order(new Date('July 1, 2019 03:24:00'), 900, "Shipped");
     orderHistory.push(order2);
     orderHistory.push(order1);
 }

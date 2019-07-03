@@ -833,14 +833,28 @@ label {
 .orderHistory {
     width: calc(100% - 100px);
     margin: auto;
+    @include blueShadow();
+    background-color: $ltgrey;
+    border-radius: 10px;
+    padding: 10px;
+    
+    .headings {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        margin-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        h3 {
+            color: $blue;
+        }
+    }
     .orderItem {
         background-color: $light;
-        @include blueShadow();
         border-radius: 10px;
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
         padding: 10px;
-        margin-top: 10px;
+        margin-top: 5px;
         justify-content: center;
         .gridPrice {
             margin-top: 0;
