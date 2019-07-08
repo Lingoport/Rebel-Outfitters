@@ -37,20 +37,6 @@ let Navbar = {
             <li><a href="/#/droids" class="navLink" id="droids">DROIDS</a></li>
             <li><a href="/#/vehicles" class="navLink" id="vehicles">VEHICLES</a></li>
         </ul>
-        <div class="right">
-            <div class="locale-dropdown">
-                <div class="locale-dropbtn">
-                    <h3>${locale}</h3>
-                    <img src="img/globe.svg" class="globe">
-                </div>
-                <div class="locale-dropdown-content">
-                    <h3 class="localeOption">ENGLISH</h3>
-                    <h3 class="localeOption">FRENCH</h3>
-                    <h3 class="localeOption">MANDARIN</h3>
-                    <h3 class="localeOption">YODA</h3>
-                </div>
-            </div>
-        </div>
     </nav>
     `
         return view
@@ -74,11 +60,7 @@ let Navbar = {
             location.href="/";
         }, false);
 
-        //change locale
-        var localeOptions = document.querySelectorAll(".localeOption");
-        for(let option of localeOptions) {
-            option.addEventListener('click', changeLocale, false);
-        }
+
         
 
         //underline active link
