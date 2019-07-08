@@ -62,6 +62,7 @@ let Cart = {
     }
 }
 
+//handle changes in qty text input
 var updateQty = (e) => {
     if(e.srcElement.value != "") {
         let changedQtyKey = e.srcElement.id;
@@ -77,6 +78,7 @@ var updateQty = (e) => {
     }
 }
 
+//remove a single item by clicking on trash can icon
 var deleteItem = (e) => {
     console.log(e);
     var deleteKey = e.srcElement.id;

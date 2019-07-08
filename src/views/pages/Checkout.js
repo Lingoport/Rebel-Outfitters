@@ -27,11 +27,11 @@ let Checkout = {
                         <div class="formInline">
                             <div class="formElement name">
                                 <label for="firstName">First Name</label>
-                                <input type="text" id="firstName" name="firstName" class="checkoutInput" placeholder="Luke">
+                                <input type="text" id="firstName" name="firstName" class="checkoutInput" placeholder="First">
                             </div>
                             <div class="formElement name">
                                 <label for="lastName">Last Name</label>
-                                <input type="text" id="lastName" name="lastName" class="checkoutInput" placeholder="Skywalker">
+                                <input type="text" id="lastName" name="lastName" class="checkoutInput" placeholder="Last">
                             </div>
                         </div>
 
@@ -42,7 +42,7 @@ let Checkout = {
                             </div>
                             <div class="formElement">
                                 <label for="sector">Sector</label>
-                                <input type="text" id="sector" name="sector" class="checkoutInput" placeholder="Core">
+                                <input type="text" id="sector" name="sector" class="checkoutInput" placeholder="Sector">
                             </div>
                         </div>
                         
@@ -61,7 +61,7 @@ let Checkout = {
                     <div class="form">
                         <div class="formElement halfWidth">
                             <label for="cardName">Name on Card</label>
-                            <input type="text" id="carName" name="cardName" class="checkoutInput" placeholder="Luke Skywalker">
+                            <input type="text" id="carName" name="cardName" class="checkoutInput" placeholder="First Last">
                         </div>
                         
                         <div class="formInline">
@@ -125,6 +125,8 @@ let Checkout = {
     }
 }
 
+//handle order placement
+//NEED TO CLEAR ALL THE QUANTITIES
 var placeOrder = () => {
     let order = new Order(new Date(), total, "Processing");
     orderHistory.unshift(order);

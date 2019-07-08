@@ -1,17 +1,22 @@
 let Bottombar = {
     render: async () => {
         let view =  /*html*/`
-            <div>
-            <a href="https://github.com/Lingoport/demo-app-spa" target="_blank"><img src="../../img/github_logo.png" class="logo"></a>
-            </div>
-            <div>
-                <img src="../../img/lingoport_logo.png" class="logo">
-            </div>
+            <img src="../../img/ham.svg" class="hamTrigger">
         `
         return view
     },
-    after_render: async () => { }
+    after_render: async () => {
+        let hamTrigger = document.querySelector('.hamTrigger');
+        hamTrigger.addEventListener('click', showHam, false);
+     }
 
+}
+
+var showHam = () => {
+    let hamSlider = document.querySelector(".hamSlider")
+    let overlayBG = document.querySelector('.bg');
+    overlayBG.classList.toggle('overlay');
+    hamSlider.classList.toggle('showHam');
 }
 
 export default Bottombar;

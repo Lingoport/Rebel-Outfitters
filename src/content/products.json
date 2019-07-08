@@ -106,11 +106,11 @@
     "desc": "Affectionately known as a \"wishbone\" to Rebel Alliance and New Republic pilots, the Y-wing starfighter is deployed as a fighter-bomber, designed to fight its way to its objective, deliver its payload of high explosives, and fight its way out again. Its weaponry includes two laser cannons, two ion cannons, and two proton torpedo launchers. An astromech droid, such as an R2 unit, can be plugged into a socket behind the cockpit to act as a co-pilot and manage the ship's various systems."
 },
 {
-    "type": "",
-    "title": "",
-    "price": 1,
+    "type": "droid",
+    "title": "Super Tactical Droid",
+    "price": 4999,
     "qty": 0,
-    "imageURL": "../../img/",
+    "imageURL": "../../img/Super_Tactical.png",
     "desc": ""
 },
 {

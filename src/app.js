@@ -11,6 +11,7 @@ import OrderHistory     from './views/pages/OrderHistory.js';
 import Navbar       from './views/components/Navbar.js';
 import Bottombar    from './views/components/Bottombar.js';
 import Cart from    './views/components/Cart.js';
+import {Hamburger} from './views/components/Hamburger.js';
 
 import {Order} from './views/classes/Order.js';
 
@@ -130,11 +131,14 @@ const router = async () => {
     const header = null || document.getElementById('header_container');
     const content = null || document.getElementById('page_container');
     const footer = null || document.getElementById('footer_container');
-    const cart = null || document.querySelector('.cartSlider')
+    const cart = null || document.querySelector('.cartSlider');
+    const ham = null || document.querySelector('.hamSlider');
     
     // Render the Header, footer, and empty cart of the page
     cart.innerHTML = await Cart.render();
     await Cart.after_render();
+    ham.innerHTML = await Hamburger.render();
+    await Hamburger.after_render();
     header.innerHTML = await Navbar.render();
     await Navbar.after_render();
     footer.innerHTML = await Bottombar.render();
