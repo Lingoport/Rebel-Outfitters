@@ -130,6 +130,10 @@ let Checkout = {
 var placeOrder = () => {
     let order = new Order(new Date(), total, "Processing");
     orderHistory.unshift(order);
+    //zero out the qty for each item before removing it
+    shoppingCart.forEach((product, key) => {
+        product.qty = 0;
+    });
     shoppingCart.clear();
     window.alert('Order placed successfully!');
     location.href="/#/history";

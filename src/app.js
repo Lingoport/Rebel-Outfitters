@@ -25,9 +25,10 @@ var shoppingCart = new Map();
 var orderHistory = [];
 
 //used to store info about selected locale
-var locale = "ENGLISH";
+var locale = "en";
 var updateLocale = (newLocale) => {
     locale = newLocale;
+    console.log("Locale changed to: " + locale);
     router();
 }
 
@@ -38,7 +39,6 @@ productList.set("vehicles", new Map());
 
 //function to get products and push to map
 let getProductsList = async () => {
-    console.log("fetching products");
     const options = {
        method: 'GET',
        headers: {
@@ -61,10 +61,8 @@ let getProductsList = async () => {
            }
        }
        
-       //THIS IS JUSt FOr DEV
+       //THIS IS JUSt FOr DEV of shopping cart
        //addToCart(droidMap.get(0));
-
-       console.log(productList);
 
    } catch (err) {
        console.log('Error getting products', err)
@@ -74,13 +72,11 @@ let getProductsList = async () => {
 //function for anytime an object is added to cart
 var addToCart = async (item) =>  {
     const cart = null || document.querySelector('.cartSlider');
-    console.log(item);
     //if cart is empty then set the value of the first key (0) to our new item
     if(!shoppingCart.has(item.title)) {
         shoppingCart.set(item.title, item);
     }
 
-    console.log(shoppingCart);
     //re-render the cart and navbar (for click listener)
     cart.innerHTML = await Cart.render();
     await Cart.after_render();
@@ -91,7 +87,6 @@ var addToCart = async (item) =>  {
 
 //show the cart and fade the other elements
 var showCart = () => {
-    console.log('cart toggled');
     var slider = document.querySelector(".cartSlider")
     var overlayBG = document.querySelector('.bg');
     overlayBG.classList.toggle('overlay');
@@ -121,12 +116,11 @@ const routes = {
 
 //load background
 particlesJS.load('particles-js', 'config/particlesjs-config.json', function() {
-    console.log('callback - particles.js config loaded');
+    //callback
 });
 
 // The router code. Takes a URL, checks against the list of supported routes and then renders the corresponding content page.
 const router = async () => {
-    console.log("DOMContentLoad event called");
     // Lazy load view element:
     const header = null || document.getElementById('header_container');
     const content = null || document.getElementById('page_container');

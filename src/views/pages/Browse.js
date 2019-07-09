@@ -54,7 +54,6 @@ let Browse = {
 
         //click listener to redirect on product click
         for(let curProduct of articles) {
-            //console.log(cur);
             curProduct.addEventListener("click", function() {
                 location.href=`/#/${type}/` + curProduct.id;
             }, false);

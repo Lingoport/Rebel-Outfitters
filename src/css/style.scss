@@ -964,7 +964,7 @@ color: white;
 
 .hamSlider {
     padding: 10px;
-    background-color: rgba(255,255,255,.9);
+    background-color: rgba(255,255,255,.95);
     height: 100%;
     width: 400px;
     position: fixed;
@@ -977,28 +977,51 @@ color: white;
     flex-direction: column;
     h3 {
         display: inline-block;
+        padding-right: 5px;
+    }
+    div {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        
+        a {
+            color: white;
+            text-decoration:none;
+        }
+    }
+    .spread {
+        margin-top: 15px;
+        justify-content: space-around;
+    }
+    .start {
+        justify-content: flex-start;
     }
     select {
         background-color: $lingoGreen;
         color: white;
-        padding: 5px;
+        padding: 3px;
         border-radius: 5px;
         font-family: $linkFont;
+        font-size: 105%;
+        border: 1px solid $lingoPurple;
         &:focus {
             outline: none;
         }
         &:hover {
             background-color: $lingoPurple;
+            border: 1px solid $lingoGreen;
         }
     }
-    a {
+    .outsideLink {
+        //display: block;
         background-color: $lingoGreen;
         color: white;
         text-decoration: none;
         font-family: $linkFont;
-        padding: 5px;
+        font-size:  110%;
+        transition: background-color .1s ease;
+        padding: 8px;
         border-radius: 5px;
-        width: auto;
         &:hover {
             background-color: $lingoPurple;
         }
@@ -1006,9 +1029,22 @@ color: white;
     }
 }
 
+.block {
+    align-self: center;
+    a {
+        padding-left: 5px;
+    }
+}
+
+.githubLink {
+    margin-top: 15px;
+}
+
 .lingoLogo {
     //margin: auto;
     background: none;
+    align-self: center;
+    margin-bottom: 10px;
 }
 
 .logoThumb {

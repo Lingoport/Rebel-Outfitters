@@ -860,7 +860,7 @@ p {
 
 .hamSlider {
   padding: 10px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.95);
   height: 100%;
   width: 400px;
   position: fixed;
@@ -874,35 +874,69 @@ p {
 }
 .hamSlider h3 {
   display: inline-block;
+  padding-right: 5px;
+}
+.hamSlider div {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+.hamSlider div a {
+  color: white;
+  text-decoration: none;
+}
+.hamSlider .spread {
+  margin-top: 15px;
+  justify-content: space-around;
+}
+.hamSlider .start {
+  justify-content: flex-start;
 }
 .hamSlider select {
   background-color: #a6c740;
   color: white;
-  padding: 5px;
+  padding: 3px;
   border-radius: 5px;
   font-family: "Space Mono", monospace;
+  font-size: 105%;
+  border: 1px solid #27235e;
 }
 .hamSlider select:focus {
   outline: none;
 }
 .hamSlider select:hover {
   background-color: #27235e;
+  border: 1px solid #a6c740;
 }
-.hamSlider a {
+.hamSlider .outsideLink {
   background-color: #a6c740;
   color: white;
   text-decoration: none;
   font-family: "Space Mono", monospace;
-  padding: 5px;
+  font-size: 110%;
+  transition: background-color 0.1s ease;
+  padding: 8px;
   border-radius: 5px;
-  width: auto;
 }
-.hamSlider a:hover {
+.hamSlider .outsideLink:hover {
   background-color: #27235e;
+}
+
+.block {
+  align-self: center;
+}
+.block a {
+  padding-left: 5px;
+}
+
+.githubLink {
+  margin-top: 15px;
 }
 
 .lingoLogo {
   background: none;
+  align-self: center;
+  margin-bottom: 10px;
 }
 
 .logoThumb {

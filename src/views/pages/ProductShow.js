@@ -16,7 +16,6 @@ let ProductShow = {
         let productMap = productList.get(type);
         //get the correct product from the product Map based on ID and type
         product = productMap.get(productID);
-        console.log(product);
         //droid = droidView;
         return /*html*/`
             <section class="productShow">
@@ -57,7 +56,6 @@ var getQtyandAddToCart = () => {
      let qtySel = document.querySelector(".qtyDrop");
      let qty = parseInt(qtySel.options[qtySel.selectedIndex].value)
      product.qty += qty;
-     console.log(`adding product with droid.qty: ${product.qty} and qty: ${qty}`);
      //pass item to cart
      addToCart(product);
 

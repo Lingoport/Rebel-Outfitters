@@ -1,5 +1,5 @@
 import Utils from "../../services/Utils.js";
-import { showCart, locale, updateLocale } from "../../app.js";
+import { showCart} from "../../app.js";
 
 let Navbar = {
     render: async () => {
@@ -91,10 +91,6 @@ var hideCart = e => {
     bg.classList.remove('overlay');
 }
 
-//function to change locale and reload page
-var changeLocale = (e) => {
-    let newLocale = e.srcElement.innerText;
-    updateLocale(newLocale);
-}
+
 
 export default Navbar;
