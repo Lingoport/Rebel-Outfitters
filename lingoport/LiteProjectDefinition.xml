@@ -26,7 +26,7 @@
     <scan>
       <scan-name>JS RS</scan-name>
       <ruleset-name>JS Rule Set</ruleset-name>
-      <ruleset-owner>olibouban@lingoport.com</ruleset-owner>
+      <ruleset-owner>demo@lingoport.com</ruleset-owner>
       <use-machine-learning>true</use-machine-learning>
       <encoding>systemDefault</encoding>
       <checks>
