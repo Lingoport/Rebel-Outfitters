@@ -42,14 +42,6 @@
     "desc": "Several new features have been added to the original Sphyrna structure, including two extra modules mounted to the port and starboard of the craft, six escape pods in place of the cargo bay, and a fourth sublight drive mounted on top of the primary three, giving it enough power to single-handedly move a disabled Star Destroyer. 315 meters in length with a maximum acceleration of 900 kilometers per hour. Equipped with a hyper drive system."
 },
 {
-    "type": "vehicle",
-    "title": "VCX-100 Freighter",
-    "price": 700000,
-    "qty": 0,
-    "imageURL": "../../img/VCX-100.png",
-    "desc": "The VCX-100 has sleeping quarters and even a galley. Its armament is comprised of a dorsal turret and a frontal-turret, the latter being controlled by a gunner in its seat or from the cockpit. The cargo bay and main entrance ramp of the VCX-100 are located in the front of the freighter, below the forward-turret. VCX-100s also has a slot in between its main engines, into which a VCX-series auxiliary starfighter can dock. The VCX-100 is also outfitted with a magnetic cargo clamp on its ventral plating, capable of holding several bulk containers. Max speed of 1, 025 killometers per hour."
-},
-{
     "type": "droid",
     "title": "G2 Repair",
     "price": 5210,
