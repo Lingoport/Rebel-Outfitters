@@ -17,6 +17,8 @@ import {Order} from './views/classes/Order.js';
 
 import Utils        from './services/Utils.js';
 
+import products from './content/products.js';
+
 //global variables//
 
 //schema: id (int), item (object)
@@ -37,8 +39,24 @@ var productList = new Map();
 productList.set("droids", new Map());
 productList.set("vehicles", new Map());
 
-//function to get products and push to map
-let getProductsList = async () => {
+//functions to get products and push to map
+let getProductsList = async() => {
+    let droidMap = productList.get("droids");
+    let vehicleMap = productList.get("vehicles");
+    for(let item of products) {
+        //loop through parsed json and add to either droid Map or vehicle Map
+        if(item.type == "droid") {
+            droidMap.set(droidMap.size, item);
+        }
+        else if(item.type == "vehicle") {
+            vehicleMap.set(vehicleMap.size, item);
+        }
+    }
+}
+
+
+//this is for the json file
+/*let getProductsList = async () => {
     const options = {
        method: 'GET',
        headers: {
@@ -67,7 +85,7 @@ let getProductsList = async () => {
    } catch (err) {
        console.log('Error getting products', err)
    }
-}
+}*/
 
 //function for anytime an object is added to cart
 var addToCart = async (item) =>  {
