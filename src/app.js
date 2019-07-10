@@ -27,7 +27,7 @@ var shoppingCart = new Map();
 var orderHistory = [];
 
 //used to store info about selected locale
-var locale = "en";
+var locale = "en-us";
 var updateLocale = (newLocale) => {
     locale = newLocale;
     console.log("Locale changed to: " + locale);

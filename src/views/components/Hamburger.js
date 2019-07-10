@@ -11,32 +11,32 @@ let Hamburger = {
         
             <a target="_blank" href="https://lingoport.com/" class="lingoLogo"><img src="../../img/lingoport_logo.png" class="lingoLogo"></a>
             <div class="start">
-                <h3>Demo Version: </h3>
-                <select id="version">
+                <h3>Version: </h3>
+                <select id="version" class="hamDrop">
                     <option value="bad">Non-i18n Compliant</option>
                     <option value="good">I18n Compliant</option>
                 </select>
             </div>
             <div class="start">
                 <h3>Locale: </h3>
-                <select id="locale">
-                    <option value="en">English</option>
-                    <option value="fr">French</option>
-                    <option value="ma">Mandarin</option>
+                <select id="locale" class="hamDrop">
+                    <option value="en-us">English - United States</option>
+                    <option value="fr-fr">French - France</option>
+                    <option value="zh-cn">Chinese - China</option>
                     <option value="yo">Yoda</option>
                     <option value="si">Sith</option>
                 </select>
             </div>
             <div class="githubLink outsideLink block">
-               
+            <a target="_blank" href="https://github.com/Lingoport/demo-app-spa">
                     <img src="../../img/github_logo.png" class="logoThumb">
-                    <a target="_blank" href="https://github.com/Lingoport/demo-app-spa">View Source</a>
+                    View Source</a>
                 
             </div>
             <div class="dashLink outsideLink block">
-                
+            <a target="_blank" href="" class="inline">
                     <img src="../../img/lingoport_thumb.png" class="logoThumb">
-                    <a target="_blank" href="" class="inline">View Lingoport Dashboard</a>
+                    View Lingoport Dashboard</a>
                 
             </div>
             <div class="spread">
@@ -73,6 +73,7 @@ var hideHam = e => {
 //function to change locale and reload page
 var changeLocale = (e) => {
     let newLocale = drop.value;
+    hideHam();
     updateLocale(newLocale);
 }
 

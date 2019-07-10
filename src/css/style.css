@@ -781,7 +781,7 @@ p {
 }
 
 .hamSlider {
-  padding: 10px;
+  padding: 15px;
   background-color: rgba(255, 255, 255, 0.95);
   height: 100%;
   width: 400px;
@@ -806,13 +806,27 @@ p {
 .hamSlider div a {
   color: white;
   text-decoration: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .hamSlider .spread {
   margin-top: 15px;
   justify-content: space-around;
 }
+.hamSlider .spread a:first-child {
+  margin-right: 5px;
+}
+.hamSlider .spread a:last-child {
+  margin-left: 5px;
+}
 .hamSlider .start {
   justify-content: flex-start;
+  align-items: center;
+}
+.hamSlider .start .hamDrop {
+  flex-grow: 2;
 }
 .hamSlider select {
   background-color: #a6c740;
@@ -845,7 +859,8 @@ p {
 }
 
 .block {
-  align-self: center;
+  display: flex;
+  align-items: center;
 }
 .block a {
   padding-left: 5px;
@@ -864,10 +879,11 @@ p {
 .logoThumb {
   width: 25px;
   height: 25px;
+  margin-right: 5px;
 }
 
 .showHam {
-  left: calc(100% - 400px);
+  left: calc(100% - 430px);
   z-index: 1000;
 }
 

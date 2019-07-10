@@ -47,7 +47,7 @@ let ProductShow = {
         const addButt = document.querySelector(".addToCart");
 
         //there's a bug where adding same item with different
-        addButt.addEventListener("click", getQtyandAddToCart, false); //add callback for success message or something?s
+        addButt.addEventListener("click", getQtyandAddToCart, false);
     }
 }
 

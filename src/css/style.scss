@@ -871,7 +871,7 @@ color: white;
 }
 
 .hamSlider {
-    padding: 10px;
+    padding: 15px;
     background-color: rgba(255,255,255,.95);
     height: 100%;
     width: 400px;
@@ -895,14 +895,30 @@ color: white;
         a {
             color: white;
             text-decoration:none;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     }
     .spread {
         margin-top: 15px;
         justify-content: space-around;
+        a{
+            &:first-child {
+                margin-right: 5px;
+            }
+            &:last-child {
+                margin-left: 5px;
+            }
+        }
     }
     .start {
         justify-content: flex-start;
+        align-items: center;
+        .hamDrop {
+            flex-grow: 2;
+        }
     }
     select {
         background-color: $lingoGreen;
@@ -938,7 +954,8 @@ color: white;
 }
 
 .block {
-    align-self: center;
+    display: flex;
+    align-items: center;
     a {
         padding-left: 5px;
     }
@@ -958,9 +975,10 @@ color: white;
 .logoThumb {
     width: 25px;
     height: 25px;
+    margin-right: 5px;
 }
 
 .showHam {
-    left: calc(100% - 400px);
+    left: calc(100% - 430px);
     z-index: 1000;
 }
