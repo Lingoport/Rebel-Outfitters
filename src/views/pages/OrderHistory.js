@@ -1,4 +1,4 @@
-import {shoppingCart, orderHistory} from "../../app.js";
+import {shoppingCart, orderHistory, formatCurrencyWithCommas} from "../../app.js";
 
 let OrderHistory = {
 
@@ -21,7 +21,7 @@ let OrderHistory = {
                     <h3>${order.orderNumber}</h3>
                     <div class="gridPrice">
                         <img src="../../img/bSymbol.svg" class="symbol">
-                        <h3>${numberWithCommas(order.total)}</h3>
+                        <h3>${formatCurrencyWithCommas(order.total)}</h3>
                     </div>
                     <h3>${order.status}</h3>
                 </article>`
@@ -34,10 +34,6 @@ let OrderHistory = {
     , after_render: async () => {
 
     }
-}
-
-var numberWithCommas = (x) => {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 export default OrderHistory;

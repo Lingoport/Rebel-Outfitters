@@ -19,29 +19,32 @@ let Home = {
 
         await getFeaturedProducts();
 
-        let view =  /*html*/`
-            <section class="welcome">
-                <h1 class="center">Welcome to Rebel Outfitters!</h1>
-                <h3 class="center white">We provide everything you need to take on the Empire (and win).</h3>
-            </section>
-            <div class="browseGrid homeGrid">`;
-            featuredProducts.forEach((product, key) => {
-                view += `<article id="${key}" class="${product.type}">
-                <img src="${product.imageURL}" class="gridImage">
-                <div class="gridDes">
-                    <h3>${product.title}</h3>
-                    <div class="gridPrice">
-                        <img src="../../img/bSymbol.svg" class="symbol">
-                        <h4>${formatCurrencyWithCommas(product.price)}</h4>
-                    </div>
-                </div>
-            </article>
-            `;
-            });
-            
+        //html markup for welcome messages
+        let view = `
+                    <section class="welcome">
+                        <h1 class="center">Welcome to Rebel Outfitters!</h1>
+                        <h3 class="center white">We provide everything you need to take on the Empire (and win).</h3>
+                    </section>
+                    <div class="browseGrid homeGrid">`;
+
+        //create a box to display each of the 4 featured products
+        featuredProducts.forEach((product, key) => {
             view += `
-            </div>
-        `;
+                    <article id="${key}" class="${product.type}">
+                        <img src="${product.imageURL}" class="gridImage">
+                        <div class="gridDes">
+                            <h3>${product.title}</h3>
+                            <div class="gridPrice">
+                                <img src="../../img/bSymbol.svg" class="symbol">
+                                <h4>${formatCurrencyWithCommas(product.price)}</h4>
+                            </div>
+                        </div>
+                    </article>`;
+        });
+            
+        view += "</div>";
+
+        //return generated markup
         return view
     }
     , after_render: async () => {
