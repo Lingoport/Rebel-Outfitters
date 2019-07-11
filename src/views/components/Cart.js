@@ -41,7 +41,7 @@ let Cart = {
                                 </div>
                                 <img src="img/delete.svg" class="delete" id="${key}" alt="${deleteAlt}">
                             </div>
-                        </div>`
+                        </div>`;
                     });
                     view += `
                 </div>
