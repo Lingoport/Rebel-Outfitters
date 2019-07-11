@@ -1,41 +1,53 @@
 import Utils from "../../services/Utils.js";
 import { showCart} from "../../app.js";
 
+//strings to hold all text used within HTML template literal
+let searchPlaceholder = "What are you looking for?";
+let searchButtonLabel = "search products";
+let logoAlt = "Rebel Outfitters Logo";
+let searchIconAlt = "search icon";
+let greetingText = "Hi, Han";
+let historyLink = "ORDER HISTORY";
+let arrowAlt = "Drop Down Arrow";
+let cartAlt = "Show cart";
+let navLinksText = ["HOME", "DROIDS", "VEHICLES"];
+
 let Navbar = {
     render: async () => {
-        let view =  /*html*/
+        //HTML Markup for nav bar (contains no actual text)
+        let view =
         `<header>
         <!-- logo, search bar, local, profile drop down -->
         <section>
-            <img src="img/logo.svg" id="logo">
+            <img src="img/logo.svg" id="logo" alt="${logoAlt}">
         </section>
         <section id="search">
             <div id="bar">
-                <input type="text" class="searchTerm" placeholder="What are you looking for?">
-                <button type="submit" class="searchButton">
-                    <img src="img/search.svg" id="searchIcon">
+                <input type="text" class="searchTerm" placeholder="${searchPlaceholder}">
+                <button type="submit" class="searchButton" aria-label="${searchButtonLabel}">
+                    <img src="img/search.svg" id="searchIcon" alt="${searchIconAlt}">
                 </button>
              </div>
         </section>
         <section id="headOptions">
             <div class="dropdown">
                 <div class="dropbtn">
-                    <h2 id="greetingText">Hi, Han</h2>
-                    <img src="img/arrow-down.svg" id="downArrow">
+                    <h2 id="greetingText">${greetingText}</h2>
+                    <img src="img/arrow-down.svg" id="downArrow" alt="${arrowAlt}">
                 </div>
                 <div class="dropdown-content">
-                    <a href="/#/history" class=".historyButt">ORDER HISTORY</a>
+                    <a href="/#/history" class=".historyButt">${historyLink}</a>
                 </div>
             </div>
-            <img src="img/cart.svg" class="cartIcon">
+            <img src="img/cart.svg" class="cartIcon" alt="${cartAlt}">
         </section>
     </header>
     <nav>
         <!-- nav links here -->
         <ul>
-            <li><a href="/#/" class="navLink" id="">HOME</a></li>
-            <li><a href="/#/droids" class="navLink" id="droids">DROIDS</a></li>
-            <li><a href="/#/vehicles" class="navLink" id="vehicles">VEHICLES</a></li>
+            <li><a href="/#/" class="navLink" id="">${navLinksText[0]}</a></li>
+            <li><a href="/#/droids" class="navLink" id="droids">${navLinksText[1]}</a></li>
+            <li><a href="/#/vehicles" class="navLink" id="vehicles">${navLinksText[2]}</a></li>
         </ul>
     </nav>
     `

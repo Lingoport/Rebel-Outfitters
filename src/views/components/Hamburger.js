@@ -9,7 +9,7 @@ let Hamburger = {
     render : async () => {
         let view = `
         
-            <a target="_blank" href="https://lingoport.com/" class="lingoLogo"><img src="../../img/lingoport_logo.png" class="lingoLogo"></a>
+            <a target="_blank" rel="noreferrer" href="https://lingoport.com/" class="lingoLogo"><img src="../../img/lingoport_logo.png" class="lingoLogo"></a>
             <div class="start">
                 <h3>Version: </h3>
                 <select id="version" class="hamDrop">
@@ -28,20 +28,20 @@ let Hamburger = {
                 </select>
             </div>
             <div class="githubLink outsideLink block">
-            <a target="_blank" href="https://github.com/Lingoport/demo-app-spa">
+            <a target="_blank" rel="noreferrer" href="https://github.com/Lingoport/demo-app-spa">
                     <img src="../../img/github_logo.png" class="logoThumb">
                     View Source</a>
                 
             </div>
             <div class="dashLink outsideLink block">
-            <a target="_blank" href="" class="inline">
+            <a target="_blank" href="" class="inline" rel="noreferrer">
                     <img src="../../img/lingoport_thumb.png" class="logoThumb">
                     View Lingoport Dashboard</a>
                 
             </div>
             <div class="spread">
-            <a target="_blank" href="https://lingoport.com/get-a-demo/" class="outsideLink">Contact Us</a>
-            <a target="_blank" href="https://lingoport.com/i18n-company/" class="outsideLink">Learn More</a>
+            <a target="_blank" href="https://lingoport.com/get-a-demo/" rel="noreferrer" class="outsideLink">Contact Us</a>
+            <a target="_blank" href="https://lingoport.com/i18n-company/" rel="noreferrer" class="outsideLink">Learn More</a>
             </div>
         `;
         

@@ -125,7 +125,21 @@ let formatCurrencyWithCommas = (x) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-export { shoppingCart, addToCart, showCart, router, locale, productList, updateLocale, orderHistory, formatCurrencyWithCommas };
+let featuredProducts = [];
+
+let getFeaturedProducts = async () => {
+    featuredProducts = [];
+
+    let vehicleMap = productList.get('vehicles');
+    let droidMap = productList.get('droids');
+   
+    featuredProducts.push(vehicleMap.get(0));
+    featuredProducts.push(droidMap.get(1));
+    featuredProducts.push(vehicleMap.get(2));
+    featuredProducts.push(droidMap.get(3));
+}
+
+export { shoppingCart, addToCart, showCart, router, locale, productList, updateLocale, orderHistory, formatCurrencyWithCommas, featuredProducts };
 
 // List of supported routes. Any url other than these routes will throw a 404 error
 const routes = {
@@ -167,9 +181,16 @@ const router = async () => {
         await getProductsList();
     }
 
+    //add some dummy orders if there's nothing there
     if(orderHistory.length == 0) {
         dummyOrders();
     }
+
+    //create featured products array
+    if(featuredProducts.length == 0) {
+        await getFeaturedProducts();
+    }
+
     // Get the parsed URl from the addressbar
     let request = Utils.parseRequestURL();
 

@@ -1,27 +1,13 @@
-import {productList, formatCurrencyWithCommas} from "../../app.js";
+import {formatCurrencyWithCommas, featuredProducts} from "../../app.js";
 
-let featuredProducts = [];
 
-let getFeaturedProducts = async () => {
-    featuredProducts = [];
 
-    let vehicleMap = productList.get('vehicles');
-    let droidMap = productList.get('droids');
-   
-    featuredProducts.push(vehicleMap.get(0));
-    featuredProducts.push(droidMap.get(1));
-    featuredProducts.push(vehicleMap.get(2));
-    featuredProducts.push(droidMap.get(3));
-}
-
-//string to hold all the text (to be used within the HTML template literal)
+//strings to hold all the text (to be used within the HTML template literal)
 let welcomeMessage = "Welcome to Rebel Outfitters!";
 let welcomeSubtitle = "We provide everything you need to take on the Empire (and win)."
 
 let Home = {
     render : async () => {
-
-        await getFeaturedProducts();
 
         //html markup for welcome messages
         let view = `
@@ -33,9 +19,13 @@ let Home = {
 
         //create a box to display each of the 4 featured products
         featuredProducts.forEach((product, key) => {
+
+            //string to give image an alt tag for accessibility
+            let imageAlt = product.title + "image";
+
             view += `
                     <article id="${key}" class="${product.type}">
-                        <img src="${product.imageURL}" class="gridImage">
+                        <img src="${product.imageURL}" class="gridImage" alt="${imageAlt}">
                         <div class="gridDes">
                             <h3>${product.title}</h3>
                             <div class="gridPrice">
