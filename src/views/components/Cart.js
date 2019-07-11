@@ -32,7 +32,7 @@ let Cart = {
                         <div class="cartItem">
                             <div class="cartQtyTitle">
                                 <input type="number" class="cartQty" name="qty" id="${key}" min="1" max="10" size="0" value="${value.qty}">
-                                <h4> x ${value.title}</h4>
+                                <h4>${value.title}</h4>
                             </div>
                             <div class="cartPrice">
                                 <div class="gridPrice">
