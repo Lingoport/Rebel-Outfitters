@@ -24,7 +24,7 @@ let Navbar = {
         </section>
         <section id="search">
             <div id="bar">
-                <input type="text" class="searchTerm" placeholder="${searchPlaceholder}">
+                <input type="text" class="searchTerm" placeholder="${searchPlaceholder}" aria-label="${searchButtonLabel}">
                 <button type="submit" class="searchButton" aria-label="${searchButtonLabel}">
                     <img src="img/search.svg" id="searchIcon" alt="${searchIconAlt}">
                 </button>

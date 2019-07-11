@@ -4,21 +4,24 @@ import { locale, updateLocale } from "../../app.js";
 //global dropdown element reference
 let drop;
 
+let githubLogoAlt = "GitHub Logo";
+let lingoLogoAlt = "Lingoport Logo";
+
 let Hamburger = {
 
     render : async () => {
         let view = `
         
-            <a target="_blank" rel="noreferrer" href="https://lingoport.com/" class="lingoLogo"><img src="../../img/lingoport_logo.png" class="lingoLogo"></a>
+            <a target="_blank" rel="noreferrer" href="https://lingoport.com/" class="lingoLogo"><img src="../../img/lingoport_logo.png" class="lingoLogo" alt="${lingoLogoAlt}"></a>
             <div class="start">
-                <h3>Version: </h3>
+                <label for="version"><h3>Version: </h3></label>
                 <select id="version" class="hamDrop">
                     <option value="bad">Non-i18n Compliant</option>
                     <option value="good">I18n Compliant</option>
                 </select>
             </div>
             <div class="start">
-                <h3>Locale: </h3>
+                <label for="locale"><h3>Locale: </h3></label>
                 <select id="locale" class="hamDrop">
                     <option value="en-us">English - United States</option>
                     <option value="fr-fr">French - France</option>
@@ -29,13 +32,13 @@ let Hamburger = {
             </div>
             <div class="githubLink outsideLink block">
             <a target="_blank" rel="noreferrer" href="https://github.com/Lingoport/demo-app-spa">
-                    <img src="../../img/github_logo.png" class="logoThumb">
+                    <img src="../../img/github_logo.png" class="logoThumb" alt="${githubLogoAlt}">
                     View Source</a>
                 
             </div>
             <div class="dashLink outsideLink block">
             <a target="_blank" href="" class="inline" rel="noreferrer">
-                    <img src="../../img/lingoport_thumb.png" class="logoThumb">
+                    <img src="../../img/lingoport_thumb.png" class="logoThumb" alt="${lingoLogoAlt}">
                     View Lingoport Dashboard</a>
                 
             </div>

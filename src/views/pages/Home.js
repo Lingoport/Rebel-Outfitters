@@ -5,6 +5,7 @@ import {formatCurrencyWithCommas, featuredProducts} from "../../app.js";
 //strings to hold all the text (to be used within the HTML template literal)
 let welcomeMessage = "Welcome to Rebel Outfitters!";
 let welcomeSubtitle = "We provide everything you need to take on the Empire (and win)."
+let symbolAlt = "Imperial Credit currency symbol";
 
 let Home = {
     render : async () => {
@@ -29,7 +30,7 @@ let Home = {
                         <div class="gridDes">
                             <h3>${product.title}</h3>
                             <div class="gridPrice">
-                                <img src="../../img/bSymbol.svg" class="symbol">
+                                <img src="../../img/bSymbol.svg" class="symbol" alt="${symbolAlt}">
                                 <h4>${formatCurrencyWithCommas(product.price)}</h4>
                             </div>
                         </div>

@@ -6,6 +6,7 @@ let symbolAlt = "Imperial Credit currency symbol";
 let deleteAlt = "Delete item from cart";
 let totalTitle = "Total: ";
 let checkoutLabel = "CHECKOUT";
+let closeAlt = "Close cart";
 
 let Cart = {
     render: async () => {
@@ -14,7 +15,7 @@ let Cart = {
         let view = `
                 <div class="cartHead">
                     <h1>Shopping Cart</h1>
-                    <img src="img/close.svg" class="cartIcon">
+                    <img src="img/close.svg" class="cartIcon" alt="${closeAlt}">
                 </div>
                 `;
 
