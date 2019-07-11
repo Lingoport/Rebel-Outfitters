@@ -14,6 +14,10 @@ let getFeaturedProducts = async () => {
     featuredProducts.push(droidMap.get(3));
 }
 
+//string to hold all the text (to be used within the HTML template literal)
+let welcomeMessage = "Welcome to Rebel Outfitters!";
+let welcomeSubtitle = "We provide everything you need to take on the Empire (and win)."
+
 let Home = {
     render : async () => {
 
@@ -22,8 +26,8 @@ let Home = {
         //html markup for welcome messages
         let view = `
                     <section class="welcome">
-                        <h1 class="center">Welcome to Rebel Outfitters!</h1>
-                        <h3 class="center white">We provide everything you need to take on the Empire (and win).</h3>
+                        <h1 class="center">${welcomeMessage}</h1>
+                        <h3 class="center white">${welcomeSubtitle}</h3>
                     </section>
                     <div class="browseGrid homeGrid">`;
 
