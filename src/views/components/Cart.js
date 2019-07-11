@@ -1,22 +1,32 @@
 import {shoppingCart, router, formatCurrencyWithCommas} from "../../app.js";
 
+//strings to hold all the text (to be used within the HTML template literal)
+let noItemMsg = "No Items in Cart.";
+let symbolAlt = "Imperial Credit currency symbol";
+let deleteAlt = "Delete item from cart";
+let totalTitle = "Total: ";
+let checkoutLabel = "CHECKOUT";
+
 let Cart = {
     render: async () => {
         let total = 0;
-        let view =  /*html*/
-        `
+
+        let view = `
                 <div class="cartHead">
                     <h1>Shopping Cart</h1>
                     <img src="img/close.svg" class="cartIcon">
                 </div>
                 `;
+
                 //show cart contents or display message if no contents
                 if(shoppingCart.size == 0) {
-                    view += `<h3>No Items in Cart.</h3>`;
-                }else  {
+                    view += `<h3>${noItemMsg}</h3>`;
+                }
+                else {
                     view += `<div class="cartContents">`;
+                    //create row for each item in title and addup the total
                     shoppingCart.forEach((value, key) => {
-                        // html
+                        
                         total += value.price * value.qty;
                         view += `
                         <div class="cartItem">
@@ -26,24 +36,24 @@ let Cart = {
                             </div>
                             <div class="cartPrice">
                                 <div class="gridPrice">
-                                    <img src="../../img/wSymbol.svg" class="symbol">
+                                    <img src="../../img/wSymbol.svg" class="symbol" alt="${symbolAlt}">
                                     <h4>${formatCurrencyWithCommas(value.price * value.qty)}</h4>
                                 </div>
-                                <img src="img/delete.svg" class="delete" id="${key}">
+                                <img src="img/delete.svg" class="delete" id="${key}" alt="${deleteAlt}">
                             </div>
                         </div>`
                     });
                     view += `
                 </div>
                 <div class="cartTotal">
-                    <h3>Total: </h3>
+                    <h3>${totalTitle}</h3>
                     <div class="totalPrice">
-                        <img src="../../img/wSymbol.svg" class="symbol">
+                        <img src="../../img/wSymbol.svg" class="symbol" alt="${symbolAlt}">
                         <h3>${formatCurrencyWithCommas(total)}</h3>
                     </div>
                 </div>
-                <a class="checkoutButt" href="/#/checkout">CHECKOUT</a>
-                `
+                <a class="checkoutButt" href="/#/checkout">${checkoutLabel}</a>
+                `;
                 }
         return view
     },

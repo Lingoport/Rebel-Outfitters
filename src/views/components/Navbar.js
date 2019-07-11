@@ -14,6 +14,7 @@ let navLinksText = ["HOME", "DROIDS", "VEHICLES"];
 
 let Navbar = {
     render: async () => {
+
         //HTML Markup for nav bar (contains no actual text)
         let view =
         `<header>
@@ -62,9 +63,9 @@ let Navbar = {
             icon.addEventListener("click", showCart, false);
         }
 
+        //add click listener to clse cart when user clicks anywhere else on page
         var overlayBG = document.querySelector('.bg');
         overlayBG.addEventListener('click', hideCart, false);
-
 
         var logo = document.querySelector("#logo");
         //redirect to home on logo click
