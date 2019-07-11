@@ -1,4 +1,4 @@
-import {shoppingCart, router} from "../../app.js";
+import {shoppingCart, router, formatCurrencyWithCommas} from "../../app.js";
 
 let Cart = {
     render: async () => {
@@ -27,7 +27,7 @@ let Cart = {
                             <div class="cartPrice">
                                 <div class="gridPrice">
                                     <img src="../../img/wSymbol.svg" class="symbol">
-                                    <h4>${commas(value.price * value.qty)}</h4>
+                                    <h4>${formatCurrencyWithCommas(value.price * value.qty)}</h4>
                                 </div>
                                 <img src="img/delete.svg" class="delete" id="${key}">
                             </div>
@@ -39,7 +39,7 @@ let Cart = {
                     <h3>Total: </h3>
                     <div class="totalPrice">
                         <img src="../../img/wSymbol.svg" class="symbol">
-                        <h3>${commas(total)}</h3>
+                        <h3>${formatCurrencyWithCommas(total)}</h3>
                     </div>
                 </div>
                 <a class="checkoutButt" href="/#/checkout">CHECKOUT</a>
@@ -86,10 +86,6 @@ var deleteItem = (e) => {
     shoppingCart.get(deleteKey).qty = 0;
     shoppingCart.delete(deleteKey);
     router();
-}
-
-var commas = (x) => {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 export default Cart;

@@ -119,7 +119,13 @@ let dummyOrders = () => {
     orderHistory.push(order1);
 }
 
-export { shoppingCart, addToCart, showCart, router, locale, productList, updateLocale, orderHistory };
+//takes a number and adds commas to it every 3 digits
+//VERY BAD i18n
+let formatCurrencyWithCommas = (x) => {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+export { shoppingCart, addToCart, showCart, router, locale, productList, updateLocale, orderHistory, formatCurrencyWithCommas };
 
 // List of supported routes. Any url other than these routes will throw a 404 error
 const routes = {

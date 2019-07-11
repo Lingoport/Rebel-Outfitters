@@ -1,4 +1,4 @@
-import {productList} from "../../app.js";
+import {productList, formatCurrencyWithCommas} from "../../app.js";
 
 let featuredProducts = [];
 
@@ -10,7 +10,7 @@ let getFeaturedProducts = async () => {
    
     featuredProducts.push(vehicleMap.get(0));
     featuredProducts.push(droidMap.get(1));
-    featuredProducts.push(vehicleMap.get(3));
+    featuredProducts.push(vehicleMap.get(2));
     featuredProducts.push(droidMap.get(3));
 }
 
@@ -32,7 +32,7 @@ let Home = {
                     <h3>${product.title}</h3>
                     <div class="gridPrice">
                         <img src="../../img/bSymbol.svg" class="symbol">
-                        <h4>${numberWithCommas(product.price)}</h4>
+                        <h4>${formatCurrencyWithCommas(product.price)}</h4>
                     </div>
                 </div>
             </article>
@@ -57,10 +57,6 @@ let Home = {
 
     }
 
-}
-
-var numberWithCommas = (x) => {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 export default Home;

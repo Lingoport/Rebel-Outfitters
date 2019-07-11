@@ -1,4 +1,4 @@
-import {shoppingCart, orderHistory} from "../../app.js";
+import {shoppingCart, orderHistory, formatCurrencyWithCommas} from "../../app.js";
 
 import {Order} from "../classes/Order.js";
 
@@ -97,7 +97,7 @@ let Checkout = {
                     <div class="cartPrice">
                         <div class="gridPrice">
                             <img src="../../img/wSymbol.svg" class="symbol">
-                            <h4>${commas(value.price * value.qty)}</h4>
+                            <h4>${formatCurrencyWithCommas(value.price * value.qty)}</h4>
                         </div>
                         <img src="img/delete.svg" class="delete" id="${key}">
                     </div>
@@ -108,7 +108,7 @@ let Checkout = {
                     <h3>Total: </h3>
                     <div class="totalPrice">
                         <img src="../../img/wSymbol.svg" class="symbol">
-                        <h3>${commas(total)}</h3>
+                        <h3>${formatCurrencyWithCommas(total)}</h3>
                     </div>
                 </div>
             </div>
@@ -138,9 +138,4 @@ var placeOrder = () => {
     window.alert('Order placed successfully!');
     location.href="/#/history";
 }
-
-var commas = (x) => {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
-
 export { Checkout };
