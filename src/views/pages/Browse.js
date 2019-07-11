@@ -2,7 +2,10 @@ import Utils from '../../services/Utils.js'
 import {productList, formatCurrencyWithCommas} from "../../app.js";
 
 let type;
+
+//static string to hold all the text (to be used within the HTML template literal)
 let title;
+let symbolAlt = "Imperial Credit currency symbol";
 
 let Browse = {
     
@@ -14,32 +17,32 @@ let Browse = {
 
         if(type == "droids") {
             productMap = productList.get('droids');
-            title = "Droids";
+            title = "All Droids";
         }
         else if(type == "vehicles") {
             productMap = productList.get('vehicles');
-            title = "Vehicles";
+            title = "All Vehicles";
         }
 
-        let view =  /*html*/`
+        //view is solely for HTML markup, contains no static text
+        let view = `
             <section class="browsePage">
-                <h1>All ${title}</h1>
+                <h1>${title}</h1>
                 <div class="browseGrid">`;
-                productMap.forEach((product, key) => {
-                    /*html*/
-                    view += `<article id="${key}">
-                        <img src="${product.imageURL}" class="gridImage">
+
+        productMap.forEach((product, key) => {
+            //create box for each product
+            view += `<article id="${key}">
+                        <img src="${product.imageURL}" class="gridImage" alt="${product.title}">
                         <div class="gridDes">
                             <h3>${product.title}</h3>
                             <div class="gridPrice">
-                                <img src="../../img/bSymbol.svg" class="symbol">
+                                <img src="../../img/bSymbol.svg" class="symbol" alt="${symbolAlt}">
                                 <h4>${formatCurrencyWithCommas(product.price)}</h4>
                             </div>
                         </div>
-                    </article>
-                    `;
-                    
-                });
+                    </article>`;
+        });
                 view += `
                 </div>
             </section>
@@ -59,8 +62,7 @@ let Browse = {
             }, false);
             curProduct.classList.add("zoom");
         }
-    }
-        
+    } 
 }
 
 export { Browse };

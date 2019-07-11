@@ -2,9 +2,34 @@ import {shoppingCart, orderHistory, formatCurrencyWithCommas} from "../../app.js
 
 import {Order} from "../classes/Order.js";
 
-//neet to add click listeners for updating qty or deleting items from cart
+//TODO: add click listeners for updating qty or deleting items from cart
 
 var total;
+
+//static string to hold all the text (to be used within the HTML template literal)
+let checkoutTitle = "Checkout";
+let shipSectionLabel = "Shipping Info";
+let firstNameLabel = "First Name";
+let lastNameLabel = "Last Name";
+let coordinatesLabel = "Coordinates";
+let coordinatesHolder = "0,0,0";
+let sectorLabel = "Sector";
+let methodLabel = "Shipping Method";
+let methodOptions = ["Lightspeed", "Overnight", "Standard"];
+let paySectionLabel = "Payment";
+let payNameLabel = "Name on Card";
+let payNameHolder = "First Last";
+let accountLabel = "Imperial Credit Number";
+let accountHolder = "1234567-9876-00";
+let securityLabel = "Security Code";
+let securityHolder = "123456";
+let expDateLabel = "Expiration Date";
+let cartTitle = "Shopping Cart";
+let symbolAlt = "Imperial Credit currency symbol";
+let deleteAlt = "remove item from cart";
+let totalLabel = "Total: ";
+
+
 
 let Checkout = {
 
@@ -16,65 +41,65 @@ let Checkout = {
         let overlayBG = document.querySelector('.bg');
         overlayBG.classList.remove('overlay');
 
+        //view is solely for HTML markup, contains no static text
         let view = `
         <section class="checkout">
-            
             <div class="checkoutDetails">
-                <h1>Checkout</h1>
+                <h1>${checkoutTitle}</h1>
                 <div class="shippingInfo">
-                    <h2>Shipping Info</h2>
+                    <h2>${shipSectionLabel}</h2>
                     <div class="form">
                         <div class="formInline">
                             <div class="formElement name">
-                                <label for="firstName">First Name</label>
-                                <input type="text" id="firstName" name="firstName" class="checkoutInput" placeholder="First">
+                                <label for="firstName">${firstNameLabel}</label>
+                                <input type="text" id="firstName" name="firstName" class="checkoutInput" placeholder="${firstNameLabel}">
                             </div>
                             <div class="formElement name">
-                                <label for="lastName">Last Name</label>
-                                <input type="text" id="lastName" name="lastName" class="checkoutInput" placeholder="Last">
+                                <label for="lastName">${lastNameLabel}</label>
+                                <input type="text" id="lastName" name="lastName" class="checkoutInput" placeholder="${lastNameLabel}">
                             </div>
                         </div>
 
                         <div class="formInline">
                             <div class="formElement">
-                                <label for="coordinates">Coordinates</label>
-                                <input type="text" id="coordinates" name="coordinates" class="checkoutInput" placeholder="0,0,0">
+                                <label for="coordinates">${coordinatesLabel}</label>
+                                <input type="text" id="coordinates" name="coordinates" class="checkoutInput" placeholder="${coordinatesHolder}">
                             </div>
                             <div class="formElement">
-                                <label for="sector">Sector</label>
-                                <input type="text" id="sector" name="sector" class="checkoutInput" placeholder="Sector">
+                                <label for="sector">${sectorLabel}</label>
+                                <input type="text" id="sector" name="sector" class="checkoutInput" placeholder="${sectorLabel}">
                             </div>
                         </div>
                         
                         <div class="formElement">
-                            <label for="shipMethod">Shipping Method</label>
+                            <label for="shipMethod">${methodLabel}</label>
                             <select id="shipMethod" class="checkoutInput">
-                                <option value="lightspeed">Lightspeed</option>
-                                <option value="overnight">Overnight</option>
-                                <option value="standard">Standard</option>
+                                <option value="lightspeed">${methodOptions[0]}</option>
+                                <option value="overnight">${methodOptions[1]}</option>
+                                <option value="standard">${methodOptions[2]}</option>
                             </select>
                         </div>
                     </div>
                 </div>
                 <div class="paymentInfo">
-                    <h2>Payment</h2>
+                    <h2>${paySectionLabel}</h2>
                     <div class="form">
                         <div class="formElement halfWidth">
-                            <label for="cardName">Name on Card</label>
-                            <input type="text" id="carName" name="cardName" class="checkoutInput" placeholder="First Last">
+                            <label for="cardName">${payNameLabel}</label>
+                            <input type="text" id="cardName" name="cardName" class="checkoutInput" placeholder="${payNameHolder}">
                         </div>
                         
                         <div class="formInline">
                             <div class="formElement">
-                                <label for="account">Imperial Credit Number</label>
-                                <input type="text" id="account" name="account" class="checkoutInput" placeholder="1234567-9876-00">
+                                <label for="account">${accountLabel}</label>
+                                <input type="text" id="account" name="account" class="checkoutInput" placeholder="${accountHolder}">
                             </div>
                             <div class="formElement margin">
-                                <label for="code">Security Code</label>
-                                <input type="text" id="code" name="code" class="checkoutInput" placeholder="1234">
+                                <label for="code">${securityLabel}</label>
+                                <input type="text" id="code" name="code" class="checkoutInput" placeholder="${securityHolder}">
                             </div>
                             <div class="formElement">
-                                <label for="expDate">Expiration Date</label>
+                                <label for="expDate">${expDateLabel}</label>
                                 <input type="date" id="expDate" name=expDate" class="checkoutInput">
                             </div>
                         </div>
@@ -83,7 +108,7 @@ let Checkout = {
                 <button class="orderButt">PLACE ORDER</button>
             </div>
             <div class="checkoutCart">
-                <h1>Shopping Cart</h1>
+                <h1>${cartTitle}</h1>
             `
             shoppingCart.forEach((value, key) => {
                 // html
@@ -92,22 +117,22 @@ let Checkout = {
                 <div class="cartItem">
                     <div class="cartQtyTitle">
                         <input type="number" class="cartQty" name="qty" id="${key}" min="1" max="10" size="0" value="${value.qty}">
-                        <h3> x ${value.title}</h3>
+                        <h3>${value.title}</h3>
                     </div>
                     <div class="cartPrice">
                         <div class="gridPrice">
-                            <img src="../../img/wSymbol.svg" class="symbol">
+                            <img src="../../img/wSymbol.svg" class="symbol" alt="${symbolAlt}">
                             <h4>${formatCurrencyWithCommas(value.price * value.qty)}</h4>
                         </div>
-                        <img src="img/delete.svg" class="delete" id="${key}">
+                        <img src="img/delete.svg" class="delete" id="${key}" alt="${deleteAlt}">
                     </div>
                 </div>`
             });
             view += `
             <div class="cartTotal">
-                    <h3>Total: </h3>
+                    <h3>${totalLabel}</h3>
                     <div class="totalPrice">
-                        <img src="../../img/wSymbol.svg" class="symbol">
+                        <img src="../../img/wSymbol.svg" class="symbol" alt="${symbolAlt}">
                         <h3>${formatCurrencyWithCommas(total)}</h3>
                     </div>
                 </div>

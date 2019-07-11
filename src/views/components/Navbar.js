@@ -1,7 +1,7 @@
 import Utils from "../../services/Utils.js";
 import { showCart} from "../../app.js";
 
-//strings to hold all text used within HTML template literal
+//static strings to hold all the text (to be used within the HTML template literal)
 let searchPlaceholder = "What are you looking for?";
 let searchButtonLabel = "search products";
 let logoAlt = "Rebel Outfitters Logo";
