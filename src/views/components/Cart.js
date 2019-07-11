@@ -1,6 +1,6 @@
 import {shoppingCart, router, formatCurrencyWithCommas} from "../../app.js";
 
-//strings to hold all the text (to be used within the HTML template literal)
+//static strings to hold all the text (to be used within the HTML template literal)
 let noItemMsg = "No Items in Cart.";
 let symbolAlt = "Imperial Credit currency symbol";
 let deleteAlt = "Delete item from cart";
@@ -12,6 +12,7 @@ let Cart = {
     render: async () => {
         let total = 0;
 
+        //view is solely for HTML markup, contains no static text
         let view = `
                 <div class="cartHead">
                     <h1>Shopping Cart</h1>
@@ -30,31 +31,31 @@ let Cart = {
                         
                         total += value.price * value.qty;
                         view += `
-                        <div class="cartItem">
-                            <div class="cartQtyTitle">
-                                <input type="number" class="cartQty" name="qty" id="${key}" min="1" max="10" size="0" value="${value.qty}">
-                                <h4>${value.title}</h4>
-                            </div>
-                            <div class="cartPrice">
-                                <div class="gridPrice">
-                                    <img src="../../img/wSymbol.svg" class="symbol" alt="${symbolAlt}">
-                                    <h4>${formatCurrencyWithCommas(value.price * value.qty)}</h4>
-                                </div>
-                                <img src="img/delete.svg" class="delete" id="${key}" alt="${deleteAlt}">
-                            </div>
-                        </div>`;
+                                <div class="cartItem">
+                                    <div class="cartQtyTitle">
+                                        <input type="number" class="cartQty" name="qty" id="${key}" min="1" max="10" size="0" value="${value.qty}">
+                                        <h4>${value.title}</h4>
+                                    </div>
+                                    <div class="cartPrice">
+                                        <div class="gridPrice">
+                                            <img src="../../img/wSymbol.svg" class="symbol" alt="${symbolAlt}">
+                                            <h4>${formatCurrencyWithCommas(value.price * value.qty)}</h4>
+                                        </div>
+                                        <img src="img/delete.svg" class="delete" id="${key}" alt="${deleteAlt}">
+                                    </div>
+                                </div>`;
                     });
                     view += `
-                </div>
-                <div class="cartTotal">
-                    <h3>${totalTitle}</h3>
-                    <div class="totalPrice">
-                        <img src="../../img/wSymbol.svg" class="symbol" alt="${symbolAlt}">
-                        <h3>${formatCurrencyWithCommas(total)}</h3>
-                    </div>
-                </div>
-                <a class="checkoutButt" href="/#/checkout">${checkoutLabel}</a>
-                `;
+                            </div>
+                            <div class="cartTotal">
+                                <h3>${totalTitle}</h3>
+                                <div class="totalPrice">
+                                    <img src="../../img/wSymbol.svg" class="symbol" alt="${symbolAlt}">
+                                    <h3>${formatCurrencyWithCommas(total)}</h3>
+                                </div>
+                            </div>
+                            <a class="checkoutButt" href="/#/checkout">${checkoutLabel}</a>
+                            `;
                 }
         return view
     },

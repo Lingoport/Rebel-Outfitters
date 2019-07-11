@@ -15,7 +15,7 @@ let navLinksText = ["HOME", "DROIDS", "VEHICLES"];
 let Navbar = {
     render: async () => {
 
-        //HTML Markup for nav bar (contains no actual text)
+        //view is solely for HTML markup, contains no static text
         let view =
         `<header>
         <!-- logo, search bar, local, profile drop down -->
@@ -51,7 +51,7 @@ let Navbar = {
             <li><a href="/#/vehicles" class="navLink" id="vehicles">${navLinksText[2]}</a></li>
         </ul>
     </nav>
-    `
+    `;
         return view
     },
     after_render: async () => {

@@ -2,7 +2,7 @@ import {formatCurrencyWithCommas, featuredProducts} from "../../app.js";
 
 
 
-//strings to hold all the text (to be used within the HTML template literal)
+//static strings to hold all the text (to be used within the HTML template literal)
 let welcomeMessage = "Welcome to Rebel Outfitters!";
 let welcomeSubtitle = "We provide everything you need to take on the Empire (and win)."
 let symbolAlt = "Imperial Credit currency symbol";
@@ -10,7 +10,7 @@ let symbolAlt = "Imperial Credit currency symbol";
 let Home = {
     render : async () => {
 
-        //html markup for welcome messages
+        //view is solely for HTML markup, contains no static text
         let view = `
                     <section class="welcome">
                         <h1 class="center">${welcomeMessage}</h1>
