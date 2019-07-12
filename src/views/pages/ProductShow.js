@@ -5,19 +5,27 @@ let product;
 let productID;
 let type;
 
+//static strings to hold all the text (to be used within the HTML template literal)
+let qtyLabel = "Qty:";
+let qtyOptions = [1, 2, 3, 4];
+let symbolAlt = "Imperial Credit Currency symbol";
+let addToCartLabel = "ADD TO CART";
+
 let ProductShow = {
 
     render : async () => {
+
         //get the id
         let request = Utils.parseRequestURL();
         productID = parseInt(request.id);
         type = request.resource;
-        //get a reference to the correct porduct Map based on type
+        //get a reference to the correct product Map based on type
         let productMap = productList.get(type);
         //get the correct product from the product Map based on ID and type
         product = productMap.get(productID);
-        //droid = droidView;
-        return /*html*/`
+
+        //return HTML markup
+        return `
             <section class="productShow">
                 <article class="leftDetailPane">
                     <img src="${product.imageURL}" class="detailImage">
@@ -25,19 +33,19 @@ let ProductShow = {
                 <article class="detailContent">
                     <h1>${product.title}</h1>
                     <div class="gridPrice">
-                        <img src="../../img/bSymbol.svg" class="symbol">
+                        <img src="../../img/bSymbol.svg" class="symbol" alt="${symbolAlt}">
                         <h4>${formatCurrencyWithCommas(product.price)}</h4>
                     </div>
                     <div class="qty">
-                        <h3>Qty:</h3>
+                        <h3>${qtyLabel}</h3>
                         <select class="qtyDrop checkoutInput">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
+                            <option value="${qtyOptions[0]}">${qtyOptions[0]}</option>
+                            <option value="${qtyOptions[1]}">${qtyOptions[1]}</option>
+                            <option value="${qtyOptions[2]}">${qtyOptions[2]}</option>
+                            <option value="${qtyOptions[3]}">${qtyOptions[3]}</option>
                         </select>
                     </div>
-                    <button class="addToCart">ADD TO CART</button>
+                    <button class="addToCart">${addToCartLabel}</button>
                     <p>${product.desc}</p>
                 </article>
             </section>

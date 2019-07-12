@@ -109,7 +109,7 @@ let Checkout = {
             </div>
             <div class="checkoutCart">
                 <h1>${cartTitle}</h1>
-            `
+            `;
             shoppingCart.forEach((value, key) => {
                 // html
                 total += value.price * value.qty;

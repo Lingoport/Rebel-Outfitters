@@ -4,7 +4,7 @@ import {productList, formatCurrencyWithCommas} from "../../app.js";
 let type;
 
 //static string to hold all the text (to be used within the HTML template literal)
-let title;
+let title = "All";
 let symbolAlt = "Imperial Credit currency symbol";
 
 let Browse = {
@@ -17,18 +17,18 @@ let Browse = {
 
         if(type == "droids") {
             productMap = productList.get('droids');
-            title = "All Droids";
+            title += " Droids";
         }
         else if(type == "vehicles") {
             productMap = productList.get('vehicles');
-            title = "All Vehicles";
+            title += " Vehicles";
         }
 
         //view is solely for HTML markup, contains no static text
         let view = `
-            <section class="browsePage">
-                <h1>${title}</h1>
-                <div class="browseGrid">`;
+                    <section class="browsePage">
+                        <h1>${title}</h1>
+                        <div class="browseGrid">`;
 
         productMap.forEach((product, key) => {
             //create box for each product
