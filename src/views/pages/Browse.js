@@ -25,8 +25,7 @@ let Browse = {
         }
 
         //view is solely for HTML markup, contains no static text
-        let view = `
-                    <section class="browsePage">
+        let view = `<section class="browsePage">
                         <h1>${title}</h1>
                         <div class="browseGrid">`;
 
