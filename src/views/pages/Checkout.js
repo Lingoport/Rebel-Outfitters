@@ -105,6 +105,10 @@ let Checkout = {
                         </div>
                     </div>
                 </div>
+                <div class="termsCheck">
+                    <input type="checkbox" name="terms" value="terms">
+                    <h4>I have read and agree to the <a target="_blank" href="../../static/terms.html">Terms and Conditions</a></h4>
+                </div>
                 <button class="orderButt">PLACE ORDER</button>
             </div>
             <div class="checkoutCart">
@@ -160,7 +164,9 @@ var placeOrder = () => {
         product.qty = 0;
     });
     shoppingCart.clear();
-    window.alert('Order placed successfully!');
+    //construct success message
+    let message = "Order #" + order.orderNumber + " placed successfully!";
+    window.alert(message);
     location.href="/#/history";
 }
 export { Checkout };

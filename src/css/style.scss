@@ -795,6 +795,27 @@ button {
     }
 }
 
+.termsCheck {
+    background-color: $light;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    a {
+        background-color: $dkgrey;
+        font-family: $linkFont;
+        color: white;
+        text-decoration: none;
+    }
+    a:visited {
+        color: white;
+    }
+    a:hover {
+        background-color: $light;
+        color: $dkgrey;
+    }
+
+}
+
 .orderButt {
     margin: 0 auto;
     margin-top: 15px;
@@ -981,4 +1002,22 @@ color: white;
 .showHam {
     left: calc(100% - 430px);
     z-index: 1000;
+}
+
+.termContainer {
+    background-color: $light;
+    width: 66%;
+    margin:auto;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    @include blueShadow();
+    .termHead {
+        color: $dkgrey;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    p {
+        margin-bottom: 5px;
+    }
 }

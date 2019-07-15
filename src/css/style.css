@@ -707,6 +707,26 @@ button:focus {
   outline: none;
 }
 
+.termsCheck {
+  background-color: #D1D5DE;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.termsCheck a {
+  background-color: #2d2d2a;
+  font-family: "Space Mono", monospace;
+  color: white;
+  text-decoration: none;
+}
+.termsCheck a:visited {
+  color: white;
+}
+.termsCheck a:hover {
+  background-color: #D1D5DE;
+  color: #2d2d2a;
+}
+
 .orderButt {
   margin: 0 auto;
   margin-top: 15px;
@@ -885,6 +905,24 @@ p {
 .showHam {
   left: calc(100% - 430px);
   z-index: 1000;
+}
+
+.termContainer {
+  background-color: #D1D5DE;
+  width: 66%;
+  margin: auto;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 6px 0 #bffff1;
+}
+.termContainer .termHead {
+  color: #2d2d2a;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.termContainer p {
+  margin-bottom: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
