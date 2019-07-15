@@ -2,9 +2,9 @@ let errorMessage = "404 Error: Page not found";
 
 let Error404 = {
     render : async () => {
-        let view = `<section class="section">
+        let view = `<div>
                         <h1>${errorMessage}</h1>
-                    </section>`;
+                    </div>`;
         return view;
     }
     , after_render: async () => {
