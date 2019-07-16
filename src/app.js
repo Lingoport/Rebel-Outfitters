@@ -26,14 +26,6 @@ var shoppingCart = new Map();
 
 var orderHistory = [];
 
-//used to store info about selected locale
-var locale = "en-us";
-var updateLocale = (newLocale) => {
-    locale = newLocale;
-    console.log("Locale changed to: " + locale);
-    router();
-}
-
 //map of maps to hold both vehicles and droids
 var productList = new Map();
 productList.set("droids", new Map());
@@ -54,38 +46,6 @@ let getProductsList = async() => {
     }
 }
 
-
-//this is for the json file
-/*let getProductsList = async () => {
-    const options = {
-       method: 'GET',
-       headers: {
-           'Content-Type': 'application/json'
-       }
-   };
-   try {
-       const response = await fetch('content/products.json', options)
-       const json = await response.json();
-
-       let droidMap = productList.get("droids");
-        let vehicleMap = productList.get("vehicles");
-       for(let item of json) {
-           //loop through parsed json and add to either droid Map or vehicle Map
-           if(item.type == "droid") {
-                droidMap.set(droidMap.size, item);
-           }
-           else if(item.type == "vehicle") {
-                vehicleMap.set(vehicleMap.size, item);
-           }
-       }
-       
-       //THIS IS JUSt FOr DEV of shopping cart
-       //addToCart(droidMap.get(0));
-
-   } catch (err) {
-       console.log('Error getting products', err)
-   }
-}*/
 
 //function for anytime an object is added to cart
 var addToCart = async (item) =>  {
@@ -139,7 +99,7 @@ let getFeaturedProducts = async () => {
     featuredProducts.push(droidMap.get(3));
 }
 
-export { shoppingCart, addToCart, showCart, router, locale, productList, updateLocale, orderHistory, formatCurrencyWithCommas, featuredProducts };
+export { shoppingCart, addToCart, showCart, router, productList, orderHistory, formatCurrencyWithCommas, featuredProducts };
 
 // List of supported routes. Any url other than these routes will throw a 404 error
 const routes = {

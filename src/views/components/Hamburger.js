@@ -1,5 +1,4 @@
 //TODO: add event listeners for i18n dropdown changes
-import { locale, updateLocale } from "../../app.js";
 
 //global dropdown element reference
 let drop;
@@ -30,16 +29,6 @@ let Hamburger = {
                     <option value="good">${versionOptions[1]}</option>
                 </select>
             </div>
-            <div class="start">
-                <label for="locale"><h3>${localeLabel}</h3></label>
-                <select id="locale" class="hamDrop">
-                    <option value="en-us">${localeOptions[0]}</option>
-                    <option value="fr-fr">${localeOptions[1]}</option>
-                    <option value="zh-cn">${localeOptions[2]}</option>
-                    <option value="yo">${localeOptions[3]}</option>
-                    <option value="si">${localeOptions[4]}</option>
-                </select>
-            </div>
             <div class="githubLink outsideLink block">
             <a target="_blank" rel="noreferrer" href="https://github.com/Lingoport/demo-app-spa">
                     <img src="../../img/github_logo.png" class="logoThumb" alt="${githubLogoAlt}">
@@ -63,13 +52,6 @@ let Hamburger = {
     after_render: async () => {
         var overlayBG = document.querySelector('.bg');
         overlayBG.addEventListener('click', hideHam, false);
-        
-        drop = document.querySelector('#locale');
-        //show selected locale in dropdown
-        drop.value = locale;
-
-        //listen for locale changes
-        drop.addEventListener("input", changeLocale, false);
     }
 
 }
@@ -83,11 +65,5 @@ var hideHam = e => {
     bg.classList.remove('overlay');
 }
 
-//function to change locale and reload page
-var changeLocale = (e) => {
-    let newLocale = drop.value;
-    hideHam();
-    updateLocale(newLocale);
-}
 
 export {Hamburger};
