@@ -4,7 +4,7 @@ import {productList, formatCurrencyWithCommas} from "../../app.js";
 let type;
 
 //static string to hold all the text (to be used within the HTML template literal)
-let title = "All";
+
 let symbolAlt = "Imperial Credit currency symbol";
 
 let Browse = {
@@ -14,6 +14,7 @@ let Browse = {
         type = request.resource;
 
         let productMap = null;
+        let title = "All";
 
         if(type == "droids") {
             productMap = productList.get('droids');
