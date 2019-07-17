@@ -1,18 +1,18 @@
 {
     "Navbar":  {
-        "searchPlaceholder" : "What are you looking for?",
-        "searchButtonLabel" : "search products",
-        "logoAlt" : "Rebel Outfitters Logo",
-        "searchIconAlt" : "search icon",
-        "greetingText" : "Hi, Han",
-        "historyLink" : "ORDER HISTORY",
-        "arrowAlt" : "Drop Down Arrow",
-        "cartAlt" : "show cart",
-        "navLinksText" : ["HOME", "DROIDS", "VEHICLES"]
+        "searchPlaceholder" : "你在找什么？",
+        "searchButtonLabel" : "搜索产品",
+        "logoAlt" : "Rebel Outfitters标志",
+        "searchIconAlt" : "搜索图标",
+        "greetingText" : "嗨，韩",
+        "historyLink" : "订单历史",
+        "arrowAlt" : "下拉箭头",
+        "cartAlt" : "显示购物车",
+        "navLinksText" : ["家", "机器人", "车辆"]
     },
     "Home": {
-        "welcomeMessage" : "Welcome to Rebel Outfitters!",
-        "welcomeSubtitle" : "We provide everything you need to take on the Empire (and win).",
+        "welcomeMessage" : "欢迎来到Rebel Outfitters！",
+        "welcomeSubtitle" : "我们提供您在帝国（和胜利）上所需的一切。",
         "symbolAlt" : "Imperial Credit currency symbol"
     }
 }
