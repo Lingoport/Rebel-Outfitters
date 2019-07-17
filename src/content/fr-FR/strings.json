@@ -1,0 +1,18 @@
+{
+    "Navbar":  {
+        "searchPlaceholder" : "Que cherchez-vous?",
+        "searchButtonLabel" : "Recherche de produits",
+        "logoAlt" : "Rebel Outfitters Logo",
+        "searchIconAlt" : "icône de recherche",
+        "greetingText" : "Salut, Han",
+        "historyLink" : "HISTORIQUE DES COMMANDES",
+        "arrowAlt" : "Flèche de déroulement",
+        "cartAlt" : "montrer le panier",
+        "navLinksText" : ["MAISON", "DROIDS", "VÉHICULES"]
+    },
+    "Home": {
+        "welcomeMessage" : "Bienvenue chez Rebel Outfitters!",
+        "welcomeSubtitle" : "Nous fournissons tout ce dont vous avez besoin pour affronter l'Empire (et gagner).",
+        "symbolAlt" : "Symbole monétaire Imperial Credit"
+    }
+}

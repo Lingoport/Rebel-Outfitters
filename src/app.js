@@ -70,6 +70,9 @@ let getProductsList = async() => {
             vehicleMap.set(vehicleMap.size, item);
         }
     }
+
+    //pick the "featured products"
+    await getFeaturedProducts();
 }
 
 //function for anytime an object is added to cart
@@ -177,7 +180,7 @@ const router = async () => {
 
     //create featured products array
     if(featuredProducts.length == 0) {
-        await getFeaturedProducts();
+        
     }
 
     // Get the parsed URl from the addressbar

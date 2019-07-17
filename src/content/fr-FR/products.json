@@ -1,0 +1,108 @@
+[{
+    "type": "droid",
+    "class": 2,
+    "title": "Titre du produit français",
+    "price": 3000,
+    "qty": 0,
+    "imageURL": "../../img/3PO.png",
+    "desc": "Description du produit en français"
+},
+{
+    "type": "droid",
+    "class": 4,
+    "title": "Titre du produit français",
+    "price": 800,
+    "qty": 0,
+    "imageURL": "../../img/DUM-series.png",
+    "desc": "Description du produit en français"
+},
+{
+    "type": "droid",
+    "class": 1,
+    "title": "Titre du produit français",
+    "price": 4300,
+    "qty": 0,
+    "imageURL": "../../img/2-1B.png",
+    "desc": "Description du produit en français"
+},
+{
+    "type": "droid",
+    "title": "Titre du produit français",
+    "price": 4500,
+    "qty": 0,
+    "imageURL": "../../img/IG-88.png",
+    "desc": "Description du produit en français"
+},
+{
+    "type": "vehicle",
+    "title": "Titre du produit français",
+    "price": 1000000,
+    "qty": 0,
+    "imageURL": "../../img/Sphyrna_Corevette.png",
+    "desc": "Description du produit en français"
+},
+{
+    "type": "droid",
+    "title": "Titre du produit français",
+    "price": 5210,
+    "qty": 0,
+    "imageURL": "../../img/G2.png",
+    "desc": "Description du produit en français"
+},
+{
+    "type": "vehicle",
+    "title": "Titre du produit français",
+    "price": 1500000,
+    "qty": 0,
+    "imageURL": "../../img/CR90.png",
+    "desc": "Description du produit en français"
+},
+{
+    "type": "vehicle",
+    "title": "Titre du produit français",
+    "price": 8000,
+    "qty": 0,
+    "imageURL": "../../img/74-Z.png",
+    "desc": "Description du produit en français"
+},
+{
+    "type": "vehicle",
+    "title": "Titre du produit français",
+    "price": 200000,
+    "qty": 0,
+    "imageURL": "../../img/ETA-2.png",
+    "desc": "Description du produit en français"
+},
+{
+    "type": "droid",
+    "title": "Titre du produit français",
+    "price": 3450,
+    "qty": 0,
+    "imageURL": "../../img/R3.png",
+    "desc": "Description du produit en français"
+},
+{
+    "type": "vehicle",
+    "title": "Titre du produit français",
+    "price": 150000,
+    "qty": 0,
+    "imageURL": "../../img/T70.png",
+    "desc": "Description du produit en français"
+},
+{
+    "type": "vehicle",
+    "title": "Titre du produit français",
+    "price": 134999,
+    "qty": 0,
+    "imageURL": "../../img/Y-Wing.png",
+    "desc": "Description du produit en français"
+},
+{
+    "type": "droid",
+    "title": "Titre du produit français",
+    "price": 4999,
+    "qty": 0,
+    "imageURL": "../../img/Super_Tactical.png",
+    "desc": "Description du produit en français"
+}
+]
