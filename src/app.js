@@ -16,6 +16,8 @@ import {Order} from './views/classes/Order.js';
 
 import Utils from './services/Utils.js';
 
+import Products from './content/Products.js';
+
 //import our i18n functions
 import i18n from './services/i18n.js';
 
@@ -59,9 +61,9 @@ let getProductsList = async() => {
     droidMap.clear();
     vehicleMap.clear();
 
-    let products = await i18n.loadProductsJSON(locale);
+    let productsJSON = await Products.loadProductCatalog();
 
-    for(let item of products) {
+    for(let item of productsJSON) {
         //loop through parsed json and add to either droid Map or vehicle Map
         if(item.type == "droid") {
             droidMap.set(droidMap.size, item);

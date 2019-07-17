@@ -1,18 +1,18 @@
 {
     "Navbar":  {
-        "searchPlaceholder" : "What are you looking for?",
-        "searchButtonLabel" : "search products",
+        "searchPlaceholder" : "Kam aras tu madesn nuo?",
+        "searchButtonLabel" : "Krata products",
         "logoAlt" : "Rebel Outfitters Logo",
-        "searchIconAlt" : "search icon",
+        "searchIconAlt" : "krata ikona",
         "greetingText" : "Hi, Han",
-        "historyLink" : "ORDER HISTORY",
-        "arrowAlt" : "Drop Down Arrow",
-        "cartAlt" : "show cart",
-        "navLinksText" : ["HOME", "DROIDS", "VEHICLES"]
+        "historyLink" : "TVARKA HISTORY",
+        "arrowAlt" : "Dropdown Arrow",
+        "cartAlt" : "parod cart",
+        "navLinksText" : ["HOME", "DOROTIS", "VEHICLES"]
     },
     "Home": {
-        "welcomeMessage" : "Welcome to Rebel Outfitters!",
-        "welcomeSubtitle" : "We provide everything you need to take on the Empire (and win).",
+        "welcomeMessage" : "Zhelosa kia Rebel Outfitters!",
+        "welcomeSubtitle" : "Mes feikti viskas tu adata kia vykti ant tave aeuso (ir dujoz).",
         "symbolAlt" : "Imperial Credit currency symbol"
     }
 }

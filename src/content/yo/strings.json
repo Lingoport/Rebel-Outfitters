@@ -9,5 +9,10 @@
         "arrowAlt" : "Drop Down Arrow",
         "cartAlt" : "show cart",
         "navLinksText" : ["HOME", "DROIDS", "VEHICLES"]
+    },
+    "Home": {
+        "welcomeMessage" : "Hrrmmm. Welcome to Rebel Outfitters. Hmm.",
+        "welcomeSubtitle" : "On the empire we provide everything you need to take. Yrsssss.",
+        "symbolAlt" : "Imperial Credit currency symbol"
     }
 }

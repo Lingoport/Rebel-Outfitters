@@ -1,28 +1,6 @@
-import {productList} from '../app.js';
-
-var productsJSON = {};
 var stringsJSON = {};
 
 const i18n = {
-    
-    //load resource json based on locale
-    loadProductsJSON : async(locale) => {
-        const options = {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        };
-        try {
-            const response = await fetch(`../content/${locale}/products.json`, options)
-            productsJSON = await response.json();
-
-            return productsJSON;
-     
-        } catch (err) {
-            console.log('Error getting products', err)
-        }
-    },
 
     //load resource json based on locale
     loadStringsJSON : async(locale) => {

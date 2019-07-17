@@ -1,4 +1,10 @@
 {
+    "desc" : {
+        "1" : "Each droid is equipped with a SyntheTech AA-1 VerboBrain making them capable of storing enormous amounts of information, the additional memory space is often used to keep communication modules in the active memory so that long delays could be avoided while searching for linguistic information on mid-translation. A TranLang III communications module allows them to be fluent in over six million forms of communication. They also have the skills necessary to quickly analyze new unregistered languages and translate them into more well-known ones."
+    },
+    "title" : {
+        "1" : "3P0 Droid"
+    },
     "Navbar":  {
         "searchPlaceholder" : "What are you looking for?",
         "searchButtonLabel" : "search products",
