@@ -1,5 +1,3 @@
-
-
 class Order {
     constructor(newDate, total, newStatus) {
         this.orderDate = newDate;
