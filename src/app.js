@@ -1,36 +1,47 @@
 "use strict";
 
-import Home         from './views/pages/Home.js';
-import {Browse}        from './views/pages/Browse.js';
-import Error404     from './views/pages/Error404.js';
-import ProductShow     from './views/pages/ProductShow.js';
-import {Checkout}     from './views/pages/Checkout.js';
-import OrderHistory     from './views/pages/OrderHistory.js';
+import Home from './views/pages/Home.js';
+import {Browse} from './views/pages/Browse.js';
+import Error404 from './views/pages/Error404.js';
+import ProductShow from './views/pages/ProductShow.js';
+import {Checkout} from './views/pages/Checkout.js';
+import OrderHistory from './views/pages/OrderHistory.js';
 
-
-import Navbar       from './views/components/Navbar.js';
-import Bottombar    from './views/components/Bottombar.js';
-import Cart from    './views/components/Cart.js';
+import Navbar from './views/components/Navbar.js';
+import Bottombar from './views/components/Bottombar.js';
+import Cart from './views/components/Cart.js';
 import {Hamburger} from './views/components/Hamburger.js';
 
 import {Order} from './views/classes/Order.js';
 
-import Utils        from './services/Utils.js';
+import Utils from './services/Utils.js';
 
-import products from './content/products.js';
+//import our i18n functions
+import i18n from './services/i18n.js';
 
-//global variables//
 
-//schema: id (int), item (object)
+//********************** 
+//  GLOBAL VARIABLES
+//**********************
+
+//holds the items that the user addsto cart; schema: id (int), item (object)
 var shoppingCart = new Map();
 
 var orderHistory = [];
 
 //used to store info about selected locale
-var locale = "en-us";
-var updateLocale = (newLocale) => {
+var locale = "en-US";
+var updateLocale = async(newLocale) => {
+    //update the locale
     locale = newLocale;
     console.log("Locale changed to: " + locale);
+    
+    //fetch new products list
+    await getProductsList(locale);
+
+    //fetch new string resources
+    await i18n.loadStringsJSON(locale);
+
     router();
 }
 
@@ -39,10 +50,17 @@ var productList = new Map();
 productList.set("droids", new Map());
 productList.set("vehicles", new Map());
 
-//functions to get products and push to map
+//function to get products and push to map
 let getProductsList = async() => {
     let droidMap = productList.get("droids");
     let vehicleMap = productList.get("vehicles");
+
+    //clear em out
+    droidMap.clear();
+    vehicleMap.clear();
+
+    let products = await i18n.loadProductsJSON(locale);
+
     for(let item of products) {
         //loop through parsed json and add to either droid Map or vehicle Map
         if(item.type == "droid") {
@@ -53,39 +71,6 @@ let getProductsList = async() => {
         }
     }
 }
-
-
-//this is for the json file
-/*let getProductsList = async () => {
-    const options = {
-       method: 'GET',
-       headers: {
-           'Content-Type': 'application/json'
-       }
-   };
-   try {
-       const response = await fetch('content/products.json', options)
-       const json = await response.json();
-
-       let droidMap = productList.get("droids");
-        let vehicleMap = productList.get("vehicles");
-       for(let item of json) {
-           //loop through parsed json and add to either droid Map or vehicle Map
-           if(item.type == "droid") {
-                droidMap.set(droidMap.size, item);
-           }
-           else if(item.type == "vehicle") {
-                vehicleMap.set(vehicleMap.size, item);
-           }
-       }
-       
-       //THIS IS JUSt FOr DEV of shopping cart
-       //addToCart(droidMap.get(0));
-
-   } catch (err) {
-       console.log('Error getting products', err)
-   }
-}*/
 
 //function for anytime an object is added to cart
 var addToCart = async (item) =>  {
@@ -165,6 +150,10 @@ const router = async () => {
     const footer = null || document.getElementById('footer_container');
     const cart = null || document.querySelector('.cartSlider');
     const ham = null || document.querySelector('.hamSlider');
+
+    //fetch new string resources
+    console.log("loading srings");
+    await i18n.loadStringsJSON(locale);
     
     // Render the Header, footer, and empty cart of the page
     cart.innerHTML = await Cart.render();

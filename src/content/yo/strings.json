@@ -1,0 +1,13 @@
+{
+    "Navbar":  {
+        "searchPlaceholder" : "You looking for what are?",
+        "searchButtonLabel" : "search products",
+        "logoAlt" : "Rebel Outfitters Logo",
+        "searchIconAlt" : "search icon",
+        "greetingText" : "Hi, Han",
+        "historyLink" : "ORDER HISTORY",
+        "arrowAlt" : "Drop Down Arrow",
+        "cartAlt" : "show cart",
+        "navLinksText" : ["HOME", "DROIDS", "VEHICLES"]
+    }
+}

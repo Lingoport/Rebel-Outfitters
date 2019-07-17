@@ -104,29 +104,5 @@
     "qty": 0,
     "imageURL": "../../img/Super_Tactical.png",
     "desc": ""
-},
-{
-    "type": "",
-    "title": "",
-    "price": 1,
-    "qty": 0,
-    "imageURL": "../../img/",
-    "desc": ""
-},
-{
-    "type": "",
-    "title": "",
-    "price": 1,
-    "qty": 0,
-    "imageURL": "../../img/",
-    "desc": ""
-},
-{
-    "type": "",
-    "title": "",
-    "price": 1,
-    "qty": 0,
-    "imageURL": "../../img/",
-    "desc": ""
 }
 ]

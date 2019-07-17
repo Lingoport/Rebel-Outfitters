@@ -33,9 +33,9 @@ let Hamburger = {
             <div class="start">
                 <label for="locale"><h3>${localeLabel}</h3></label>
                 <select id="locale" class="hamDrop">
-                    <option value="en-us">${localeOptions[0]}</option>
-                    <option value="fr-fr">${localeOptions[1]}</option>
-                    <option value="zh-cn">${localeOptions[2]}</option>
+                    <option value="en-US">${localeOptions[0]}</option>
+                    <option value="fr-FR">${localeOptions[1]}</option>
+                    <option value="zh-CN">${localeOptions[2]}</option>
                     <option value="yo">${localeOptions[3]}</option>
                     <option value="si">${localeOptions[4]}</option>
                 </select>

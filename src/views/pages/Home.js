@@ -1,14 +1,12 @@
 import {formatCurrencyWithCommas, featuredProducts} from "../../app.js";
-
-
-
-//static strings to hold all the text (to be used within the HTML template literal)
-let welcomeMessage = "Welcome to Rebel Outfitters!";
-let welcomeSubtitle = "We provide everything you need to take on the Empire (and win)."
-let symbolAlt = "Imperial Credit currency symbol";
+import i18n from "../../services/i18n.js";
 
 let Home = {
     render : async () => {
+        //fetch locale-sensitive strings via i18n method
+        let welcomeMessage = i18n.getString("Home", "welcomeMessage");
+        let welcomeSubtitle = i18n.getString("Home", "welcomeSubtitle");
+        let symbolAlt = i18n.getString("Home", "symbolAlt");
 
         //view is solely for HTML markup, contains no static text
         let view = `

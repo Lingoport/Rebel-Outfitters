@@ -1,13 +1,11 @@
-import i18n from '../services/i18n.js';
-
-var products = [{
+[{
     "type": "droid",
     "class": 2,
     "title": "3P0 Droid",
     "price": 3000,
     "qty": 0,
     "imageURL": "../../img/3PO.png",
-    "desc": "Each droid is equipped with a SyntheTech AA-1 VerboBrain making them capable of storing enormous amounts of information, the additional memory space is often used to keep communication modules in the active memory so that long delays could be avoided while searching for linguistic information on mid-translation. A TranLang III communications module allows them to be fluent in over six million forms of communication. They also have the skills necessary to quickly analyze new unregistered languages and translate them into more well-known ones."
+    "desc": "Equipped with a synthetech aa-1 verbobrain making them capable of storing enormous amounts of information, each droid is, the additional memory space is often used to keep communication modules in the active memory so that long delays, avoided while searching for linguistic information on mid-translation, could be.  To be fluent in over six million forms of communication a tranlang iii communications module allows them.  The skills necessary to quickly analyze new unregistered languages and translate them into more well-known ones, they also have.  Yeesssssss."
 },
 {
     "type": "droid",
@@ -16,7 +14,7 @@ var products = [{
     "price": 800,
     "qty": 0,
     "imageURL": "../../img/DUM-series.png",
-    "desc": "Designed for maintaining podracers, pit droids are affordable, durable repair droids. Pit droids stand at a height of 1.19 meters but have the ability to fold into a compact form when not in use. This feature can be toggled by tapping their nose."
+    "desc": "Designed for maintaining podracers, affordable pit droids are, durable repair droids. At a height of 1 pit droids stand. The ability to fold into a compact form when not in use 19 meters but have. Toggled by tapping their nose this feature can be."
 },
 {
     "type": "droid",
@@ -29,7 +27,7 @@ var products = [{
 },
 {
     "type": "droid",
-    "title": "IG-88B",
+    "title": "IG-88B Droid",
     "price": 4500,
     "qty": 0,
     "imageURL": "../../img/IG-88.png",
@@ -107,6 +105,4 @@ var products = [{
     "imageURL": "../../img/Super_Tactical.png",
     "desc": ""
 }
-];
-
-export default products;
+]

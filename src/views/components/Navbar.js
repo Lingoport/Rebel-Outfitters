@@ -1,19 +1,19 @@
 import Utils from "../../services/Utils.js";
 import { showCart} from "../../app.js";
-
-//static strings to hold all the text (to be used within the HTML template literal)
-let searchPlaceholder = "What are you looking for?";
-let searchButtonLabel = "search products";
-let logoAlt = "Rebel Outfitters Logo";
-let searchIconAlt = "search icon";
-let greetingText = "Hi, Han";
-let historyLink = "ORDER HISTORY";
-let arrowAlt = "Drop Down Arrow";
-let cartAlt = "Show cart";
-let navLinksText = ["HOME", "DROIDS", "VEHICLES"];
+import i18n from "../../services/i18n.js";
 
 let Navbar = {
     render: async () => {
+        //fetch locale-sensitive strings via i18n method
+        let searchPlaceholder = i18n.getString("Navbar", "searchPlaceholder");
+        let searchButtonLabel = i18n.getString("Navbar", "searchButtonLabel");
+        let logoAlt = i18n.getString("Navbar", "logoAlt");
+        let searchIconAlt = i18n.getString("Navbar", "searchIconAlt");
+        let historyLink = i18n.getString("Navbar", "historyLink");
+        let arrowAlt = i18n.getString("Navbar", "arrowAlt");
+        let greetingText = i18n.getString("Navbar", "greetingText");
+        let cartAlt = i18n.getString("Navbar", "cartAlt");
+        let navLinksText = i18n.getString("Navbar", "navLinksText");
 
         //view is solely for HTML markup, contains no static text
         let view =

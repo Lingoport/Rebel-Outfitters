@@ -1,0 +1,18 @@
+{
+    "Navbar":  {
+        "searchPlaceholder" : "What are you looking for?",
+        "searchButtonLabel" : "search products",
+        "logoAlt" : "Rebel Outfitters Logo",
+        "searchIconAlt" : "search icon",
+        "greetingText" : "Hi, Han",
+        "historyLink" : "ORDER HISTORY",
+        "arrowAlt" : "Drop Down Arrow",
+        "cartAlt" : "show cart",
+        "navLinksText" : ["HOME", "DROIDS", "VEHICLES"]
+    },
+    "Home": {
+        "welcomeMessage" : "Welcome to Rebel Outfitters!",
+        "welcomeSubtitle" : "We provide everything you need to take on the Empire (and win).",
+        "symbolAlt" : "Imperial Credit currency symbol"
+    }
+}
