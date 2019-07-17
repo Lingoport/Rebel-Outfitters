@@ -1,4 +1,10 @@
 {
+    "desc" : {
+        "1" : "Test tsis sandau description"
+    },
+    "title" : {
+        "1" : "Tsis sandau Title"
+    },
     "Navbar":  {
         "searchPlaceholder" : "Kam aras tu madesn nuo?",
         "searchButtonLabel" : "Krata products",

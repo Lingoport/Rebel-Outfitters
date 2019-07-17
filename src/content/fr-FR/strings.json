@@ -1,4 +1,10 @@
 {
+    "desc" : {
+        "1" : "Description du produit en français"
+    },
+    "title" : {
+        "1" : "Titre du produit français"
+    },
     "Navbar":  {
         "searchPlaceholder" : "Que cherchez-vous?",
         "searchButtonLabel" : "Recherche de produits",

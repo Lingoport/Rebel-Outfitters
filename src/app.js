@@ -38,11 +38,8 @@ var updateLocale = async(newLocale) => {
     locale = newLocale;
     console.log("Locale changed to: " + locale);
     
-    //fetch new products list
+    //fetch new products list and refresh stringsJSON
     await getProductsList(locale);
-
-    //fetch new string resources
-    await i18n.loadStringsJSON(locale);
 
     router();
 }
@@ -156,9 +153,10 @@ const router = async () => {
     const cart = null || document.querySelector('.cartSlider');
     const ham = null || document.querySelector('.hamSlider');
 
-    //fetch new string resources
-    console.log("loading srings");
-    await i18n.loadStringsJSON(locale);
+    //grab products from JSON file
+    if(productList.get("droids").size == 0 && productList.get("vehicles").size == 0) {
+        await getProductsList();
+    }
     
     // Render the Header, footer, and empty cart of the page
     cart.innerHTML = await Cart.render();
@@ -170,19 +168,9 @@ const router = async () => {
     footer.innerHTML = await Bottombar.render();
     await Bottombar.after_render();
 
-    //grab products from JSON file
-    if(productList.get("droids").size == 0 && productList.get("vehicles").size == 0) {
-        await getProductsList();
-    }
-
     //add some dummy orders if there's nothing there
     if(orderHistory.length == 0) {
         dummyOrders();
-    }
-
-    //create featured products array
-    if(featuredProducts.length == 0) {
-        
     }
 
     // Get the parsed URl from the addressbar

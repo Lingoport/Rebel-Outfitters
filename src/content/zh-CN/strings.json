@@ -1,4 +1,10 @@
 {
+    "desc" : {
+        "1" : "中文产品说明"
+    },
+    "title" : {
+        "1" : "中文产品名称"
+    },
     "Navbar":  {
         "searchPlaceholder" : "你在找什么？",
         "searchButtonLabel" : "搜索产品",
