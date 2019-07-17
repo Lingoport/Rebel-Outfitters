@@ -477,6 +477,7 @@ nav ul li .activeLink::after {
 .browseGrid article:hover {
   box-shadow: 0 0 8px 2px #bffff1;
 }
+
 .gridImage {
   object-fit: contain;
   display: block;

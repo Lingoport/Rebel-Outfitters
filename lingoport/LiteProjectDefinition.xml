@@ -43,5 +43,25 @@
       </comments>
       <scan-items/>
     </scan>
+    <scan>
+      <scan-name>HTML RS</scan-name>
+      <ruleset-name>Isaac HTML</ruleset-name>
+      <ruleset-owner>demo@lingoport.com</ruleset-owner>
+      <use-machine-learning>true</use-machine-learning>
+      <encoding>systemDefault</encoding>
+      <checks>
+        <embedded-strings>true</embedded-strings>
+        <locale-sensitive-methods>true</locale-sensitive-methods>
+        <general-patterns>true</general-patterns>
+        <static-file-references>true</static-file-references>
+      </checks>
+      <comments>
+        <todo>GLOBALYZER_TODO</todo>
+        <ignore-next-line>GLOBALYZER_IGNORE_NEXT_LINE</ignore-next-line>
+        <start-ignore>GLOBALYZER_START_IGNORE</start-ignore>
+        <end-ignore>GLOBALYZER_END_IGNORE</end-ignore>
+      </comments>
+      <scan-items/>
+    </scan>
   </scans>
 </gzproject>
