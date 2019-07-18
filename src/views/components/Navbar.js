@@ -70,11 +70,8 @@ let Navbar = {
         var logo = document.querySelector("#logo");
         //redirect to home on logo click
         logo.addEventListener("click", function() {
-            location.href="/";
+            location.href="/#";
         }, false);
-
-
-        
 
         //underline active link
         //figure out what resource path we're at and add the activeLink class so it can be styled in css

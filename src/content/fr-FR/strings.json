@@ -1,9 +1,33 @@
 {
-    "desc" : {
-        "1" : "Description du produit en français"
-    },
     "title" : {
-        "1" : "Titre du produit français"
+        "1" : "Titre du produit français",
+        "2" : "Titre du produit français",
+        "3" : "Titre du produit français",
+        "4" : "Titre du produit français",
+        "5" : "Titre du produit français",
+        "6" : "Titre du produit français",
+        "7" : "Titre du produit français",
+        "8" : "Titre du produit français",
+        "9" : "Titre du produit français",
+        "10" : "Titre du produit français",
+        "11" : "Titre du produit français",
+        "12" : "Titre du produit français",
+        "13" : "Titre du produit français"
+    },
+    "desc" : {
+        "1" : "Description du produit en français",
+        "2" : "Description du produit en français",
+        "3" : "Description du produit en français",
+        "4" : "Description du produit en français",
+        "5" : "Description du produit en français",
+        "6" : "Description du produit en français",
+        "7" : "Description du produit en français",
+        "8" : "Description du produit en français",
+        "9" : "Description du produit en français",
+        "10" : "Description du produit en français",
+        "11" : "Description du produit en français",
+        "12" : "Description du produit en français",
+        "13" : "Description du produit en français"
     },
     "Navbar":  {
         "searchPlaceholder" : "Que cherchez-vous?",
