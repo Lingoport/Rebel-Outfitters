@@ -114,24 +114,24 @@ let Checkout = {
             <div class="checkoutCart">
                 <h1>${cartTitle}</h1>
             `;
-            shoppingCart.forEach((value, key) => {
-                // html
+            for(let key in shoppingCart) {
+                let value = shoppingCart[key];
                 total += value.price * value.qty;
                 view += `
-                <div class="cartItem">
-                    <div class="cartQtyTitle">
-                        <input type="number" class="cartQty" name="qty" id="${key}" min="1" max="10" size="0" value="${value.qty}">
-                        <h3>${value.title}</h3>
-                    </div>
-                    <div class="cartPrice">
-                        <div class="gridPrice">
-                            <img src="../../img/wSymbol.svg" class="symbol" alt="${symbolAlt}">
-                            <h4>${formatCurrencyWithCommas(value.price * value.qty)}</h4>
-                        </div>
-                        <img src="img/delete.svg" class="delete" id="${key}" alt="${deleteAlt}">
-                    </div>
-                </div>`
-            });
+                        <div class="cartItem">
+                            <div class="cartQtyTitle">
+                                <input type="number" class="cartQty" name="qty" id="${value.productID}" min="1" max="10" size="0" value="${value.qty}">
+                                <h4>${value.title}</h4>
+                            </div>
+                            <div class="cartPrice">
+                                <div class="gridPrice">
+                                    <img src="../../img/wSymbol.svg" class="symbol" alt="${symbolAlt}">
+                                    <h4>${formatCurrencyWithCommas(value.price * value.qty)}</h4>
+                                </div>
+                                <img src="img/delete.svg" class="delete" id="${value.productID}" alt="${deleteAlt}">
+                            </div>
+                        </div>`;
+            }
             view += `
             <div class="cartTotal">
                     <h3>${totalLabel}</h3>

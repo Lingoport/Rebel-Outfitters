@@ -49,12 +49,43 @@ var updateLocale = async(newLocale) => {
     //refresh the shopping cart
     console.log(shoppingCart);
     console.log(productList);
+    reloadCart();
 
     router();
 }
 
+//update the shopping cart based on the new product list
 var reloadCart = () => {
 
+    //get references to droid and vehicle map
+    let droidMap = productList.get("droids");
+    let vehicleMap = productList.get("vehicles");
+
+    for(let key in shoppingCart) {
+        let product = shoppingCart[key];
+        let saveQty;
+        if(product.type == "droid") {
+            saveQty = product.qty;
+            shoppingCart[product.productID] = droidMap.get(product.productID);
+            shoppingCart[product.productID].qty = saveQty;
+        }
+        else {
+            saveQty = product.qty;
+            shoppingCart[product.productID] = vehicleMap.get(product.productID);
+            shoppingCart[product.productID].qty = saveQty;
+        }
+    }
+    saveCart();
+}
+
+//stringify the cart and persist
+var saveCart = () => {
+    let cartIds = [];
+    //construct array of objects with schema productID : type
+    for(let key in shoppingCart) {
+        cartIds.push([key, shoppingCart[key].type, shoppingCart[key].qty]);
+    }
+    localStorage.setItem("cart", JSON.stringify(cartIds));
 }
 
 //map of maps to hold both vehicles and droids
@@ -85,17 +116,55 @@ let getProductsList = async() => {
 
     //pick the "featured products"
     await getFeaturedProducts();
+    //load cart contents fromlocalStorage if available
+    //localStorage.removeItem('cart');
+    readCart();
 }
 
-//holds the items that the user adds to cart; schema: id (int), item (object)
-var shoppingCart = new Map();
+//holds the items that the user adds to cart; schema: productID (int) : item (object)
+var shoppingCart = {};
+
+//load cart contents fromlocalStorage if available
+var readCart = () => {
+    if(localStorage.getItem("cart") !== null) {
+        console.log("found cart in storage, reconstructing...");
+
+        let droidMap = productList.get("droids");
+        let vehicleMap = productList.get("vehicles");
+
+        console.log(droidMap);
+
+
+        let cartIdString = localStorage.getItem("cart");
+        let cartIds = JSON.parse(cartIdString);
+
+        console.log(cartIds);
+
+        for(let productAr of cartIds) {
+            console.log(productAr);
+            if(productAr[1] == "droid") {
+                let product = droidMap.get(parseInt(productAr[0]));
+                product.qty = parseInt(productAr[2]);
+                shoppingCart[productAr[0]] = product;
+            }
+            else {
+                let product = vehicleMap.get(parseInt(productAr[0]));
+                product.qty = parseInt(productAr[2]);
+                shoppingCart[productAr[0]] = product;
+            }
+        }
+        console.log(shoppingCart);
+
+    }
+}
 
 //function for anytime an object is added to cart
 var addToCart = async (item) =>  {
     const cart = null || document.querySelector('.cartSlider');
+
     //add item to cart if it doesn't already exist
-    if(!shoppingCart.has(item.productID)) {
-        shoppingCart.set(item.productID, item);
+    if(!shoppingCart.hasOwnProperty(item.productID)) {
+        shoppingCart[item.productID] = item;
     }
 
     //re-render the cart and navbar (for click listener)
@@ -104,6 +173,8 @@ var addToCart = async (item) =>  {
     await Navbar.after_render();
     //display cart
     showCart();
+    //save it to localStorage
+    saveCart();
 }
 
 //show the cart and fade the other elements
@@ -142,7 +213,7 @@ let getFeaturedProducts = async () => {
     featuredProducts.push(droidMap.get(2));
 }
 
-export { shoppingCart, addToCart, showCart, router, locale, productList, updateLocale, orderHistory, formatCurrencyWithCommas, featuredProducts };
+export { shoppingCart, addToCart, showCart, router, locale, productList, updateLocale, orderHistory, formatCurrencyWithCommas, featuredProducts, saveCart };
 
 // List of supported routes. Any url other than these routes will throw a 404 error
 const routes = {
