@@ -18,30 +18,43 @@ import Utils from './services/Utils.js';
 
 import Products from './content/Products.js';
 
-//import our i18n functions
-import i18n from './services/i18n.js';
-
-
 //********************** 
 //  GLOBAL VARIABLES
 //**********************
 
-//holds the items that the user addsto cart; schema: id (int), item (object)
-var shoppingCart = new Map();
-
 var orderHistory = [];
 
 //used to store info about selected locale
-var locale = "en-US";
+var locale;
+//check localStorage for saved locale, load if exists, set to en-US be default
+if(localStorage.getItem("locale") === null) {
+    console.log("no locale info in storage");
+    locale = "en-US";
+}
+else {
+    console.log("found locale in storage, using that value");
+    locale = localStorage.getItem("locale");
+}
+//function to update and save locale
 var updateLocale = async(newLocale) => {
     //update the locale
     locale = newLocale;
+    //store the new locale
+    localStorage.setItem('locale', locale);
     console.log("Locale changed to: " + locale);
     
     //fetch new products list and refresh stringsJSON
     await getProductsList(locale);
 
+    //refresh the shopping cart
+    console.log(shoppingCart);
+    console.log(productList);
+
     router();
+}
+
+var reloadCart = () => {
+
 }
 
 //map of maps to hold both vehicles and droids
@@ -63,10 +76,10 @@ let getProductsList = async() => {
     for(let item of productsJSON) {
         //loop through parsed json and add to either droid Map or vehicle Map
         if(item.type == "droid") {
-            droidMap.set(droidMap.size, item);
+            droidMap.set(item.productID, item);
         }
         else if(item.type == "vehicle") {
-            vehicleMap.set(vehicleMap.size, item);
+            vehicleMap.set(item.productID, item);
         }
     }
 
@@ -74,12 +87,15 @@ let getProductsList = async() => {
     await getFeaturedProducts();
 }
 
+//holds the items that the user adds to cart; schema: id (int), item (object)
+var shoppingCart = new Map();
+
 //function for anytime an object is added to cart
 var addToCart = async (item) =>  {
     const cart = null || document.querySelector('.cartSlider');
-    //if cart is empty then set the value of the first key (0) to our new item
-    if(!shoppingCart.has(item.title)) {
-        shoppingCart.set(item.title, item);
+    //add item to cart if it doesn't already exist
+    if(!shoppingCart.has(item.productID)) {
+        shoppingCart.set(item.productID, item);
     }
 
     //re-render the cart and navbar (for click listener)
@@ -120,10 +136,10 @@ let getFeaturedProducts = async () => {
     let vehicleMap = productList.get('vehicles');
     let droidMap = productList.get('droids');
    
-    featuredProducts.push(vehicleMap.get(0));
+    featuredProducts.push(vehicleMap.get(5));
     featuredProducts.push(droidMap.get(1));
-    featuredProducts.push(vehicleMap.get(2));
-    featuredProducts.push(droidMap.get(3));
+    featuredProducts.push(vehicleMap.get(8));
+    featuredProducts.push(droidMap.get(2));
 }
 
 export { shoppingCart, addToCart, showCart, router, locale, productList, updateLocale, orderHistory, formatCurrencyWithCommas, featuredProducts };
