@@ -31,10 +31,14 @@ let ProductShow = {
                     <img src="${product.imageURL}" class="detailImage">
                 </article>
                 <article class="detailContent">
-                    <h1>${product.title}</h1>
-                    <div class="gridPrice">
+                    <div class="grem-container left">
+                        <h1>${product.title}</h1>
+                        <img src="../../img/orange_grem.png" class="gremlin-right embedded gremlin-space">
+                    </div>
+                    <div class="gridPrice grem-container left">
                         <img src="../../img/bSymbol.svg" class="symbol" alt="${symbolAlt}">
                         <h4>${formatCurrencyWithCommas(product.price)}</h4>
+                        <img src="../../img/purple_grem.png" class="gremlin-right small format gremlin space">
                     </div>
                     <div class="qty">
                         <h3>${qtyLabel}</h3>

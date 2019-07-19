@@ -15,6 +15,8 @@ let Browse = {
 
         let productMap = null;
 
+        title = "All";
+
         if(type == "droids") {
             productMap = productList.get('droids');
             title += " Droids";
@@ -26,7 +28,10 @@ let Browse = {
 
         //view is solely for HTML markup, contains no static text
         let view = `<section class="browsePage">
-                        <h1>${title}</h1>
+                        <div class="grem-container left">
+                            <h1>${title}</h1>
+                            <img src="../../img/red_grem.png" class="gremlin-right gremlin-space concat">
+                        </div>
                         <div class="browseGrid">`;
 
         productMap.forEach((product, key) => {
@@ -35,9 +40,10 @@ let Browse = {
                         <img src="${product.imageURL}" class="gridImage" alt="${product.title}">
                         <div class="gridDes">
                             <h3>${product.title}</h3>
-                            <div class="gridPrice">
+                            <div class="gridPrice grem-container">
                                 <img src="../../img/bSymbol.svg" class="symbol" alt="${symbolAlt}">
                                 <h4>${formatCurrencyWithCommas(product.price)}</h4>
+                                <img src="../../img/purple_grem.png" class="gremlin-right small format show${key} hide-gremlin">
                             </div>
                         </div>
                     </article>`;

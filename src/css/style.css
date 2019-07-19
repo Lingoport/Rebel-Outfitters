@@ -42,6 +42,116 @@ body canvas {
   z-index: -1;
 }
 
+.grem-container {
+  position: relative;
+  display: table;
+  margin: 0 auto;
+}
+
+.left {
+  margin-left: 0;
+}
+
+.gremlin-right {
+  position: absolute;
+  top: calc(50% - 20px);
+  left: 100%;
+  width: 40px;
+  height: 40px;
+  opacity: 0.75;
+  animation-duration: 4s;
+  animation-name: pulse;
+  animation-iteration-count: infinite;
+  object-fit: contain;
+}
+.gremlin-right:hover {
+  animation: none;
+  opacity: 1;
+}
+
+.gremlin-space {
+  left: 105%;
+}
+
+.gremlin-center-top {
+  position: absolute;
+  top: 1%;
+  left: calc(50% - 25px);
+  width: 50px;
+  height: 50px;
+  opacity: 0.75;
+  animation-duration: 4s;
+  animation-name: pulse;
+  animation-iteration-count: infinite;
+  object-fit: contain;
+}
+.gremlin-center-top:hover {
+  animation: none;
+  opacity: 1;
+}
+
+.small {
+  width: 30px;
+  height: 30px;
+  top: calc(50% - 15px);
+}
+
+.hide-gremlin {
+  display: none;
+}
+
+.show0 {
+  display: block;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+.tippy-tooltip.custom-theme {
+  background-color: #2d2d2a;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0 0 6px 0 #bffff1;
+  border: 1px solid #bffff1;
+  border-radius: 10px;
+}
+
+.tippy-tooltip.custom-theme[data-animatefill] {
+  background-color: transparent;
+}
+
+.tippy-tooltip.custom-theme .tippy-backdrop {
+  background-color: #2d2d2a;
+}
+
+.tippy-tooltip.custom-theme .tippy-content {
+  padding: 7px;
+}
+
+.tippy-tooltip.custom-theme[x-placement^=top] .tippy-arrow {
+  border-top-color: #bffff1;
+}
+
+.tippy-tooltip.custom-theme[x-placement^=bottom] .tippy-arrow {
+  border-bottom-color: #bffff1;
+}
+
+.tippy-tooltip.custom-theme[x-placement^=left] .tippy-arrow {
+  border-left-color: #bffff1;
+}
+
+.tippy-tooltip.custom-theme[x-placement^=right] .tippy-arrow {
+  border-right-color: #bffff1;
+}
+
 .loading {
   text-align: center;
   margin-top: 33%;
@@ -289,7 +399,7 @@ input[type=number]::-webkit-outer-spin-button {
   align-items: center;
 }
 .cartSlider .cartContents .cartItem .cartPrice .gridPrice {
-  margin-top: 0;
+  margin-top: 5px;
 }
 .cartSlider .cartContents .cartItem .cartPrice .gridPrice .symbol {
   margin-right: 0;
@@ -779,6 +889,12 @@ p {
   margin-bottom: 30px;
 }
 
+.welcome {
+  text-align: center;
+  position: relative;
+  display: table;
+  margin: auto;
+}
 .welcome h3 {
   padding-top: 10px;
 }

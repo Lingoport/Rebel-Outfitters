@@ -12,9 +12,10 @@ let Home = {
 
         //view is solely for HTML markup, contains no static text
         let view = `
-                    <section class="welcome">
+                    <section class="welcome grem-container">
                         <h1 class="center">${welcomeMessage}</h1>
                         <h3 class="center white">${welcomeSubtitle}</h3>
+                        <img src="../../img/orange_grem.png" class="gremlin-right embedded">
                     </section>
                     <div class="browseGrid homeGrid">`;
 
@@ -22,16 +23,17 @@ let Home = {
         featuredProducts.forEach((product, key) => {
 
             //string to give image an alt tag for accessibility
-            let imageAlt = product.title + "image";
+            let imageAlt = product.title + " image";
 
             view += `
                     <article id="${key}" class="${product.type}">
                         <img src="${product.imageURL}" class="gridImage" alt="${imageAlt}">
                         <div class="gridDes">
                             <h3>${product.title}</h3>
-                            <div class="gridPrice">
+                            <div class="gridPrice grem-container">
                                 <img src="../../img/bSymbol.svg" class="symbol" alt="${symbolAlt}">
                                 <h4>${formatCurrencyWithCommas(product.price)}</h4>
+                                <img src="../../img/purple_grem.png" class="gremlin-right small format show${key} hide-gremlin">
                             </div>
                         </div>
                     </article>`;
@@ -52,6 +54,8 @@ let Home = {
             }, false);
             curProduct.classList.add("zoom");
         }
+
+
 
     }
 

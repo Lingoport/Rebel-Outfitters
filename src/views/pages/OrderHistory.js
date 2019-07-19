@@ -23,13 +23,19 @@ let OrderHistory = {
             orderHistory.forEach((order, key) => {
                 view += `
                 <article class="orderItem">
-                    <h3>${order.formatDate()}</h3>
+                    <div class="grem-container left">
+                        <h3>${order.formatDate()}</h3>
+                        <img src="../../img/blue_grem.png" class="gremlin-right gremlin-space small localeMethod show${key} hide-gremlin">
+                    </div>
                     <h3>${order.orderNumber}</h3>
                     <div class="gridPrice">
                         <img src="../../img/bSymbol.svg" class="symbol" alt="${symbolAlt}">
                         <h3>${formatCurrencyWithCommas(order.total)}</h3>
                     </div>
-                    <h3>${order.status}</h3>
+                    <div class="grem-container left">
+                        <h3>${order.status}</h3>
+                        <img src="../../img/orange_grem.png" class="gremlin-right gremlin-space small embedded show${key} hide-gremlin">
+                    </div>
                 </article>`
             });
             view += `

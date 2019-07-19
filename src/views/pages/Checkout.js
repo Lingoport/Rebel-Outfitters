@@ -44,7 +44,8 @@ let Checkout = {
         //view is solely for HTML markup, contains no static text
         let view = `
         <section class="checkout">
-            <div class="checkoutDetails">
+            <div class="checkoutDetails grem-container">
+                <img src="../../img/teal_grem.png" class="gremlin-center-top gremlin-space formIssue">
                 <h1>${checkoutTitle}</h1>
                 <div class="shippingInfo">
                     <h2>${shipSectionLabel}</h2>
@@ -82,7 +83,10 @@ let Checkout = {
                     </div>
                 </div>
                 <div class="paymentInfo">
-                    <h2>${paySectionLabel}</h2>
+                    <div class="grem-container left">
+                        <h2>${paySectionLabel}</h2>
+                        <img src="../../img/orange_grem.png" class="gremlin-right embedded">
+                    </div>
                     <div class="form">
                         <div class="formElement halfWidth">
                             <label for="cardName">${payNameLabel}</label>
@@ -105,9 +109,10 @@ let Checkout = {
                         </div>
                     </div>
                 </div>
-                <div class="termsCheck">
+                <div class="termsCheck grem-container left">
                     <input type="checkbox" name="terms" value="terms">
                     <h4>I have read and agree to the <a target="_blank" href="../../static/terms.html">Terms and Conditions</a></h4>
+                    <img src="../../img/blue_grem.png" class="gremlin-right small staticFile">
                 </div>
                 <button class="orderButt">PLACE ORDER</button>
             </div>
