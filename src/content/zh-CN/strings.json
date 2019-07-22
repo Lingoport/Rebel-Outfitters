@@ -44,5 +44,39 @@
         "welcomeMessage" : "欢迎来到Rebel Outfitters！",
         "welcomeSubtitle" : "我们提供您在帝国（和胜利）上所需的一切。",
         "symbolAlt" : "Imperial Credit currency symbol"
+    },
+    "Browse": {
+        "droidTitle" : "所有的機器人",
+        "vehicleTitle" : "所有車輛"
+    },
+    "Checkout": {
+        "checkoutTitle": "查看",
+        "shipSectionLabel": "送货信息",
+        "firstNameLabel": "名字",
+        "lastNameLabel": "姓",
+        "coordinatesLabel": "坐标",
+        "coordinatesHolder": "0,0,0",
+        "sectorLabel": "扇形",
+        "methodLabel": "邮寄方式",
+        "methodOptions": [
+            "光速",
+            "前夜的",
+            "标准"
+        ],
+        "paySectionLabel": "付款",
+        "payNameLabel": "卡片上的名字",
+        "payNameHolder": "最后一个",
+        "accountLabel": "帝国信用卡号码",
+        "accountHolder": "1234567-9876-00",
+        "securityLabel": "安全码",
+        "securityHolder": "123456",
+        "expDateLabel": "截止日期",
+        "cartTitle": "购物车",
+        "deleteAlt": "从购物车中删除商品",
+        "totalLabel": "总： ",
+        "orderLabel": "下订单",
+        "termsStatement": "我已经阅读并同意",
+        "termsLink": "条款和条件"
+
     }
 }

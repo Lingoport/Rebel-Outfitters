@@ -44,5 +44,38 @@
         "welcomeMessage" : "Hrrmmm. Welcome to Rebel Outfitters. Hmm.",
         "welcomeSubtitle" : "On the empire we provide everything you need to take. Yrsssss.",
         "symbolAlt" : "Imperial Credit currency symbol"
+    },
+    "Browse": {
+        "droidTitle" : "Hrrmmm. All droids.",
+        "vehicleTitle" : "All Vehicles."
+    },
+    "Checkout": {
+        "checkoutTitle": "Checkout",
+        "shipSectionLabel": "Shipping info. Yrsssss.",
+        "firstNameLabel": "Hrrmmm. First name.",
+        "lastNameLabel": "Last Name",
+        "coordinatesLabel": "Coordinates",
+        "coordinatesHolder": "0,0,0",
+        "sectorLabel": "Sector. Yes, hrrrm.",
+        "methodLabel": "Shipping Method",
+        "methodOptions": [
+            "Lightspeed",
+            "Overnight",
+            "Standard"
+        ],
+        "paySectionLabel": "Hrrmmm. Payment. Yes, hrrmmm.",
+        "payNameLabel": "Name on card.",
+        "payNameHolder": "First Last",
+        "accountLabel": "Imperial Credit Number",
+        "accountHolder": "1234567-9876-00",
+        "securityLabel": "Security Code",
+        "securityHolder": "123456",
+        "expDateLabel": "Expiration date. Yes, hrrmmm.",
+        "cartTitle": "Shopping Cart",
+        "deleteAlt": "from cart item remove",
+        "totalLabel": "Total: ",
+        "orderLabel": "PLACE ORDER",
+        "termsStatement": "Read and agree to I have the",
+        "termsLink": "Terms and Conditions"
     }
 }

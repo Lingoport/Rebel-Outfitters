@@ -44,5 +44,38 @@
         "welcomeMessage" : "Zhelosa kia Rebel Outfitters!",
         "welcomeSubtitle" : "Mes feikti viskas tu adata kia vykti ant tave aeuso (ir dujoz).",
         "symbolAlt" : "Imperial Credit currency symbol"
+    },
+    "Browse": {
+        "droidTitle" : "Visa Dorotis",
+        "vehicleTitle" : "Visa Vehicles"
+    },
+    "Checkout": {
+        "checkoutTitle": "Checkout",
+        "shipSectionLabel": "Shipping Info",
+        "firstNameLabel": "karuvis vadinti",
+        "lastNameLabel": "galas vadinti",
+        "coordinatesLabel": "Coordinates",
+        "coordinatesHolder": "0,0,0",
+        "sectorLabel": "ruozas",
+        "methodLabel": "Shipping Method",
+        "methodOptions": [
+            "Lightspeed",
+            "Overnight",
+            "Standard"
+        ],
+        "paySectionLabel": "Payment",
+        "payNameLabel": "vadinti ant Card",
+        "payNameHolder": "karuvis galas",
+        "accountLabel": "Imperial Credit Number",
+        "accountHolder": "1234567-9876-00",
+        "securityLabel": "uzstafas sifu",
+        "securityHolder": "123456",
+        "expDateLabel": "Expiration Date",
+        "cartTitle": "Shopping Cart",
+        "deleteAlt": "klase item sulig cart",
+        "totalLabel": "Total: ",
+        "orderLabel": "Aikste tvarka",
+        "termsStatement": "Nu zinot rodyt ir derinti kia",
+        "termsLink": "Terms ir Conditions"
     }
 }

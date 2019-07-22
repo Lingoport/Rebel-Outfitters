@@ -1,39 +1,45 @@
-import {shoppingCart, orderHistory, formatCurrency} from "../../app.js";
+import { shoppingCart, orderHistory, formatCurrency } from "../../app.js";
 
-import {Order} from "../classes/Order.js";
+import i18n from '../../services/i18n.js';
+
+import { Order } from "../classes/Order.js";
 
 //TODO: add click listeners for updating qty or deleting items from cart
 
 var total;
 
-//static string to hold all the text (to be used within the HTML template literal)
-let checkoutTitle = "Checkout";
-let shipSectionLabel = "Shipping Info";
-let firstNameLabel = "First Name";
-let lastNameLabel = "Last Name";
-let coordinatesLabel = "Coordinates";
-let coordinatesHolder = "0,0,0";
-let sectorLabel = "Sector";
-let methodLabel = "Shipping Method";
-let methodOptions = ["Lightspeed", "Overnight", "Standard"];
-let paySectionLabel = "Payment";
-let payNameLabel = "Name on Card";
-let payNameHolder = "First Last";
-let accountLabel = "Imperial Credit Number";
-let accountHolder = "1234567-9876-00";
-let securityLabel = "Security Code";
-let securityHolder = "123456";
-let expDateLabel = "Expiration Date";
-let cartTitle = "Shopping Cart";
-let symbolAlt = "Imperial Credit currency symbol";
-let deleteAlt = "remove item from cart";
-let totalLabel = "Total: ";
+
 
 
 
 let Checkout = {
 
     render: async () => {
+        //static string to hold all the text (to be used within the HTML template literal)
+        let checkoutTitle = i18n.getString("Checkout", "checkoutTitle");
+        let shipSectionLabel = i18n.getString("Checkout", "shipSectionLabel");
+        let firstNameLabel = i18n.getString("Checkout", "firstNameLabel");
+        let lastNameLabel = i18n.getString("Checkout", "lastNameLabel");
+        let coordinatesLabel = i18n.getString("Checkout", "coordinatesLabel");
+        let coordinatesHolder = i18n.getString("Checkout", "coordinatesHolder");
+        let sectorLabel = i18n.getString("Checkout", "sectorLabel");
+        let methodLabel = i18n.getString("Checkout", "methodLabel");
+        let methodOptions = i18n.getString("Checkout", "methodOptions");
+        let paySectionLabel = i18n.getString("Checkout", "paySectionLabel");
+        let payNameLabel = i18n.getString("Checkout", "payNameLabel");
+        let payNameHolder = i18n.getString("Checkout", "payNameHolder");
+        let accountLabel = i18n.getString("Checkout", "accountLabel");
+        let accountHolder = i18n.getString("Checkout", "accountHolder");
+        let securityLabel = i18n.getString("Checkout", "securityLabel");
+        let securityHolder = i18n.getString("Checkout", "securityHolder");
+        let expDateLabel = i18n.getString("Checkout", "expDateLabel");
+        let cartTitle = i18n.getString("Checkout", "cartTitle");
+        let deleteAlt = i18n.getString("Checkout", "deleteAlt");
+        let totalLabel = i18n.getString("Checkout", "totalLabel");
+        let orderLabel = i18n.getString("Checkout", "orderLabel");
+        let termsStatement = i18n.getString("Checkout", "termsStatement");
+        let termsLink = i18n.getString("Checkout", "termsLink");
+        
         total = 0;
         //hide cart initially
         let slider = document.querySelector(".cartSlider")
@@ -107,17 +113,17 @@ let Checkout = {
                 </div>
                 <div class="termsCheck">
                     <input type="checkbox" name="terms" value="terms">
-                    <h4>I have read and agree to the <a target="_blank" href="../../static/terms.html">Terms and Conditions</a></h4>
+                    <h4>${termsStatement} <a target="_blank" href="../../static/terms.html">${termsLink}</a></h4>
                 </div>
-                <button class="orderButt">PLACE ORDER</button>
+                <button class="orderButt">${orderLabel}</button>
             </div>
             <div class="checkoutCart">
                 <h1>${cartTitle}</h1>
             `;
-            for(let key in shoppingCart) {
-                let value = shoppingCart[key];
-                total += value.price * value.qty;
-                view += `
+        for (let key in shoppingCart) {
+            let value = shoppingCart[key];
+            total += value.price * value.qty;
+            view += `
                         <div class="cartItem">
                             <div class="cartQtyTitle">
                                 <input type="number" class="cartQty" name="qty" id="${value.productID}" min="1" max="10" size="0" value="${value.qty}">
@@ -130,8 +136,8 @@ let Checkout = {
                                 <img src="img/delete.svg" class="delete" id="${value.productID}" alt="${deleteAlt}">
                             </div>
                         </div>`;
-            }
-            view += `
+        }
+        view += `
             <div class="cartTotal">
                     <h3>${totalLabel}</h3>
                     <div class="totalPrice">
@@ -165,6 +171,6 @@ var placeOrder = () => {
     //construct success message
     let message = "Order #" + order.orderNumber + " placed successfully!";
     window.alert(message);
-    location.href="/#/history";
+    location.href = "/#/history";
 }
 export { Checkout };

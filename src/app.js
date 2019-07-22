@@ -19,6 +19,8 @@ import i18n from './services/i18n.js';
 
 import Products from './content/Products.js';
 
+
+
 //********************** 
 //  GLOBAL VARIABLES
 //**********************
@@ -84,7 +86,6 @@ var formatCurrency = (price) => {
     if(locale == 'yo' || locale == 'si') {
         let symbolAlt = i18n.getString("Home", "symbolAlt");
         formatted = new Intl.NumberFormat('en-US').format(price);
-        console.log(formatted);
 
         //return the formatted currency within template literal
         return `<img src="../../img/bSymbol.svg" class="symbol" alt="${symbolAlt}">
@@ -94,7 +95,6 @@ var formatCurrency = (price) => {
     else {
         let converted = convertCurrency(price);
         formatted = new Intl.NumberFormat(locale, { style: 'currency', currency: currencyMap[locale] }).format(converted);
-        console.log(formatted);
         //return the formatted currency within template literal
         return `<h4>${formatted}</h4>`
     }
@@ -178,16 +178,10 @@ var readCart = () => {
         let droidMap = productList.get("droids");
         let vehicleMap = productList.get("vehicles");
 
-        console.log(droidMap);
-
-
         let cartIdString = localStorage.getItem("cart");
         let cartIds = JSON.parse(cartIdString);
 
-        console.log(cartIds);
-
         for(let productAr of cartIds) {
-            console.log(productAr);
             if(productAr[1] == "droid") {
                 let product = droidMap.get(parseInt(productAr[0]));
                 product.qty = parseInt(productAr[2]);
@@ -199,7 +193,6 @@ var readCart = () => {
                 shoppingCart[productAr[0]] = product;
             }
         }
-        console.log(shoppingCart);
 
     }
 }
@@ -279,6 +272,7 @@ particlesJS.load('particles-js', 'config/particlesjs-config.json', function() {
 
 // The router code. Takes a URL, checks against the list of supported routes and then renders the corresponding content page.
 const router = async () => {
+
     // Lazy load view element:
     const header = null || document.getElementById('header_container');
     const content = null || document.getElementById('page_container');

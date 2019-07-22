@@ -1,11 +1,8 @@
-import Utils from '../../services/Utils.js'
+import Utils from '../../services/Utils.js';
+import i18n from '../../services/i18n.js';
 import {productList, formatCurrency} from "../../app.js";
 
 let type;
-
-//static string to hold all the text (to be used within the HTML template literal)
-
-let symbolAlt = "Imperial Credit currency symbol";
 
 let Browse = {
     
@@ -15,15 +12,15 @@ let Browse = {
 
         let productMap = null;
 
-        let title = "All";
+        let title;
 
         if(type == "droids") {
             productMap = productList.get('droids');
-            title += " Droids";
+            title = i18n.getString("Browse", "droidTitle");
         }
         else if(type == "vehicles") {
             productMap = productList.get('vehicles');
-            title += " Vehicles";
+            title = i18n.getString("Browse", "vehicleTitle");
         }
 
         //view is solely for HTML markup, contains no static text
