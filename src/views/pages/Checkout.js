@@ -45,7 +45,7 @@ let Checkout = {
         let view = `
         <section class="checkout">
             <div class="checkoutDetails grem-container">
-                <img src="../../img/teal_grem.png" class="gremlin-center-top gremlin-space formIssue">
+            <a href="https://lingoport.com/webinar-common-i18n-gremlins-and-how-to-squash-them/" target="_blank"><img src="../../img/teal_grem.png" class="gremlin-center-top gremlin-space formIssue"></a>
                 <h1>${checkoutTitle}</h1>
                 <div class="shippingInfo">
                     <h2>${shipSectionLabel}</h2>
@@ -85,7 +85,7 @@ let Checkout = {
                 <div class="paymentInfo">
                     <div class="grem-container left">
                         <h2>${paySectionLabel}</h2>
-                        <img src="../../img/orange_grem.png" class="gremlin-right embedded">
+                        <a href="https://lingoport.com/webinar-common-i18n-gremlins-and-how-to-squash-them/" target="_blank"><img src="../../img/orange_grem.png" class="gremlin-right embedded"></a>
                     </div>
                     <div class="form">
                         <div class="formElement halfWidth">
@@ -112,7 +112,7 @@ let Checkout = {
                 <div class="termsCheck grem-container left">
                     <input type="checkbox" name="terms" value="terms">
                     <h4>I have read and agree to the <a target="_blank" href="../../static/terms.html">Terms and Conditions</a></h4>
-                    <img src="../../img/blue_grem.png" class="gremlin-right small staticFile">
+                    <a href="https://lingoport.com/webinar-common-i18n-gremlins-and-how-to-squash-them/" target="_blank"><img src="../../img/blue_grem.png" class="gremlin-right small staticFile"></a>
                 </div>
                 <button class="orderButt">PLACE ORDER</button>
             </div>

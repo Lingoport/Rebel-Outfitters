@@ -33,12 +33,12 @@ let ProductShow = {
                 <article class="detailContent">
                     <div class="grem-container left">
                         <h1>${product.title}</h1>
-                        <img src="../../img/orange_grem.png" class="gremlin-right embedded gremlin-space">
+                        <a href="https://lingoport.com/webinar-common-i18n-gremlins-and-how-to-squash-them/" target="_blank"><img src="../../img/orange_grem.png" class="gremlin-right embedded gremlin-space"></a>
                     </div>
                     <div class="gridPrice grem-container left">
                         <img src="../../img/bSymbol.svg" class="symbol" alt="${symbolAlt}">
                         <h4>${formatCurrencyWithCommas(product.price)}</h4>
-                        <img src="../../img/purple_grem.png" class="gremlin-right small format gremlin space">
+                        <a href="https://lingoport.com/webinar-common-i18n-gremlins-and-how-to-squash-them/" target="_blank"><img src="../../img/purple_grem.png" class="gremlin-right small format gremlin space"></a>
                     </div>
                     <div class="qty">
                         <h3>${qtyLabel}</h3>
