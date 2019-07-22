@@ -152,6 +152,11 @@ body canvas {
   border-right-color: #bffff1;
 }
 
+.gremTitle {
+  font-weight: 500;
+  font-size: 110%;
+}
+
 .loading {
   text-align: center;
   margin-top: 33%;
