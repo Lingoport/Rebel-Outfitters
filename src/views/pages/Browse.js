@@ -39,7 +39,10 @@ let Browse = {
             view += `<article id="${key}">
                         <img src="${product.imageURL}" class="gridImage" alt="${product.title}">
                         <div class="gridDes">
-                            <h3>${product.title}</h3>
+                            <div class="grem-container">
+                                <h3>${product.title}</h3>
+                                <img src="../../img/orange_grem.png" class="gremlin-right small embedded show${key} hide-gremlin">
+                            </div>
                             <div class="gridPrice grem-container">
                                 <img src="../../img/bSymbol.svg" class="symbol" alt="${symbolAlt}">
                                 <h4>${formatCurrencyWithCommas(product.price)}</h4>

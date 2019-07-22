@@ -33,7 +33,7 @@ let Home = {
                             <div class="gridPrice grem-container">
                                 <img src="../../img/bSymbol.svg" class="symbol" alt="${symbolAlt}">
                                 <h4>${formatCurrencyWithCommas(product.price)}</h4>
-                                <img src="../../img/purple_grem.png" class="gremlin-right small format show${key} hide-gremlin">
+                                <a href="https://lingoport.com/webinar-common-i18n-gremlins-and-how-to-squash-them/" target="_blank"><img src="../../img/purple_grem.png" class="gremlin-right small format show${key} hide-gremlin"></a>
                             </div>
                         </div>
                     </article>`;
@@ -49,16 +49,15 @@ let Home = {
 
         //click listener to redirect on product click
         for(let curProduct of articles) {
-            curProduct.addEventListener("click", function() {
-                location.href=`/#/${curProduct.classList[0]}s/` + curProduct.id;
-            }, false);
-            curProduct.classList.add("zoom");
+            curProduct.addEventListener("click", viewProduct(e, curProduct.classList[0]), false);
         }
-
-
-
     }
-
 }
+
+var viewProduct = (e, type, id) => {
+    console.log(e);
+    location.href=`/#/${curProduct.classList[0]}s/` + curProduct.id;
+}
+
 
 export default Home;

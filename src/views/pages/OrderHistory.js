@@ -28,9 +28,10 @@ let OrderHistory = {
                         <img src="../../img/blue_grem.png" class="gremlin-right gremlin-space small localeMethod show${key} hide-gremlin">
                     </div>
                     <h3>${order.orderNumber}</h3>
-                    <div class="gridPrice">
+                    <div class="gridPrice grem-container left">
                         <img src="../../img/bSymbol.svg" class="symbol" alt="${symbolAlt}">
                         <h3>${formatCurrencyWithCommas(order.total)}</h3>
+                        <img src="../../img/purple_grem.png" class="gremlin-right gremlin-space small format show${key} hide-gremlin">
                     </div>
                     <div class="grem-container left">
                         <h3>${order.status}</h3>

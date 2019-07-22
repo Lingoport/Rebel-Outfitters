@@ -70,7 +70,7 @@ let Navbar = {
         var logo = document.querySelector("#logo");
         //redirect to home on logo click
         logo.addEventListener("click", function() {
-            location.href="/";
+            location.href="/#";
         }, false);
 
 
