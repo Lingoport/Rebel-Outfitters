@@ -1,4 +1,4 @@
-import {shoppingCart, router, formatCurrencyWithCommas, saveCart} from "../../app.js";
+import {shoppingCart, router, formatCurrency, saveCart} from "../../app.js";
 
 //static strings to hold all the text (to be used within the HTML template literal)
 let noItemMsg = "No Items in Cart.";
@@ -38,8 +38,7 @@ let Cart = {
                                     </div>
                                     <div class="cartPrice">
                                         <div class="gridPrice">
-                                            <img src="../../img/wSymbol.svg" class="symbol" alt="${symbolAlt}">
-                                            <h4>${formatCurrencyWithCommas(value.price * value.qty)}</h4>
+                                            ${formatCurrency(value.price * value.qty)}
                                         </div>
                                         <img src="img/delete.svg" class="delete" id="${value.productID}" alt="${deleteAlt}">
                                     </div>
@@ -50,8 +49,7 @@ let Cart = {
                             <div class="cartTotal">
                                 <h3>${totalTitle}</h3>
                                 <div class="totalPrice">
-                                    <img src="../../img/wSymbol.svg" class="symbol" alt="${symbolAlt}">
-                                    <h3>${formatCurrencyWithCommas(total)}</h3>
+                                    ${formatCurrency(total)}
                                 </div>
                             </div>
                             <a class="checkoutButt" href="/#/checkout">${checkoutLabel}</a>

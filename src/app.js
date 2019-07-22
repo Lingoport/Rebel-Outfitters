@@ -15,6 +15,7 @@ import {Hamburger} from './views/components/Hamburger.js';
 import {Order} from './views/classes/Order.js';
 
 import Utils from './services/Utils.js';
+import i18n from './services/i18n.js';
 
 import Products from './content/Products.js';
 
@@ -54,6 +55,51 @@ var updateLocale = async(newLocale) => {
     router();
 }
 
+//used to determine the correct currency symbol
+var currencyMap = {
+    'en-US' : 'USD',
+    'fr-FR' : 'EUR',
+    'zh-CN' : 'CNY'
+};
+
+//function to perform rough conversion from galactic credits to real currencies
+var convertCurrency = (price) => {
+    switch (locale) {
+        case 'en-US':
+            return price * 0.62;
+        case 'fr-FR':
+            return price * 0.55;
+        case 'zh-CN':
+            return price * 4.27;
+        default:
+            return price;
+    }
+}
+
+//determine the proper currency formate based on locale and return html string
+var formatCurrency = (price) => {
+    let formatted;
+    
+    //format in imperial credit with symbol if locale is YODA or SITH
+    if(locale == 'yo' || locale == 'si') {
+        let symbolAlt = i18n.getString("Home", "symbolAlt");
+        formatted = new Intl.NumberFormat('en-US').format(price);
+        console.log(formatted);
+
+        //return the formatted currency within template literal
+        return `<img src="../../img/bSymbol.svg" class="symbol" alt="${symbolAlt}">
+        <h4>${formatted}</h4>`;
+    }
+    //format using actual symbol and conventions if it's a real locale
+    else {
+        let converted = convertCurrency(price);
+        formatted = new Intl.NumberFormat(locale, { style: 'currency', currency: currencyMap[locale] }).format(converted);
+        console.log(formatted);
+        //return the formatted currency within template literal
+        return `<h4>${formatted}</h4>`
+    }
+    
+}
 //update the shopping cart based on the new product list
 var reloadCart = () => {
 
@@ -213,7 +259,7 @@ let getFeaturedProducts = async () => {
     featuredProducts.push(droidMap.get(2));
 }
 
-export { shoppingCart, addToCart, showCart, router, locale, productList, updateLocale, orderHistory, formatCurrencyWithCommas, featuredProducts, saveCart };
+export { shoppingCart, addToCart, showCart, router, locale, productList, updateLocale, orderHistory, formatCurrencyWithCommas, featuredProducts, saveCart, formatCurrency };
 
 // List of supported routes. Any url other than these routes will throw a 404 error
 const routes = {

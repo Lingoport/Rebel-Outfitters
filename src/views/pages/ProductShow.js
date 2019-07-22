@@ -1,5 +1,5 @@
 import Utils        from '../../services/Utils.js';
-import {productList, addToCart, formatCurrencyWithCommas} from '../../app.js';
+import {productList, addToCart, formatCurrency} from '../../app.js';
 
 let product;
 let productID;
@@ -33,8 +33,7 @@ let ProductShow = {
                 <article class="detailContent">
                     <h1>${product.title}</h1>
                     <div class="gridPrice">
-                        <img src="../../img/bSymbol.svg" class="symbol" alt="${symbolAlt}">
-                        <h4>${formatCurrencyWithCommas(product.price)}</h4>
+                        ${formatCurrency(product.price)}
                     </div>
                     <div class="qty">
                         <h3>${qtyLabel}</h3>

@@ -1,4 +1,4 @@
-import {shoppingCart, orderHistory, formatCurrencyWithCommas} from "../../app.js";
+import {shoppingCart, orderHistory, formatCurrency} from "../../app.js";
 
 import {Order} from "../classes/Order.js";
 
@@ -125,8 +125,7 @@ let Checkout = {
                             </div>
                             <div class="cartPrice">
                                 <div class="gridPrice">
-                                    <img src="../../img/wSymbol.svg" class="symbol" alt="${symbolAlt}">
-                                    <h4>${formatCurrencyWithCommas(value.price * value.qty)}</h4>
+                                    ${formatCurrency(value.price * value.qty)}
                                 </div>
                                 <img src="img/delete.svg" class="delete" id="${value.productID}" alt="${deleteAlt}">
                             </div>
@@ -136,8 +135,7 @@ let Checkout = {
             <div class="cartTotal">
                     <h3>${totalLabel}</h3>
                     <div class="totalPrice">
-                        <img src="../../img/wSymbol.svg" class="symbol" alt="${symbolAlt}">
-                        <h3>${formatCurrencyWithCommas(total)}</h3>
+                        ${formatCurrency(total)}
                     </div>
                 </div>
             </div>

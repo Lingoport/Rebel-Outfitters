@@ -1,5 +1,5 @@
 import Utils from '../../services/Utils.js'
-import {productList, formatCurrencyWithCommas} from "../../app.js";
+import {productList, formatCurrency} from "../../app.js";
 
 let type;
 
@@ -38,8 +38,7 @@ let Browse = {
                         <div class="gridDes">
                             <h3>${product.title}</h3>
                             <div class="gridPrice">
-                                <img src="../../img/bSymbol.svg" class="symbol" alt="${symbolAlt}">
-                                <h4>${formatCurrencyWithCommas(product.price)}</h4>
+                                ${formatCurrency(product.price)}
                             </div>
                         </div>
                     </article>`;

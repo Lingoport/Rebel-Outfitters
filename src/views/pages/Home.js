@@ -1,4 +1,4 @@
-import {formatCurrencyWithCommas, featuredProducts} from "../../app.js";
+import {featuredProducts, formatCurrency} from "../../app.js";
 import i18n from "../../services/i18n.js";
 
 let Home = {
@@ -6,7 +6,6 @@ let Home = {
         //fetch locale-sensitive strings via i18n method
         let welcomeMessage = i18n.getString("Home", "welcomeMessage");
         let welcomeSubtitle = i18n.getString("Home", "welcomeSubtitle");
-        let symbolAlt = i18n.getString("Home", "symbolAlt");
 
         //view is solely for HTML markup, contains no static text
         let view = `
@@ -28,8 +27,7 @@ let Home = {
                         <div class="gridDes">
                             <h3>${product.title}</h3>
                             <div class="gridPrice">
-                                <img src="../../img/bSymbol.svg" class="symbol" alt="${symbolAlt}">
-                                <h4>${formatCurrencyWithCommas(product.price)}</h4>
+                                ${formatCurrency(product.price)}
                             </div>
                         </div>
                     </article>`;

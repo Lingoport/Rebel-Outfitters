@@ -1,4 +1,4 @@
-import {orderHistory, formatCurrencyWithCommas} from "../../app.js";
+import {orderHistory, formatCurrency} from "../../app.js";
 
 //static strings to hold all the text (to be used within the HTML template literal)
 let historyTitle = "Order History";
@@ -26,8 +26,7 @@ let OrderHistory = {
                     <h3>${order.formatDate()}</h3>
                     <h3>${order.orderNumber}</h3>
                     <div class="gridPrice">
-                        <img src="../../img/bSymbol.svg" class="symbol" alt="${symbolAlt}">
-                        <h3>${formatCurrencyWithCommas(order.total)}</h3>
+                        ${formatCurrency(order.total)}
                     </div>
                     <h3>${order.status}</h3>
                 </article>`
