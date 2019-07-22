@@ -38,7 +38,7 @@ let Cart = {
                                     </div>
                                     <div class="cartPrice">
                                         <div class="gridPrice">
-                                            <img src="../../img/wSymbol.svg" class="symbol" alt="${symbolAlt}">
+                                            <img src="../../img/wSymbol.gif" class="symbol" alt="${symbolAlt}">
                                             <h4>${formatCurrencyWithCommas(value.price * value.qty)}</h4>
                                         </div>
                                         <img src="img/delete.svg" class="delete" id="${key}" alt="${deleteAlt}">
@@ -50,7 +50,7 @@ let Cart = {
                             <div class="cartTotal">
                                 <h3>${totalTitle}</h3>
                                 <div class="totalPrice">
-                                    <img src="../../img/wSymbol.svg" class="symbol" alt="${symbolAlt}">
+                                    <img src="../../img/wSymbol.gif" class="symbol" alt="${symbolAlt}">
                                     <h3>${formatCurrencyWithCommas(total)}</h3>
                                 </div>
                             </div>

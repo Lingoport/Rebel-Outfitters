@@ -29,7 +29,7 @@ let OrderHistory = {
                     </div>
                     <h3>${order.orderNumber}</h3>
                     <div class="gridPrice grem-container left">
-                        <img src="../../img/bSymbol.svg" class="symbol" alt="${symbolAlt}">
+                        <img src="../../img/bSymbol.gif" class="symbol" alt="${symbolAlt}">
                         <h3>${formatCurrencyWithCommas(order.total)}</h3>
                         <a href="https://lingoport.com/webinar-common-i18n-gremlins-and-how-to-squash-them/" target="_blank"><img src="../../img/purple_grem.png" class="gremlin-right gremlin-space small format show${key} hide-gremlin"></a>
                     </div>
