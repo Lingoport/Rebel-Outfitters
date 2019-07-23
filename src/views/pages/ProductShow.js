@@ -1,19 +1,19 @@
-import Utils        from '../../services/Utils.js';
-import {productList, addToCart} from '../../app.js';
+import Utils from '../../services/Utils.js';
+import { productList, addToCart } from '../../app.js';
 import i18n from '../../services/i18n.js';
 
 let product;
 let productID;
 let type;
 
-//static strings to hold all the text (to be used within the HTML template literal)
-let qtyLabel = "Qty:";
-let qtyOptions = [1, 2, 3, 4];
-let addToCartLabel = "ADD TO CART";
-
 let ProductShow = {
 
-    render : async () => {
+    render: async () => {
+
+        //static strings to hold all the text (to be used within the HTML template literal)
+        let qtyLabel = i18n.getString("ProductShow", "qtyLabel");
+        let qtyOptions = [1, 2, 3, 4];
+        let addToCartLabel = i18n.getString("ProductShow", "addToCartLabel");
 
         //get the id
         let request = Utils.parseRequestURL();
@@ -48,7 +48,7 @@ let ProductShow = {
                     <p>${product.desc}</p>
                 </article>
             </section>
-        `
+        `;
     }
     , after_render: async () => {
         const addButt = document.querySelector(".addToCart");
@@ -59,12 +59,12 @@ let ProductShow = {
 }
 
 var getQtyandAddToCart = () => {
-     //get the qty and modify selected item
-     let qtySel = document.querySelector(".qtyDrop");
-     let qty = parseInt(qtySel.options[qtySel.selectedIndex].value)
-     product.qty += qty;
-     //pass item to cart
-     addToCart(product);
+    //get the qty and modify selected item
+    let qtySel = document.querySelector(".qtyDrop");
+    let qty = parseInt(qtySel.options[qtySel.selectedIndex].value)
+    product.qty += qty;
+    //pass item to cart
+    addToCart(product);
 
 }
 

@@ -79,7 +79,7 @@
         "termsLink": "Termes et conditions"
     },
     "ProductShow" : {
-        "qtyLabel": "Qty: ",
-        "addToCartLabel": "ADD TO CART"
+        "qtyLabel": "Quantité: ",
+        "addToCartLabel": "AJOUTER AU PANIER"
     }
 }
