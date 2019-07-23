@@ -81,5 +81,13 @@
     "ProductShow" : {
         "qtyLabel": "Qty: ",
         "addToCartLabel": "KURAS KIA CART"
+    },
+    "Cart" : {
+        "cartTitle": "Shopping Cart",
+        "noItemMsg": "Nie items kash cart.",
+        "deleteAlt": "Delete item sulig cart",
+        "totalTitle": "Total: ",
+        "checkoutLabel": "CHECKOUT",
+        "closeAlt": "arti Cart"
     }
 }

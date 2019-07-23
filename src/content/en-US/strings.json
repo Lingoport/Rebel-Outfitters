@@ -85,5 +85,13 @@
     "ProductShow" : {
         "qtyLabel": "Qty: ",
         "addToCartLabel": "ADD TO CART"
+    },
+    "Cart" : {
+        "cartTitle": "Shopping Cart",
+        "noItemMsg": "No items in cart.",
+        "deleteAlt": "Delete item from cart",
+        "totalTitle": "Total: ",
+        "checkoutLabel": "CHECKOUT",
+        "closeAlt": "Close Cart"
     }
 }

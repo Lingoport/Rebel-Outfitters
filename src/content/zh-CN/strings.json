@@ -81,5 +81,13 @@
     "ProductShow" : {
         "qtyLabel": "数量: ",
         "addToCartLabel": "添加到购物车"
+    },
+    "Cart" : {
+        "cartTitle": "购物车",
+        "noItemMsg": "购物车中没有商品。",
+        "deleteAlt": "从购物车中删除商品",
+        "totalTitle": "总： ",
+        "checkoutLabel": "查看",
+        "closeAlt": "关闭购物车"
     }
 }

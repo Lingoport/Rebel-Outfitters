@@ -1,37 +1,37 @@
-import {shoppingCart, router, saveCart} from "../../app.js";
+import { shoppingCart, router, saveCart } from "../../app.js";
 import i18n from '../../services/i18n.js';
-
-//static strings to hold all the text (to be used within the HTML template literal)
-let noItemMsg = "No Items in Cart.";
-let symbolAlt = "Imperial Credit currency symbol";
-let deleteAlt = "Delete item from cart";
-let totalTitle = "Total: ";
-let checkoutLabel = "CHECKOUT";
-let closeAlt = "Close cart";
 
 let Cart = {
     render: async () => {
         let total = 0;
 
+        //strings to hold all the text (to be used within the HTML template literal)
+        let cartTitle = i18n.getString("Cart", "cartTitle");
+        let noItemMsg = i18n.getString("Cart", "noItemMsg");
+        let deleteAlt = i18n.getString("Cart", "deleteAlt");
+        let totalTitle = i18n.getString("Cart", "totalTitle");
+        let checkoutLabel = i18n.getString("Cart", "checkoutLabel");
+        let closeAlt = i18n.getString("Cart", "closeAlt");
+
         //view is solely for HTML markup, contains no static text
         let view = `
                 <div class="cartHead">
-                    <h1>Shopping Cart</h1>
+                    <h1>${cartTitle}</h1>
                     <img src="img/close.svg" class="cartIcon" alt="${closeAlt}">
                 </div>
                 `;
 
-                //show cart contents or display message if no contents
-                if(Object.keys(shoppingCart).length === 0 && shoppingCart.constructor === Object) {
-                    view += `<h3>${noItemMsg}</h3>`;
-                }
-                else {
-                    view += `<div class="cartContents">`;
-                    //create row for each item in title and addup the total
-                    for(let key in shoppingCart) {
-                        let value = shoppingCart[key];
-                        total += value.price * value.qty;
-                        view += `
+        //show cart contents or display message if no contents
+        if (Object.keys(shoppingCart).length === 0 && shoppingCart.constructor === Object) {
+            view += `<h3>${noItemMsg}</h3>`;
+        }
+        else {
+            view += `<div class="cartContents">`;
+            //create row for each item in title and addup the total
+            for (let key in shoppingCart) {
+                let value = shoppingCart[key];
+                total += value.price * value.qty;
+                view += `
                                 <div class="cartItem">
                                     <div class="cartQtyTitle">
                                         <input type="number" class="cartQty" name="qty" id="${value.productID}" min="1" max="10" size="0" value="${value.qty}">
@@ -44,8 +44,8 @@ let Cart = {
                                         <img src="img/delete.svg" class="delete" id="${value.productID}" alt="${deleteAlt}">
                                     </div>
                                 </div>`;
-                    }
-                    view += `
+            }
+            view += `
                             </div>
                             <div class="cartTotal">
                                 <h3>${totalTitle}</h3>
@@ -55,7 +55,7 @@ let Cart = {
                             </div>
                             <a class="checkoutButt" href="/#/checkout">${checkoutLabel}</a>
                             `;
-                }
+        }
         return view
     },
     after_render: async () => {
@@ -63,24 +63,24 @@ let Cart = {
         var qtyInputs = document.querySelectorAll(".cartQty");
         var deleteIcons = document.querySelectorAll(".delete");
 
-        for(let input of qtyInputs) {
+        for (let input of qtyInputs) {
             input.addEventListener('input', updateQty, false);
         }
-        for(let icon of deleteIcons) {
+        for (let icon of deleteIcons) {
             icon.addEventListener('click', deleteItem, false);
         }
-        
+
     }
 }
 
 //handle changes in qty text input
 var updateQty = (e) => {
-    if(e.srcElement.value != "") {
+    if (e.srcElement.value != "") {
         let changedQtyKey = e.srcElement.id;
         let newQty = parseInt(e.srcElement.value);
         let product = shoppingCart[changedQtyKey];
         product.qty = newQty;
-        if(product.qty < 1) {
+        if (product.qty < 1) {
             product.qty = 0;
             delete shoppingCart[changedQtyKey];
         }

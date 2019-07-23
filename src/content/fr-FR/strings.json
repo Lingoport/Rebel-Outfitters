@@ -81,5 +81,13 @@
     "ProductShow" : {
         "qtyLabel": "Quantité: ",
         "addToCartLabel": "AJOUTER AU PANIER"
+    },
+    "Cart" : {
+        "cartTitle": "Chariot",
+        "noItemMsg": "Aucun article dans le panier.",
+        "deleteAlt": "Supprimer l'article du panier",
+        "totalTitle": "Totale: ",
+        "checkoutLabel": "CHECK-OUT",
+        "closeAlt": "Fermer le panier"
     }
 }
