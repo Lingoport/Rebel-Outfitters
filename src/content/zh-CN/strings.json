@@ -77,6 +77,9 @@
         "orderLabel": "下订单",
         "termsStatement": "我已经阅读并同意",
         "termsLink": "条款和条件"
-
+    },
+    "ProductShow" : {
+        "qtyLabel": "数量: ",
+        "addToCartLabel": "添加到购物车"
     }
 }

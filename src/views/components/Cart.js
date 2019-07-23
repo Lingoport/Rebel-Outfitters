@@ -1,4 +1,5 @@
-import {shoppingCart, router, formatCurrency, saveCart} from "../../app.js";
+import {shoppingCart, router, saveCart} from "../../app.js";
+import i18n from '../../services/i18n.js';
 
 //static strings to hold all the text (to be used within the HTML template literal)
 let noItemMsg = "No Items in Cart.";
@@ -38,7 +39,7 @@ let Cart = {
                                     </div>
                                     <div class="cartPrice">
                                         <div class="gridPrice">
-                                            ${formatCurrency(value.price * value.qty)}
+                                            ${i18n.formatCurrency(value.price * value.qty, "w")}
                                         </div>
                                         <img src="img/delete.svg" class="delete" id="${value.productID}" alt="${deleteAlt}">
                                     </div>
@@ -49,7 +50,7 @@ let Cart = {
                             <div class="cartTotal">
                                 <h3>${totalTitle}</h3>
                                 <div class="totalPrice">
-                                    ${formatCurrency(total)}
+                                    ${i18n.formatCurrency(total, "w")}
                                 </div>
                             </div>
                             <a class="checkoutButt" href="/#/checkout">${checkoutLabel}</a>

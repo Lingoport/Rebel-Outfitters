@@ -77,5 +77,9 @@
         "orderLabel": "Aikste tvarka",
         "termsStatement": "Nu zinot rodyt ir derinti kia",
         "termsLink": "Terms ir Conditions"
+    },
+    "ProductShow" : {
+        "qtyLabel": "Qty: ",
+        "addToCartLabel": "KURAS KIA CART"
     }
 }

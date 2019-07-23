@@ -1,4 +1,5 @@
-import {orderHistory, formatCurrency} from "../../app.js";
+import {orderHistory} from "../../app.js";
+import i18n from "../../services/i18n.js";
 
 //static strings to hold all the text (to be used within the HTML template literal)
 let historyTitle = "Order History";
@@ -26,7 +27,7 @@ let OrderHistory = {
                     <h3>${order.formatDate()}</h3>
                     <h3>${order.orderNumber}</h3>
                     <div class="gridPrice">
-                        ${formatCurrency(order.total)}
+                        ${i18n.formatCurrency(order.total, "b")}
                     </div>
                     <h3>${order.status}</h3>
                 </article>`

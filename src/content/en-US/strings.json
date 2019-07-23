@@ -81,5 +81,9 @@
         "orderLabel": "PLACE ORDER",
         "termsStatement": "I have read and agree to the",
         "termsLink": "Terms and Conditions"
+    },
+    "ProductShow" : {
+        "qtyLabel": "Qty: ",
+        "addToCartLabel": "ADD TO CART"
     }
 }

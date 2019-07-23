@@ -1,4 +1,4 @@
-import { shoppingCart, orderHistory, formatCurrency } from "../../app.js";
+import { shoppingCart, orderHistory } from "../../app.js";
 
 import i18n from '../../services/i18n.js';
 
@@ -39,7 +39,7 @@ let Checkout = {
         let orderLabel = i18n.getString("Checkout", "orderLabel");
         let termsStatement = i18n.getString("Checkout", "termsStatement");
         let termsLink = i18n.getString("Checkout", "termsLink");
-        
+
         total = 0;
         //hide cart initially
         let slider = document.querySelector(".cartSlider")
@@ -131,7 +131,7 @@ let Checkout = {
                             </div>
                             <div class="cartPrice">
                                 <div class="gridPrice">
-                                    ${formatCurrency(value.price * value.qty)}
+                                    ${i18n.formatCurrency(value.price * value.qty, "w")}
                                 </div>
                                 <img src="img/delete.svg" class="delete" id="${value.productID}" alt="${deleteAlt}">
                             </div>
@@ -141,7 +141,7 @@ let Checkout = {
             <div class="cartTotal">
                     <h3>${totalLabel}</h3>
                     <div class="totalPrice">
-                        ${formatCurrency(total)}
+                        ${i18n.formatCurrency(total,"w")}
                     </div>
                 </div>
             </div>
@@ -159,15 +159,16 @@ let Checkout = {
 }
 
 //handle order placement
-//NEED TO CLEAR ALL THE QUANTITIES
 var placeOrder = () => {
     let order = new Order(new Date(), total, "Processing");
     orderHistory.unshift(order);
     //zero out the qty for each item before removing it
-    shoppingCart.forEach((product, key) => {
+    for (let key in shoppingCart) {
+        let product = shoppingCart[key];
         product.qty = 0;
-    });
-    shoppingCart.clear();
+        delete shoppingCart[key];
+        console.log(shoppingCart);
+    }
     //construct success message
     let message = "Order #" + order.orderNumber + " placed successfully!";
     window.alert(message);

@@ -1,5 +1,6 @@
 import Utils        from '../../services/Utils.js';
-import {productList, addToCart, formatCurrency} from '../../app.js';
+import {productList, addToCart} from '../../app.js';
+import i18n from '../../services/i18n.js';
 
 let product;
 let productID;
@@ -8,7 +9,6 @@ let type;
 //static strings to hold all the text (to be used within the HTML template literal)
 let qtyLabel = "Qty:";
 let qtyOptions = [1, 2, 3, 4];
-let symbolAlt = "Imperial Credit Currency symbol";
 let addToCartLabel = "ADD TO CART";
 
 let ProductShow = {
@@ -33,7 +33,7 @@ let ProductShow = {
                 <article class="detailContent">
                     <h1>${product.title}</h1>
                     <div class="gridPrice">
-                        ${formatCurrency(product.price)}
+                        ${i18n.formatCurrency(product.price, "b")}
                     </div>
                     <div class="qty">
                         <h3>${qtyLabel}</h3>
