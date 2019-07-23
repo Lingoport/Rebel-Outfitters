@@ -89,5 +89,14 @@
         "totalTitle": "总： ",
         "checkoutLabel": "查看",
         "closeAlt": "关闭购物车"
+    },
+    "OrderHistory" : {
+        "historyTitle" : "订单历史",
+        "headings" : [
+            "日期",
+            "订单号",
+            "总",
+            "状态"
+        ]
     }
 }

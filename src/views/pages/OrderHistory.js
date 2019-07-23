@@ -1,14 +1,15 @@
-import {orderHistory} from "../../app.js";
+import { orderHistory } from "../../app.js";
 import i18n from "../../services/i18n.js";
 
-//static strings to hold all the text (to be used within the HTML template literal)
-let historyTitle = "Order History";
-let headings =["Date", "Order Number", "Total", "Status"];
-let symbolAlt = "Imperial Credit Currency symbol";
+
 
 let OrderHistory = {
 
     render: async () => {
+
+        //strings to hold all the text (to be used within the HTML template literal)
+        let historyTitle = i18n.getString("OrderHistory", "historyTitle");
+        let headings = i18n.getString("OrderHistory", "headings");
 
         //view is solely for HTML markup, contains no static text
         let view = `
@@ -20,9 +21,9 @@ let OrderHistory = {
                 <h3>${headings[2]}</h3>
                 <h3>${headings[3]}</h3>
             </div>`;
-            
-            orderHistory.forEach((order, key) => {
-                view += `
+
+        orderHistory.forEach((order, key) => {
+            view += `
                 <article class="orderItem">
                     <h3>${order.formatDate()}</h3>
                     <h3>${order.orderNumber}</h3>
@@ -31,8 +32,8 @@ let OrderHistory = {
                     </div>
                     <h3>${order.status}</h3>
                 </article>`
-            });
-            view += `
+        });
+        view += `
         </section>`;
 
         return view;

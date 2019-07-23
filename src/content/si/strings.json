@@ -89,5 +89,14 @@
         "totalTitle": "Total: ",
         "checkoutLabel": "CHECKOUT",
         "closeAlt": "arti Cart"
+    },
+    "OrderHistory" : {
+        "historyTitle" : "Tvarka History",
+        "headings" : [
+            "Date",
+            "Tvarka Number",
+            "Total",
+            "Status"
+        ]
     }
 }

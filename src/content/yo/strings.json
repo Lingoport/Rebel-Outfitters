@@ -89,5 +89,14 @@
         "totalTitle": "Total: ",
         "checkoutLabel": "CHECKOUT",
         "closeAlt": "Close Cart"
+    },
+    "OrderHistory" : {
+        "historyTitle" : "Order History",
+        "headings" : [
+            "Date",
+            "Order Number",
+            "Total",
+            "Status"
+        ]
     }
 }

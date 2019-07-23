@@ -89,5 +89,14 @@
         "totalTitle": "Totale: ",
         "checkoutLabel": "CHECK-OUT",
         "closeAlt": "Fermer le panier"
+    },
+    "OrderHistory" : {
+        "historyTitle" : "Historique des commandes",
+        "headings" : [
+            "Date",
+            "Numéro de commande",
+            "Totale",
+            "Statut"
+        ]
     }
 }
