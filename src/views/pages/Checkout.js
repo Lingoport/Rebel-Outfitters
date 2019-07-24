@@ -28,7 +28,9 @@ let cartTitle = "Shopping Cart";
 let symbolAlt = "Imperial Credit currency symbol";
 let deleteAlt = "remove item from cart";
 let totalLabel = "Total: ";
-
+let termsStatement = "I have read and agree to the ";
+let termsLink = "Terms and Conditions";
+let orderButton = "PLACE ORDER"
 
 
 let Checkout = {
@@ -45,7 +47,6 @@ let Checkout = {
         let view = `
         <section class="checkout">
             <div class="checkoutDetails grem-container">
-            <a href="https://lingoport.com/webinar-common-i18n-gremlins-and-how-to-squash-them/" target="_blank"><img src="../../img/teal_grem.png" class="gremlin-center-top gremlin-space formIssue"></a>
                 <h1>${checkoutTitle}</h1>
                 <div class="shippingInfo">
                     <h2>${shipSectionLabel}</h2>
@@ -85,7 +86,7 @@ let Checkout = {
                 <div class="paymentInfo">
                     <div class="grem-container left">
                         <h2>${paySectionLabel}</h2>
-                        <a href="https://lingoport.com/webinar-common-i18n-gremlins-and-how-to-squash-them/" target="_blank"><img src="../../img/orange_grem.png" class="gremlin-right embedded"></a>
+                        <a href="https://wiki.lingoport.com/Gremlins#Embedded_Strings" target="_blank"><img src="../../img/orange_grem.png" class="gremlin-right embedded"></a>
                     </div>
                     <div class="form">
                         <div class="formElement halfWidth">
@@ -111,10 +112,10 @@ let Checkout = {
                 </div>
                 <div class="termsCheck grem-container left">
                     <input type="checkbox" name="terms" value="terms">
-                    <h4>I have read and agree to the <a target="_blank" href="../../static/terms.html">Terms and Conditions</a></h4>
-                    <a href="https://lingoport.com/webinar-common-i18n-gremlins-and-how-to-squash-them/" target="_blank"><img src="../../img/blue_grem.png" class="gremlin-right small staticFile"></a>
+                    <h4>${termsStatement}<a target="_blank" href="../../static/terms.html">${termsLink}</a></h4>
+                    <a href="https://wiki.lingoport.com/Gremlins#Static_Files" target="_blank"><img src="../../img/green_grem.png" class="gremlin-right small staticFile"></a>
                 </div>
-                <button class="orderButt">PLACE ORDER</button>
+                <button class="orderButt">${orderButton}</button>
             </div>
             <div class="checkoutCart">
                 <h1>${cartTitle}</h1>

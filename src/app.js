@@ -163,42 +163,41 @@ const router = async () => {
     content.innerHTML = await page.render();
     await page.after_render();
 
-    //add tooltips for the gremlins
-    tippy('.embedded', {
-        content: '<div class="gremTitle">EMBEDDED STRING</div> This string is embedded in the source code and is not i18n compatible. Click for more info.',
-        theme: 'custom',
-        arrow: true,
-      });
+    addTooltipsToGremlins();
 
-    tippy('.format', {
-        content: '<div class="gremTitle">FORMATTING ISSUE</div> The formatting for this currency is hard-coded and is not i18n compatible. Click for more info.',
-        theme: 'custom',
-        arrow: true,
-    });
+}
 
-    tippy('.localeMethod', {
-        content: '<div class="gremTitle">LOCALE-SENSITIVE METHOD</div> This content was created using locale-sensitive Javascript methods. Click for more info.',
-        theme: 'custom',
-        arrow: true,
-    });
-
-    tippy('.concat', {
-        content: '<div class="gremTitle">CONCATENATION</div> This content was created using Javascript string concatenation. Click for more info.',
-        theme: 'custom',
-        arrow: true,
-    });
-
-    tippy('.formIssue', {
-        content: '<div class="gremTitle">FORMS</div> The fields in this form are not locale-sensitive and is not i18n compatible.',
-        theme: 'custom',
-        arrow: true,
-    });
-
-    tippy('.staticFile', {
-        content: '<div class="gremTitle">STATIC FILE</div> This is a static file link which needs to be changed based on the users locale.',
-        theme: 'custom',
-        arrow: true,
-    });
+var addTooltipsToGremlins = () => {
+        //add tooltips for the gremlins
+        tippy('.embedded', {
+            content: '<div class="gremTitle">EMBEDDED STRING</div> This string is embedded in the source code. Click for more info.',
+            theme: 'custom',
+            arrow: true,
+          });
+    
+        tippy('.format', {
+            content: '<div class="gremTitle">CURRENCY FORMAT</div> The formatting for this currency is hard-coded. Click for more info.',
+            theme: 'custom',
+            arrow: true,
+        });
+    
+        tippy('.localeMethod', {
+            content: '<div class="gremTitle">DATE/TIME FORMAT</div> The formatting for this date is hard-coded. Click for more info.',
+            theme: 'custom',
+            arrow: true,
+        });
+    
+        tippy('.concat', {
+            content: '<div class="gremTitle">CONCATENATION</div> This content was created using Javascript string concatenation. Click for more info.',
+            theme: 'custom',
+            arrow: true,
+        });
+    
+        tippy('.staticFile', {
+            content: '<div class="gremTitle">STATIC FILE</div> This links to a static file. Click for more info.',
+            theme: 'custom',
+            arrow: true,
+        });
 }
 
 

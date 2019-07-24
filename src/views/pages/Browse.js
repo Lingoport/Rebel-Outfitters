@@ -4,7 +4,7 @@ import {productList, formatCurrencyWithCommas} from "../../app.js";
 let type;
 
 //static string to hold all the text (to be used within the HTML template literal)
-let title = "All";
+let title;
 let symbolAlt = "Imperial Credit currency symbol";
 
 let Browse = {
@@ -30,7 +30,7 @@ let Browse = {
         let view = `<section class="browsePage">
                         <div class="grem-container left">
                             <h1>${title}</h1>
-                            <a href="https://lingoport.com/webinar-common-i18n-gremlins-and-how-to-squash-them/" target="_blank"><img src="../../img/red_grem.png" class="gremlin-right gremlin-space concat"></a>
+                            <a href="https://wiki.lingoport.com/Gremlins#Concatenations" target="_blank"><img src="../../img/red_grem.png" class="gremlin-right gremlin-space concat"></a>
                         </div>
                         <div class="browseGrid">`;
 
@@ -41,12 +41,12 @@ let Browse = {
                         <div class="gridDes">
                             <div class="grem-container">
                                 <h3>${product.title}</h3>
-                                <a href="https://lingoport.com/webinar-common-i18n-gremlins-and-how-to-squash-them/" target="_blank"><img src="../../img/orange_grem.png" class="gremLink gremlin-right small embedded show${key} hide-gremlin"></a>
+                                <a href="https://wiki.lingoport.com/Gremlins#Embedded_Strings" target="_blank"><img src="../../img/orange_grem.png" class="gremLink gremlin-right small embedded show${key} hide-gremlin"></a>
                             </div>
                             <div class="gridPrice grem-container">
                                 <img src="../../img/bSymbol.gif" class="symbol" alt="${symbolAlt}">
                                 <h4>${formatCurrencyWithCommas(product.price)}</h4>
-                                <a href="https://lingoport.com/webinar-common-i18n-gremlins-and-how-to-squash-them/" target="_blank"><img src="../../img/purple_grem.png" class="gremLink gremlin-right small format show${key} hide-gremlin"></a>
+                                <a href="https://wiki.lingoport.com/Gremlins#Currency_Format" target="_blank"><img src="../../img/purple_grem.png" class="gremLink gremlin-right small format show${key} hide-gremlin"></a>
                             </div>
                         </div>
                     </article>`;

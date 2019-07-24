@@ -1,6 +1,7 @@
 import {shoppingCart, router, formatCurrencyWithCommas} from "../../app.js";
 
 //static strings to hold all the text (to be used within the HTML template literal)
+let shoppingCartTitle = "Shopping Cart"
 let noItemMsg = "No Items in Cart.";
 let symbolAlt = "Imperial Credit currency symbol";
 let deleteAlt = "Delete item from cart";
@@ -15,7 +16,7 @@ let Cart = {
         //view is solely for HTML markup, contains no static text
         let view = `
                 <div class="cartHead">
-                    <h1>Shopping Cart</h1>
+                    <h1>${shoppingCartTitle}</h1>
                     <img src="img/close.svg" class="cartIcon" alt="${closeAlt}">
                 </div>
                 `;
