@@ -189,12 +189,6 @@ let dummyOrders = () => {
     orderHistory.push(order1);
 }
 
-//takes a number and adds commas to it every 3 digits
-//VERY BAD i18n
-let formatCurrencyWithCommas = (x) => {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
-
 let featuredProducts = [];
 
 let getFeaturedProducts = async () => {
