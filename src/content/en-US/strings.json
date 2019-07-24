@@ -78,11 +78,11 @@
         "termsStatement": "I have read and agree to the",
         "termsLink": "Terms and Conditions"
     },
-    "ProductShow" : {
+    "ProductShow": {
         "qtyLabel": "Qty: ",
         "addToCartLabel": "ADD TO CART"
     },
-    "Cart" : {
+    "Cart": {
         "cartTitle": "Shopping Cart",
         "noItemMsg": "No items in cart.",
         "deleteAlt": "Delete item from cart",
@@ -90,11 +90,34 @@
         "checkoutLabel": "CHECKOUT",
         "closeAlt": "Close Cart"
     },
-    "OrderHistory" : {
-        "historyTitle" : "Order History",
-        "dateHeading" : "Date",
-        "numberHeading" : "Order Number",
-        "totalHeading" : "Total",
-        "statusHeading" : "Status"
+    "OrderHistory": {
+        "historyTitle": "Order History",
+        "dateHeading": "Date",
+        "numberHeading": "Order Number",
+        "totalHeading": "Total",
+        "statusHeading": "Status"
+    },
+    "Error404": {
+        "errorMessage": "404 Error: Page not found."
+    },
+    "Bottombar": {
+        "menuAlt": "open sidebar menu"
+    },
+    "Hamburger": {
+        "githubLogoAlt": "GitHub Logo",
+        "lingoLogoAlt": "Lingoport Logo",
+        "versionLabel": "Version: ",
+        "versionBad": "Non-i18n Compliant",
+        "versionGood": "I18n Compliant",
+        "localeLabel": "Locale: ",
+        "localeEN": "English - United States",
+        "localeFR": "French - France",
+        "localeZH": "Chinese - China",
+        "localeYO": "Yoda",
+        "localeSI": "Sith",
+        "githubLabel": "View Source",
+        "dashLabel": "View Lingoport Dashboard",
+        "contactLabel": "Contact Us",
+        "learnLabel": "Learn More"
     }
 }

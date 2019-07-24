@@ -139,7 +139,7 @@ var readCart = () => {
         let cartIds = JSON.parse(cartIdString);
 
         for(let productAr of cartIds) {
-            if(productAr[1] == "droid") {
+            if(productAr[1] == 'droid') {
                 let product = droidMap.get(parseInt(productAr[0]));
                 product.qty = parseInt(productAr[2]);
                 shoppingCart[productAr[0]] = product;

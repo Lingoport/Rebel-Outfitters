@@ -1,55 +1,55 @@
 {
-    "title" : {
-        "1" : "Tsis sandau Title",
-        "2" : "Tsis sandau Title",
-        "3" : "Tsis sandau Title",
-        "4" : "Tsis sandau Title",
-        "5" : "Tsis sandau Title",
-        "6" : "Tsis sandau Title",
-        "7" : "Tsis sandau Title",
-        "8" : "Tsis sandau Title",
-        "9" : "Tsis sandau Title",
-        "10" : "Tsis sandau Title",
-        "11" : "Tsis sandau Title",
-        "12" : "Tsis sandau Title",
-        "13" : "Tsis sandau Title"
+    "title": {
+        "1": "Tsis sandau Title",
+        "2": "Tsis sandau Title",
+        "3": "Tsis sandau Title",
+        "4": "Tsis sandau Title",
+        "5": "Tsis sandau Title",
+        "6": "Tsis sandau Title",
+        "7": "Tsis sandau Title",
+        "8": "Tsis sandau Title",
+        "9": "Tsis sandau Title",
+        "10": "Tsis sandau Title",
+        "11": "Tsis sandau Title",
+        "12": "Tsis sandau Title",
+        "13": "Tsis sandau Title"
     },
-    "desc" : {
-        "1" : "Test tsis sandau description",
-        "2" : "Test tsis sandau description",
-        "3" : "Test tsis sandau description",
-        "4" : "Test tsis sandau description",
-        "5" : "Test tsis sandau description",
-        "6" : "Test tsis sandau description",
-        "7" : "Test tsis sandau description",
-        "8" : "Test tsis sandau description",
-        "9" : "Test tsis sandau description",
-        "10" : "Test tsis sandau description",
-        "11" : "Test tsis sandau description",
-        "12" : "Test tsis sandau description",
-        "13" : "Test tsis sandau description"
+    "desc": {
+        "1": "Test tsis sandau description",
+        "2": "Test tsis sandau description",
+        "3": "Test tsis sandau description",
+        "4": "Test tsis sandau description",
+        "5": "Test tsis sandau description",
+        "6": "Test tsis sandau description",
+        "7": "Test tsis sandau description",
+        "8": "Test tsis sandau description",
+        "9": "Test tsis sandau description",
+        "10": "Test tsis sandau description",
+        "11": "Test tsis sandau description",
+        "12": "Test tsis sandau description",
+        "13": "Test tsis sandau description"
     },
-    "Navbar":  {
-        "searchPlaceholder" : "Kam aras tu madesn nuo?",
-        "searchButtonLabel" : "Krata products",
-        "logoAlt" : "Rebel Outfitters Logo",
-        "searchIconAlt" : "krata ikona",
-        "greetingText" : "Hi, Han",
-        "historyLink" : "TVARKA HISTORY",
-        "arrowAlt" : "Dropdown Arrow",
-        "cartAlt" : "parod cart",
+    "Navbar": {
+        "searchPlaceholder": "Kam aras tu madesn nuo?",
+        "searchButtonLabel": "Krata products",
+        "logoAlt": "Rebel Outfitters Logo",
+        "searchIconAlt": "krata ikona",
+        "greetingText": "Hi, Han",
+        "historyLink": "TVARKA HISTORY",
+        "arrowAlt": "Dropdown Arrow",
+        "cartAlt": "parod cart",
         "navLinkHome": "HOME",
         "navLinkDroids": "DOROTIS",
         "navLinkVehicles": "VEHICLES"
     },
     "Home": {
-        "welcomeMessage" : "Zhelosa kia Rebel Outfitters!",
-        "welcomeSubtitle" : "Mes feikti viskas tu adata kia vykti ant tave aeuso (ir dujoz).",
-        "symbolAlt" : "Imperial Credit currency symbol"
+        "welcomeMessage": "Zhelosa kia Rebel Outfitters!",
+        "welcomeSubtitle": "Mes feikti viskas tu adata kia vykti ant tave aeuso (ir dujoz).",
+        "symbolAlt": "Imperial Credit currency symbol"
     },
     "Browse": {
-        "droidTitle" : "Visa Dorotis",
-        "vehicleTitle" : "Visa Vehicles"
+        "droidTitle": "Visa Dorotis",
+        "vehicleTitle": "Visa Vehicles"
     },
     "Checkout": {
         "checkoutTitle": "Checkout",
@@ -78,11 +78,11 @@
         "termsStatement": "Nu zinot rodyt ir derinti kia",
         "termsLink": "Terms ir Conditions"
     },
-    "ProductShow" : {
+    "ProductShow": {
         "qtyLabel": "Qty: ",
         "addToCartLabel": "KURAS KIA CART"
     },
-    "Cart" : {
+    "Cart": {
         "cartTitle": "Shopping Cart",
         "noItemMsg": "Nie items kash cart.",
         "deleteAlt": "Delete item sulig cart",
@@ -90,11 +90,34 @@
         "checkoutLabel": "CHECKOUT",
         "closeAlt": "arti Cart"
     },
-    "OrderHistory" : {
-        "historyTitle" : "Tvarka History",
-        "dateHeading" : "Date",
-        "numberHeading" : "Tvarka Number",
-        "totalHeading" : "Total",
-        "statusHeading" : "Status"
+    "OrderHistory": {
+        "historyTitle": "Tvarka History",
+        "dateHeading": "Date",
+        "numberHeading": "Tvarka Number",
+        "totalHeading": "Total",
+        "statusHeading": "Status"
+    },
+    "Error404": {
+        "errorMessage": "404 Error: Page not found."
+    },
+    "Bottombar": {
+        "menuAlt": "Anga sidebar menu"
+    },
+    "Hamburger": {
+        "githubLogoAlt": "GitHub Logo",
+        "lingoLogoAlt": "Lingoport Logo",
+        "versionLabel": "Version: ",
+        "versionBad": "Non-i18n Compliant",
+        "versionGood": "I18n Compliant",
+        "localeLabel": "Locale: ",
+        "localeEN": "English - United States",
+        "localeFR": "French - France",
+        "localeZH": "Chinese - China",
+        "localeYO": "Yoda",
+        "localeSI": "Sith",
+        "githubLabel": "View Source",
+        "dashLabel": "View Lingoport Dashboard",
+        "contactLabel": "Contact Us",
+        "learnLabel": "Learn More"
     }
 }

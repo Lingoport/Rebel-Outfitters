@@ -1,7 +1,8 @@
-let errorMessage = "404 Error: Page not found";
+import i18n from '../../services/i18n.js';
 
 let Error404 = {
     render : async () => {
+        let errorMessage = i18n.getString("Error404", "errorMessage");
         let view = `<div>
                         <h1>${errorMessage}</h1>
                     </div>`;

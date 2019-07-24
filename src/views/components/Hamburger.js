@@ -1,24 +1,29 @@
-//TODO: add event listeners for i18n dropdown changes
 import { locale, updateLocale } from "../../app.js";
+import i18n from '../../services/i18n.js'
 
 //global dropdown element reference
 let drop;
 
-//static strings to hold all the text (to be used within the HTML template literal)
-let githubLogoAlt = "GitHub Logo";
-let lingoLogoAlt = "Lingoport Logo";
-let versionLabel = "Version: ";
-let versionOptions = ["Non-i18n Compliant", "I18n Compliant"];
-let localeLabel = "Locale: ";
-let localeOptions = ["English - United States", "French - France", "Chinese - China", "Yoda", "Sith"];
-let githubLabel = "View Source";
-let dashLabel = "View Lingoport Dashboard";
-let contactLabel = "Contact Us";
-let learnLabel = "Learn More";
-
 let Hamburger = {
 
-    render : async () => {
+    render: async () => {
+        
+        //strings to hold all the text (to be used within the HTML template literal)
+        let githubLogoAlt = i18n.getString("Hamburger", "githubLogoAlt");
+        let lingoLogoAlt = i18n.getString("Hamburger", "lingoLogoAlt");
+        let versionLabel = i18n.getString("Hamburger", "versionLabel");
+        let versionBad = i18n.getString("Hamburger", "versionBad");
+        let versionGood = i18n.getString("Hamburger", "versionGood");
+        let localeLabel = i18n.getString("Hamburger", "localeLabel");
+        let localeEN = i18n.getString("Hamburger", "localeEN");
+        let localeFR = i18n.getString("Hamburger", "localeFR");
+        let localeZH = i18n.getString("Hamburger", "localeZH");
+        let localeYO = i18n.getString("Hamburger", "localeYO");
+        let localeSI = i18n.getString("Hamburger", "localeSI");
+        let githubLabel = i18n.getString("Hamburger", "githubLabel");
+        let dashLabel = i18n.getString("Hamburger", "dashLabel");
+        let contactLabel = i18n.getString("Hamburger", "contactLabel");
+        let learnLabel = i18n.getString("Hamburger", "learnLabel");
 
         //view is solely for HTML markup, contains no static text
         let view = `
@@ -26,18 +31,18 @@ let Hamburger = {
             <div class="start">
                 <label for="version"><h3>${versionLabel}</h3></label>
                 <select id="version" class="hamDrop">
-                    <option value="good">${versionOptions[1]}</option>
-                    <option value="bad">${versionOptions[0]}</option>
+                    <option value="good">${versionGood}</option>
+                    <option value="bad">${versionBad}</option>
                 </select>
             </div>
             <div class="start">
                 <label for="locale"><h3>${localeLabel}</h3></label>
                 <select id="locale" class="hamDrop">
-                    <option value="en-US">${localeOptions[0]}</option>
-                    <option value="fr-FR">${localeOptions[1]}</option>
-                    <option value="zh-CN">${localeOptions[2]}</option>
-                    <option value="yo">${localeOptions[3]}</option>
-                    <option value="si">${localeOptions[4]}</option>
+                    <option value="en-US">${localeEN}</option>
+                    <option value="fr-FR">${localeFR}</option>
+                    <option value="zh-CN">${localeZH}</option>
+                    <option value="yo">${localeYO}</option>
+                    <option value="si">${localeSI}</option>
                 </select>
             </div>
             <div class="githubLink outsideLink block">
@@ -57,13 +62,13 @@ let Hamburger = {
             <a target="_blank" href="https://lingoport.com/i18n-company/" rel="noreferrer" class="outsideLink">${learnLabel}</a>
             </div>
         `;
-        
+
         return view;
     },
     after_render: async () => {
         var overlayBG = document.querySelector('.bg');
         overlayBG.addEventListener('click', hideHam, false);
-        
+
         drop = document.querySelector('#locale');
         //show selected locale in dropdown
         drop.value = locale;
@@ -90,4 +95,4 @@ var changeLocale = (e) => {
     updateLocale(newLocale);
 }
 
-export {Hamburger};
+export { Hamburger };

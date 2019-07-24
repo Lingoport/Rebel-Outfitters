@@ -1,7 +1,11 @@
-let menuAlt = "open hamburger menu";
+import i18n from '../../services/i18n.js';
+
+
 
 let Bottombar = {
     render: async () => {
+        let menuAlt = i18n.getString("Bottombar", "menuAlt");
+
         let view =  /*html*/`
             <img src="../../img/ham.svg" class="hamTrigger" alt="${menuAlt}">
         `
@@ -10,7 +14,7 @@ let Bottombar = {
     after_render: async () => {
         let hamTrigger = document.querySelector('.hamTrigger');
         hamTrigger.addEventListener('click', showHam, false);
-     }
+    }
 
 }
 

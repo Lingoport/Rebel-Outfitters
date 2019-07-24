@@ -1,55 +1,55 @@
 {
-    "title" : {
-        "1" : "Titre du produit français",
-        "2" : "Titre du produit français",
-        "3" : "Titre du produit français",
-        "4" : "Titre du produit français",
-        "5" : "Titre du produit français",
-        "6" : "Titre du produit français",
-        "7" : "Titre du produit français",
-        "8" : "Titre du produit français",
-        "9" : "Titre du produit français",
-        "10" : "Titre du produit français",
-        "11" : "Titre du produit français",
-        "12" : "Titre du produit français",
-        "13" : "Titre du produit français"
+    "title": {
+        "1": "Titre du produit français",
+        "2": "Titre du produit français",
+        "3": "Titre du produit français",
+        "4": "Titre du produit français",
+        "5": "Titre du produit français",
+        "6": "Titre du produit français",
+        "7": "Titre du produit français",
+        "8": "Titre du produit français",
+        "9": "Titre du produit français",
+        "10": "Titre du produit français",
+        "11": "Titre du produit français",
+        "12": "Titre du produit français",
+        "13": "Titre du produit français"
     },
-    "desc" : {
-        "1" : "Description du produit en français",
-        "2" : "Description du produit en français",
-        "3" : "Description du produit en français",
-        "4" : "Description du produit en français",
-        "5" : "Description du produit en français",
-        "6" : "Description du produit en français",
-        "7" : "Description du produit en français",
-        "8" : "Description du produit en français",
-        "9" : "Description du produit en français",
-        "10" : "Description du produit en français",
-        "11" : "Description du produit en français",
-        "12" : "Description du produit en français",
-        "13" : "Description du produit en français"
+    "desc": {
+        "1": "Description du produit en français",
+        "2": "Description du produit en français",
+        "3": "Description du produit en français",
+        "4": "Description du produit en français",
+        "5": "Description du produit en français",
+        "6": "Description du produit en français",
+        "7": "Description du produit en français",
+        "8": "Description du produit en français",
+        "9": "Description du produit en français",
+        "10": "Description du produit en français",
+        "11": "Description du produit en français",
+        "12": "Description du produit en français",
+        "13": "Description du produit en français"
     },
-    "Navbar":  {
-        "searchPlaceholder" : "Que cherchez-vous?",
-        "searchButtonLabel" : "Recherche de produits",
-        "logoAlt" : "Rebel Outfitters Logo",
-        "searchIconAlt" : "icône de recherche",
-        "greetingText" : "Salut, Han",
-        "historyLink" : "HISTORIQUE DES COMMANDES",
-        "arrowAlt" : "Flèche de déroulement",
-        "cartAlt" : "montrer le panier",
+    "Navbar": {
+        "searchPlaceholder": "Que cherchez-vous?",
+        "searchButtonLabel": "Recherche de produits",
+        "logoAlt": "Rebel Outfitters Logo",
+        "searchIconAlt": "icône de recherche",
+        "greetingText": "Salut, Han",
+        "historyLink": "HISTORIQUE DES COMMANDES",
+        "arrowAlt": "Flèche de déroulement",
+        "cartAlt": "montrer le panier",
         "navLinkHome": "PAGE D'ACCUEIL",
         "navLinkDroids": "DROIDS",
         "navLinkVehicles": "VÉHICULES"
     },
     "Home": {
-        "welcomeMessage" : "Bienvenue chez Rebel Outfitters!",
-        "welcomeSubtitle" : "Nous fournissons tout ce dont vous avez besoin pour affronter l'Empire (et gagner).",
-        "symbolAlt" : "Symbole monétaire Imperial Credit"
+        "welcomeMessage": "Bienvenue chez Rebel Outfitters!",
+        "welcomeSubtitle": "Nous fournissons tout ce dont vous avez besoin pour affronter l'Empire (et gagner).",
+        "symbolAlt": "Symbole monétaire Imperial Credit"
     },
     "Browse": {
-        "droidTitle" : "Tous Les Droïdes",
-        "vehicleTitle" : "Tous Les Véhicules"
+        "droidTitle": "Tous Les Droïdes",
+        "vehicleTitle": "Tous Les Véhicules"
     },
     "Checkout": {
         "checkoutTitle": "Check-out",
@@ -78,11 +78,11 @@
         "termsStatement": "j'ai lu et accepté les",
         "termsLink": "Termes et conditions"
     },
-    "ProductShow" : {
+    "ProductShow": {
         "qtyLabel": "Quantité: ",
         "addToCartLabel": "AJOUTER AU PANIER"
     },
-    "Cart" : {
+    "Cart": {
         "cartTitle": "Chariot",
         "noItemMsg": "Aucun article dans le panier.",
         "deleteAlt": "Supprimer l'article du panier",
@@ -90,11 +90,34 @@
         "checkoutLabel": "CHECK-OUT",
         "closeAlt": "Fermer le panier"
     },
-    "OrderHistory" : {
-        "historyTitle" : "Historique des commandes",
-        "dateHeading" : "Date",
-        "numberHeading" : "Numéro de commande",
-        "totalHeading" : "Totale",
-        "statusHeading" : "Statut"
+    "OrderHistory": {
+        "historyTitle": "Historique des commandes",
+        "dateHeading": "Date",
+        "numberHeading": "Numéro de commande",
+        "totalHeading": "Totale",
+        "statusHeading": "Statut"
+    },
+    "Error404": {
+        "errorMessage": "Erreur 404: page non trouvée."
+    },
+    "Bottombar": {
+        "menuAlt": "ouvrir le menu de la barre latérale"
+    },
+    "Hamburger": {
+        "githubLogoAlt": "GitHub Logo",
+        "lingoLogoAlt": "Lingoport Logo",
+        "versionLabel": "Version: ",
+        "versionBad": "Non-i18n Compliant",
+        "versionGood": "I18n Compliant",
+        "localeLabel": "Locale: ",
+        "localeEN": "English - United States",
+        "localeFR": "French - France",
+        "localeZH": "Chinese - China",
+        "localeYO": "Yoda",
+        "localeSI": "Sith",
+        "githubLabel": "View Source",
+        "dashLabel": "View Lingoport Dashboard",
+        "contactLabel": "Contact Us",
+        "learnLabel": "Learn More"
     }
 }

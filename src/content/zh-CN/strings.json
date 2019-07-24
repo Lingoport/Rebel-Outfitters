@@ -1,55 +1,55 @@
 {
-    "title" : {
-        "1" : "中文产品名称",
-        "2" : "中文产品名称",
-        "3" : "中文产品名称",
-        "4" : "中文产品名称",
-        "5" : "中文产品名称",
-        "6" : "中文产品名称",
-        "7" : "中文产品名称",
-        "8" : "中文产品名称",
-        "9" : "中文产品名称",
-        "10" : "中文产品名称",
-        "11" : "中文产品名称",
-        "12" : "中文产品名称",
-        "13" : "中文产品名称"
+    "title": {
+        "1": "中文产品名称",
+        "2": "中文产品名称",
+        "3": "中文产品名称",
+        "4": "中文产品名称",
+        "5": "中文产品名称",
+        "6": "中文产品名称",
+        "7": "中文产品名称",
+        "8": "中文产品名称",
+        "9": "中文产品名称",
+        "10": "中文产品名称",
+        "11": "中文产品名称",
+        "12": "中文产品名称",
+        "13": "中文产品名称"
     },
-    "desc" : {
-        "1" : "中文产品说明",
-        "2" : "中文产品说明",
-        "3" : "中文产品说明",
-        "4" : "中文产品说明",
-        "5" : "中文产品说明",
-        "6" : "中文产品说明",
-        "7" : "中文产品说明",
-        "8" : "中文产品说明",
-        "9" : "中文产品说明",
-        "10" : "中文产品说明",
-        "11" : "中文产品说明",
-        "12" : "中文产品说明",
-        "13" : "中文产品说明"
+    "desc": {
+        "1": "中文产品说明",
+        "2": "中文产品说明",
+        "3": "中文产品说明",
+        "4": "中文产品说明",
+        "5": "中文产品说明",
+        "6": "中文产品说明",
+        "7": "中文产品说明",
+        "8": "中文产品说明",
+        "9": "中文产品说明",
+        "10": "中文产品说明",
+        "11": "中文产品说明",
+        "12": "中文产品说明",
+        "13": "中文产品说明"
     },
-    "Navbar":  {
-        "searchPlaceholder" : "你在找什么？",
-        "searchButtonLabel" : "搜索产品",
-        "logoAlt" : "Rebel Outfitters标志",
-        "searchIconAlt" : "搜索图标",
-        "greetingText" : "嗨，韩",
-        "historyLink" : "订单历史",
-        "arrowAlt" : "下拉箭头",
-        "cartAlt" : "显示购物车",
+    "Navbar": {
+        "searchPlaceholder": "你在找什么？",
+        "searchButtonLabel": "搜索产品",
+        "logoAlt": "Rebel Outfitters标志",
+        "searchIconAlt": "搜索图标",
+        "greetingText": "嗨，韩",
+        "historyLink": "订单历史",
+        "arrowAlt": "下拉箭头",
+        "cartAlt": "显示购物车",
         "navLinkHome": "主页",
         "navLinkDroids": "机器人",
         "navLinkVehicles": "车辆"
     },
     "Home": {
-        "welcomeMessage" : "欢迎来到Rebel Outfitters！",
-        "welcomeSubtitle" : "我们提供您在帝国（和胜利）上所需的一切。",
-        "symbolAlt" : "Imperial Credit currency symbol"
+        "welcomeMessage": "欢迎来到Rebel Outfitters！",
+        "welcomeSubtitle": "我们提供您在帝国（和胜利）上所需的一切。",
+        "symbolAlt": "Imperial Credit currency symbol"
     },
     "Browse": {
-        "droidTitle" : "所有的機器人",
-        "vehicleTitle" : "所有車輛"
+        "droidTitle": "所有的機器人",
+        "vehicleTitle": "所有車輛"
     },
     "Checkout": {
         "checkoutTitle": "查看",
@@ -78,11 +78,11 @@
         "termsStatement": "我已经阅读并同意",
         "termsLink": "条款和条件"
     },
-    "ProductShow" : {
+    "ProductShow": {
         "qtyLabel": "数量: ",
         "addToCartLabel": "添加到购物车"
     },
-    "Cart" : {
+    "Cart": {
         "cartTitle": "购物车",
         "noItemMsg": "购物车中没有商品。",
         "deleteAlt": "从购物车中删除商品",
@@ -90,11 +90,34 @@
         "checkoutLabel": "查看",
         "closeAlt": "关闭购物车"
     },
-    "OrderHistory" : {
-        "historyTitle" : "订单历史",
-        "dateHeading" : "日期",
-        "numberHeading" : "订单号",
-        "totalHeading" : "总",
-        "statusHeading" : "状态"
+    "OrderHistory": {
+        "historyTitle": "订单历史",
+        "dateHeading": "日期",
+        "numberHeading": "订单号",
+        "totalHeading": "总",
+        "statusHeading": "状态"
+    },
+    "Error404": {
+        "errorMessage": "404错误：找不到页面。"
+    },
+    "Bottombar": {
+        "menuAlt": "打开侧边栏菜单"
+    },
+    "Hamburger": {
+        "githubLogoAlt": "GitHub Logo",
+        "lingoLogoAlt": "Lingoport Logo",
+        "versionLabel": "Version: ",
+        "versionBad": "Non-i18n Compliant",
+        "versionGood": "I18n Compliant",
+        "localeLabel": "Locale: ",
+        "localeEN": "English - United States",
+        "localeFR": "French - France",
+        "localeZH": "Chinese - China",
+        "localeYO": "Yoda",
+        "localeSI": "Sith",
+        "githubLabel": "View Source",
+        "dashLabel": "View Lingoport Dashboard",
+        "contactLabel": "Contact Us",
+        "learnLabel": "Learn More"
     }
 }
