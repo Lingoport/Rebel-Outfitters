@@ -38,7 +38,9 @@
         "historyLink" : "订单历史",
         "arrowAlt" : "下拉箭头",
         "cartAlt" : "显示购物车",
-        "navLinksText" : ["家", "机器人", "车辆"]
+        "navLinkHome": "主页",
+        "navLinkDroids": "机器人",
+        "navLinkVehicles": "车辆"
     },
     "Home": {
         "welcomeMessage" : "欢迎来到Rebel Outfitters！",
@@ -58,11 +60,9 @@
         "coordinatesHolder": "0,0,0",
         "sectorLabel": "扇形",
         "methodLabel": "邮寄方式",
-        "methodOptions": [
-            "光速",
-            "前夜的",
-            "标准"
-        ],
+        "shipLightspeed": "光速",
+        "shipOvernight": "前夜的",
+        "shipStandard": "标准",
         "paySectionLabel": "付款",
         "payNameLabel": "卡片上的名字",
         "payNameHolder": "最后一个",
@@ -92,11 +92,9 @@
     },
     "OrderHistory" : {
         "historyTitle" : "订单历史",
-        "headings" : [
-            "日期",
-            "订单号",
-            "总",
-            "状态"
-        ]
+        "dateHeading" : "日期",
+        "numberHeading" : "订单号",
+        "totalHeading" : "总",
+        "statusHeading" : "状态"
     }
 }

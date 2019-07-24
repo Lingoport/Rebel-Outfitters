@@ -24,7 +24,9 @@ let Checkout = {
         let coordinatesHolder = i18n.getString("Checkout", "coordinatesHolder");
         let sectorLabel = i18n.getString("Checkout", "sectorLabel");
         let methodLabel = i18n.getString("Checkout", "methodLabel");
-        let methodOptions = i18n.getString("Checkout", "methodOptions");
+        let shipLightspeed = i18n.getString("Checkout", "shipLightspeed");
+        let shipOvernight = i18n.getString("Checkout", "shipOvernight");
+        let shipStandard = i18n.getString("Checkout", "shipStandard");
         let paySectionLabel = i18n.getString("Checkout", "paySectionLabel");
         let payNameLabel = i18n.getString("Checkout", "payNameLabel");
         let payNameHolder = i18n.getString("Checkout", "payNameHolder");
@@ -80,9 +82,9 @@ let Checkout = {
                         <div class="formElement">
                             <label for="shipMethod">${methodLabel}</label>
                             <select id="shipMethod" class="checkoutInput">
-                                <option value="lightspeed">${methodOptions[0]}</option>
-                                <option value="overnight">${methodOptions[1]}</option>
-                                <option value="standard">${methodOptions[2]}</option>
+                                <option value="lightspeed">${shipLightspeed}</option>
+                                <option value="overnight">${shipOvernight}</option>
+                                <option value="standard">${shipStandard}</option>
                             </select>
                         </div>
                     </div>

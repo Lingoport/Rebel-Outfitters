@@ -38,7 +38,9 @@
         "historyLink" : "HISTORIQUE DES COMMANDES",
         "arrowAlt" : "Flèche de déroulement",
         "cartAlt" : "montrer le panier",
-        "navLinksText" : ["MAISON", "DROIDS", "VÉHICULES"]
+        "navLinkHome": "PAGE D'ACCUEIL",
+        "navLinkDroids": "DROIDS",
+        "navLinkVehicles": "VÉHICULES"
     },
     "Home": {
         "welcomeMessage" : "Bienvenue chez Rebel Outfitters!",
@@ -58,11 +60,9 @@
         "coordinatesHolder": "0,0,0",
         "sectorLabel": "Secteur",
         "methodLabel": "Méthode d'envoi",
-        "methodOptions": [
-            "Vitesse de la lumière",
-            "Pendant la nuit",
-            "la norme"
-        ],
+        "shipLightspeed": "Vitesse de la lumière",
+        "shipOvernight": "Pendant la nuit",
+        "shipStandard": "La Norme",
         "paySectionLabel": "Paiement",
         "payNameLabel": "Nom sur carte",
         "payNameHolder": "Premier Dernier",
@@ -92,11 +92,9 @@
     },
     "OrderHistory" : {
         "historyTitle" : "Historique des commandes",
-        "headings" : [
-            "Date",
-            "Numéro de commande",
-            "Totale",
-            "Statut"
-        ]
+        "dateHeading" : "Date",
+        "numberHeading" : "Numéro de commande",
+        "totalHeading" : "Totale",
+        "statusHeading" : "Statut"
     }
 }

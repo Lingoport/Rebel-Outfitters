@@ -38,11 +38,9 @@
         "historyLink": "ORDER HISTORY",
         "arrowAlt": "Drop Down Arrow",
         "cartAlt": "show cart",
-        "navLinksText": [
-            "HOME",
-            "DROIDS",
-            "VEHICLES"
-        ]
+        "navLinkHome": "HOME",
+        "navLinkDroids": "DROIDS",
+        "navLinkVehicles": "VEHICLES"
     },
     "Home": {
         "welcomeMessage": "Welcome to Rebel Outfitters!",
@@ -62,11 +60,9 @@
         "coordinatesHolder": "0,0,0",
         "sectorLabel": "Sector",
         "methodLabel": "Shipping Method",
-        "methodOptions": [
-            "Lightspeed",
-            "Overnight",
-            "Standard"
-        ],
+        "shipLightspeed": "Lightspeed",
+        "shipOvernight": "Overnight",
+        "shipStandard": "Standard",
         "paySectionLabel": "Payment",
         "payNameLabel": "Name on Card",
         "payNameHolder": "First Last",
@@ -96,11 +92,9 @@
     },
     "OrderHistory" : {
         "historyTitle" : "Order History",
-        "headings" : [
-            "Date",
-            "Order Number",
-            "Total",
-            "Status"
-        ]
+        "dateHeading" : "Date",
+        "numberHeading" : "Order Number",
+        "totalHeading" : "Total",
+        "statusHeading" : "Status"
     }
 }

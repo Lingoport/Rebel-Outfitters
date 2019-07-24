@@ -9,17 +9,20 @@ let OrderHistory = {
 
         //strings to hold all the text (to be used within the HTML template literal)
         let historyTitle = i18n.getString("OrderHistory", "historyTitle");
-        let headings = i18n.getString("OrderHistory", "headings");
+        let dateHeading = i18n.getString("OrderHistory", "dateHeading");
+        let numberHeading = i18n.getString("OrderHistory", "numberHeading");
+        let totalHeading = i18n.getString("OrderHistory", "totalHeading");
+        let statusHeading = i18n.getString("OrderHistory", "statusHeading");
 
         //view is solely for HTML markup, contains no static text
         let view = `
         <section class="orderHistory">
             <h1>${historyTitle}</h1>
             <div class="headings">
-                <h3>${headings[0]}</h3>
-                <h3>${headings[1]}</h3>
-                <h3>${headings[2]}</h3>
-                <h3>${headings[3]}</h3>
+                <h3>${dateHeading}</h3>
+                <h3>${numberHeading}</h3>
+                <h3>${totalHeading}</h3>
+                <h3>${statusHeading}</h3>
             </div>`;
 
         orderHistory.forEach((order, key) => {

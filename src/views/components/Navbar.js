@@ -13,7 +13,9 @@ let Navbar = {
         let arrowAlt = i18n.getString("Navbar", "arrowAlt");
         let greetingText = i18n.getString("Navbar", "greetingText");
         let cartAlt = i18n.getString("Navbar", "cartAlt");
-        let navLinksText = i18n.getString("Navbar", "navLinksText");
+        let navLinkHome = i18n.getString("Navbar", "navLinkHome");
+        let navLinkDroids = i18n.getString("Navbar", "navLinkDroids");
+        let navLinkVehicles = i18n.getString("Navbar", "navLinkVehicles");
 
         //view is solely for HTML markup, contains no static text
         let view =
@@ -46,9 +48,9 @@ let Navbar = {
     <nav>
         <!-- nav links here -->
         <ul>
-            <li><a href="/#/" class="navLink" id="">${navLinksText[0]}</a></li>
-            <li><a href="/#/droids" class="navLink" id="droids">${navLinksText[1]}</a></li>
-            <li><a href="/#/vehicles" class="navLink" id="vehicles">${navLinksText[2]}</a></li>
+            <li><a href="/#/" class="navLink" id="">${navLinkHome}</a></li>
+            <li><a href="/#/droids" class="navLink" id="droids">${navLinkDroids}</a></li>
+            <li><a href="/#/vehicles" class="navLink" id="vehicles">${navLinkVehicles}</a></li>
         </ul>
     </nav>
     `;

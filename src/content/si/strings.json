@@ -38,7 +38,9 @@
         "historyLink" : "TVARKA HISTORY",
         "arrowAlt" : "Dropdown Arrow",
         "cartAlt" : "parod cart",
-        "navLinksText" : ["HOME", "DOROTIS", "VEHICLES"]
+        "navLinkHome": "HOME",
+        "navLinkDroids": "DOROTIS",
+        "navLinkVehicles": "VEHICLES"
     },
     "Home": {
         "welcomeMessage" : "Zhelosa kia Rebel Outfitters!",
@@ -58,11 +60,9 @@
         "coordinatesHolder": "0,0,0",
         "sectorLabel": "ruozas",
         "methodLabel": "Shipping Method",
-        "methodOptions": [
-            "Lightspeed",
-            "Overnight",
-            "Standard"
-        ],
+        "shipLightspeed": "Lightspeed",
+        "shipOvernight": "Overnight",
+        "shipStandard": "Standard",
         "paySectionLabel": "Payment",
         "payNameLabel": "vadinti ant Card",
         "payNameHolder": "karuvis galas",
@@ -92,11 +92,9 @@
     },
     "OrderHistory" : {
         "historyTitle" : "Tvarka History",
-        "headings" : [
-            "Date",
-            "Tvarka Number",
-            "Total",
-            "Status"
-        ]
+        "dateHeading" : "Date",
+        "numberHeading" : "Tvarka Number",
+        "totalHeading" : "Total",
+        "statusHeading" : "Status"
     }
 }
