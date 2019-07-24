@@ -33,7 +33,7 @@ const i18n = {
         //format in imperial credit with symbol if locale is YODA or SITH
         if (locale == 'yo' || locale == 'si') {
             let symbolAlt = i18n.getString("Home", "symbolAlt");
-            formatted = new Intl.NumberFormat('en-US').format(price);
+            formatted = new Intl.NumberFormat('en-US').format(price); //$NON-NLS-L$ 
 
             //return the formatted currency within template literal
             return `<img src="../../img/${color}Symbol.svg" class="symbol" alt="${symbolAlt}">
@@ -42,7 +42,7 @@ const i18n = {
         //format using actual symbol and conventions if it's a real locale
         else {
             let converted = convertCurrency(price);
-            formatted = new Intl.NumberFormat(locale, { style: 'currency', currency: currencyMap[locale] }).format(converted);
+            formatted = new Intl.NumberFormat(locale, { style: 'currency', currency: currencyMap[locale] }).format(converted); //$NON-NLS-L$ 
             //return the formatted currency within template literal
             return `<h4>${formatted}</h4>`
         }

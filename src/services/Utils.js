@@ -4,8 +4,8 @@ const Utils = {
     // --------------------------------
     parseRequestURL : () => {
 
-        let url = location.hash.slice(1).toLowerCase() || '/';
-        let r = url.split("/")
+        let url = location.hash.slice(1).toLowerCase() || '/'; //$NON-NLS-L$ 
+        let r = url.split("/"); //$NON-NLS-L$ 
         let request = {
             resource    : null,
             id          : null,
