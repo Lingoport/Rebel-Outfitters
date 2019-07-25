@@ -48,10 +48,15 @@ const i18n = {
         }
 
     },
+    //return the locale based link to html file within the 'static' folder
     getHTML: () => {
-        return `${locale}/terms.html`;
-    }
+        return `${locale}/terms.html`; //$NON-NLS-L$ 
+    },
 
+    formatDate: (date) => {
+        var options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
+        return new Intl.DateTimeFormat([locale, 'en-US'], options).format(date);
+    }
 }
 
 //used to determine the correct currency symbol

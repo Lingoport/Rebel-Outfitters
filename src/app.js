@@ -139,7 +139,7 @@ var readCart = () => {
         let cartIds = JSON.parse(cartIdString);
 
         for(let productAr of cartIds) {
-            if(productAr[1] == 'droid') {
+            if(productAr[1] == 'droid') { //$NON-NLS-L$
                 let product = droidMap.get(parseInt(productAr[0]));
                 product.qty = parseInt(productAr[2]);
                 shoppingCart[productAr[0]] = product;
@@ -183,8 +183,8 @@ var showCart = () => {
 
 //adds some dummy orders to the history on startup
 let dummyOrders = () => {
-    let order1 = new Order(new Date('May 13, 2019 03:24:00'), 68500, "Delivered");
-    let order2 = new Order(new Date('July 1, 2019 03:24:00'), 900, "Shipped");
+    let order1 = new Order(new Date(Date.UTC(2019, 5, 16)), 68500); //$NON-NLS-L$
+    let order2 = new Order(new Date(Date.UTC(2019, 6, 9)), 900); //$NON-NLS-L$
     orderHistory.push(order2);
     orderHistory.push(order1);
 }

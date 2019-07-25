@@ -7,7 +7,7 @@ let drop;
 let Hamburger = {
 
     render: async () => {
-        
+
         //strings to hold all the text (to be used within the HTML template literal)
         let githubLogoAlt = i18n.getString("Hamburger", "githubLogoAlt");
         let lingoLogoAlt = i18n.getString("Hamburger", "lingoLogoAlt");
@@ -52,7 +52,7 @@ let Hamburger = {
                 
             </div>
             <div class="dashLink outsideLink block">
-            <a target="_blank" href="" class="inline" rel="noreferrer">
+            <a target="_blank" href="https://sandbox.lingoport.com/overview?id=Lingoport.goodi18n%3Ascan" class="inline" rel="noreferrer">
                     <img src="../../img/lingoport_thumb.png" class="logoThumb" alt="${lingoLogoAlt}">
                     ${dashLabel}</a>
                 

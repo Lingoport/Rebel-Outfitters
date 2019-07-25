@@ -162,7 +162,7 @@ let Checkout = {
 
 //handle order placement
 var placeOrder = () => {
-    let order = new Order(new Date(), total, "Processing");
+    let order = new Order(new Date(), total, "Processing"); //$NON-NLS-L$
     orderHistory.unshift(order);
     //zero out the qty for each item before removing it
     for (let key in shoppingCart) {
