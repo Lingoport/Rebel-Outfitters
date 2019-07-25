@@ -52,10 +52,10 @@ const i18n = {
     getHTML: () => {
         return `${locale}/terms.html`; //$NON-NLS-L$ 
     },
-
+    //format date accoring to locale
     formatDate: (date) => {
         var options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
-        return new Intl.DateTimeFormat([locale, 'en-US'], options).format(date);
+        return new Intl.DateTimeFormat([locale, 'en-US'], options).format(date); //$NON-NLS-L$
     }
 }
 
