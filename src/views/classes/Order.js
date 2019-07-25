@@ -4,7 +4,7 @@ import i18n from "../../services/i18n.js";
 class Order {
     constructor(newDate, total) {
         if(newDate == null) {
-            this.orderDate = new Date();
+            this.orderDate = new Date(); //$NON-NLS-L$
         }else {
             this.orderDate = newDate;
         }
@@ -12,7 +12,7 @@ class Order {
         this.total = total;
     }
 
-    getDate() {
+    getOrderDate() {
         return i18n.formatDate(this.orderDate);
     }
 

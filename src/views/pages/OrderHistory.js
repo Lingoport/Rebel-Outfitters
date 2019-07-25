@@ -28,7 +28,7 @@ let OrderHistory = {
         orderHistory.forEach((order, key) => {
             view += `
                 <article class="orderItem">
-                    <h3>${order.getDate()}</h3>
+                    <h3>${order.getOrderDate()}</h3>
                     <h3>${order.orderNumber}</h3>
                     <div class="gridPrice">
                         ${i18n.formatCurrency(order.total, "b")}
