@@ -115,7 +115,7 @@ let Checkout = {
                 </div>
                 <div class="termsCheck">
                     <input type="checkbox" name="terms" value="terms">
-                    <h4>${termsStatement} <a target="_blank" href="../../static/terms.html">${termsLink}</a></h4>
+                    <h4>${termsStatement} <a target="_blank" href="../../static/${i18n.getHTML()}">${termsLink}</a></h4>
                 </div>
                 <button class="orderButt">${orderLabel}</button>
             </div>

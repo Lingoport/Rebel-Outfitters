@@ -47,6 +47,9 @@ const i18n = {
             return `<h4>${formatted}</h4>`
         }
 
+    },
+    getHTML: () => {
+        return `${locale}/terms.html`;
     }
 
 }
