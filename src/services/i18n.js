@@ -1,4 +1,4 @@
-import { locale } from './../app.js';
+import { locale } from '../app.js';
 
 var stringsJSON = {};
 
