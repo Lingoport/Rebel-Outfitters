@@ -3,7 +3,7 @@ import {locale} from '../app.js';
 
 var productCatalog = [{}];
 
-const Products = {
+const products = {
 
     loadProductCatalog : async() => {
 
