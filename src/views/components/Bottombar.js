@@ -3,7 +3,7 @@ let menuAlt = "open hamburger menu";
 let Bottombar = {
     render: async () => {
         let view =  /*html*/`
-            <img src="../../img/ham.svg" class="hamTrigger" alt="${menuAlt}">
+            <img src="img/ham.svg" class="hamTrigger" alt="${menuAlt}">
         `
         return view
     },

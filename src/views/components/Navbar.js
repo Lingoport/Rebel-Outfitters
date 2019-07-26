@@ -37,7 +37,7 @@ let Navbar = {
                     <img src="img/arrow-down.svg" id="downArrow" alt="${arrowAlt}">
                 </div>
                 <div class="dropdown-content">
-                    <a href="/#/history" class=".historyButt">${historyLink}</a>
+                    <a href="./#/history" class=".historyButt">${historyLink}</a>
                 </div>
             </div>
             <img src="img/cart.svg" class="cartIcon" alt="${cartAlt}">
@@ -46,9 +46,9 @@ let Navbar = {
     <nav>
         <!-- nav links here -->
         <ul>
-            <li><a href="/#/" class="navLink" id="">${navLinksText[0]}</a></li>
-            <li><a href="/#/droids" class="navLink" id="droids">${navLinksText[1]}</a></li>
-            <li><a href="/#/vehicles" class="navLink" id="vehicles">${navLinksText[2]}</a></li>
+            <li><a href="./#/" class="navLink" id="">${navLinksText[0]}</a></li>
+            <li><a href="./#/droids" class="navLink" id="droids">${navLinksText[1]}</a></li>
+            <li><a href="./#/vehicles" class="navLink" id="vehicles">${navLinksText[2]}</a></li>
         </ul>
     </nav>
     `;
@@ -70,7 +70,7 @@ let Navbar = {
         var logo = document.querySelector("#logo");
         //redirect to home on logo click
         logo.addEventListener("click", function() {
-            location.href="/#";
+            location.href="./#";
         }, false);
 
 

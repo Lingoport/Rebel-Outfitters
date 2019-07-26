@@ -113,7 +113,7 @@ const routes = {
 };
 
 //load background
-particlesJS.load('particles-js', 'config/particlesjs-config.json', function() {
+particlesJS.load('particles-js', './plugins/assets/particlesjs-config.json', function() {
     //callback
 });
 

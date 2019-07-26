@@ -86,7 +86,7 @@ let Checkout = {
                 <div class="paymentInfo">
                     <div class="grem-container left">
                         <h2>${paySectionLabel}</h2>
-                        <a href="https://wiki.lingoport.com/Gremlins#Embedded_Strings" target="_blank"><img src="../../img/orange_grem.png" class="gremlin-right embedded"></a>
+                        <a href="https://wiki.lingoport.com/Gremlins#Embedded_Strings" target="_blank"><img src="img/orange_grem.png" class="gremlin-right embedded"></a>
                     </div>
                     <div class="form">
                         <div class="formElement halfWidth">
@@ -112,8 +112,8 @@ let Checkout = {
                 </div>
                 <div class="termsCheck grem-container left">
                     <input type="checkbox" name="terms" value="terms">
-                    <h4>${termsStatement}<a target="_blank" href="../../static/terms.html">${termsLink}</a></h4>
-                    <a href="https://wiki.lingoport.com/Gremlins#Static_Files" target="_blank"><img src="../../img/green_grem.png" class="gremlin-right small staticFile"></a>
+                    <h4>${termsStatement}<a target="_blank" href="static/terms.html">${termsLink}</a></h4>
+                    <a href="https://wiki.lingoport.com/Gremlins#Static_Files" target="_blank"><img src="img/green_grem.png" class="gremlin-right small staticFile"></a>
                 </div>
                 <button class="orderButt">${orderButton}</button>
             </div>
@@ -131,7 +131,7 @@ let Checkout = {
                     </div>
                     <div class="cartPrice">
                         <div class="gridPrice">
-                            <img src="../../img/wSymbol.gif" class="symbol" alt="${symbolAlt}">
+                            <img src="img/wSymbol.gif" class="symbol" alt="${symbolAlt}">
                             <h4>${formatCurrencyWithCommas(value.price * value.qty)}</h4>
                         </div>
                         <img src="img/delete.svg" class="delete" id="${key}" alt="${deleteAlt}">
@@ -142,7 +142,7 @@ let Checkout = {
             <div class="cartTotal">
                     <h3>${totalLabel}</h3>
                     <div class="totalPrice">
-                        <img src="../../img/wSymbol.gif" class="symbol" alt="${symbolAlt}">
+                        <img src="img/wSymbol.gif" class="symbol" alt="${symbolAlt}">
                         <h3>${formatCurrencyWithCommas(total)}</h3>
                     </div>
                 </div>
@@ -173,6 +173,6 @@ var placeOrder = () => {
     //construct success message
     let message = "Order #" + order.orderNumber + " placed successfully!";
     window.alert(message);
-    location.href="/#/history";
+    location.href="./#/history";
 }
 export { Checkout };

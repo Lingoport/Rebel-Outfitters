@@ -15,7 +15,7 @@ let Home = {
                     <section class="welcome grem-container">
                         <h1 class="center">${welcomeMessage}</h1>
                         <h3 class="center white">${welcomeSubtitle}</h3>
-                        <a href="https://wiki.lingoport.com/Gremlins#Embedded_Strings" target="_blank"><img src="../../img/orange_grem.png" class="gremlin-right embedded"></a>
+                        <a href="https://wiki.lingoport.com/Gremlins#Embedded_Strings" target="_blank"><img src="img/orange_grem.png" class="gremlin-right embedded"></a>
                     </section>
                     <div class="browseGrid homeGrid">`;
 
@@ -31,9 +31,9 @@ let Home = {
                         <div class="gridDes">
                             <h3>${product.title}</h3>
                             <div class="gridPrice grem-container">
-                                <img src="../../img/bSymbol.gif" class="symbol" alt="${symbolAlt}">
+                                <img src="img/bSymbol.gif" class="symbol" alt="${symbolAlt}">
                                 <h4>${formatCurrencyWithCommas(product.price)}</h4>
-                                <a href="https://wiki.lingoport.com/Gremlins#Currency_Format" target="_blank"><img src="../../img/purple_grem.png" class="gremLink gremlin-right small format show${key} hide-gremlin"></a>
+                                <a href="https://wiki.lingoport.com/Gremlins#Currency_Format" target="_blank"><img src="img/purple_grem.png" class="gremLink gremlin-right small format show${key} hide-gremlin"></a>
                             </div>
                         </div>
                     </article>`;
@@ -58,7 +58,7 @@ let Home = {
 var viewProduct = (type, id, e) => {
     //console.log(e);
     if(e.srcElement.classList[0] != "gremLink") {
-        location.href=`/#/${type}s/` + id;
+        location.href=`./#/${type}s/` + id;
     }
 }
 
