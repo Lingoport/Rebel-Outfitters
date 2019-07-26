@@ -14,6 +14,7 @@ let Hamburger = {
         let versionLabel = i18n.getString("Hamburger", "versionLabel");
         let versionBad = i18n.getString("Hamburger", "versionBad");
         let versionGood = i18n.getString("Hamburger", "versionGood");
+        let versionIQA = i18n.getString("Hamburger", "versionIQA")
         let localeLabel = i18n.getString("Hamburger", "localeLabel");
         let localeEN = i18n.getString("Hamburger", "localeEN");
         let localeFR = i18n.getString("Hamburger", "localeFR");
@@ -31,6 +32,7 @@ let Hamburger = {
             <div class="start">
                 <label for="version"><h3>${versionLabel}</h3></label>
                 <select id="version" class="hamDrop">
+                    <option value="IQA">${versionIQA}</option>
                     <option value="good">${versionGood}</option>
                     <option value="bad">${versionBad}</option>
                 </select>
@@ -46,13 +48,13 @@ let Hamburger = {
                 </select>
             </div>
             <div class="githubLink outsideLink block">
-            <a target="_blank" rel="noreferrer" href="https://github.com/Lingoport/demo-app-spa">
+            <a target="_blank" rel="noreferrer" href="https://github.com/Lingoport/demo-app-spa/tree/IQA">
                     <img src="img/github_logo.png" class="logoThumb" alt="${githubLogoAlt}">
                     ${githubLabel}</a>
                 
             </div>
             <div class="dashLink outsideLink block">
-            <a target="_blank" href="https://sandbox.lingoport.com/overview?id=Lingoport.goodi18n%3Ascan" class="inline" rel="noreferrer">
+            <a target="_blank" href="https://sandbox.lingoport.com/overview?id=RebelOutfitters.IQA%3Ascan" class="inline" rel="noreferrer">
                     <img src="img/lingoport_thumb.png" class="logoThumb" alt="${lingoLogoAlt}">
                     ${dashLabel}</a>
                 
@@ -75,6 +77,9 @@ let Hamburger = {
 
         //listen for locale changes
         drop.addEventListener("input", changeLocale, false);
+
+        let versionSelect = document.querySelector('#version');
+        versionSelect.addEventListener('change', switchVersion, false);
     }
 
 }
@@ -86,6 +91,7 @@ var hideHam = e => {
 
     hamSlider.classList.remove('showHam');
     bg.classList.remove('overlay');
+
 }
 
 //function to change locale and reload page
@@ -94,5 +100,21 @@ var changeLocale = (e) => {
     hideHam();
     updateLocale(newLocale);
 }
+
+var switchVersion = (e) => {
+    console.log(event.target.value);
+    let selectedOption = event.target.value;
+
+    if (selectedOption == "good") {
+        window.open('http://34.204.74.162:8080/RebelOutfitters.i18n', '_blank');
+    }
+    else if (selectedOption == "bad") {
+        window.open('http://34.204.74.162:8080/Lingoport.badi18n/', "_blank");
+    }
+}
+
+// http://34.204.74.162:8080/RebelOutfitters.IQA/
+// http://34.204.74.162:8080/Lingoport.badi18n/
+// http://34.204.74.162:8080/RebelOutfitters.i18n
 
 export { Hamburger };
