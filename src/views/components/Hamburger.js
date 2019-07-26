@@ -19,7 +19,7 @@ let Hamburger = {
 
         //view is solely for HTML markup, contains no static text
         let view = `
-            <a target="_blank" rel="noreferrer" href="https://lingoport.com/" class="lingoLogo"><img src="../../img/lingoport_logo.png" class="lingoLogo" alt="${lingoLogoAlt}"></a>
+            <a target="_blank" rel="noreferrer" href="https://lingoport.com/" class="lingoLogo"><img src="img/lingoport_logo.png" class="lingoLogo" alt="${lingoLogoAlt}"></a>
             <div class="start">
                 <label for="version"><h3>${versionLabel}</h3></label>
                 <select id="version" class="hamDrop">
@@ -29,13 +29,13 @@ let Hamburger = {
             </div>
             <div class="githubLink outsideLink block">
             <a target="_blank" rel="noreferrer" href="https://github.com/Lingoport/demo-app-spa">
-                    <img src="../../img/github_logo.png" class="logoThumb" alt="${githubLogoAlt}">
+                    <img src="img/github_logo.png" class="logoThumb" alt="${githubLogoAlt}">
                     ${githubLabel}</a>
                 
             </div>
             <div class="dashLink outsideLink block">
             <a target="_blank" href="" class="inline" rel="noreferrer">
-                    <img src="../../img/lingoport_thumb.png" class="logoThumb" alt="${lingoLogoAlt}">
+                    <img src="img/lingoport_thumb.png" class="logoThumb" alt="${lingoLogoAlt}">
                     ${dashLabel}</a>
                 
             </div>
