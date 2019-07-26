@@ -1,23 +1,23 @@
 "use strict";
 
-import Home from '/views/pages/Home.js';
-import {Browse} from '/views/pages/Browse.js';
-import Error404 from '/views/pages/Error404.js';
-import ProductShow from '/views/pages/ProductShow.js';
-import {Checkout} from '/views/pages/Checkout.js';
-import OrderHistory from '/views/pages/OrderHistory.js';
+import Home from './views/pages/Home.js';
+import {Browse} from './views/pages/Browse.js';
+import Error404 from './views/pages/Error404.js';
+import ProductShow from './views/pages/ProductShow.js';
+import {Checkout} from './views/pages/Checkout.js';
+import OrderHistory from './views/pages/OrderHistory.js';
 
-import Navbar from '/views/components/Navbar.js';
-import Bottombar from '/views/components/Bottombar.js';
-import Cart from '/views/components/Cart.js';
-import {Hamburger} from '/views/components/Hamburger.js';
+import Navbar from './views/components/Navbar.js';
+import Bottombar from './views/components/Bottombar.js';
+import Cart from './views/components/Cart.js';
+import {Hamburger} from './views/components/Hamburger.js';
 
-import {Order} from '/views/classes/Order.js';
+import {Order} from './views/classes/Order.js';
 
-import Utils from '/services/Utils.js';
-import i18n from '/services/i18n.js';
+import Utils from './services/Utils.js';
+import i18n from './services/i18n.js';
 
-import Products from '/content/products.js';
+import Products from './content/products.js';
 
 
 
@@ -207,13 +207,13 @@ export { shoppingCart, addToCart, showCart, router, locale, productList, updateL
 
 // List of supported routes. Any url other than these routes will throw a 404 error
 const routes = {
-    '/' : Home, 
-    '/droids' : Browse,
-    '/droids/:id' : ProductShow,
-    '/vehicles' : Browse,
-    '/vehicles/:id' : ProductShow,
-    '/history' : OrderHistory,
-    '/checkout' : Checkout
+    './' : Home, 
+    './droids' : Browse,
+    './droids/:id' : ProductShow,
+    './vehicles' : Browse,
+    './vehicles/:id' : ProductShow,
+    './history' : OrderHistory,
+    './checkout' : Checkout
 };
 
 //load background
@@ -255,7 +255,8 @@ const router = async () => {
     let request = Utils.parseRequestURL();
 
     // Parse the URL and if it has an id part, change it with the string ":id"
-    let parsedURL = (request.resource ? '/' + request.resource : '/') + (request.id ? '/:id' : '') + (request.verb ? '/' + request.verb : '')
+    let parsedURL = (request.resource ? './' + request.resource : './') + (request.id ? '/:id' : '') + (request.verb ? './' + request.verb : '')
+    console.log(parsedURL);
     
     // Get the page from our hash of supported routes.
     // If the parsed URL is not in our list of supported routes, select the 404 page instead

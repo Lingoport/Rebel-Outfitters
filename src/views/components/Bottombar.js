@@ -7,7 +7,7 @@ let Bottombar = {
         let menuAlt = i18n.getString("Bottombar", "menuAlt");
 
         let view =  /*html*/`
-            <img src="../../img/ham.svg" class="hamTrigger" alt="${menuAlt}">
+            <img src="img/ham.svg" class="hamTrigger" alt="${menuAlt}">
         `
         return view
     },

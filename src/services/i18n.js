@@ -13,7 +13,7 @@ const i18n = {
             }
         };
         try {
-            const response = await fetch(`../content/${newLocale}/strings.json`, options)
+            const response = await fetch(`./content/${newLocale}/strings.json`, options)
             stringsJSON = await response.json();
 
         } catch (err) {
@@ -36,7 +36,7 @@ const i18n = {
             formatted = new Intl.NumberFormat('en-US').format(price); //$NON-NLS-L$ 
 
             //return the formatted currency within template literal
-            return `<img src="../../img/${color}Symbol.svg" class="symbol" alt="${symbolAlt}">
+            return `<img src="img/${color}Symbol.svg" class="symbol" alt="${symbolAlt}">
             <h4>${formatted}</h4>`;
         }
         //format using actual symbol and conventions if it's a real locale

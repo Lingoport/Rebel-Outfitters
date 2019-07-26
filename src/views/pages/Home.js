@@ -44,7 +44,7 @@ let Home = {
         //click listener to redirect on product click
         for(let curProduct of articles) {
             curProduct.addEventListener("click", function() {
-                location.href=`/#/${curProduct.classList[0]}s/` + curProduct.id;
+                location.href=`./#/${curProduct.classList[0]}s/` + curProduct.id;
             }, false);
             curProduct.classList.add("zoom");
         }

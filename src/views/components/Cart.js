@@ -53,7 +53,7 @@ let Cart = {
                                     ${i18n.formatCurrency(total, "w")}
                                 </div>
                             </div>
-                            <a class="checkoutButt" href="/#/checkout">${checkoutLabel}</a>
+                            <a class="checkoutButt" href="./#/checkout">${checkoutLabel}</a>
                             `;
         }
         return view
