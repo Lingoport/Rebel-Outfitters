@@ -46,7 +46,7 @@ let Hamburger = {
                 </select>
             </div>
             <div class="githubLink outsideLink block">
-            <a target="_blank" rel="noreferrer" href="https://github.com/Lingoport/demo-app-spa">
+            <a target="_blank" rel="noreferrer" href="https://github.com/Lingoport/demo-app-spa/tree/good-i18n">
                     <img src="img/github_logo.png" class="logoThumb" alt="${githubLogoAlt}">
                     ${githubLabel}</a>
                 
