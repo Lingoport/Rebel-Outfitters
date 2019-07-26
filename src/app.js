@@ -17,7 +17,7 @@ import {Order} from './views/classes/Order.js';
 
 import Utils        from './services/Utils.js';
 
-import products from './content/products.js';
+import Products from './content/products.js';
 
 //global variables//
 
@@ -35,7 +35,7 @@ productList.set("vehicles", new Map());
 let getProductsList = async() => {
     let droidMap = productList.get("droids");
     let vehicleMap = productList.get("vehicles");
-    for(let item of products) {
+    for(let item of Products) {
         //loop through parsed json and add to either droid Map or vehicle Map
         if(item.type == "droid") {
             droidMap.set(droidMap.size, item);
