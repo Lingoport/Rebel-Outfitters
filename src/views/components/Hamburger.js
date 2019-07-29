@@ -14,6 +14,7 @@ let Hamburger = {
         let versionLabel = i18n.getString("Hamburger", "versionLabel");
         let versionBad = i18n.getString("Hamburger", "versionBad");
         let versionGood = i18n.getString("Hamburger", "versionGood");
+        let versionIQA = i18n.getString("Hamburger", "versionIQA");
         let localeLabel = i18n.getString("Hamburger", "localeLabel");
         let localeEN = i18n.getString("Hamburger", "localeEN");
         let localeFR = i18n.getString("Hamburger", "localeFR");
@@ -32,6 +33,7 @@ let Hamburger = {
                 <label for="version"><h3>${versionLabel}</h3></label>
                 <select id="version" class="hamDrop">
                     <option value="good">${versionGood}</option>
+                    <option value="IQA">${versionIQA}</option>
                     <option value="bad">${versionBad}</option>
                 </select>
             </div>
@@ -94,5 +96,26 @@ var changeLocale = (e) => {
     hideHam();
     updateLocale(newLocale);
 }
+
+//change to selected version from dropdown and perserve location
+var switchVersion = (e) => {
+    let request = Utils.parseRequestURL();
+    console.log(request);
+    let parsedURL = (request.resource ? '#/' + request.resource : '#/') + (request.id ? '/' + request.id : '') + (request.verb ? './' + request.verb : '');
+    console.log(parsedURL);
+
+    let selectedOption = event.target.value;
+
+    if (selectedOption == "good") {
+        window.location.href = `http://34.204.74.162:8080/RebelOutfitters.i18n/${parsedURL}`;
+    }
+    else if (selectedOption == "bad") {
+        window.location.href = `http://34.204.74.162:8080/Lingoport.badi18n/${parsedURL}`;
+    }
+}
+
+// http://34.204.74.162:8080/RebelOutfitters.IQA/
+// http://34.204.74.162:8080/Lingoport.badi18n/
+// http://34.204.74.162:8080/RebelOutfitters.i18n
 
 export { Hamburger };
