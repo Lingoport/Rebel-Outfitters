@@ -26,7 +26,7 @@ let Home = {
             let imageAlt = product.title + " image";
 
             view += `
-                    <article id="${key}" class="${product.type}">
+                    <article id="${product.productID}" class="${product.type}">
                         <img src="${product.imageURL}" class="gridImage" alt="${imageAlt}">
                         <div class="gridDes">
                             <h3>${product.title}</h3>

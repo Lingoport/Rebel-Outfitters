@@ -38,10 +38,10 @@ let getProductsList = async() => {
     for(let item of Products) {
         //loop through parsed json and add to either droid Map or vehicle Map
         if(item.type == "droid") {
-            droidMap.set(droidMap.size, item);
+            droidMap.set(item.productID, item);
         }
         else if(item.type == "vehicle") {
-            vehicleMap.set(vehicleMap.size, item);
+            vehicleMap.set(item.productID, item);
         }
     }
 }
@@ -93,10 +93,10 @@ let getFeaturedProducts = async () => {
     let vehicleMap = productList.get('vehicles');
     let droidMap = productList.get('droids');
    
-    featuredProducts.push(vehicleMap.get(0));
+    featuredProducts.push(vehicleMap.get(5));
     featuredProducts.push(droidMap.get(1));
-    featuredProducts.push(vehicleMap.get(2));
-    featuredProducts.push(droidMap.get(3));
+    featuredProducts.push(vehicleMap.get(8));
+    featuredProducts.push(droidMap.get(2));
 }
 
 export { shoppingCart, addToCart, showCart, router, productList, orderHistory, formatCurrencyWithCommas, featuredProducts };
