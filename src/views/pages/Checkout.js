@@ -1,4 +1,4 @@
-import { shoppingCart, orderHistory } from "../../app.js";
+import { shoppingCart, orderHistory, saveCart } from "../../app.js";
 
 import i18n from '../../services/i18n.js';
 
@@ -164,6 +164,7 @@ let Checkout = {
 //handle order placement
 var placeOrder = () => {
     let order = new Order(total, new Date()); //$NON-NLS-L$
+    saveOrder(order);
     orderHistory.unshift(order);
     //zero out the qty for each item before removing it
     for (let key in shoppingCart) {
@@ -172,9 +173,30 @@ var placeOrder = () => {
         delete shoppingCart[key];
         console.log(shoppingCart);
     }
+    saveCart();
     //construct success message
     let message = i18n.getString("Checkout", "successMessage");
     window.alert(message);
     location.href = "./#/history";
 }
+
+let saveOrder = (newOrder) => {
+    let orders = [];
+    let orderString = [newOrder.orderDate.toString(), newOrder.orderNumber.toString(), newOrder.total.toString()];
+    if(localStorage.getItem('orderHistory') === null) {
+        //no saved orders
+        orders.unshift(orderString);
+        console.log(orders);
+        localStorage.setItem('orderHistory', JSON.stringify(orders));
+    }
+    else {
+        //save orders, just push the new one and save again
+        orders = JSON.parse(localStorage.getItem('orderHistory'));
+        orders.unshift(orderString);
+        console.log(orders);
+        localStorage.setItem('orderHistory', JSON.stringify(orders));
+    }
+    console.log(orderString);
+}
+
 export { Checkout };

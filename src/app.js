@@ -24,8 +24,32 @@ import Products from './content/products.js';
 //********************** 
 //  GLOBAL VARIABLES
 //**********************
-
 var orderHistory = [];
+
+//adds some dummy orders to the history on startup
+let dummyOrders = () => {
+    let now = new Date(); //$NON-NLS-L$
+    var twoDays = now - 1000 * 60 * 60 * 24 * 2;
+    var fiveDays = now - 1000 * 60 * 60 * 24 * 5;
+    let order2 = new Order(900, new Date(fiveDays)); //$NON-NLS-L$
+    let order1 = new Order(68500, new Date(twoDays)); //$NON-NLS-L$
+    orderHistory.push(order1);
+    orderHistory.push(order2);
+}
+
+//load
+if(localStorage.getItem("orderHistory") !== null) {
+    //first add a couple dummies
+    dummyOrders();
+    //get and parse the stringified array
+    let orders = JSON.parse(localStorage.getItem('orderHistory'));
+    //construct the objects and put into object array
+    for(let order of orders) {
+        let orderObj = new Order(parseInt(order[2]), new Date(order[0]), parseInt(order[1])); //$NON-NLS-L$
+        console.log(orderObj);
+        orderHistory.unshift(orderObj);
+    }
+}
 
 //used to store info about selected locale
 var locale;
@@ -84,7 +108,7 @@ var reloadCart = () => {
 //stringify the cart and persist
 var saveCart = () => {
     let cartIds = [];
-    //construct array of objects with schema productID : type
+
     for(let key in shoppingCart) {
         cartIds.push([key, shoppingCart[key].type, shoppingCart[key].qty]);
     }
@@ -181,17 +205,6 @@ var showCart = () => {
     slider.classList.toggle('showCart');
 }
 
-//adds some dummy orders to the history on startup
-let dummyOrders = () => {
-    let now = new Date(); //$NON-NLS-L$
-    var twoDays = now - 1000 * 60 * 60 * 24 * 2;
-    var fiveDays = now - 1000 * 60 * 60 * 24 * 5;
-    let order2 = new Order(900, new Date(fiveDays)); //$NON-NLS-L$
-    let order1 = new Order(68500, new Date(twoDays)); //$NON-NLS-L$
-    orderHistory.push(order1);
-    orderHistory.push(order2);
-}
-
 let featuredProducts = [];
 
 let getFeaturedProducts = async () => {
@@ -220,7 +233,7 @@ const routes = {
 };
 
 //load background
-particlesJS.load('particles-js', 'config/particlesjs-config.json', function() {
+particlesJS.load('particles-js', './plugins/assets/particlesjs-config.json', function() {
     //callback
 });
 
