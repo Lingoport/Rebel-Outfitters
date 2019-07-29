@@ -49,13 +49,13 @@ let Hamburger = {
                 </select>
             </div>
             <div class="githubLink outsideLink block">
-            <a target="_blank" rel="noreferrer" href="https://github.com/Lingoport/demo-app-spa/tree/good-i18n">
+            <a target="_blank" rel="noreferrer" href="https://github.com/Lingoport/Rebel-Outfitters/tree/i18n">
                     <img src="img/github_logo.png" class="logoThumb" alt="${githubLogoAlt}">
                     ${githubLabel}</a>
                 
             </div>
             <div class="dashLink outsideLink block">
-            <a target="_blank" href="https://sandbox.lingoport.com/overview?id=Lingoport.goodi18n%3Ascan" class="inline" rel="noreferrer">
+            <a target="_blank" href="https://sandbox.lingoport.com/overview?id=RebelOutfitters.i18n%3Ascan" class="inline" rel="noreferrer">
                     <img src="img/lingoport_thumb.png" class="logoThumb" alt="${lingoLogoAlt}">
                     ${dashLabel}</a>
                 
@@ -114,12 +114,8 @@ var switchVersion = (e) => {
         window.location.href = `http://34.204.74.162:8080/RebelOutfitters.IQA/${parsedURL}`;
     }
     else if (selectedOption == "bad") { //$NON-NLS-L$
-        window.location.href = `http://34.204.74.162:8080/Lingoport.badi18n/${parsedURL}`;
+        window.location.href = `http://34.204.74.162:8080/RebelOutfitters.DarkSide/${parsedURL}`;
     }
 }
-
-// http://34.204.74.162:8080/RebelOutfitters.IQA/
-// http://34.204.74.162:8080/Lingoport.badi18n/
-// http://34.204.74.162:8080/RebelOutfitters.i18n
 
 export { Hamburger };
