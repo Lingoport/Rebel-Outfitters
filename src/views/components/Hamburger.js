@@ -1,5 +1,6 @@
 import { locale, updateLocale } from "../../app.js";
-import i18n from '../../services/i18n.js'
+import i18n from '../../services/i18n.js';
+import Utils from '../../services/Utils.js';
 
 //global dropdown element reference
 let drop;
@@ -101,15 +102,20 @@ var changeLocale = (e) => {
     updateLocale(newLocale);
 }
 
+//change to selected version from dropdown and perserve location
 var switchVersion = (e) => {
-    console.log(event.target.value);
+    let request = Utils.parseRequestURL();
+    console.log(request);
+    let parsedURL = (request.resource ? '#/' + request.resource : '#/') + (request.id ? '/' + request.id : '') + (request.verb ? './' + request.verb : '');
+    console.log(parsedURL);
+
     let selectedOption = event.target.value;
 
     if (selectedOption == "good") {
-        window.open('http://34.204.74.162:8080/RebelOutfitters.i18n', '_blank');
+        window.location.href = `http://34.204.74.162:8080/RebelOutfitters.i18n/${parsedURL}`;
     }
     else if (selectedOption == "bad") {
-        window.open('http://34.204.74.162:8080/Lingoport.badi18n/', "_blank");
+        window.location.href = `http://34.204.74.162:8080/Lingoport.badi18n/${parsedURL}`;
     }
 }
 
