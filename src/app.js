@@ -183,10 +183,13 @@ var showCart = () => {
 
 //adds some dummy orders to the history on startup
 let dummyOrders = () => {
-    let order1 = new Order(new Date(Date.UTC(2019, 5, 16)), 68500); //$NON-NLS-L$
-    let order2 = new Order(new Date(Date.UTC(2019, 6, 9)), 900); //$NON-NLS-L$
-    orderHistory.push(order2);
+    let now = new Date(); //$NON-NLS-L$
+    var twoDays = now - 1000 * 60 * 60 * 24 * 2;
+    var fiveDays = now - 1000 * 60 * 60 * 24 * 5;
+    let order2 = new Order(900, new Date(fiveDays)); //$NON-NLS-L$
+    let order1 = new Order(68500, new Date(twoDays)); //$NON-NLS-L$
     orderHistory.push(order1);
+    orderHistory.push(order2);
 }
 
 let featuredProducts = [];

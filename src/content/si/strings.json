@@ -120,5 +120,10 @@
         "dashLabel": "View Lingoport Dashboard",
         "contactLabel": "Contact Us",
         "learnLabel": "Learn More"
+    },
+    "Order": {
+        "statusProcessing": "Processing",
+        "statusShipped": "Shipped",
+        "statusDelivered": "Sakytijas"
     }
 }

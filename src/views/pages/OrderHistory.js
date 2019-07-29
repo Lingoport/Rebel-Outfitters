@@ -2,7 +2,6 @@ import { orderHistory } from "../../app.js";
 import i18n from "../../services/i18n.js";
 
 
-
 let OrderHistory = {
 
     render: async () => {
@@ -33,7 +32,7 @@ let OrderHistory = {
                     <div class="gridPrice">
                         ${i18n.formatCurrency(order.total, "b")}
                     </div>
-                    <h3>${order.status}</h3>
+                    <h3>${order.getOrderStatus()}</h3>
                 </article>`
         });
         view += `
