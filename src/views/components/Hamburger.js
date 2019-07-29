@@ -33,8 +33,8 @@ let Hamburger = {
             <div class="start">
                 <label for="version"><h3>${versionLabel}</h3></label>
                 <select id="version" class="hamDrop">
-                    <option value="good">${versionGood}</option>
                     <option value="IQA">${versionIQA}</option>
+                    <option value="good">${versionGood}</option>
                     <option value="bad">${versionBad}</option>
                 </select>
             </div>
@@ -49,13 +49,13 @@ let Hamburger = {
                 </select>
             </div>
             <div class="githubLink outsideLink block">
-            <a target="_blank" rel="noreferrer" href="https://github.com/Lingoport/demo-app-spa/tree/good-i18n">
+            <a target="_blank" rel="noreferrer" href="https://github.com/Lingoport/Rebel-Outfitters/tree/IQA">
                     <img src="img/github_logo.png" class="logoThumb" alt="${githubLogoAlt}">
                     ${githubLabel}</a>
                 
             </div>
             <div class="dashLink outsideLink block">
-            <a target="_blank" href="https://sandbox.lingoport.com/overview?id=Lingoport.goodi18n%3Ascan" class="inline" rel="noreferrer">
+            <a target="_blank" href="https://sandbox.lingoport.com/overview?id=RebelOutfitters.IQA%3Ascan" class="inline" rel="noreferrer">
                     <img src="img/lingoport_thumb.png" class="logoThumb" alt="${lingoLogoAlt}">
                     ${dashLabel}</a>
                 
@@ -110,16 +110,12 @@ var switchVersion = (e) => {
 
     let selectedOption = event.target.value;
 
-    if (selectedOption == "IQA") { //$NON-NLS-L$
-        window.location.href = `http://34.204.74.162:8080/RebelOutfitters.IQA/${parsedURL}`;
+    if (selectedOption == "good") { //$NON-NLS-L$
+        window.location.href = `http://34.204.74.162:8080/RebelOutfitters.i18n/${parsedURL}`;
     }
     else if (selectedOption == "bad") { //$NON-NLS-L$
-        window.location.href = `http://34.204.74.162:8080/Lingoport.badi18n/${parsedURL}`;
+        window.location.href = `http://34.204.74.162:8080/RebelOutfitters.DarkSide/${parsedURL}`;
     }
 }
-
-// http://34.204.74.162:8080/RebelOutfitters.IQA/
-// http://34.204.74.162:8080/Lingoport.badi18n/
-// http://34.204.74.162:8080/RebelOutfitters.i18n
 
 export { Hamburger };
