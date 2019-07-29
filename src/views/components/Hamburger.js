@@ -1,5 +1,6 @@
 import { locale, updateLocale } from "../../app.js";
-import i18n from '../../services/i18n.js'
+import i18n from '../../services/i18n.js';
+import Utils from '../../services/Utils.js';
 
 //global dropdown element reference
 let drop;
@@ -74,9 +75,12 @@ let Hamburger = {
         drop = document.querySelector('#locale');
         //show selected locale in dropdown
         drop.value = locale;
-
         //listen for locale changes
         drop.addEventListener("input", changeLocale, false);
+
+        //add listener from version change
+        let versionSelect = document.querySelector('#version');
+        versionSelect.addEventListener('change', switchVersion, false);
     }
 
 }
@@ -106,8 +110,8 @@ var switchVersion = (e) => {
 
     let selectedOption = event.target.value;
 
-    if (selectedOption == "good") {
-        window.location.href = `http://34.204.74.162:8080/RebelOutfitters.i18n/${parsedURL}`;
+    if (selectedOption == "IQA") {
+        window.location.href = `http://34.204.74.162:8080/RebelOutfitters.IQA/${parsedURL}`;
     }
     else if (selectedOption == "bad") {
         window.location.href = `http://34.204.74.162:8080/Lingoport.badi18n/${parsedURL}`;
