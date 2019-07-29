@@ -115,7 +115,8 @@ let Checkout = {
                 </div>
                 <div class="termsCheck">
                     <input type="checkbox" name="terms" value="terms">
-                    <h4>${termsStatement} <a target="_blank" href="./static/${i18n.getHTML()}">${termsLink}</a></h4>
+                    <h4>${termsStatement}</h4>
+                    <a target="_blank" href="./static/${i18n.getHTML()}">${termsLink}</a>
                 </div>
                 <button class="orderButt">${orderLabel}</button>
             </div>
@@ -172,7 +173,7 @@ var placeOrder = () => {
         console.log(shoppingCart);
     }
     //construct success message
-    let message = "Order #" + order.orderNumber + " placed successfully!";
+    let message = i18n.getString("Checkout", "successMessage");
     window.alert(message);
     location.href = "./#/history";
 }

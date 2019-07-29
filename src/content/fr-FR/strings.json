@@ -75,8 +75,9 @@
         "deleteAlt": "retirer l'article du panier",
         "totalLabel": "Totale: ",
         "orderLabel": "PASSER LA COMMANDE",
-        "termsStatement": "j'ai lu et accepté les",
-        "termsLink": "Termes et conditions"
+        "termsStatement": "J'ai lu et j'accepte les conditions générales",
+        "termsLink": "(Vue)",
+        "successMessage": "Commande passée avec succès!"
     },
     "ProductShow": {
         "qtyLabel": "Quantité: ",

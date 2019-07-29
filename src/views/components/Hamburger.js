@@ -15,7 +15,7 @@ let Hamburger = {
         let versionLabel = i18n.getString("Hamburger", "versionLabel");
         let versionBad = i18n.getString("Hamburger", "versionBad");
         let versionGood = i18n.getString("Hamburger", "versionGood");
-        let versionIQA = i18n.getString("Hamburger", "versionIQA")
+        let versionIQA = i18n.getString("Hamburger", "versionIQA");
         let localeLabel = i18n.getString("Hamburger", "localeLabel");
         let localeEN = i18n.getString("Hamburger", "localeEN");
         let localeFR = i18n.getString("Hamburger", "localeFR");
@@ -33,8 +33,8 @@ let Hamburger = {
             <div class="start">
                 <label for="version"><h3>${versionLabel}</h3></label>
                 <select id="version" class="hamDrop">
-                    <option value="IQA">${versionIQA}</option>
                     <option value="good">${versionGood}</option>
+                    <option value="IQA">${versionIQA}</option>
                     <option value="bad">${versionBad}</option>
                 </select>
             </div>
@@ -49,13 +49,13 @@ let Hamburger = {
                 </select>
             </div>
             <div class="githubLink outsideLink block">
-            <a target="_blank" rel="noreferrer" href="https://github.com/Lingoport/demo-app-spa/tree/IQA">
+            <a target="_blank" rel="noreferrer" href="https://github.com/Lingoport/demo-app-spa/tree/good-i18n">
                     <img src="img/github_logo.png" class="logoThumb" alt="${githubLogoAlt}">
                     ${githubLabel}</a>
                 
             </div>
             <div class="dashLink outsideLink block">
-            <a target="_blank" href="https://sandbox.lingoport.com/overview?id=RebelOutfitters.IQA%3Ascan" class="inline" rel="noreferrer">
+            <a target="_blank" href="https://sandbox.lingoport.com/overview?id=Lingoport.goodi18n%3Ascan" class="inline" rel="noreferrer">
                     <img src="img/lingoport_thumb.png" class="logoThumb" alt="${lingoLogoAlt}">
                     ${dashLabel}</a>
                 
@@ -75,10 +75,10 @@ let Hamburger = {
         drop = document.querySelector('#locale');
         //show selected locale in dropdown
         drop.value = locale;
-
         //listen for locale changes
         drop.addEventListener("input", changeLocale, false);
 
+        //add listener from version change
         let versionSelect = document.querySelector('#version');
         versionSelect.addEventListener('change', switchVersion, false);
     }
@@ -92,7 +92,6 @@ var hideHam = e => {
 
     hamSlider.classList.remove('showHam');
     bg.classList.remove('overlay');
-
 }
 
 //function to change locale and reload page
@@ -111,10 +110,10 @@ var switchVersion = (e) => {
 
     let selectedOption = event.target.value;
 
-    if (selectedOption == "good") {
-        window.location.href = `http://34.204.74.162:8080/RebelOutfitters.i18n/${parsedURL}`;
+    if (selectedOption == "IQA") { //$NON-NLS-L$
+        window.location.href = `http://34.204.74.162:8080/RebelOutfitters.IQA/${parsedURL}`;
     }
-    else if (selectedOption == "bad") {
+    else if (selectedOption == "bad") { //$NON-NLS-L$
         window.location.href = `http://34.204.74.162:8080/Lingoport.badi18n/${parsedURL}`;
     }
 }

@@ -75,8 +75,9 @@
         "deleteAlt": "remove item from cart",
         "totalLabel": "Total: ",
         "orderLabel": "PLACE ORDER",
-        "termsStatement": "I have read and agree to the",
-        "termsLink": "Terms and Conditions"
+        "termsStatement": "I have read and agree to the Terms and Conditions",
+        "termsLink": "(View)",
+        "successMessage": "Order placed successfully!"
     },
     "ProductShow": {
         "qtyLabel": "Qty: ",
@@ -109,7 +110,7 @@
         "versionLabel": "Version: ",
         "versionBad": "Non-i18n Compliant",
         "versionGood": "I18n Compliant",
-        "versionIQA" : "InContext Translation",
+        "versionIQA": "InContext Translation",
         "localeLabel": "Locale: ",
         "localeEN": "English - United States",
         "localeFR": "French - France",
