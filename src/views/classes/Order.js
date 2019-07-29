@@ -20,8 +20,8 @@ class Order {
     getOrderStatus() {
         //calculate diff
         let oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
-        let now = new Date();
-        var diffDays = Math.floor(Math.abs((this.orderDate.getTime() - now.getTime())/(oneDay)));
+        let now = new Date(); //$NON-NLS-L$
+        var diffDays = Math.floor(Math.abs((this.orderDate.getTime() - now.getTime())/(oneDay))); //$NON-NLS-L$
 
         console.log(diffDays);
 

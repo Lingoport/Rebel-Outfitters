@@ -75,8 +75,9 @@
         "deleteAlt": "from cart item remove",
         "totalLabel": "Total: ",
         "orderLabel": "PLACE ORDER",
-        "termsStatement": "Read and agree to I have the",
-        "termsLink": "Terms and Conditions"
+        "termsStatement": "Read and agree to the Terms and Conditions I have",
+        "termsLink": "(View)",
+        "successMessage": "Placed succcessfully your order was!"
     },
     "ProductShow": {
         "qtyLabel": "Qty: ",
@@ -119,7 +120,8 @@
         "githubLabel": "View Source",
         "dashLabel": "View Lingoport Dashboard",
         "contactLabel": "Contact Us",
-        "learnLabel": "Learn More"
+        "learnLabel": "Learn More",
+        "successMessage": "Order placed successfully!"
     },
     "Order": {
         "statusProcessing": "Processing",
