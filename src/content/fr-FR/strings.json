@@ -109,7 +109,7 @@
         "versionLabel": "Version: ",
         "versionBad": "Non-i18n Compliant",
         "versionGood": "I18n Compliant",
-        "versionIQA" : "InContext Translation",
+        "versionIQA": "InContext Translation",
         "localeLabel": "Locale: ",
         "localeEN": "English - United States",
         "localeFR": "French - France",
@@ -120,5 +120,10 @@
         "dashLabel": "View Lingoport Dashboard",
         "contactLabel": "Contact Us",
         "learnLabel": "Learn More"
+    },
+    "Order": {
+        "statusProcessing": "En traitement",
+        "statusShipped": "Expédié",
+        "statusDelivered": "Livré"
     }
 }
