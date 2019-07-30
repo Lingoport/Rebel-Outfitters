@@ -126,6 +126,5 @@
         "statusProcessing": "Processing",
         "statusShipped": "Shipped",
         "statusDelivered": "Delivered"
-    },
-    "Olivier": "IQA String"
+    }
 }
