@@ -75,6 +75,7 @@ let Browse = {
             curProduct.classList.add("zoom");
         }
 
+        //add tooltips to gremlins
         tippy('.browseConcat', {
             content: `<div class="gremTitle">CONCATENATION</div> This content was created using Javascript string concatenation. <a href="${gremConcatDashLink}" target="_blank">View Source</a> <a href="https://wiki.lingoport.com/Gremlins#Concatenations" target="_blank">View Details</a>`,
             theme: 'custom',

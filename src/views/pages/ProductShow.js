@@ -61,6 +61,7 @@ let ProductShow = {
         //there's a bug where adding same item with different
         addButt.addEventListener("click", getQtyandAddToCart, false);
 
+        //add tooltips to gremlins
         tippy('.productShowEmbedded', {
             content: '<div class="gremTitle">EMBEDDED STRING</div> All strings on this page are embedded in source code. <a href="https://sandbox.lingoport.com/code/index?id=RebelOutfitters.DarkSide%3Ascan#/RebelOutfitters.DarkSide%3Ascan%3Asrc%2Fcontent%2Fproducts.js" target="_blank">View Source</a> <a href="https://wiki.lingoport.com/Gremlins#Embedded_Strings" target="_blank">View Details</a>',
             theme: 'custom',

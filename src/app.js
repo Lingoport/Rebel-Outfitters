@@ -163,48 +163,7 @@ const router = async () => {
     content.innerHTML = await page.render();
     await page.after_render();
 
-    addTooltipsToGremlins();
-
 }
-
-var addTooltipsToGremlins = () => {
-    //add tooltips for the gremlins
-    // tippy('.embedded', {
-    //     content: '<div class="gremTitle">EMBEDDED STRING</div> This string is embedded in the source code. <a href="" target="_blank">View Source</a> <a href="" target="_blank">View Details</a>',
-    //     theme: 'custom',
-    //     arrow: true,
-    //     interactive: true
-    // });
-
-    // tippy('.format', {
-    //     content: '<div class="gremTitle">CURRENCY FORMAT</div> The formatting for this currency is hard-coded. <a href="" target="_blank">View Source</a> <a href="" target="_blank">View Details</a>',
-    //     theme: 'custom',
-    //     arrow: true,
-    //     interactive: true
-    // });
-
-    // tippy('.localeMethod', {
-    //     content: '<div class="gremTitle">DATE/TIME FORMAT</div> The formatting for this date is hard-coded. <a href="" target="_blank">View Source</a> <a href="" target="_blank">View Details</a>',
-    //     theme: 'custom',
-    //     arrow: true,
-    //     interactive: true
-    // });
-
-    // tippy('.concat', {
-    //     content: '<div class="gremTitle">CONCATENATION</div> This content was created using Javascript string concatenation. <a href="" target="_blank">View Source</a> <a href="" target="_blank">View Details</a>',
-    //     theme: 'custom',
-    //     arrow: true,
-    //     interactive: true
-    // });
-
-    tippy('.staticFile', {
-        content: '<div class="gremTitle">STATIC FILE</div> This links to a static file. <a href="" target="_blank">View Source</a> <a href="" target="_blank">View Details</a>',
-        theme: 'custom',
-        arrow: true,
-        interactive: true
-    });
-}
-
 
 // Listen on hash change:
 window.addEventListener('hashchange', router);

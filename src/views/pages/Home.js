@@ -52,6 +52,7 @@ let Home = {
             curProduct.addEventListener("click", viewProduct.bind(null, curProduct.classList[0], curProduct.id), false);
         }
 
+        //add tooltips to gremlins
         tippy('.homeEmbedded', {
             content: '<div class="gremTitle">EMBEDDED STRING</div> This string is embedded in the source code. <a href="https://sandbox.lingoport.com/issues/search#issues=AWw_A8m6nik4oCHIT0V7" target="_blank">View Source</a> <a href="https://wiki.lingoport.com/Gremlins#Embedded_Strings" target="_blank">View Details</a>',
             theme: 'custom',

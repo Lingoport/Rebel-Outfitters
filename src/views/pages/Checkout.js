@@ -157,6 +157,7 @@ let Checkout = {
         var orderButt = document.querySelector('.orderButt');
         orderButt.addEventListener('click', placeOrder, false);
 
+        //add tooltips to gremlins
         tippy('.checkoutEmbedded', {
             content: `<div class="gremTitle">EMBEDDED STRING</div> This string is embedded in the source code. <a href="https://sandbox.lingoport.com/issues/search#issues=AWw_A8mlnik4oCHIT0Vl" target="_blank">View Source</a> <a href="https://wiki.lingoport.com/Gremlins#Embedded_Strings" target="_blank">View Details</a>`,
             theme: 'custom',
