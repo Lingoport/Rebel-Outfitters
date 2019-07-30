@@ -1,6 +1,6 @@
-import {shoppingCart, orderHistory, formatCurrencyWithCommas} from "../../app.js";
+import { shoppingCart, orderHistory, formatCurrencyWithCommas } from "../../app.js";
 
-import {Order} from "../classes/Order.js";
+import { Order } from "../classes/Order.js";
 
 //TODO: add click listeners for updating qty or deleting items from cart
 
@@ -86,7 +86,7 @@ let Checkout = {
                 <div class="paymentInfo">
                     <div class="grem-container left">
                         <h2>${paySectionLabel}</h2>
-                        <a href="https://wiki.lingoport.com/Gremlins#Embedded_Strings" target="_blank"><img src="img/orange_grem.png" class="gremlin-right embedded"></a>
+                        <img src="img/orange_grem.png" class="gremlin-right checkoutEmbedded">
                     </div>
                     <div class="form">
                         <div class="formElement halfWidth">
@@ -113,17 +113,17 @@ let Checkout = {
                 <div class="termsCheck grem-container left">
                     <input type="checkbox" name="terms" value="terms">
                     <h4>${termsStatement}<a target="_blank" href="static/terms.html">${termsLink}</a></h4>
-                    <a href="https://wiki.lingoport.com/Gremlins#Static_Files" target="_blank"><img src="img/green_grem.png" class="gremlin-right small staticFile"></a>
+                    <img src="img/green_grem.png" class="gremlin-right small checkoutStaticFile">
                 </div>
                 <button class="orderButt">${orderButton}</button>
             </div>
             <div class="checkoutCart">
                 <h1>${cartTitle}</h1>
             `;
-            shoppingCart.forEach((value, key) => {
-                // html
-                total += value.price * value.qty;
-                view += `
+        shoppingCart.forEach((value, key) => {
+            // html
+            total += value.price * value.qty;
+            view += `
                 <div class="cartItem">
                     <div class="cartQtyTitle">
                         <input type="number" class="cartQty" name="qty" id="${key}" min="1" max="10" size="0" value="${value.qty}">
@@ -137,8 +137,8 @@ let Checkout = {
                         <img src="img/delete.svg" class="delete" id="${key}" alt="${deleteAlt}">
                     </div>
                 </div>`
-            });
-            view += `
+        });
+        view += `
             <div class="cartTotal">
                     <h3>${totalLabel}</h3>
                     <div class="totalPrice">
@@ -157,6 +157,20 @@ let Checkout = {
         var orderButt = document.querySelector('.orderButt');
         orderButt.addEventListener('click', placeOrder, false);
 
+        tippy('.checkoutEmbedded', {
+            content: `<div class="gremTitle">EMBEDDED STRING</div> This string is embedded in the source code. <a href="https://sandbox.lingoport.com/issues/search#issues=AWw_A8mlnik4oCHIT0Vl" target="_blank">View Source</a> <a href="https://wiki.lingoport.com/Gremlins#Embedded_Strings" target="_blank">View Details</a>`,
+            theme: 'custom',
+            arrow: true,
+            interactive: true
+        });
+
+        tippy('.checkoutStaticFile', {
+            content: '<div class="gremTitle">STATIC FILE</div> This links to a static HTML file. <a href="https://sandbox.lingoport.com/issues/search#issues=AWw_A8mqnik4oCHIT0V1" target="_blank">View Source</a> <a href="https://wiki.lingoport.com/Gremlins#Static_Files" target="_blank">View Details</a>',
+            theme: 'custom',
+            arrow: true,
+            interactive: true
+        });
+
     }
 }
 
@@ -173,6 +187,6 @@ var placeOrder = () => {
     //construct success message
     let message = "Order #" + order.orderNumber + " placed successfully!";
     window.alert(message);
-    location.href="./#/history";
+    location.href = "./#/history";
 }
 export { Checkout };

@@ -100,7 +100,7 @@ body canvas {
   display: none;
 }
 
-.show0 {
+.show1, .show5, .orderShow0 {
   display: block;
 }
 
@@ -155,6 +155,24 @@ body canvas {
 .gremTitle {
   font-weight: 500;
   font-size: 110%;
+}
+
+.tippy-content a {
+  display: block;
+  font-family: "Space Mono", monospace;
+  background-color: white;
+  text-decoration: none;
+  color: #2d2d2a;
+  margin: 5px auto;
+  padding: 3px;
+  border-radius: 3px;
+  width: 150px;
+  transition: background-color 0.3s ease;
+  transition: color 0.3s ease;
+}
+.tippy-content a:hover {
+  background-color: #2d2d2a;
+  color: white;
 }
 
 .loading {

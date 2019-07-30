@@ -1,21 +1,21 @@
 "use strict";
 
-import Home         from './views/pages/Home.js';
-import {Browse}        from './views/pages/Browse.js';
-import Error404     from './views/pages/Error404.js';
-import ProductShow     from './views/pages/ProductShow.js';
-import {Checkout}     from './views/pages/Checkout.js';
-import OrderHistory     from './views/pages/OrderHistory.js';
+import Home from './views/pages/Home.js';
+import { Browse } from './views/pages/Browse.js';
+import Error404 from './views/pages/Error404.js';
+import ProductShow from './views/pages/ProductShow.js';
+import { Checkout } from './views/pages/Checkout.js';
+import OrderHistory from './views/pages/OrderHistory.js';
 
 
-import Navbar       from './views/components/Navbar.js';
-import Bottombar    from './views/components/Bottombar.js';
-import Cart from    './views/components/Cart.js';
-import {Hamburger} from './views/components/Hamburger.js';
+import Navbar from './views/components/Navbar.js';
+import Bottombar from './views/components/Bottombar.js';
+import Cart from './views/components/Cart.js';
+import { Hamburger } from './views/components/Hamburger.js';
 
-import {Order} from './views/classes/Order.js';
+import { Order } from './views/classes/Order.js';
 
-import Utils        from './services/Utils.js';
+import Utils from './services/Utils.js';
 
 import Products from './content/products.js';
 
@@ -32,15 +32,15 @@ productList.set("droids", new Map());
 productList.set("vehicles", new Map());
 
 //functions to get products and push to map
-let getProductsList = async() => {
+let getProductsList = async () => {
     let droidMap = productList.get("droids");
     let vehicleMap = productList.get("vehicles");
-    for(let item of Products) {
+    for (let item of Products) {
         //loop through parsed json and add to either droid Map or vehicle Map
-        if(item.type == "droid") {
+        if (item.type == "droid") {
             droidMap.set(item.productID, item);
         }
-        else if(item.type == "vehicle") {
+        else if (item.type == "vehicle") {
             vehicleMap.set(item.productID, item);
         }
     }
@@ -48,10 +48,10 @@ let getProductsList = async() => {
 
 
 //function for anytime an object is added to cart
-var addToCart = async (item) =>  {
+var addToCart = async (item) => {
     const cart = null || document.querySelector('.cartSlider');
     //if cart is empty then set the value of the first key (0) to our new item
-    if(!shoppingCart.has(item.title)) {
+    if (!shoppingCart.has(item.title)) {
         shoppingCart.set(item.title, item);
     }
 
@@ -92,7 +92,7 @@ let getFeaturedProducts = async () => {
 
     let vehicleMap = productList.get('vehicles');
     let droidMap = productList.get('droids');
-   
+
     featuredProducts.push(vehicleMap.get(5));
     featuredProducts.push(droidMap.get(1));
     featuredProducts.push(vehicleMap.get(8));
@@ -103,17 +103,17 @@ export { shoppingCart, addToCart, showCart, router, productList, orderHistory, f
 
 // List of supported routes. Any url other than these routes will throw a 404 error
 const routes = {
-    '/' : Home, 
-    '/droids' : Browse,
-    '/droids/:id' : ProductShow,
-    '/vehicles' : Browse,
-    '/vehicles/:id' : ProductShow,
-    '/history' : OrderHistory,
-    '/checkout' : Checkout
+    '/': Home,
+    '/droids': Browse,
+    '/droids/:id': ProductShow,
+    '/vehicles': Browse,
+    '/vehicles/:id': ProductShow,
+    '/history': OrderHistory,
+    '/checkout': Checkout
 };
 
 //load background
-particlesJS.load('particles-js', './plugins/assets/particlesjs-config.json', function() {
+particlesJS.load('particles-js', './plugins/assets/particlesjs-config.json', function () {
     //callback
 });
 
@@ -125,7 +125,7 @@ const router = async () => {
     const footer = null || document.getElementById('footer_container');
     const cart = null || document.querySelector('.cartSlider');
     const ham = null || document.querySelector('.hamSlider');
-    
+
     // Render the Header, footer, and empty cart of the page
     cart.innerHTML = await Cart.render();
     await Cart.after_render();
@@ -137,17 +137,17 @@ const router = async () => {
     await Bottombar.after_render();
 
     //grab products from JSON file
-    if(productList.get("droids").size == 0 && productList.get("vehicles").size == 0) {
+    if (productList.get("droids").size == 0 && productList.get("vehicles").size == 0) {
         await getProductsList();
     }
 
     //add some dummy orders if there's nothing there
-    if(orderHistory.length == 0) {
+    if (orderHistory.length == 0) {
         dummyOrders();
     }
 
     //create featured products array
-    if(featuredProducts.length == 0) {
+    if (featuredProducts.length == 0) {
         await getFeaturedProducts();
     }
 
@@ -156,7 +156,7 @@ const router = async () => {
 
     // Parse the URL and if it has an id part, change it with the string ":id"
     let parsedURL = (request.resource ? '/' + request.resource : '/') + (request.id ? '/:id' : '') + (request.verb ? '/' + request.verb : '')
-    
+
     // Get the page from our hash of supported routes.
     // If the parsed URL is not in our list of supported routes, select the 404 page instead
     let page = routes[parsedURL] ? routes[parsedURL] : Error404
@@ -168,36 +168,41 @@ const router = async () => {
 }
 
 var addTooltipsToGremlins = () => {
-        //add tooltips for the gremlins
-        tippy('.embedded', {
-            content: '<div class="gremTitle">EMBEDDED STRING</div> This string is embedded in the source code. Click for more info.',
-            theme: 'custom',
-            arrow: true,
-          });
-    
-        tippy('.format', {
-            content: '<div class="gremTitle">CURRENCY FORMAT</div> The formatting for this currency is hard-coded. Click for more info.',
-            theme: 'custom',
-            arrow: true,
-        });
-    
-        tippy('.localeMethod', {
-            content: '<div class="gremTitle">DATE/TIME FORMAT</div> The formatting for this date is hard-coded. Click for more info.',
-            theme: 'custom',
-            arrow: true,
-        });
-    
-        tippy('.concat', {
-            content: '<div class="gremTitle">CONCATENATION</div> This content was created using Javascript string concatenation. Click for more info.',
-            theme: 'custom',
-            arrow: true,
-        });
-    
-        tippy('.staticFile', {
-            content: '<div class="gremTitle">STATIC FILE</div> This links to a static file. Click for more info.',
-            theme: 'custom',
-            arrow: true,
-        });
+    //add tooltips for the gremlins
+    // tippy('.embedded', {
+    //     content: '<div class="gremTitle">EMBEDDED STRING</div> This string is embedded in the source code. <a href="" target="_blank">View Source</a> <a href="" target="_blank">View Details</a>',
+    //     theme: 'custom',
+    //     arrow: true,
+    //     interactive: true
+    // });
+
+    // tippy('.format', {
+    //     content: '<div class="gremTitle">CURRENCY FORMAT</div> The formatting for this currency is hard-coded. <a href="" target="_blank">View Source</a> <a href="" target="_blank">View Details</a>',
+    //     theme: 'custom',
+    //     arrow: true,
+    //     interactive: true
+    // });
+
+    // tippy('.localeMethod', {
+    //     content: '<div class="gremTitle">DATE/TIME FORMAT</div> The formatting for this date is hard-coded. <a href="" target="_blank">View Source</a> <a href="" target="_blank">View Details</a>',
+    //     theme: 'custom',
+    //     arrow: true,
+    //     interactive: true
+    // });
+
+    // tippy('.concat', {
+    //     content: '<div class="gremTitle">CONCATENATION</div> This content was created using Javascript string concatenation. <a href="" target="_blank">View Source</a> <a href="" target="_blank">View Details</a>',
+    //     theme: 'custom',
+    //     arrow: true,
+    //     interactive: true
+    // });
+
+    tippy('.staticFile', {
+        content: '<div class="gremTitle">STATIC FILE</div> This links to a static file. <a href="" target="_blank">View Source</a> <a href="" target="_blank">View Details</a>',
+        theme: 'custom',
+        arrow: true,
+        interactive: true
+    });
 }
 
 

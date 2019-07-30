@@ -33,12 +33,12 @@ let ProductShow = {
                 <article class="detailContent">
                     <div class="grem-container left">
                         <h1>${product.title}</h1>
-                        <a href="https://wiki.lingoport.com/Gremlins#Embedded_Strings" target="_blank"><img src="img/orange_grem.png" class="gremlin-right embedded gremlin-space"></a>
+                        <img src="img/orange_grem.png" class="gremlin-right productShowEmbedded gremlin-space">
                     </div>
                     <div class="gridPrice grem-container left">
                         <img src="img/bSymbol.gif" class="symbol" alt="${symbolAlt}">
                         <h4>${formatCurrencyWithCommas(product.price)}</h4>
-                        <a href="https://wiki.lingoport.com/Gremlins#Currency_Format" target="_blank"><img src="img/purple_grem.png" class="gremlin-right small format gremlin space"></a>
+                        <img src="img/purple_grem.png" class="gremlin-right small productShowFormat gremlin space">
                     </div>
                     <div class="qty">
                         <h3>${qtyLabel}</h3>
@@ -60,6 +60,20 @@ let ProductShow = {
 
         //there's a bug where adding same item with different
         addButt.addEventListener("click", getQtyandAddToCart, false);
+
+        tippy('.productShowEmbedded', {
+            content: '<div class="gremTitle">EMBEDDED STRING</div> All strings on this page are embedded in source code. <a href="https://sandbox.lingoport.com/code/index?id=RebelOutfitters.DarkSide%3Ascan#/RebelOutfitters.DarkSide%3Ascan%3Asrc%2Fcontent%2Fproducts.js" target="_blank">View Source</a> <a href="https://wiki.lingoport.com/Gremlins#Embedded_Strings" target="_blank">View Details</a>',
+            theme: 'custom',
+            arrow: true,
+            interactive: true
+        });
+
+        tippy('.productShowFormat', {
+            content: '<div class="gremTitle">CURRENCY FORMAT</div> The formatting for this currency is hard-coded. <a href="https://sandbox.lingoport.com/issues/search#issues=AWw_A8jrnik4oCHIT0UH" target="_blank">View Source</a> <a href="https://wiki.lingoport.com/Gremlins#Currency_Format" target="_blank">View Details</a>',
+            theme: 'custom',
+            arrow: true,
+            interactive: true
+        });
     }
 }
 

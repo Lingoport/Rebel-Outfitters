@@ -15,7 +15,7 @@ let Home = {
                     <section class="welcome grem-container">
                         <h1 class="center">${welcomeMessage}</h1>
                         <h3 class="center white">${welcomeSubtitle}</h3>
-                        <a href="https://wiki.lingoport.com/Gremlins#Embedded_Strings" target="_blank"><img src="img/orange_grem.png" class="gremlin-right embedded"></a>
+                        <img src="img/orange_grem.png" class="gremlin-right homeEmbedded">
                     </section>
                     <div class="browseGrid homeGrid">`;
 
@@ -33,7 +33,7 @@ let Home = {
                             <div class="gridPrice grem-container">
                                 <img src="img/bSymbol.gif" class="symbol" alt="${symbolAlt}">
                                 <h4>${formatCurrencyWithCommas(product.price)}</h4>
-                                <a href="https://wiki.lingoport.com/Gremlins#Currency_Format" target="_blank"><img src="img/purple_grem.png" class="gremLink gremlin-right small format show${key} hide-gremlin"></a>
+                                <img src="img/purple_grem.png" class="gremLink gremlin-right small homeFormat show${key} hide-gremlin">
                             </div>
                         </div>
                     </article>`;
@@ -51,6 +51,20 @@ let Home = {
         for(let curProduct of articles) {
             curProduct.addEventListener("click", viewProduct.bind(null, curProduct.classList[0], curProduct.id), false);
         }
+
+        tippy('.homeEmbedded', {
+            content: '<div class="gremTitle">EMBEDDED STRING</div> This string is embedded in the source code. <a href="https://sandbox.lingoport.com/issues/search#issues=AWw_A8m6nik4oCHIT0V7" target="_blank">View Source</a> <a href="https://wiki.lingoport.com/Gremlins#Embedded_Strings" target="_blank">View Details</a>',
+            theme: 'custom',
+            arrow: true,
+            interactive: true
+        });
+
+        tippy('.homeFormat', {
+            content: '<div class="gremTitle">CURRENCY FORMAT</div> The formatting for this currency is hard-coded. <a href="https://sandbox.lingoport.com/issues/search#issues=AWw_A8jrnik4oCHIT0UH" target="_blank">View Source</a> <a href="https://wiki.lingoport.com/Gremlins#Currency_Format" target="_blank">View Details</a>',
+            theme: 'custom',
+            arrow: true,
+            interactive: true
+        });
     }
 }
 
