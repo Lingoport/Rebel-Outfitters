@@ -1,11 +1,11 @@
 "use strict";
 
-import Home from './views/pages/Home.js';
-import {Browse} from './views/pages/Browse.js';
-import Error404 from './views/pages/Error404.js';
-import ProductShow from './views/pages/ProductShow.js';
-import {Checkout} from './views/pages/Checkout.js';
-import OrderHistory from './views/pages/OrderHistory.js';
+let Browse = "Browse.js";//$NON-NLS-L$
+let Error404 = "Error404.js";//$NON-NLS-L$
+let Home = "Home.js";//$NON-NLS-L$
+let ProductShow = "ProductShow.js";//$NON-NLS-L$
+let Checkout = "Checkout.js";//$NON-NLS-L$
+let OrderHistory = "OrderHistory.js";//$NON-NLS-L$
 
 import Navbar from './views/components/Navbar.js';
 import Bottombar from './views/components/Bottombar.js';
@@ -276,8 +276,12 @@ const router = async () => {
     // Get the page from our hash of supported routes.
     // If the parsed URL is not in our list of supported routes, select the 404 page instead
     let page = routes[parsedURL] ? routes[parsedURL] : Error404
-    content.innerHTML = await page.render();
-    await page.after_render();
+
+    //lazy load and then render the correct page
+    let loadPage = await import(`./views/pages/${page}`);
+    content.innerHTML = await loadPage.default.render();
+    await loadPage.default.after_render();
+    
 }
 
 
