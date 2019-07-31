@@ -199,4 +199,4 @@ let saveOrder = (newOrder) => {
     console.log(orderString);
 }
 
-export { Checkout };
+export default Checkout;
