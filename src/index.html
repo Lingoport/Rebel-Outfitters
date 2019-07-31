@@ -9,12 +9,13 @@
     <!-- favicon -->
     <link rel="icon" href="img/favicon.png">
 
-    <!-- fonts, css -->
-
-    <link rel="stylesheet" href="css/style.css" async defer>
     <!-- preconnect to google fonts for speed -->
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css?family=Audiowide|Space+Mono|Montserrat:400,500&display=swap" rel="stylesheet">
+    <!-- load fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Audiowide|Space+Mono|Montserrat:400,500&display=swap" rel="stylesheet" async>
+
+    <!-- fonts, css -->
+    <link rel="stylesheet" href="css/style.css" async defer>
 
     <!-- preload key requests for speed -->
     <link rel="preload" href="./views/pages/Home.js" as="script" crossorigin>
@@ -27,7 +28,7 @@
     <link rel="preload" href="./services/i18n.js" as="script" crossorigin>
     <link rel="preload" href="./content/products.js" as="script" crossorigin>
     <!-- particle bg script -->
-    <script src="./plugins/particles.js" defer></script>
+    <script src="./plugins/particles.js" defer async></script>
     <!-- app driver javascript -->
     <script type="module" src="app.js" defer></script>
 </head>
