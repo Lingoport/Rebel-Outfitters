@@ -182,7 +182,7 @@ var placeOrder = () => {
 
 let saveOrder = (newOrder) => {
     let orders = [];
-    let orderString = [newOrder.orderDate.toString(), newOrder.orderNumber.toString(), newOrder.total.toString()];
+    let orderString = [newOrder.orderDate.toString(), newOrder.orderNumber.toString(), newOrder.total.toString()]; //$NON-NLS-L$
     if(localStorage.getItem('orderHistory') === null) {
         //no saved orders
         orders.unshift(orderString);
