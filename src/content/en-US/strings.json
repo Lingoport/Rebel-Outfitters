@@ -126,5 +126,6 @@
         "statusProcessing": "Processing",
         "statusShipped": "Shipped",
         "statusDelivered": "Delivered"
-    }
+    },
+    "Special": "Special"
 }
