@@ -190,4 +190,4 @@ var placeOrder = () => {
     window.alert(message);
     location.href = "./#/history";
 }
-export { Checkout };
+export default Checkout;

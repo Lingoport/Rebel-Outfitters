@@ -202,8 +202,10 @@ body {
         transition: background-color .3s ease;
         transition: color .3s ease;
         &:hover {
+            padding: 2px;
             background-color: $dkgrey;
             color: white;
+            border: 1px solid white;
         }
     }
 }

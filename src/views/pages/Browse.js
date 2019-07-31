@@ -107,4 +107,4 @@ var viewProduct = (type, id, e) => {
     }
 }
 
-export { Browse };
+export default Browse;
