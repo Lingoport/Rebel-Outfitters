@@ -188,6 +188,10 @@ header {
     
 }
 
+#expDropdown * {
+    display: inline-block;
+}
+
 .dropdown {
     position: relative;
     display: inline-block;

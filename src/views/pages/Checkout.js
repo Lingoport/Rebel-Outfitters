@@ -108,7 +108,27 @@ let Checkout = {
                             </div>
                             <div class="formElement">
                                 <label for="expDate">${expDateLabel}</label>
-                                <input type="date" id="expDate" name=expDate" class="checkoutInput">
+                                <div id="expDropdown">
+                                    <select id="expDate" name="expDate" class="checkoutInput">
+                                        <option value="" disabled selected hidden>MM</option>
+                                        `;
+                                    for(let i = 1; i <= 31; i++) {
+                                        var formattedNumber = ("0" + i).slice(-2);
+                                        view += `<option value="${formattedNumber}">${formattedNumber}</option>`;
+                                    }
+                                    view += `
+                                    </select>
+                                    <h3>/</h3>
+                                    <select id="expDateYear" name="expDateYear" class="checkoutInput">
+                                        <option value="" disabled selected hidden>YY</option>
+                                        `;
+                                    for(let i = 1; i <= 12; i++) {
+                                        var formattedNumber = ("0" + i).slice(-2);
+                                        view += `<option value="${formattedNumber}">${formattedNumber}</option>`;
+                                    }
+                                    view += `
+                                    </select>
+                                </div>
                             </div>
                         </div>
                     </div>
