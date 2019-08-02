@@ -111,10 +111,10 @@ var switchVersion = (e) => {
     let selectedOption = event.target.value;
 
     if (selectedOption == "IQA") { //$NON-NLS-L$
-        window.location.href = `http://34.204.74.162:8080/RebelOutfitters.IQA/${parsedURL}`;
+        window.location.href = `http://rebeloutfitters.lingoport.com/RebelOutfitters.IQA/${parsedURL}`;
     }
     else if (selectedOption == "bad") { //$NON-NLS-L$
-        window.location.href = `http://34.204.74.162:8080/RebelOutfitters.DarkSide/${parsedURL}`;
+        window.location.href = `http://rebeloutfitters.lingoport.com/RebelOutfitters.DarkSide/${parsedURL}`;
     }
 }
 
