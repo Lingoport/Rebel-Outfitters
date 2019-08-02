@@ -156,6 +156,10 @@ header section h2 {
   justify-content: space-between;
 }
 
+#expDropdown * {
+  display: inline-block;
+}
+
 .dropdown {
   position: relative;
   display: inline-block;
