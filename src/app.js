@@ -35,13 +35,13 @@ let dummyOrders = () => {
 }
 
 //load
-if(localStorage.getItem("orderHistory") !== null) {
+if (localStorage.getItem("orderHistory") !== null) {
     //first add a couple dummies
     dummyOrders();
     //get and parse the stringified array
     let orders = JSON.parse(localStorage.getItem('orderHistory'));
     //construct the objects and put into object array
-    for(let order of orders) {
+    for (let order of orders) {
         let orderObj = new Order(parseInt(order[2]), new Date(order[0]), parseInt(order[1])); //$NON-NLS-L$
         console.log(orderObj);
         orderHistory.unshift(orderObj);
@@ -72,7 +72,7 @@ let getProductsList = async () => {
 
 //load cart contents fromlocalStorage if available
 var readCart = () => {
-    if(localStorage.getItem("cart") !== null) {
+    if (localStorage.getItem("cart") !== null) {
         console.log("found cart in storage, reconstructing...");
 
         let droidMap = productList.get("droids");
@@ -81,8 +81,8 @@ var readCart = () => {
         let cartIdString = localStorage.getItem("cart");
         let cartIds = JSON.parse(cartIdString);
 
-        for(let productAr of cartIds) {
-            if(productAr[1] == 'droid') {
+        for (let productAr of cartIds) {
+            if (productAr[1] == 'droid') {
                 let product = droidMap.get(parseInt(productAr[0]));
                 product.qty = parseInt(productAr[2]);
                 shoppingCart[productAr[0]] = product;
@@ -121,7 +121,7 @@ var addToCart = async (item) => {
 var saveCart = () => {
     let cartIds = [];
 
-    for(let key in shoppingCart) {
+    for (let key in shoppingCart) {
         cartIds.push([key, shoppingCart[key].type, shoppingCart[key].qty]);
     }
     localStorage.setItem("cart", JSON.stringify(cartIds));
@@ -184,6 +184,13 @@ const router = async () => {
     const cart = null || document.querySelector('.cartSlider');
     const ham = null || document.querySelector('.hamSlider');
 
+    //grab products from JSON file
+    if (productList.get("droids").size == 0 && productList.get("vehicles").size == 0) {
+        await getProductsList();
+    }
+    //render cart
+    cart.innerHTML = await Cart.render();
+    await Cart.after_render();
     // Render the Header, footer, hamburger menu
     ham.innerHTML = await Hamburger.render();
     await Hamburger.after_render();
@@ -192,14 +199,9 @@ const router = async () => {
     footer.innerHTML = await Bottombar.render();
     await Bottombar.after_render();
 
-    //grab products from JSON file
-    if (productList.get("droids").size == 0 && productList.get("vehicles").size == 0) {
-        await getProductsList();
-    }
 
-    //render cart
-    cart.innerHTML = await Cart.render();
-    await Cart.after_render();
+
+    
 
     //add some dummy orders if there's nothing there
     if (orderHistory.length == 0) {
