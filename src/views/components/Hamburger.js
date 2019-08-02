@@ -33,7 +33,7 @@ let Hamburger = {
             <div class="start">
                 <label for="version"><h3>${versionLabel}</h3></label>
                 <select id="version" class="hamDrop">
-                    <option value="good">${versionGood}</option>
+                    <option value="good" disabled selected hidden>${versionGood}</option>
                     <option value="IQA">${versionIQA}</option>
                     <option value="bad">${versionBad}</option>
                 </select>
@@ -41,7 +41,7 @@ let Hamburger = {
             <div class="start">
                 <label for="locale"><h3>${localeLabel}</h3></label>
                 <select id="locale" class="hamDrop">
-                    <option value="en-US">${localeEN}</option>
+                    <option value="en-US" disabled selected hidden>${localeEN}</option>
                     <option value="fr-FR">${localeFR}</option>
                     <option value="zh-CN">${localeZH}</option>
                     <option value="yo">${localeYO}</option>
