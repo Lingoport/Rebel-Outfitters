@@ -33,7 +33,7 @@ let Hamburger = {
             <div class="start">
                 <label for="version"><h3>${versionLabel}</h3></label>
                 <select id="version" class="hamDrop">
-                    <option value="IQA">${versionIQA}</option>
+                    <option value="IQA" disabled selected hidden>${versionIQA}</option>
                     <option value="good">${versionGood}</option>
                     <option value="bad">${versionBad}</option>
                 </select>
@@ -111,10 +111,10 @@ var switchVersion = (e) => {
     let selectedOption = event.target.value;
 
     if (selectedOption == "good") { //$NON-NLS-L$
-        window.location.href = `http://34.204.74.162:8080/RebelOutfitters.i18n/${parsedURL}`;
+        window.location.href = `http://rebeloutfitters.lingoport.com/RebelOutfitters.i18n/${parsedURL}`;
     }
     else if (selectedOption == "bad") { //$NON-NLS-L$
-        window.location.href = `http://34.204.74.162:8080/RebelOutfitters.DarkSide/${parsedURL}`;
+        window.location.href = `http://rebeloutfitters.lingoport.com/RebelOutfitters.DarkSide/${parsedURL}`;
     }
 }
 
