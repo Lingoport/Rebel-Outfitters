@@ -55,7 +55,7 @@ let Hamburger = {
                 
             </div>
             <div class="dashLink outsideLink block">
-            <a target="_blank" href="https://sandbox.lingoport.com/overview?id=RebelOutfitters.IQA%3Ascan" class="inline" rel="noreferrer">
+            <a target="_blank" href="https://sandbox.lingoport.com/dashboard?id=RebelOutfitters.IQA%3Ascan&did=7" class="inline" rel="noreferrer">
                     <img src="img/lingoport_thumb.png" class="logoThumb" alt="${lingoLogoAlt}">
                     ${dashLabel}</a>
                 

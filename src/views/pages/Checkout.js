@@ -113,7 +113,7 @@ let Checkout = {
                                         <option value="" disabled selected hidden>MM</option>
                                         `;
                                     for(let i = 1; i <= 31; i++) {
-                                        var formattedNumber = ("0" + i).slice(-2);
+                                        var formattedNumber = ("0" + i).slice(-2); //$NON-NLS-L$
                                         view += `<option value="${formattedNumber}">${formattedNumber}</option>`;
                                     }
                                     view += `
@@ -123,7 +123,7 @@ let Checkout = {
                                         <option value="" disabled selected hidden>YY</option>
                                         `;
                                     for(let i = 1; i <= 12; i++) {
-                                        var formattedNumber = ("0" + i).slice(-2);
+                                        var formattedNumber = ("0" + i).slice(-2); //$NON-NLS-L$
                                         view += `<option value="${formattedNumber}">${formattedNumber}</option>`;
                                     }
                                     view += `
