@@ -22,7 +22,7 @@ let Hamburger = {
             <div class="start">
                 <label for="version"><h3>${versionLabel}</h3></label>
                 <select id="version" class="hamDrop">
-                    <option value="bad">${versionOptions[0]}</option>
+                    <option value="bad" disabled selected hidden>${versionOptions[0]}</option>
                     <option value="good">${versionOptions[1]}</option>
                     <option value="IQA">${versionOptions[2]}</option>
                 </select>
