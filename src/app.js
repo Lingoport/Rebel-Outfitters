@@ -20,10 +20,33 @@ import Products from './content/products.js';
 
 //global variables//
 
-//schema: id (int), item (object)
-var shoppingCart = new Map();
+var shoppingCart = {};
 
 var orderHistory = [];
+//adds some dummy orders to the history on startup
+let dummyOrders = () => {
+    let now = new Date();
+    var twoDays = now - 1000 * 60 * 60 * 24 * 2;
+    var fiveDays = now - 1000 * 60 * 60 * 24 * 5;
+    let order2 = new Order(900, new Date(fiveDays));
+    let order1 = new Order(68500, new Date(twoDays));
+    orderHistory.push(order1);
+    orderHistory.push(order2);
+}
+
+//load
+if(localStorage.getItem("orderHistory") !== null) {
+    //first add a couple dummies
+    dummyOrders();
+    //get and parse the stringified array
+    let orders = JSON.parse(localStorage.getItem('orderHistory'));
+    //construct the objects and put into object array
+    for(let order of orders) {
+        let orderObj = new Order(parseInt(order[2]), new Date(order[0]), parseInt(order[1])); //$NON-NLS-L$
+        console.log(orderObj);
+        orderHistory.unshift(orderObj);
+    }
+}
 
 //map of maps to hold both vehicles and droids
 var productList = new Map();
@@ -43,15 +66,46 @@ let getProductsList = async () => {
             vehicleMap.set(item.productID, item);
         }
     }
+    readCart();
+
 }
+
+//load cart contents fromlocalStorage if available
+var readCart = () => {
+    if(localStorage.getItem("cart") !== null) {
+        console.log("found cart in storage, reconstructing...");
+
+        let droidMap = productList.get("droids");
+        let vehicleMap = productList.get("vehicles");
+
+        let cartIdString = localStorage.getItem("cart");
+        let cartIds = JSON.parse(cartIdString);
+
+        for(let productAr of cartIds) {
+            if(productAr[1] == 'droid') {
+                let product = droidMap.get(parseInt(productAr[0]));
+                product.qty = parseInt(productAr[2]);
+                shoppingCart[productAr[0]] = product;
+            }
+            else {
+                let product = vehicleMap.get(parseInt(productAr[0]));
+                product.qty = parseInt(productAr[2]);
+                shoppingCart[productAr[0]] = product;
+            }
+        }
+        console.log(shoppingCart);
+
+    }
+}
+
 
 
 //function for anytime an object is added to cart
 var addToCart = async (item) => {
     const cart = null || document.querySelector('.cartSlider');
     //if cart is empty then set the value of the first key (0) to our new item
-    if (!shoppingCart.has(item.title)) {
-        shoppingCart.set(item.title, item);
+    if (!shoppingCart.hasOwnProperty(item.productID)) {
+        shoppingCart[item.productID] = item;
     }
 
     //re-render the cart and navbar (for click listener)
@@ -60,6 +114,17 @@ var addToCart = async (item) => {
     await Navbar.after_render();
     //display cart
     showCart();
+    //save new cart to local storage
+    saveCart();
+}
+//stringify the cart and persist
+var saveCart = () => {
+    let cartIds = [];
+
+    for(let key in shoppingCart) {
+        cartIds.push([key, shoppingCart[key].type, shoppingCart[key].qty]);
+    }
+    localStorage.setItem("cart", JSON.stringify(cartIds));
 }
 
 //show the cart and fade the other elements
@@ -70,13 +135,7 @@ var showCart = () => {
     slider.classList.toggle('showCart');
 }
 
-//adds some dummy orders to the history on startup
-let dummyOrders = () => {
-    let order1 = new Order(new Date('May 13, 2019 03:24:00'), 68500, "Delivered");
-    let order2 = new Order(new Date('July 1, 2019 03:24:00'), 900, "Shipped");
-    orderHistory.push(order2);
-    orderHistory.push(order1);
-}
+
 
 //takes a number and adds commas to it every 3 digits
 //VERY BAD i18n
@@ -98,7 +157,7 @@ let getFeaturedProducts = async () => {
     featuredProducts.push(droidMap.get(2));
 }
 
-export { shoppingCart, addToCart, showCart, router, productList, orderHistory, formatCurrencyWithCommas, featuredProducts };
+export { shoppingCart, addToCart, showCart, saveCart, router, productList, orderHistory, formatCurrencyWithCommas, featuredProducts };
 
 // List of supported routes. Any url other than these routes will throw a 404 error
 const routes = {
@@ -125,9 +184,7 @@ const router = async () => {
     const cart = null || document.querySelector('.cartSlider');
     const ham = null || document.querySelector('.hamSlider');
 
-    // Render the Header, footer, and empty cart of the page
-    cart.innerHTML = await Cart.render();
-    await Cart.after_render();
+    // Render the Header, footer, hamburger menu
     ham.innerHTML = await Hamburger.render();
     await Hamburger.after_render();
     header.innerHTML = await Navbar.render();
@@ -139,6 +196,10 @@ const router = async () => {
     if (productList.get("droids").size == 0 && productList.get("vehicles").size == 0) {
         await getProductsList();
     }
+
+    //render cart
+    cart.innerHTML = await Cart.render();
+    await Cart.after_render();
 
     //add some dummy orders if there's nothing there
     if (orderHistory.length == 0) {

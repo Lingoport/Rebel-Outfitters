@@ -1,4 +1,4 @@
-import {shoppingCart, router, formatCurrencyWithCommas} from "../../app.js";
+import {shoppingCart, router, formatCurrencyWithCommas, saveCart} from "../../app.js";
 
 //static strings to hold all the text (to be used within the HTML template literal)
 let shoppingCartTitle = "Shopping Cart"
@@ -22,19 +22,19 @@ let Cart = {
                 `;
 
                 //show cart contents or display message if no contents
-                if(shoppingCart.size == 0) {
+                if(Object.keys(shoppingCart).length === 0 && shoppingCart.constructor === Object) {
                     view += `<h3>${noItemMsg}</h3>`;
                 }
                 else {
                     view += `<div class="cartContents">`;
                     //create row for each item in title and addup the total
-                    shoppingCart.forEach((value, key) => {
-                        
+                    for (let key in shoppingCart) {
+                        let value = shoppingCart[key];
                         total += value.price * value.qty;
                         view += `
                                 <div class="cartItem">
                                     <div class="cartQtyTitle">
-                                        <input type="number" class="cartQty" name="qty" id="${key}" min="1" max="10" size="0" value="${value.qty}">
+                                        <input type="number" class="cartQty" name="qty" id="${value.productID}" min="1" max="10" size="0" value="${value.qty}">
                                         <h4>${value.title}</h4>
                                     </div>
                                     <div class="cartPrice">
@@ -42,10 +42,10 @@ let Cart = {
                                             <img src="img/wSymbol.gif" class="symbol" alt="${symbolAlt}">
                                             <h4>${formatCurrencyWithCommas(value.price * value.qty)}</h4>
                                         </div>
-                                        <img src="img/delete.svg" class="delete" id="${key}" alt="${deleteAlt}">
+                                        <img src="img/delete.svg" class="delete" id="${value.productID}" alt="${deleteAlt}">
                                     </div>
                                 </div>`;
-                    });
+                    }
                     view += `
                             </div>
                             <div class="cartTotal">
@@ -77,27 +77,33 @@ let Cart = {
 
 //handle changes in qty text input
 var updateQty = (e) => {
-    if(e.srcElement.value != "") {
+    console.log(e);
+    if (e.srcElement.value != "") {
         let changedQtyKey = e.srcElement.id;
+        console.log(changedQtyKey);
         let newQty = parseInt(e.srcElement.value);
-        console.log(newQty);
-        let product = shoppingCart.get(changedQtyKey);
+        let product = shoppingCart[changedQtyKey];
         product.qty = newQty;
-        if(product.qty < 1) {
+        if (product.qty < 1) {
             product.qty = 0;
-            shoppingCart.delete(changedQtyKey);
+            delete shoppingCart[changedQtyKey];
         }
+        //save changes
+        saveCart();
+        //re-render
         router();
     }
 }
 
 //remove a single item by clicking on trash can icon
 var deleteItem = (e) => {
-    console.log(e);
     var deleteKey = e.srcElement.id;
     console.log(deleteKey);
-    shoppingCart.get(deleteKey).qty = 0;
-    shoppingCart.delete(deleteKey);
+    shoppingCart[deleteKey].qty = 0;
+    delete shoppingCart[deleteKey];
+    //save changes
+    saveCart();
+    //re-render
     router();
 }
 

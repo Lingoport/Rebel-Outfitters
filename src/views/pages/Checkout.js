@@ -1,4 +1,4 @@
-import { shoppingCart, orderHistory, formatCurrencyWithCommas } from "../../app.js";
+import { shoppingCart, saveCart, orderHistory, formatCurrencyWithCommas } from "../../app.js";
 
 import { Order } from "../classes/Order.js";
 
@@ -120,8 +120,8 @@ let Checkout = {
             <div class="checkoutCart">
                 <h1>${cartTitle}</h1>
             `;
-        shoppingCart.forEach((value, key) => {
-            // html
+        for (let key in shoppingCart) {
+            let value = shoppingCart[key];
             total += value.price * value.qty;
             view += `
                 <div class="cartItem">
@@ -137,7 +137,7 @@ let Checkout = {
                         <img src="img/delete.svg" class="delete" id="${key}" alt="${deleteAlt}">
                     </div>
                 </div>`
-        });
+        }
         view += `
             <div class="cartTotal">
                     <h3>${totalLabel}</h3>
@@ -178,16 +178,39 @@ let Checkout = {
 //handle order placement
 //NEED TO CLEAR ALL THE QUANTITIES
 var placeOrder = () => {
-    let order = new Order(new Date(), total, "Processing");
+    let order = new Order(total, new Date());
+    saveOrder(order);
     orderHistory.unshift(order);
     //zero out the qty for each item before removing it
-    shoppingCart.forEach((product, key) => {
+    for (let key in shoppingCart) {
+        let product = shoppingCart[key];
         product.qty = 0;
-    });
-    shoppingCart.clear();
+        delete shoppingCart[key];
+        console.log(shoppingCart);
+    }
+    saveCart();
     //construct success message
     let message = "Order #" + order.orderNumber + " placed successfully!";
     window.alert(message);
     location.href = "./#/history";
+}
+
+let saveOrder = (newOrder) => {
+    let orders = [];
+    let orderString = [newOrder.orderDate.toString(), newOrder.orderNumber.toString(), newOrder.total.toString()]; //$NON-NLS-L$
+    if(localStorage.getItem('orderHistory') === null) {
+        //no saved orders
+        orders.unshift(orderString);
+        console.log(orders);
+        localStorage.setItem('orderHistory', JSON.stringify(orders));
+    }
+    else {
+        //save orders, just push the new one and save again
+        orders = JSON.parse(localStorage.getItem('orderHistory'));
+        orders.unshift(orderString);
+        console.log(orders);
+        localStorage.setItem('orderHistory', JSON.stringify(orders));
+    }
+    console.log(orderString);
 }
 export default Checkout;

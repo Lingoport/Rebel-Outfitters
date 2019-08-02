@@ -34,7 +34,7 @@ let OrderHistory = {
                         <img src="img/purple_grem.png" class="gremlin-right gremlin-space small orderHistoryFormat orderShow${key} hide-gremlin">
                     </div>
                     <div class="grem-container left">
-                        <h3>${order.status}</h3>
+                        <h3>${order.getOrderStatus()}</h3>
                         <img src="img/orange_grem.png" class="gremlin-right gremlin-space small orderHistoryEmbedded orderShow${key} hide-gremlin">
                     </div>
                 </article>`
