@@ -77,7 +77,8 @@
         "orderLabel": "Aikste tvarka",
         "termsStatement": "Nu zinot rodyt ir derinti kia Terms ir Conditions",
         "termsLink": "(Maty)",
-        "successMessage": "Tvarka placed successfully!"
+        "successMessage": "Tvarka placed successfully!",
+        "noItemMessage": "Add items Kia cart Kia proceed."
     },
     "ProductShow": {
         "qtyLabel": "Qty: ",
