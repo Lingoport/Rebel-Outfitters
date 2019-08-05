@@ -1,4 +1,4 @@
-import { shoppingCart, orderHistory, saveCart } from "../../app.js";
+import { shoppingCart, orderHistory, saveCart, router } from "../../app.js";
 
 import i18n from '../../services/i18n.js';
 
@@ -7,10 +7,6 @@ import { Order } from "../classes/Order.js";
 //TODO: add click listeners for updating qty or deleting items from cart
 
 var total;
-
-
-
-
 
 let Checkout = {
 
@@ -41,6 +37,7 @@ let Checkout = {
         let orderLabel = i18n.getString("Checkout", "orderLabel");
         let termsStatement = i18n.getString("Checkout", "termsStatement");
         let termsLink = i18n.getString("Checkout", "termsLink");
+        let noItemMessage = i18n.getString("Checkout", "noItemMessage");
 
         total = 0;
         //hide cart initially
@@ -112,21 +109,21 @@ let Checkout = {
                                     <select id="expDate" name="expDate" class="checkoutInput">
                                         <option value="" disabled selected hidden>MM</option>
                                         `;
-                                    for(let i = 1; i <= 31; i++) {
-                                        var formattedNumber = ("0" + i).slice(-2); //$NON-NLS-L$
-                                        view += `<option value="${formattedNumber}">${formattedNumber}</option>`;
-                                    }
-                                    view += `
+        for (let i = 1; i <= 31; i++) {
+            var formattedNumber = ("0" + i).slice(-2); //$NON-NLS-L$
+            view += `<option value="${formattedNumber}">${formattedNumber}</option>`;
+        }
+        view += `
                                     </select>
                                     <h3>/</h3>
                                     <select id="expDateYear" name="expDateYear" class="checkoutInput">
                                         <option value="" disabled selected hidden>YY</option>
                                         `;
-                                    for(let i = 1; i <= 12; i++) {
-                                        var formattedNumber = ("0" + i).slice(-2); //$NON-NLS-L$
-                                        view += `<option value="${formattedNumber}">${formattedNumber}</option>`;
-                                    }
-                                    view += `
+        for (let i = 1; i <= 12; i++) {
+            var formattedNumber = ("0" + i).slice(-2); //$NON-NLS-L$
+            view += `<option value="${formattedNumber}">${formattedNumber}</option>`;
+        }
+        view += `
                                     </select>
                                 </div>
                             </div>
@@ -143,10 +140,14 @@ let Checkout = {
             <div class="checkoutCart">
                 <h1>${cartTitle}</h1>
             `;
-        for (let key in shoppingCart) {
-            let value = shoppingCart[key];
-            total += value.price * value.qty;
-            view += `
+        if (Object.keys(shoppingCart).length === 0 && shoppingCart.constructor === Object) {
+            view += `<h3>${noItemMessage}</h3>`;
+        }
+        else {
+            for (let key in shoppingCart) {
+                let value = shoppingCart[key];
+                total += value.price * value.qty;
+                view += `
                         <div class="cartItem">
                             <div class="cartQtyTitle">
                                 <input type="number" class="cartQty" name="qty" id="${value.productID}" min="1" max="10" size="0" value="${value.qty}">
@@ -159,26 +160,76 @@ let Checkout = {
                                 <img src="img/delete.svg" class="delete" id="${value.productID}" alt="${deleteAlt}">
                             </div>
                         </div>`;
-        }
-        view += `
+            }
+            view += `
             <div class="cartTotal">
                     <h3>${totalLabel}</h3>
                     <div class="totalPrice">
-                        ${i18n.formatCurrency(total,"w")}
+                        ${i18n.formatCurrency(total, "w")}
                     </div>
                 </div>
             </div>
             
-        </section>`
+        </section>`;
+        }
 
         return view;
     }
     , after_render: async () => {
 
         var orderButt = document.querySelector('.orderButt');
-        orderButt.addEventListener('click', placeOrder, false);
+        if (Object.keys(shoppingCart).length === 0 && shoppingCart.constructor === Object) {
+            var checkoutSection = document.querySelector('.checkoutDetails');
+            checkoutSection.classList.add('noItems');
+        }
+        else {
+            orderButt.addEventListener('click', placeOrder, false);
+        }
+
+        //cart manipulation
+        var qtyInputs = document.querySelectorAll(".cartQty");
+        var deleteIcons = document.querySelectorAll(".delete");
+
+        for (let input of qtyInputs) {
+            input.addEventListener('input', updateQty, false);
+        }
+        for (let icon of deleteIcons) {
+            icon.addEventListener('click', deleteItem, false);
+        }
+
+
 
     }
+}
+
+//handle changes in qty text input
+var updateQty = (e) => {
+    if (e.srcElement.value != "") {
+        let changedQtyKey = e.srcElement.id;
+        let newQty = parseInt(e.srcElement.value);
+        let product = shoppingCart[changedQtyKey];
+        product.qty = newQty;
+        if (product.qty < 1) {
+            product.qty = 0;
+            delete shoppingCart[changedQtyKey];
+        }
+        //save changes
+        saveCart();
+        //re-render
+        router();
+    }
+}
+
+//remove a single item by clicking on trash can icon
+var deleteItem = (e) => {
+    var deleteKey = e.srcElement.id;
+    console.log(deleteKey);
+    shoppingCart[deleteKey].qty = 0;
+    delete shoppingCart[deleteKey];
+    //save changes
+    saveCart();
+    //re-render
+    router();
 }
 
 //handle order placement
@@ -203,7 +254,7 @@ var placeOrder = () => {
 let saveOrder = (newOrder) => {
     let orders = [];
     let orderString = [newOrder.orderDate.toString(), newOrder.orderNumber.toString(), newOrder.total.toString()]; //$NON-NLS-L$
-    if(localStorage.getItem('orderHistory') === null) {
+    if (localStorage.getItem('orderHistory') === null) {
         //no saved orders
         orders.unshift(orderString);
         console.log(orders);

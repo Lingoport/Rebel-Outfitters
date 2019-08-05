@@ -77,7 +77,8 @@
         "orderLabel": "下订单",
         "termsStatement": "我已阅读并同意条款和条件",
         "termsLink": "（视图）",
-        "successMessage": "订单成功下单！"
+        "successMessage": "订单成功下单！",
+        "noItemMessage": "将商品添加到购物车继续。"
     },
     "ProductShow": {
         "qtyLabel": "数量: ",

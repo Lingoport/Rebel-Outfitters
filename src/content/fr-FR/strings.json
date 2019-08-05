@@ -77,7 +77,8 @@
         "orderLabel": "PASSER LA COMMANDE",
         "termsStatement": "J'ai lu et j'accepte les conditions générales",
         "termsLink": "(Vue)",
-        "successMessage": "Commande passée avec succès!"
+        "successMessage": "Commande passée avec succès!",
+        "noItemMessage": "Ajoutez des articles au panier pour continuer."
     },
     "ProductShow": {
         "qtyLabel": "Quantité: ",

@@ -77,7 +77,8 @@
         "orderLabel": "PLACE ORDER",
         "termsStatement": "Read and agree to the Terms and Conditions I have",
         "termsLink": "(View)",
-        "successMessage": "Placed succcessfully your order was!"
+        "successMessage": "Placed succcessfully your order was!",
+        "noItemMessage": "Items to cart you must add."
     },
     "ProductShow": {
         "qtyLabel": "Qty: ",

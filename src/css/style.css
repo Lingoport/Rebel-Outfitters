@@ -620,6 +620,11 @@ nav ul li .activeLink::after {
   border-radius: 10px;
   padding: 10px;
 }
+.checkout .checkoutCart h3 {
+  margin-top: 10px;
+  text-align: center;
+  color: white;
+}
 .checkout .checkoutCart .cartItem {
   margin-top: 20px;
   display: flex;
@@ -643,6 +648,11 @@ nav ul li .activeLink::after {
 }
 .checkout .checkoutCart .cartItem .cartPrice .gridPrice .symbol {
   margin-right: 0;
+}
+
+.noItems {
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 label {
