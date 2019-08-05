@@ -1,8 +1,6 @@
-import { shoppingCart, saveCart, orderHistory, formatCurrencyWithCommas } from "../../app.js";
+import { shoppingCart, saveCart, orderHistory, formatCurrencyWithCommas, router } from "../../app.js";
 
 import { Order } from "../classes/Order.js";
-
-//TODO: add click listeners for updating qty or deleting items from cart
 
 var total;
 
@@ -31,6 +29,7 @@ let totalLabel = "Total: ";
 let termsStatement = "I have read and agree to the ";
 let termsLink = "Terms and Conditions";
 let orderButton = "PLACE ORDER"
+let noItemMessage = "Add items to cart to proceed.";
 
 
 let Checkout = {
@@ -120,10 +119,14 @@ let Checkout = {
             <div class="checkoutCart">
                 <h1>${cartTitle}</h1>
             `;
-        for (let key in shoppingCart) {
-            let value = shoppingCart[key];
-            total += value.price * value.qty;
-            view += `
+        if (Object.keys(shoppingCart).length === 0 && shoppingCart.constructor === Object) {
+            view += `<h3 class="noItemsMsg">${noItemMessage}</h3>`;
+        }
+        else {
+            for (let key in shoppingCart) {
+                let value = shoppingCart[key];
+                total += value.price * value.qty;
+                view += `
                 <div class="cartItem">
                     <div class="cartQtyTitle">
                         <input type="number" class="cartQty" name="qty" id="${key}" min="1" max="10" size="0" value="${value.qty}">
@@ -137,8 +140,8 @@ let Checkout = {
                         <img src="img/delete.svg" class="delete" id="${key}" alt="${deleteAlt}">
                     </div>
                 </div>`
-        }
-        view += `
+            }
+            view += `
             <div class="cartTotal">
                     <h3>${totalLabel}</h3>
                     <div class="totalPrice">
@@ -148,14 +151,32 @@ let Checkout = {
                 </div>
             </div>
             
-        </section>`
+        </section>`;
+        }
 
         return view;
     }
     , after_render: async () => {
 
         var orderButt = document.querySelector('.orderButt');
-        orderButt.addEventListener('click', placeOrder, false);
+        if (Object.keys(shoppingCart).length === 0 && shoppingCart.constructor === Object) {
+            var checkoutSection = document.querySelector('.checkoutDetails');
+            checkoutSection.classList.add('noItems');
+        }
+        else {
+            orderButt.addEventListener('click', placeOrder, false);
+        }
+
+         //cart manipulation
+         var qtyInputs = document.querySelectorAll(".cartQty");
+         var deleteIcons = document.querySelectorAll(".delete");
+ 
+         for (let input of qtyInputs) {
+             input.addEventListener('input', updateQty, false);
+         }
+         for (let icon of deleteIcons) {
+             icon.addEventListener('click', deleteItem, false);
+         }
 
         //add tooltips to gremlins
         tippy('.checkoutEmbedded', {
@@ -174,9 +195,37 @@ let Checkout = {
 
     }
 }
+//handle changes in qty text input
+var updateQty = (e) => {
+    if (e.srcElement.value != "") {
+        let changedQtyKey = e.srcElement.id;
+        let newQty = parseInt(e.srcElement.value);
+        let product = shoppingCart[changedQtyKey];
+        product.qty = newQty;
+        if (product.qty < 1) {
+            product.qty = 0;
+            delete shoppingCart[changedQtyKey];
+        }
+        //save changes
+        saveCart();
+        //re-render
+        router();
+    }
+}
+
+//remove a single item by clicking on trash can icon
+var deleteItem = (e) => {
+    var deleteKey = e.srcElement.id;
+    console.log(deleteKey);
+    shoppingCart[deleteKey].qty = 0;
+    delete shoppingCart[deleteKey];
+    //save changes
+    saveCart();
+    //re-render
+    router();
+}
 
 //handle order placement
-//NEED TO CLEAR ALL THE QUANTITIES
 var placeOrder = () => {
     let order = new Order(total, new Date());
     saveOrder(order);
@@ -198,7 +247,7 @@ var placeOrder = () => {
 let saveOrder = (newOrder) => {
     let orders = [];
     let orderString = [newOrder.orderDate.toString(), newOrder.orderNumber.toString(), newOrder.total.toString()]; //$NON-NLS-L$
-    if(localStorage.getItem('orderHistory') === null) {
+    if (localStorage.getItem('orderHistory') === null) {
         //no saved orders
         orders.unshift(orderString);
         console.log(orders);
