@@ -39,6 +39,10 @@ const i18n = {
             return `<img src="img/${color}Symbol.svg" class="symbol" alt="${symbolAlt}">
             <h4>${formatted}</h4>`;
         }
+        //psuedo locale
+        else if(locale == 'eo') {
+            return `<h4>&#8375;${convertCurrency(price)}</h4>`
+        }
         //format using actual symbol and conventions if it's a real locale
         else {
             let converted = convertCurrency(price);
@@ -63,7 +67,7 @@ const i18n = {
 var currencyMap = {
     'en-US': 'USD',
     'fr-FR': 'EUR',
-    'zh-CN': 'CNY'
+    'zh-CN': 'CNY',
 };
 
 //function to perform rough conversion from galactic credits to real currencies
@@ -75,6 +79,8 @@ var convertCurrency = (price) => {
             return price * 0.55;
         case 'zh-CN':
             return price * 4.27;
+        case 'eo':
+        return price * 2;
         default:
             return price;
     }
