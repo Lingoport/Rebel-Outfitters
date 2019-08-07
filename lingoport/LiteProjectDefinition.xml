@@ -2,8 +2,8 @@
 <!-- see  http://wiki.lingoport.com/index.php5?title=Globalyzer_Lite#The_.globalyzerrc_File -->
 <gzproject>
   <login>
-    <username></username>
-    <password></password>
+    <username>demo@lingoport.com</username>
+    <password>fordemonstrationpurposes</password>
     <server>https://www.globalyzer.com/gzserver</server>
     <use-local-rulesets>false</use-local-rulesets>
     <optional>
