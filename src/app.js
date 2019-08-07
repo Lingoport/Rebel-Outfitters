@@ -188,6 +188,7 @@ const router = async () => {
     if (productList.get("droids").size == 0 && productList.get("vehicles").size == 0) {
         await getProductsList();
     }
+    
     //render cart
     cart.innerHTML = await Cart.render();
     await Cart.after_render();
@@ -198,10 +199,6 @@ const router = async () => {
     await Navbar.after_render();
     footer.innerHTML = await Bottombar.render();
     await Bottombar.after_render();
-
-
-
-    
 
     //add some dummy orders if there's nothing there
     if (orderHistory.length == 0) {
@@ -226,8 +223,7 @@ const router = async () => {
     //lazy load and then render the correct page
     let loadPage = await import(`./views/pages/${page}`);
     content.innerHTML = await loadPage.default.render();
-    await loadPage.default.after_render();
-
+	await loadPage.default.after_render();
 }
 
 // Listen on hash change:

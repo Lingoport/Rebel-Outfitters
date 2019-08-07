@@ -30,10 +30,10 @@ let Home = {
                         <img src="${product.imageURL}" class="gridImage" alt="${imageAlt}">
                         <div class="gridDes">
                             <h3>${product.title}</h3>
-                            <div class="gridPrice grem-container">
-                                <img src="img/bSymbol.gif" class="symbol" alt="${symbolAlt}">
+	                            <div class="gridPrice grem-container">
+	                                <img src="img/bSymbol.gif" class="symbol" alt="${symbolAlt}">
                                 <h4>${formatCurrencyWithCommas(product.price)}</h4>
-                                <img src="img/purple_grem.png" class="gremLink gremlin-right small homeFormat show${key} hide-gremlin">
+                            	<img src="img/purple_grem.png" class="gremLink gremlin-right small homeFormat show${key} hide-gremlin">
                             </div>
                         </div>
                     </article>`;
