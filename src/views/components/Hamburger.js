@@ -22,6 +22,7 @@ let Hamburger = {
         let localeZH = i18n.getString("Hamburger", "localeZH");
         let localeYO = i18n.getString("Hamburger", "localeYO");
         let localeSI = i18n.getString("Hamburger", "localeSI");
+        let localeEO = i18n.getString("Hamburger", "localeEO")
         let githubLabel = i18n.getString("Hamburger", "githubLabel");
         let dashLabel = i18n.getString("Hamburger", "dashLabel");
         let contactLabel = i18n.getString("Hamburger", "contactLabel");
@@ -46,6 +47,7 @@ let Hamburger = {
                     <option value="zh-CN">${localeZH}</option>
                     <option value="yo">${localeYO}</option>
                     <option value="si">${localeSI}</option>
+                    <option value="eo">${localeEO}</option>
                 </select>
             </div>
             <div class="githubLink outsideLink block">
