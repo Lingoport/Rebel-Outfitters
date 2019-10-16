@@ -31,7 +31,7 @@
     "payNameHolder": "\uDB40\uDC3CPremier Dernier\uDB40\uDC40\uDB40\uDC31\uDB40\uDC38\uDB40\uDC35\uDB40\uDC5F\uDB40\uDC32\uDB40\uDC32\uDB40\uDC3E",
     "payNameLabel": "\uDB40\uDC3CNom sur carte\uDB40\uDC40\uDB40\uDC31\uDB40\uDC38\uDB40\uDC34\uDB40\uDC5F\uDB40\uDC32\uDB40\uDC32\uDB40\uDC3E",
     "paySectionLabel": "\uDB40\uDC3CPaiement\uDB40\uDC40\uDB40\uDC31\uDB40\uDC38\uDB40\uDC33\uDB40\uDC5F\uDB40\uDC32\uDB40\uDC32\uDB40\uDC3E",
-    "sectorLabel": "\uDB40\uDC3CSecteur\uDB40\uDC40\uDB40\uDC31\uDB40\uDC37\uDB40\uDC38\uDB40\uDC5F\uDB40\uDC32\uDB40\uDC32\uDB40\uDC3E",
+    "sectorLabel": "\uDB40\uDC3CSecteur / Quadrant\uDB40\uDC40\uDB40\uDC31\uDB40\uDC37\uDB40\uDC38\uDB40\uDC5F\uDB40\uDC32\uDB40\uDC32\uDB40\uDC3E",
     "securityHolder": "\uDB40\uDC3C123456\uDB40\uDC40\uDB40\uDC31\uDB40\uDC38\uDB40\uDC39\uDB40\uDC5F\uDB40\uDC32\uDB40\uDC32\uDB40\uDC3E",
     "securityLabel": "\uDB40\uDC3CCode de sécurité\uDB40\uDC40\uDB40\uDC31\uDB40\uDC38\uDB40\uDC38\uDB40\uDC5F\uDB40\uDC32\uDB40\uDC32\uDB40\uDC3E",
     "shipLightspeed": "\uDB40\uDC3CVitesse de la lumière\uDB40\uDC40\uDB40\uDC31\uDB40\uDC38\uDB40\uDC30\uDB40\uDC5F\uDB40\uDC32\uDB40\uDC32\uDB40\uDC3E",
@@ -99,6 +99,7 @@
     "addToCartLabel": "\uDB40\uDC3CAJOUTER AU PANIER\uDB40\uDC40\uDB40\uDC32\uDB40\uDC30\uDB40\uDC30\uDB40\uDC5F\uDB40\uDC32\uDB40\uDC32\uDB40\uDC3E",
     "qtyLabel": "\uDB40\uDC3CQuantité: \uDB40\uDC40\uDB40\uDC31\uDB40\uDC39\uDB40\uDC39\uDB40\uDC5F\uDB40\uDC32\uDB40\uDC32\uDB40\uDC3E"
   },
+  "Special": "\uDB40\uDC3CSpécial\uDB40\uDC40\uDB40\uDC32\uDB40\uDC33\uDB40\uDC34\uDB40\uDC5F\uDB40\uDC32\uDB40\uDC32\uDB40\uDC3E",
   "desc": {
     "1": "\uDB40\uDC3CChaque droïde est équipé d’un SyntheTech AA-1 VerboBrain les rendant capables de stocker d’énormes quantités d’informations; l’espace mémoire supplémentaire est souvent utilisé pour conserver les modules de communication dans la mémoire active, ce qui permet d’éviter les retards importants lors de la recherche d’informations linguistiques à la mi-parcours. -Traduction. Un module de communication TranLang III leur permet de s'exprimer couramment dans plus de six millions de formes de communication. Ils possèdent également les compétences nécessaires pour analyser rapidement de nouvelles langues non enregistrées et les traduire en langues plus connues.\uDB40\uDC40\uDB40\uDC31\uDB40\uDC34\uDB40\uDC33\uDB40\uDC5F\uDB40\uDC32\uDB40\uDC32\uDB40\uDC3E",
     "10": "\uDB40\uDC3CLe droïde astromech de la série R3 présente une grande partie du même matériel que son prédécesseur, l’unité R2, qui ne manque que du capteur vidéo extensible du droïde précédent. Le châssis du R3 est en grande partie cylindrique et se présente sous la forme d’un tube vertical muni d’un cône tronqué et court à la base. Tenant le droïde debout, deux jambes étroites se terminent par un pied fileté en forme de prisme trapézoïdal. Une troisième jambe est logée dans le corps du droïde et peut être étendue si nécessaire pour offrir une plus grande stabilité. Le design de l’appareil est coiffé d’un dôme robuste, rotatif, en plastex ou transparentiste. L'astromech est scellé pour permettre la fonctionnalité dans le vide de l'espace.\uDB40\uDC40\uDB40\uDC31\uDB40\uDC35\uDB40\uDC32\uDB40\uDC5F\uDB40\uDC32\uDB40\uDC32\uDB40\uDC3E",
