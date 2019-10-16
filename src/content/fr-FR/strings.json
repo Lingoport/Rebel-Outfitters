@@ -58,7 +58,7 @@
         "lastNameLabel": "Nom de famille",
         "coordinatesLabel": "Les coordonnées",
         "coordinatesHolder": "0,0,0",
-        "sectorLabel": "Secteur",
+        "sectorLabel": "Secteur / Quadrant",
         "methodLabel": "Méthode d'envoi",
         "shipLightspeed": "Vitesse de la lumière",
         "shipOvernight": "Pendant la nuit",
@@ -128,5 +128,6 @@
         "statusProcessing": "En traitement",
         "statusShipped": "Expédié",
         "statusDelivered": "Livré"
-    }
+    },
+    "Special": "Spécial"
 }
