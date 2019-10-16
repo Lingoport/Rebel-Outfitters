@@ -58,7 +58,7 @@
         "lastNameLabel": "Last Name",
         "coordinatesLabel": "Coordinates",
         "coordinatesHolder": "0,0,0",
-        "sectorLabel": "Sector",
+        "sectorLabel": "Sector/Quadrant",
         "methodLabel": "Shipping Method",
         "shipLightspeed": "Lightspeed",
         "shipOvernight": "Overnight",
