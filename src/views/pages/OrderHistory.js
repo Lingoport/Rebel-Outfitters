@@ -25,13 +25,13 @@ let OrderHistory = {
                 <article class="orderItem">
                     <div class="grem-container left">
                         <h3>${order.formatDate()}</h3>
-                        <img src="img/blue_grem.png" class="gremlin-right gremlin-space small orderHistoryLocaleMethod orderShow${key} hide-gremlin">
+                        <img src="img/teal_grem.png" class="gremlin-right gremlin-space small orderHistoryLocaleMethod orderShow${key} hide-gremlin">
                     </div>
                     <h3>${order.orderNumber}</h3>
                     <div class="gridPrice grem-container left">
                         <img src="img/bSymbol.gif" class="symbol" alt="${symbolAlt}">
                         <h3>${formatCurrencyWithCommas(order.total)}</h3>
-                        <img src="img/purple_grem.png" class="gremlin-right gremlin-space small orderHistoryFormat orderShow${key} hide-gremlin">
+                        <img src="img/teal_grem.png" class="gremlin-right gremlin-space small orderHistoryFormat orderShow${key} hide-gremlin">
                     </div>
                     <div class="grem-container left">
                         <h3>${order.getOrderStatus()}</h3>

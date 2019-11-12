@@ -38,7 +38,7 @@ let ProductShow = {
                     <div class="gridPrice grem-container left">
                         <img src="img/bSymbol.gif" class="symbol" alt="${symbolAlt}">
                         <h4>${formatCurrencyWithCommas(product.price)}</h4>
-                        <img src="img/purple_grem.png" class="gremlin-right small productShowFormat gremlin space">
+                        <img src="img/teal_grem.png" class="gremlin-right small productShowFormat gremlin space">
                     </div>
                     <div class="qty">
                         <h3>${qtyLabel}</h3>

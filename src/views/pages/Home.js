@@ -33,7 +33,7 @@ let Home = {
 	                            <div class="gridPrice grem-container">
 	                                <img src="img/bSymbol.gif" class="symbol" alt="${symbolAlt}">
                                 <h4>${formatCurrencyWithCommas(product.price)}</h4>
-                            	<img src="img/purple_grem.png" class="gremLink gremlin-right small homeFormat show${key} hide-gremlin">
+                            	<img src="img/teal_grem.png" class="gremLink gremlin-right small homeFormat show${key} hide-gremlin">
                             </div>
                         </div>
                     </article>`;
