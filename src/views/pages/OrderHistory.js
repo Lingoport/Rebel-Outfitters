@@ -48,14 +48,14 @@ let OrderHistory = {
 
         //add gremlin tooltips
         tippy('.orderHistoryLocaleMethod', {
-            content: '<div class="gremTitle">DATE/TIME FORMAT</div> The formatting for this date is hard-coded. <a href="https://sandbox.lingoport.com/issues/search#issues=AWw_A8lWnik4oCHIT0Uy" target="_blank">View Source</a> <a href="https://wiki.lingoport.com/Gremlins#Date.2FTime_Format" target="_blank">View Details</a>',
+            content: '<div class="gremTitle">DATE/TIME FORMAT</div> The formatting for this date is hard-coded. <a href="https://sandbox.lingoport.com/issues/search#issues=AWw_A8lWnik4oCHIT0Uy" target="_blank">View Source</a> <a href="https://wiki.lingoport.com/Gremlins#Locale_Sensitive_Method_-_e.g._Date.2FTime_Format" target="_blank">View Details</a>',
             theme: 'custom',
             arrow: true,
             interactive: true
         });
 
         tippy('.orderHistoryFormat', {
-            content: '<div class="gremTitle">CURRENCY FORMAT</div> The formatting for this currency is hard-coded. <a href="https://sandbox.lingoport.com/issues/search#issues=AWw_A8jrnik4oCHIT0UH" target="_blank">View Source</a> <a href="https://wiki.lingoport.com/Gremlins#Currency_Format" target="_blank">View Details</a>',
+            content: '<div class="gremTitle">CURRENCY FORMAT</div> The formatting for this currency is hard-coded. <a href="https://sandbox.lingoport.com/issues/search#issues=AWw_A8jrnik4oCHIT0UH" target="_blank">View Source</a> <a href="https://wiki.lingoport.com/Gremlins#Locale_Sensitive_Method_-_e.g._Currency_Format" target="_blank">View Details</a>',
             theme: 'custom',
             arrow: true,
             interactive: true
