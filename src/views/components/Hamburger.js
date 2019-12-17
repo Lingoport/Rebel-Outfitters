@@ -34,7 +34,7 @@ let Hamburger = {
                 
             </div>
             <div class="dashLink outsideLink block">
-            <a target="_blank" href="https://sandbox.lingoport.com/dashboard?id=RebelOutfitters.DarkSide:scan&name=Lingoport%20Overview" class="inline" rel="noreferrer">
+            <a target="_blank" href="https://sandbox.lingoport.com/project/extension/lingoport/overview_page?id=RebelOutfitters.DarkSide%3Ascan&qualifier=TRK" class="inline" rel="noreferrer">
                     <img src="img/lingoport_thumb.png" class="logoThumb" alt="${lingoLogoAlt}">
                     ${dashLabel}</a>
                 

@@ -52,16 +52,16 @@ let Home = {
             curProduct.addEventListener("click", viewProduct.bind(null, curProduct.classList[0], curProduct.id), false);
         }
 
-        //add tooltips to gremlins
+        //add tooltips to gremlins with links to the specific issue on dashboard and a general description on wiki
         tippy('.homeEmbedded', {
-            content: '<div class="gremTitle">EMBEDDED STRING</div> This string is embedded in the source code. <a href="https://sandbox.lingoport.com/issues/search#issues=AWw_A8m6nik4oCHIT0V7" target="_blank">View Source</a> <a href="https://wiki.lingoport.com/Gremlins#Embedded_Strings" target="_blank">View Details</a>',
+            content: '<div class="gremTitle">EMBEDDED STRING</div> This string is embedded in the source code. <a href="https://sandbox.lingoport.com/project/issues?id=RebelOutfitters.DarkSide%3Ascan&issues=AWw_A8m6nik4oCHIT0V7&open=AWw_A8m6nik4oCHIT0V7" target="_blank">View Source</a> <a href="https://wiki.lingoport.com/Gremlins#Embedded_Strings" target="_blank">View Details</a>',
             theme: 'custom',
             arrow: true,
             interactive: true
         });
 
         tippy('.homeFormat', {
-            content: '<div class="gremTitle">CURRENCY FORMAT</div> The formatting for this currency is hard-coded. <a href="https://sandbox.lingoport.com/issues/search#issues=AWw_A8jrnik4oCHIT0UH" target="_blank">View Source</a> <a href="https://wiki.lingoport.com/Gremlins#Locale_Sensitive_Method_-_e.g._Currency_Format" target="_blank">View Details</a>',
+            content: '<div class="gremTitle">CURRENCY FORMAT</div> The formatting for this currency is hard-coded. <a href="https://sandbox.lingoport.com/project/issues?id=RebelOutfitters.DarkSide%3Ascan&issues=AWw_A8jrnik4oCHIT0UH&open=AWw_A8jrnik4oCHIT0UH" target="_blank">View Source</a> <a href="https://wiki.lingoport.com/Gremlins#Locale_Sensitive_Method_-_e.g._Currency_Format" target="_blank">View Details</a>',
             theme: 'custom',
             arrow: true,
             interactive: true
@@ -69,7 +69,7 @@ let Home = {
     }
 }
 
-//function to show product clickedby user (unless they clicked the gremlin link)
+//function to show product clicked by user (unless they clicked the gremlin link)
 var viewProduct = (type, id, e) => {
     //console.log(e);
     if(e.srcElement.classList[0] != "gremLink") {

@@ -22,14 +22,14 @@ let Browse = {
         if(type == "droids") {
             productMap = productList.get('droids');
             title += " Droids";
-            gremConcatDashLink = 'https://sandbox.lingoport.com/issues/search#issues=AWw_A8mdnik4oCHIT0VY';
-            gremEmbedDashLink = 'https://sandbox.lingoport.com/issues/search#issues=AWw_A8kInik4oCHIT0UL';
+            gremConcatDashLink = 'https://sandbox.lingoport.com/project/issues?id=RebelOutfitters.DarkSide%3Ascan&issues=AWw_A8mdnik4oCHIT0VY&open=AWw_A8mdnik4oCHIT0VY';
+            gremEmbedDashLink = 'https://sandbox.lingoport.com/project/issues?id=RebelOutfitters.DarkSide%3Ascan&issues=AWw_A8kInik4oCHIT0UL&open=AWw_A8kInik4oCHIT0UL';
         }
         else if(type == "vehicles") {
             productMap = productList.get('vehicles');
             title += " Vehicles";
-            gremConcatDashLink = 'https://sandbox.lingoport.com/issues/search#issues=AWw_A8mdnik4oCHIT0VZ';
-            gremEmbedDashLink = 'https://sandbox.lingoport.com/issues/search#issues=AWw_A8kKnik4oCHIT0US';
+            gremConcatDashLink = 'https://sandbox.lingoport.com/project/issues?id=RebelOutfitters.DarkSide%3Ascan&issues=AWw_A8mdnik4oCHIT0VZ&open=AWw_A8mdnik4oCHIT0VZ';
+            gremEmbedDashLink = 'https://sandbox.lingoport.com/project/issues?id=RebelOutfitters.DarkSide%3Ascan&issues=AWw_A8kKnik4oCHIT0US&open=AWw_A8kKnik4oCHIT0US';
         }
 
         //view is solely for HTML markup, contains no static text
@@ -91,7 +91,7 @@ let Browse = {
         });
 
         tippy('.browseFormat', {
-            content: '<div class="gremTitle">CURRENCY FORMAT</div> The formatting for this currency is hard-coded. <a href="https://sandbox.lingoport.com/issues/search#issues=AWw_A8jrnik4oCHIT0UH" target="_blank">View Source</a> <a href="https://wiki.lingoport.com/Gremlins#Locale_Sensitive_Method_-_e.g._Currency_Format" target="_blank">View Details</a>',
+            content: '<div class="gremTitle">CURRENCY FORMAT</div> The formatting for this currency is hard-coded. <a href="https://sandbox.lingoport.com/project/issues?id=RebelOutfitters.DarkSide%3Ascan&issues=AWw_A8jrnik4oCHIT0UH&open=AWw_A8jrnik4oCHIT0UH" target="_blank">View Source</a> <a href="https://wiki.lingoport.com/Gremlins#Locale_Sensitive_Method_-_e.g._Currency_Format" target="_blank">View Details</a>',
             theme: 'custom',
             arrow: true,
             interactive: true

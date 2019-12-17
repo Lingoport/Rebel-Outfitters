@@ -63,14 +63,14 @@ let ProductShow = {
 
         //add tooltips to gremlins
         tippy('.productShowEmbedded', {
-            content: '<div class="gremTitle">EMBEDDED STRING</div> All strings on this page are embedded in source code. <a href="https://sandbox.lingoport.com/code/index?id=RebelOutfitters.DarkSide%3Ascan#/RebelOutfitters.DarkSide%3Ascan%3Asrc%2Fcontent%2Fproducts.js" target="_blank">View Source</a> <a href="https://wiki.lingoport.com/Gremlins#Embedded_Strings" target="_blank">View Details</a>',
+            content: '<div class="gremTitle">EMBEDDED STRING</div> All strings on this page are embedded in source code. <a href="https://sandbox.lingoport.com/code?id=RebelOutfitters.DarkSide%3Ascan&selected=RebelOutfitters.DarkSide%3Ascan%3Asrc%2Fcontent%2Fproducts.js" target="_blank">View Source</a> <a href="https://wiki.lingoport.com/Gremlins#Embedded_Strings" target="_blank">View Details</a>',
             theme: 'custom',
             arrow: true,
             interactive: true
         });
 
         tippy('.productShowFormat', {
-            content: '<div class="gremTitle">CURRENCY FORMAT</div> The formatting for this currency is hard-coded. <a href="https://sandbox.lingoport.com/issues/search#issues=AWw_A8jrnik4oCHIT0UH" target="_blank">View Source</a> <a href="https://wiki.lingoport.com/Gremlins#Locale_Sensitive_Method_-_e.g._Currency_Format" target="_blank">View Details</a>',
+            content: '<div class="gremTitle">CURRENCY FORMAT</div> The formatting for this currency is hard-coded. <a href="https://sandbox.lingoport.com/project/issues?id=RebelOutfitters.DarkSide%3Ascan&issues=AWw_A8jrnik4oCHIT0UH&open=AWw_A8jrnik4oCHIT0UH" target="_blank">View Source</a> <a href="https://wiki.lingoport.com/Gremlins#Locale_Sensitive_Method_-_e.g._Currency_Format" target="_blank">View Details</a>',
             theme: 'custom',
             arrow: true,
             interactive: true
