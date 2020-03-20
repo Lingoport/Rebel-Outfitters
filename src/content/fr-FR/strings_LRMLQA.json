@@ -85,7 +85,7 @@
   },
   "OrderHistory": {
     "dateHeading": "\uDB40\uDC3CDate\uDB40\uDC40\uDB40\uDC31\uDB40\uDC37\uDB40\uDC33\uDB40\uDC38\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC34\uDB40\uDC3E",
-    "historyTitle": "\uDB40\uDC3CHistorique des commandes\uDB40\uDC40\uDB40\uDC31\uDB40\uDC37\uDB40\uDC33\uDB40\uDC37\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC34\uDB40\uDC3E",
+    "historyTitle": "\uDB40\uDC3CCommandes\uDB40\uDC40\uDB40\uDC31\uDB40\uDC37\uDB40\uDC33\uDB40\uDC37\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC34\uDB40\uDC3E",
     "numberHeading": "\uDB40\uDC3CNuméro de commande\uDB40\uDC40\uDB40\uDC31\uDB40\uDC37\uDB40\uDC33\uDB40\uDC39\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC34\uDB40\uDC3E",
     "statusHeading": "\uDB40\uDC3CStatut\uDB40\uDC40\uDB40\uDC31\uDB40\uDC37\uDB40\uDC34\uDB40\uDC31\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC34\uDB40\uDC3E",
     "totalHeading": "\uDB40\uDC3CTotal\uDB40\uDC40\uDB40\uDC31\uDB40\uDC37\uDB40\uDC34\uDB40\uDC30\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC34\uDB40\uDC3E"
@@ -116,7 +116,7 @@
     "9": "\uDB40\uDC3CMesurant 5,47 mètres de long, l'ETA-2 est un starfighter très maniable orienté combat et est plus rapide que son prédécesseur d'Aethersprite, avec des moteurs à ions jumeaux offrant une accélération maximale de 5 200G et une vitesse maximale de 1 500 km/h. L'Eta-2 comporte des ailes avec des panneaux de radiateur supérieurs et inférieurs, des feuilles de S, qui sont ouvertes pour évacuer la chaleur excessive des moteurs du navire. Les ailes du radiateur s'ouvrent principalement lors de combats intenses. Pour sa défense, le navire comportait deux canons laser et deux canons ioniques. Contrairement aux canons laser, les canons ioniques du navire tirent des éclats de plasma qui causent des perturbations électriques temporaires à leur cible lors de l'impact.\uDB40\uDC40\uDB40\uDC31\uDB40\uDC36\uDB40\uDC38\uDB40\uDC31\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC34\uDB40\uDC3E"
   },
   "title": {
-    "1": "\uDB40\uDC3C3P0 Space Tin Man\uDB40\uDC40\uDB40\uDC31\uDB40\uDC36\uDB40\uDC35\uDB40\uDC39\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC34\uDB40\uDC3E",
+    "1": "\uDB40\uDC3C3P0 Ambassadeur Spatial\uDB40\uDC40\uDB40\uDC31\uDB40\uDC36\uDB40\uDC35\uDB40\uDC39\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC34\uDB40\uDC3E",
     "10": "\uDB40\uDC3CDroid série R3\uDB40\uDC40\uDB40\uDC31\uDB40\uDC36\uDB40\uDC36\uDB40\uDC38\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC34\uDB40\uDC3E",
     "11": "\uDB40\uDC3CT-70 X-Wing\uDB40\uDC40\uDB40\uDC31\uDB40\uDC36\uDB40\uDC36\uDB40\uDC39\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC34\uDB40\uDC3E",
     "12": "\uDB40\uDC3CBatteur à ailes Y\uDB40\uDC40\uDB40\uDC31\uDB40\uDC36\uDB40\uDC37\uDB40\uDC30\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC34\uDB40\uDC3E",
