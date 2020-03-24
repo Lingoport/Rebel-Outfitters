@@ -77,7 +77,7 @@
     "historyLink": "HISTORIQUE DES COMMANDES",
     "logoAlt": "Logo des pourvoiries rebelles",
     "navLinkDroids": "DROÏDES",
-    "navLinkHome": "FOYER",
+    "navLinkHome":"ACCUEIL",
     "navLinkVehicles": "VÉHICULES",
     "searchButtonLabel": "recherche de produits",
     "searchIconAlt": "icône de recherche",
@@ -116,7 +116,7 @@
     "9": "D'une longueur de 5,47 mètres, l'ETA-2 est un chasseur étoilé très maniable et plus rapide que son prédécesseur Aethersprite, avec des moteurs à double ion offrant une accélération maximale de 5 200 G et une vitesse maximale de 1 500 km/h. L'Eta-2 dispose d'ailes avec des panneaux de radiateur supérieur et inférieur, des feuilles en S, qui sont ouverts pour évacuer l'excès de chaleur des moteurs du navire. Les ailes du radiateur sont principalement ouvertes lors de combats intenses. Pour la défense, le navire comportait deux canons laser et deux canons ioniques. Contrairement aux canons laser, les canons ioniques du navire exploitent des éclats de plasma qui causent des perturbations électriques temporaires à leur cible lors de l'impact."
   },
   "title": {
-    "1": "3P0 Secrétaire de l'espace",
+    "1":"3P0 Ambassadeur",
     "10": "Droïde série R3",
     "11": "T-70 X-Wing",
     "12": "Chasseur Y-Wing",
