@@ -76,8 +76,8 @@
     "greetingText": "Salut Han",
     "historyLink": "HISTOIRE DE L'ORDRE",
     "logoAlt": "Logo Rebel Outfitters",
-    "navLinkDroids": "DROIDS",
-    "navLinkHome": "MAISON",
+    "navLinkDroids":"DROÏDES",
+    "navLinkHome":"ACCUEIL",
     "navLinkVehicles": "VÉHICULES",
     "searchButtonLabel": "produits de recherche",
     "searchIconAlt": "icône de recherche",
@@ -127,7 +127,7 @@
     "5": "Sphyrna Corvette",
     "6": "G2 Réparation Droid",
     "7": "CR90 Corvette",
-    "8": "Vitesse de vitesse 74-Z",
+    "8":"74-Z",
     "9": "Intercepteur ETA-2"
   }
 }
