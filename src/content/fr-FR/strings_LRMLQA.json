@@ -77,7 +77,7 @@
     "historyLink": "\uDB40\uDC3CHISTORIQUE DES COMMANDES\uDB40\uDC40\uDB40\uDC31\uDB40\uDC37\uDB40\uDC39\uDB40\uDC36\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC35\uDB40\uDC3E",
     "logoAlt": "\uDB40\uDC3CLogo des pourvoiries rebelles\uDB40\uDC40\uDB40\uDC31\uDB40\uDC37\uDB40\uDC39\uDB40\uDC33\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC35\uDB40\uDC3E",
     "navLinkDroids": "\uDB40\uDC3CDROÏDES\uDB40\uDC40\uDB40\uDC31\uDB40\uDC38\uDB40\uDC30\uDB40\uDC30\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC35\uDB40\uDC3E",
-    "navLinkHome": "\uDB40\uDC3CFOYER\uDB40\uDC40\uDB40\uDC31\uDB40\uDC37\uDB40\uDC39\uDB40\uDC39\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC35\uDB40\uDC3E",
+    "navLinkHome": "\uDB40\uDC3CACCUEIL\uDB40\uDC40\uDB40\uDC31\uDB40\uDC37\uDB40\uDC39\uDB40\uDC39\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC35\uDB40\uDC3E",
     "navLinkVehicles": "\uDB40\uDC3CVÉHICULES\uDB40\uDC40\uDB40\uDC31\uDB40\uDC38\uDB40\uDC30\uDB40\uDC31\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC35\uDB40\uDC3E",
     "searchButtonLabel": "\uDB40\uDC3Crecherche de produits\uDB40\uDC40\uDB40\uDC31\uDB40\uDC37\uDB40\uDC39\uDB40\uDC32\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC35\uDB40\uDC3E",
     "searchIconAlt": "\uDB40\uDC3Cicône de recherche\uDB40\uDC40\uDB40\uDC31\uDB40\uDC37\uDB40\uDC39\uDB40\uDC34\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC35\uDB40\uDC3E",
@@ -116,7 +116,7 @@
     "9": "\uDB40\uDC3CD'une longueur de 5,47 mètres, l'ETA-2 est un chasseur étoilé très maniable et plus rapide que son prédécesseur Aethersprite, avec des moteurs à double ion offrant une accélération maximale de 5 200 G et une vitesse maximale de 1 500 km/h. L'Eta-2 dispose d'ailes avec des panneaux de radiateur supérieur et inférieur, des feuilles en S, qui sont ouverts pour évacuer l'excès de chaleur des moteurs du navire. Les ailes du radiateur sont principalement ouvertes lors de combats intenses. Pour la défense, le navire comportait deux canons laser et deux canons ioniques. Contrairement aux canons laser, les canons ioniques du navire exploitent des éclats de plasma qui causent des perturbations électriques temporaires à leur cible lors de l'impact.\uDB40\uDC40\uDB40\uDC31\uDB40\uDC37\uDB40\uDC38\uDB40\uDC36\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC35\uDB40\uDC3E"
   },
   "title": {
-    "1": "\uDB40\uDC3C3P0 Marie\uDB40\uDC40\uDB40\uDC31\uDB40\uDC37\uDB40\uDC36\uDB40\uDC35\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC35\uDB40\uDC3E",
+    "1": "\uDB40\uDC3C3P0 Ambassadeur\uDB40\uDC40\uDB40\uDC31\uDB40\uDC37\uDB40\uDC36\uDB40\uDC35\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC35\uDB40\uDC3E",
     "10": "\uDB40\uDC3CDroïde série R3\uDB40\uDC40\uDB40\uDC31\uDB40\uDC37\uDB40\uDC37\uDB40\uDC34\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC35\uDB40\uDC3E",
     "11": "\uDB40\uDC3CT-70 X-Wing\uDB40\uDC40\uDB40\uDC31\uDB40\uDC37\uDB40\uDC37\uDB40\uDC35\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC35\uDB40\uDC3E",
     "12": "\uDB40\uDC3CChasseur Y-Wing\uDB40\uDC40\uDB40\uDC31\uDB40\uDC37\uDB40\uDC37\uDB40\uDC36\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC35\uDB40\uDC3E",
