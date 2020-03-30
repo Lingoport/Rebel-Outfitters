@@ -96,7 +96,7 @@
     "statusShipped": "Expédié"
   },
   "ProductShow": {
-    "addToCartLabel": "AJOUTER À LA CARTE",
+    "addToCartLabel":"AJOUTER AU PANIER",
     "qtyLabel": "Qté : "
   },
   "Special": "Spécial",
