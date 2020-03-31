@@ -76,7 +76,7 @@
     "greetingText": "Salut Han",
     "historyLink": "HISTOIRE DE L'ORDRE",
     "logoAlt": "Logo Rebel Outfitters",
-    "navLinkDroids":"DROIDES",
+    "navLinkDroids":"DROÏDES",
     "navLinkHome":"ACCUEIL",
     "navLinkVehicles": "VÉHICULES",
     "searchButtonLabel": "produits de recherche",
@@ -116,7 +116,7 @@
     "9": "Mesurant 5,47 mètres de long, l'ETA-2 est un starfighter très maniable orienté combat et est plus rapide que son prédécesseur d'Aethersprite, avec des moteurs à ions jumeaux offrant une accélération maximale de 5 200G et une vitesse maximale de 1 500 km/h. L'Eta-2 comporte des ailes avec des panneaux de radiateur supérieurs et inférieurs, des feuilles de S, qui sont ouvertes pour évacuer la chaleur excessive des moteurs du navire. Les ailes du radiateur s'ouvrent principalement lors de combats intenses. Pour sa défense, le navire comportait deux canons laser et deux canons ioniques. Contrairement aux canons laser, les canons ioniques du navire tirent des éclats de plasma qui causent des perturbations électriques temporaires à leur cible lors de l'impact."
   },
   "title": {
-    "1": "Ambassadeur 3P0",
+    "1":"3P0",
     "10": "Droid série R3",
     "11": "T-70 X-Wing",
     "12": "Batteur à ailes Y",
