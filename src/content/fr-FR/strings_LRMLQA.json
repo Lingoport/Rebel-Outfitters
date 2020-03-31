@@ -76,7 +76,7 @@
     "greetingText": "\uDB40\uDC3CSalut Han\uDB40\uDC40\uDB40\uDC31\uDB40\uDC36\uDB40\uDC39\uDB40\uDC30\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC34\uDB40\uDC3E",
     "historyLink": "\uDB40\uDC3CHISTOIRE DE L'ORDRE\uDB40\uDC40\uDB40\uDC31\uDB40\uDC36\uDB40\uDC39\uDB40\uDC31\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC34\uDB40\uDC3E",
     "logoAlt": "\uDB40\uDC3CLogo Rebel Outfitters\uDB40\uDC40\uDB40\uDC31\uDB40\uDC36\uDB40\uDC38\uDB40\uDC38\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC34\uDB40\uDC3E",
-    "navLinkDroids": "\uDB40\uDC3CDROIDES\uDB40\uDC40\uDB40\uDC31\uDB40\uDC36\uDB40\uDC39\uDB40\uDC35\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC34\uDB40\uDC3E",
+    "navLinkDroids": "\uDB40\uDC3CDROÏDES\uDB40\uDC40\uDB40\uDC31\uDB40\uDC36\uDB40\uDC39\uDB40\uDC35\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC34\uDB40\uDC3E",
     "navLinkHome": "\uDB40\uDC3CACCUEIL\uDB40\uDC40\uDB40\uDC31\uDB40\uDC36\uDB40\uDC39\uDB40\uDC34\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC34\uDB40\uDC3E",
     "navLinkVehicles": "\uDB40\uDC3CVÉHICULES\uDB40\uDC40\uDB40\uDC31\uDB40\uDC36\uDB40\uDC39\uDB40\uDC36\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC34\uDB40\uDC3E",
     "searchButtonLabel": "\uDB40\uDC3Cproduits de recherche\uDB40\uDC40\uDB40\uDC31\uDB40\uDC36\uDB40\uDC38\uDB40\uDC37\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC34\uDB40\uDC3E",
@@ -116,7 +116,7 @@
     "9": "\uDB40\uDC3CMesurant 5,47 mètres de long, l'ETA-2 est un starfighter très maniable orienté combat et est plus rapide que son prédécesseur d'Aethersprite, avec des moteurs à ions jumeaux offrant une accélération maximale de 5 200G et une vitesse maximale de 1 500 km/h. L'Eta-2 comporte des ailes avec des panneaux de radiateur supérieurs et inférieurs, des feuilles de S, qui sont ouvertes pour évacuer la chaleur excessive des moteurs du navire. Les ailes du radiateur s'ouvrent principalement lors de combats intenses. Pour sa défense, le navire comportait deux canons laser et deux canons ioniques. Contrairement aux canons laser, les canons ioniques du navire tirent des éclats de plasma qui causent des perturbations électriques temporaires à leur cible lors de l'impact.\uDB40\uDC40\uDB40\uDC31\uDB40\uDC36\uDB40\uDC38\uDB40\uDC31\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC34\uDB40\uDC3E"
   },
   "title": {
-    "1": "\uDB40\uDC3CAmbassadeur 3P0\uDB40\uDC40\uDB40\uDC31\uDB40\uDC36\uDB40\uDC35\uDB40\uDC39\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC34\uDB40\uDC3E",
+    "1": "\uDB40\uDC3C3P0\uDB40\uDC40\uDB40\uDC31\uDB40\uDC36\uDB40\uDC35\uDB40\uDC39\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC34\uDB40\uDC3E",
     "10": "\uDB40\uDC3CDroid série R3\uDB40\uDC40\uDB40\uDC31\uDB40\uDC36\uDB40\uDC36\uDB40\uDC38\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC34\uDB40\uDC3E",
     "11": "\uDB40\uDC3CT-70 X-Wing\uDB40\uDC40\uDB40\uDC31\uDB40\uDC36\uDB40\uDC36\uDB40\uDC39\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC34\uDB40\uDC3E",
     "12": "\uDB40\uDC3CBatteur à ailes Y\uDB40\uDC40\uDB40\uDC31\uDB40\uDC36\uDB40\uDC37\uDB40\uDC30\uDB40\uDC5F\uDB40\uDC31\uDB40\uDC35\uDB40\uDC34\uDB40\uDC3E",
