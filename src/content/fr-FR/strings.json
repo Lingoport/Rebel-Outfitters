@@ -77,14 +77,14 @@
     "historyLink": "HISTORIQUE DES COMMANDES",
     "logoAlt": "Logo des pourvoiries rebelles",
     "navLinkDroids": "DROÏDES",
-    "navLinkHome": "FOYER",
+    "navLinkHome":"ACCUEIL",
     "navLinkVehicles": "VÉHICULES",
     "searchButtonLabel": "recherche de produits",
     "searchIconAlt": "icône de recherche",
     "searchPlaceholder": "Qu'est-ce que tu cherches ?"
   },
   "OrderHistory": {
-    "dateHeading": "Rendez-vous amoureux",
+    "dateHeading":"Date",
     "historyTitle": "Historique des commandes",
     "numberHeading": "Numéro de commande",
     "statusHeading": "Statut",
