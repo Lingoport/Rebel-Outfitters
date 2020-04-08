@@ -77,7 +77,7 @@
     "historyLink": "HISTORIQUE DES COMMANDES",
     "logoAlt": "Logo des pourvoiries rebelles",
     "navLinkDroids": "DROÏDES",
-    "navLinkHome": "FOYER",
+    "navLinkHome":"ACCUEIL",
     "navLinkVehicles": "VÉHICULES",
     "searchButtonLabel": "recherche de produits",
     "searchIconAlt": "icône de recherche",
@@ -127,7 +127,7 @@
     "5": "Sphyrna Corvette",
     "6": "Droïde de réparation G2",
     "7": "CR90 Corvette",
-    "8": "Vélo Speeder 74-Z",
+    "8":"74-Z",
     "9": "Intercepteur ETA-2"
   }
 }
