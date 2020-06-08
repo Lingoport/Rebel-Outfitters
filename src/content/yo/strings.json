@@ -111,7 +111,7 @@
     "versionLabel": "Version: ",
     "versionBad": "Non-i18n Compliant",
     "versionGood": "I18n Compliant",
-    "versionIQA": "InContext Translation",
+    "versionIQA": "InContext",
     "localeLabel": "Locale: ",
     "localeEN": "English - United States",
     "localeFR": "French - France",
