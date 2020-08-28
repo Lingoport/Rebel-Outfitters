@@ -1,6 +1,5 @@
 {
     "title": {
-    "_LRM_RESEND796":" LQA-||olibouban@lingoport.com||||3P0",
     "1": "Ambassadeur 3P0",
     "2": "Droïde - série DUM",
     "3": "Droïde chirurgical 2-1B",
@@ -54,8 +53,7 @@
     "vehicleTitle": "Tous les véhicules"
     },
     "Checkout": {
-    "_LRM_RESEND933":" LQA-||olibouban@lingoport.com||||Paiements",
-    "checkoutTitle": "Conclusion de la transaction",
+    "checkoutTitle": "Paiements",
     "shipSectionLabel": "Informations sur l'expédition",
     "firstNameLabel": "Prénom",
     "lastNameLabel": "Nom de famille",
