@@ -1,0 +1,133 @@
+{
+  "Bottombar": {
+    "menuAlt": "Öffnen Sie das Sidebar-"
+  },
+  "Browse": {
+    "droidTitle": "Alle Droiden",
+    "vehicleTitle": "Alle Fahrzeuge"
+  },
+  "Cart": {
+    "cartTitle": "Einkaufswagen",
+    "checkoutLabel": "KASSE",
+    "closeAlt": "Cart schließen",
+    "deleteAlt": "Artikel aus dem Einkaufswagen löschen",
+    "noItemMsg": "Keine Artikel im Einkaufswagen.",
+    "totalTitle": "Insgesamt: "
+  },
+  "Checkout": {
+    "accountHolder": "1234567-9876-00",
+    "accountLabel": "Imperiale Kreditnummer",
+    "cartTitle": "Einkaufswagen",
+    "checkoutTitle": "Zur Kasse",
+    "coordinatesHolder": "0,0,0",
+    "coordinatesLabel": "Koordinaten",
+    "deleteAlt": "Artikel aus dem Einkaufswagen entfernen",
+    "expDateLabel": "Verfallsdatum",
+    "firstNameLabel": "Vorname",
+    "lastNameLabel": "Nachname",
+    "methodLabel": "Versand-Methode",
+    "noItemMessage": "Fügen Sie Artikel zur Kasse in den Warenkorb.",
+    "orderLabel": "BESTELLUNG AUFGEBEN",
+    "payNameHolder": "Erster Letzter",
+    "payNameLabel": "Name auf der Karte",
+    "paySectionLabel": "Zahlung",
+    "sectorLabel": "Sektor",
+    "securityHolder": "123456",
+    "securityLabel": "Sicherheitscode",
+    "shipLightspeed": "Lightspeed",
+    "shipOvernight": "Über Nacht",
+    "shipSectionLabel": "Versand-Info",
+    "shipStandard": "Standardmäßig",
+    "successMessage": "Bestellung wurde erfolgreich aufgegeben!",
+    "termsLink": "(Ansicht)",
+    "termsStatement": "Ich habe die AGB gelesen und stimme ihnen zu",
+    "totalLabel": "Insgesamt: "
+  },
+  "Error404": {
+    "errorMessage": "404 Error: Die Seite wurde nicht gefunden."
+  },
+  "Hamburger": {
+    "contactLabel": "Kontaktiere uns",
+    "dashLabel": "Lingoport Dashboard anzeigen",
+    "githubLabel": "Quelltext anzeigen",
+    "githubLogoAlt": "GitHub Logo",
+    "learnLabel": "Lerne mehr",
+    "lingoLogoAlt": "Lingoport-Logo",
+    "localeEN": "Englisch - Vereinigte Staaten",
+    "localeEO": "Esperanto",
+    "localeFR": "Französisch - Frankreich",
+    "localeLabel": "Gebietsschema: ",
+    "localeSI": "Sith",
+    "localeYO": "Yoda",
+    "localeZH": "Chinesisch - China",
+    "versionBad": "Nicht-I18n-konform",
+    "versionGood": "I18n konform",
+    "versionIQA": "inContext",
+    "versionLabel": "Fassung: "
+  },
+  "Home": {
+    "symbolAlt": "Währungssymbol des Imperial Credits",
+    "welcomeMessage": "Willkommen bei Rebel Outfitters!",
+    "welcomeSubtitle": "Wir bieten alles, was Sie brauchen, um es mit dem Imperium aufzunehmen (und zu gewinnen)."
+  },
+  "Navbar": {
+    "arrowAlt": "Pfeil nach unten fallen",
+    "cartAlt": "Warenkorb zeigen",
+    "greetingText": "Hallo Han",
+    "historyLink": "GESCHICHTE DER BESTELLUNG",
+    "logoAlt": "Rebel Outfitters Logo",
+    "navLinkDroids": "DROIDEN",
+    "navLinkHome": "ZUHAUSE",
+    "navLinkVehicles": "FAHRZEUGE",
+    "searchButtonLabel": "Suche nach Produkten",
+    "searchIconAlt": "Suche Icon",
+    "searchPlaceholder": "Wen suchst du?"
+  },
+  "OrderHistory": {
+    "dateHeading": "Datum",
+    "historyTitle": "Geschichte der Bestellung",
+    "numberHeading": "Nummer der Bestellung",
+    "statusHeading": "Status",
+    "totalHeading": "Insgesamt"
+  },
+  "Order": {
+    "statusDelivered": "Ausgeliefert",
+    "statusProcessing": "-Verarbeitung",
+    "statusShipped": "Versendet"
+  },
+  "ProductShow": {
+    "addToCartLabel": "ZUM EINKAUFSWAGEN HINZUFÜGEN",
+    "qtyLabel": "Menge: "
+  },
+  "Special": "Spezial",
+  "desc": {
+    "1": "Jeder Droide ist mit einem SyntheTech AA-1 VerboBrain ausgestattet, der ihn in der Lage macht, enorme Mengen an Informationen zu speichern. Der zusätzliche Speicherplatz wird häufig verwendet, um Kommunikationsmodule im aktiven Speicher zu halten, so dass lange Verzögerungen bei der Suche nach sprachlichen Informationen zur mittleren Übersetzung vermieden werden können. Ein TranLang III-Kommunikationsmodul ermöglicht es ihnen, über sechs Millionen Formen der Kommunikation fließend zu sprechen. Sie verfügen auch über die erforderlichen Fähigkeiten, um neue nicht registrierte Sprachen schnell zu analysieren und in bekanntere Sprachen zu übersetzen.",
+    "10": "Der Astromech-Droide der R3-Serie verfügt über die gleiche Hardware wie sein Vorgänger, die R2-Einheit, bei der nur der erweiterbare Videosensor des früheren Droiden fehlt. Das Chassis des R3 ist weitgehend zylindrisch und erscheint als aufrechtes Rohr mit einem kurzen, abgeschnittenen Kegel an seiner Basis. Den Droiden aufrecht halten zwei schmale Beine, von denen jedes in einem wie trapezförmigen Prismen geformten Fuß endet, ein drittes Bein ist im Droidenkörper untergebracht und kann bei Bedarf verlängert werden, um eine größere Stabilität zu gewährleisten. Das Design der Einheit ist eine robuste, rotierende, plastex- oder transparisteelige Kuppel. Der Astromech ist versiegelt, um die Funktionalität im Vakuum des Weltraums zu ermöglichen.",
+    "11": "Der T-70 X-Wing Starfighter ist ein kreuzarger Sternenjäger mit einer Länge von 12,48 Metern und einer maximalen Kapazität eines einzelnen Piloten und einem vom Boden beladenen Astromech-Droiden, der in eine Steckdose passt und für verschiedene Modelle variabel konfiguriert werden kann. Bei Bedarf kann der Droide den Sternenjäger ohne Hilfe eines Piloten fliegen und kann dies sogar aus der Ferne tun. Der Zielcomputer des Schiffes, die Flugsteuerungen und andere wichtige Pilotinstrumente befinden sich in einem gepanzerten Cockpitmodul, unter dem ein herausnehmbarer, mit Flüssigkeit gekühlter Flugcomputer den Piloten beim schiffsbasierten Betrieb weiter unterstützt. Zugangspaneele für den Computerzugriff und die Lagerung befinden sich in der „Nase“ des Schiffes sowie ein Hilfsgenerator und ein Lagerbereich, der typischerweise zum Verstauen von Überlebensausrüstung verwendet wird. Ein kleines Sensorfenster markiert die Position des primären Sensorarrays des Schiffes an der Spitze der Nosecone, die sich hinter einem Notfallfeuer befindet. Hinter dem Piloten ermöglicht ein eingebautes Lebenserhaltungssystem dem Insassen, eine sauerstoffreiche Atmosphäre einzuatmen.",
+    "12": "Der Y-Wing-Sternenjäger, der Piloten der Rebel Alliance und der New Republic, liebevoll als „Querlenker“ bekannt ist, wird als Kampfbomber eingesetzt, um seinen Weg zu seinem Ziel zu erreichen, seine Nutzlast mit hohem Sprengstoff zu liefern und sich wieder zu bekämpfen. Seine Waffen umfassen zwei Laserkanonen, zwei Ionenkanonen und zwei Protonentorpedowerfer. Ein Astromech-Droide, wie eine R2-Einheit, kann an eine Steckdose hinter dem Cockpit angeschlossen werden, um als Copilot zu fungieren und die verschiedenen Systeme des Schiffes zu verwalten.",
+    "13": "Ein ziemlich guter Droide für die Koordination von Angriffen. Nicht gut im Kämpfen, nur gut in der Planung.",
+    "2": "Pit Droids wurde für die Wartung von Podracern entwickelt und sind erschwingliche, langlebige Reparaturdroiden. Pit Droids stehen in einer Höhe von 1,19 Metern, können sich jedoch bei Nichtgebrauch in eine kompakte Form falten. Diese Funktion kann durch Antippen der Nase umgeschaltet werden.",
+    "3": "Das 2-1B-Droid-Modell ist sehr fortschrittlich und intelligent, da seine Programmierung von einigen der führenden Ärzte der Galaxie der Rhinnal State Medical Academy, die auch heuristische Prozessoren integrieren, weiter vorangetrieben wird. Das nützlichste Merkmal der 2-1B-Droiden ist die Leichtigkeit, mit der Besitzer ihre Programmierung und ihre Anhänge aktualisieren können. Ein 2-1B-Droide kann mit einer Reise in ein zertifiziertes Servicecenter leicht ein Spezialist für Neurochirurgie, Podologie, Pädiatrie, Ersatz kybernetischer Gliedmaßen und Alien-Biologie werden.",
+    "4": "Ein ramponierter Chromkriegsdroide IG-88 ist 1,96 Meter hoch. Sein stetiges Ziel und seine Fähigkeit, Ziele mit fortschrittlichen Sensoren zu verfolgen, die seinen Kopf klingeln und es ihm ermöglichen, in alle Richtungen zu sehen, bringt ihm großen Erfolg. Zu diesen Sensoren gehören mehrere rote Photorezeptoren, ein Wärmesensor und ein Schallsensor IG-88 hat auch einen Vocoder an der Basis seines Kopfes. Sein Torso kann sich auf dem Schlachtfeld vollständig drehen, sodass er auf allen Seiten Feinde sprengen kann. Sein robuster Metallkörper ermöglicht es ihm, die meisten Angriffe zu überleben, ohne Schaden zu nehmen, und verfügt über säurefeste Servodrähte.",
+    "5": "Der ursprünglichen Sphyrna-Struktur wurden mehrere neue Funktionen hinzugefügt, darunter zwei zusätzliche Module, die am Backbord und an Steuerbord des Fahrzeugs angebracht sind, sechs Rettungskapseln anstelle des Frachtraums und ein vierter Sublight-Antrieb, der auf den primären drei montiert ist und ihm genug Kraft gibt, um sich eigenhändig zu bewegen Sternenzerstörer. 315 Meter lang mit einer maximalen Beschleunigung von 900 Kilometern pro Stunde. Ausgestattet mit einem Hyper-Antriebssystem.",
+    "6": "Der G2-Reparaturdroide G2, der bei Reparaturen an Bord behilflich sein soll, hat eine geringe Größe und ist 0,8 Meter hoch. Es ist auch gedrungen, mit einer breiten, bodenschweren Haltung, die es zwingt, zu watscheln, wenn es ging. Diese Eigenschaften, kombiniert mit ihrem langen, mehrfach verbundenen Hals und weit auseinander liegenden, gewichtsverteilenden Füßen, verdienen ihm den Spitznamen „Gänsedroide“. Jede G2-Einheit hat einen abgespeckten, silbernen und messingfarbenen Skelettrahmen mit freiliegenden Gelenken und Verkabelungen mit einer farbigen Verkleidung. Die dreistelligen, schweren Manipulatoren des Droiden können die meisten Reparaturwerkzeuge greifen, während gespreizte Füße dazu beirten, seinen niedrigen Schwerpunkt zu stabilisieren und dem G2 zusätzliche Stabilität im Umgang mit großen, schweren Geräten verleihen.",
+    "7": "Mit einer Länge von 150 Metern verfügt er über zwei duale und vier einzelne Turbolaser-Türme und kann eine Höchstgeschwindigkeit von 950 km/h erreichen. Laut Luke Skywalker können einige mit Kämpfen ausgerüstete CR90-Schiffe mit sechs Dual-Turbolasern ausgerüstet werden. Es ist in der Lage, eine ganze diplomatische Eskorte zu transportieren und hat Hunderte von Passagierkapazitäten. Obwohl die Schiffe nicht als Träger gebaut sind, können drei RZ-1 A-Wing-Abfangjäger an den Andockringen angebracht werden, was eine kleine Eskorte ermöglicht. Sie dienen als Rückgrat der frühen Rebellion und der Allianz. Obwohl sie nicht besonders schwer bewaffnet sind, verfügen CR90s über genügend Schusswaffe, um einen Gozanti-Klasse-Kreuzer ganz einfach zu zerstören.",
+    "8": "Das 74-Z Speeder Bike ist in der Lage, Geschwindigkeiten von bis zu fünfhundert Stundenkilometern zu erreichen und hat eine Fluggrenze von fünfundzwanzig Metern. 74-Zs sind die militärische Variante des zivilen 74-Y. Sie werden durch einen Lenker gesteuert, der sich an der Vorderseite des Fahrzeugs befindet, und die darunter liegenden Fußpedale passen Geschwindigkeit und Höhe an. Die sehr wendigen Fahrzeuge sind mit Sensor- und Kommunikationsgeräten ausgestattet, die sich zwischen dem Lenker befinden, einschließlich eines Komlinks und eines Comlink-Jamming-Geräts. Der Speeder ist mit Terrain-Folge-Sensoren ausgestattet, die mit dem HUD im Helm des Fahrers verbunden sind. Sie sind mit einer nach vorn rotierenden Blaster-Kanonen für den Kampf bewaffnet.",
+    "9": "Mit einer Länge von 5,47 Metern ist der ETA-2 ein sehr manövrierfähiger, kampferorientierter Sternenjäger und schneller als sein Vorgänger von Aethersprite, wobei Twin-Ionen-Motoren eine maximale Beschleunigung von 5.200G und eine maximale Geschwindigkeit von 1.500 km/h bieten. Der Eta-2 verfügt über Flügel mit oberen und unteren Heizkörperverkleidungen, S-Folien, die geöffnet werden, um überschüssige Wärme von den Schiffsmotoren abzugeben. Die Kühlerflügel werden hauptsächlich während intensiver Kämpfe geöffnet. Zur Verteidigung verfügte das Schiff über zwei Laserkanonen und zwei Ionenkanonen. Im Gegensatz zu Laserkanonen feuern die Ionenkanonen des Schiffes Plasmaausbrüche, die beim Aufprall vorübergehende elektrische Störungen ihres Ziels verursachen."
+  },
+  "title": {
+    "1": "3P0 Botschafter Olivier",
+    "10": "R3-Serie Droid",
+    "11": "T-70 X-Wing",
+    "12": "Y-Wing-Kämpfer",
+    "13": "Super taktischer Droid",
+    "2": "Dum-Serie Droid",
+    "3": "2-1B Chirurgischer Droide",
+    "4": "IG-88B-Droide",
+    "5": "Sphyrna Corvette",
+    "6": "G2-Reparatur-Droide",
+    "7": "CR90 Corvette",
+    "8": "74-Z Speeder-Rad",
+    "9": "ETA-2 Abfangjäger"
+  }
+}

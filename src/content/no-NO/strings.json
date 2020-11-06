@@ -1,0 +1,133 @@
+{
+  "Bottombar": {
+    "menuAlt": "Åpne sidepanelmenyen"
+  },
+  "Browse": {
+    "droidTitle": "Alle droider",
+    "vehicleTitle": "Alle kjøretøy"
+  },
+  "Cart": {
+    "cartTitle": "Handlevogn",
+    "checkoutLabel": "KASSA",
+    "closeAlt": "Lukk handlevogn",
+    "deleteAlt": "Slett element fra handlekurven",
+    "noItemMsg": "Ingen varer i handlekurven.",
+    "totalTitle": "Totalt: "
+  },
+  "Checkout": {
+    "accountHolder": "1234567-9876-00",
+    "accountLabel": "Imperial kredittnummer",
+    "cartTitle": "Handlevogn",
+    "checkoutTitle": "Kassefunksjonen",
+    "coordinatesHolder": "0,0,0",
+    "coordinatesLabel": "Koordinater",
+    "deleteAlt": "fjern vare fra handlekurven",
+    "expDateLabel": "Utløpsdato",
+    "firstNameLabel": "Fornavn",
+    "lastNameLabel": "Etternavn",
+    "methodLabel": "Forsendelsesmetode",
+    "noItemMessage": "Legg til varer i handlekurven til kassen.",
+    "orderLabel": "STED ORDRE",
+    "payNameHolder": "Første siste",
+    "payNameLabel": "Navn på kort",
+    "paySectionLabel": "Betaling",
+    "sectorLabel": "Sektor",
+    "securityHolder": "123456",
+    "securityLabel": "Sikkerhetskode",
+    "shipLightspeed": "Lyshastighet",
+    "shipOvernight": "Over natten",
+    "shipSectionLabel": "Informasjon om frakt",
+    "shipStandard": "Standard",
+    "successMessage": "Bestill plassert vellykket!",
+    "termsLink": "(Vis)",
+    "termsStatement": "Jeg har lest og samtykker i vilkårene og betingelsene",
+    "totalLabel": "Totalt: "
+  },
+  "Error404": {
+    "errorMessage": "404 Feil: Siden ikke funnet."
+  },
+  "Hamburger": {
+    "contactLabel": "Kontakt oss",
+    "dashLabel": "Vis Lingoport Dashboard",
+    "githubLabel": "Vis kilde",
+    "githubLogoAlt": "GitHub-logo",
+    "learnLabel": "Lær mer",
+    "lingoLogoAlt": "Lingoport-logo",
+    "localeEN": "Engelsk — USA",
+    "localeEO": "Esperanto",
+    "localeFR": "Fransk - Frankrike",
+    "localeLabel": "Språksted: ",
+    "localeSI": "Sithasj",
+    "localeYO": "Yoda",
+    "localeZH": "Kinesisk - Kina",
+    "versionBad": "I18N-kompatibel",
+    "versionGood": "I18N-kompatibel",
+    "versionIQA": "Inkontekst",
+    "versionLabel": "Versjon: "
+  },
+  "Home": {
+    "symbolAlt": "Imperial kreditt valuta symbol",
+    "welcomeMessage": "Velkommen til Rebel Outfitters!",
+    "welcomeSubtitle": "Vi tilbyr alt du trenger for å ta på Empire (og vinne)."
+  },
+  "Navbar": {
+    "arrowAlt": "Pil ned",
+    "cartAlt": "Vis handlekurv",
+    "greetingText": "Hei Han",
+    "historyLink": "ORDREHISTORIKK",
+    "logoAlt": "Rebel Outfitters Logo",
+    "navLinkDroids": "DROIDER",
+    "navLinkHome": "HJEM",
+    "navLinkVehicles": "KJØRETØY",
+    "searchButtonLabel": "Søk etter produkter",
+    "searchIconAlt": "søkeikon",
+    "searchPlaceholder": "Hva leter du etter?"
+  },
+  "OrderHistory": {
+    "dateHeading": "Stevnemøte",
+    "historyTitle": "Ordrehistorikk",
+    "numberHeading": "Ordensnummer",
+    "statusHeading": "Status",
+    "totalHeading": "Totalt"
+  },
+  "Order": {
+    "statusDelivered": "Forløst",
+    "statusProcessing": "Behandling",
+    "statusShipped": "Sendt"
+  },
+  "ProductShow": {
+    "addToCartLabel": "LEGG TIL HANDLEKURV",
+    "qtyLabel": "Qty: "
+  },
+  "Special": "Spesial",
+  "desc": {
+    "1": "Hver droide er utstyrt med en SyntheTech AA-1 Verbobrain gjør dem i stand til å lagre enorme mengder informasjon, er ekstra minne plass ofte brukt for å holde kommunikasjonsmoduler i det aktive minnet slik at lange forsinkelser kan unngås mens du søker etter språklig informasjon om mid-translation. En TranLang III-kommunikasjonsmodul gjør at de kan være flytende i over seks millioner former for kommunikasjon. De har også de ferdighetene som er nødvendige for raskt å analysere nye uregistrerte språk og oversette dem til mer kjente.",
+    "10": "Astromech-droiden i R3-serien har mye av den samme maskinvaren som forgjengeren, R2-enheten, som bare mangler den tidligere droidens utvidbare videosensor. R3s chassis er i stor grad sylindrisk, og fremstår som et oppreist rør med en kort, avkortet kjegle ved basen. Å holde droiden oppreist er to smale ben, som hver avsluttes i en trå fot formet som trapesformede prismer, et tredje ben er plassert inne i droidkroppen og kan forlenges når det er nødvendig for å gi større stabilitet. Capping av enhetens design er en hardfør, roterende, plastex eller transparisteel kuppel. Astromech er forseglet for å tillate funksjonalitet i vakuum av plass.",
+    "11": "T-70 X-wing starfighter er en korsformet starfighter som måler 12,48 meter i lengde med en maksimal kapasitet på en enkelt pilot og bunnbelastet astromech droide, som passer inn i en stikkontakt og kan variabelt konfigureres for forskjellige modeller. Om nødvendig kan droiden fly starfighter uten hjelp av en pilot, og kan til og med gjøre det eksternt. Fartøyets målrettet datamaskin, flykontroller og andre essensielle piloterinstrumenter er plassert inne i en pansret cockpitmodul, der en flyttbar væskekjølt flycomputer ytterligere hjelpemidler piloten i skipsbaserte operasjoner. Adgangspaneler for datatilgang og lagring finnes inne i «nesen» på fartøyet, sammen med en hjelpegenerator og lagringsområde som vanligvis brukes til å stashing survival gear. Et lite sensorvindu markerer plasseringen av skipets primære sensorarray helt på spissen av nosecone, plassert bak et nødsignal. Bak piloten gjør det mulig for beboeren å puste inn en oksygenholdig atmosfære.",
+    "12": "Kjærlig kjent som et «wishbone» til Rebel Alliance og New Republic piloter, er Y-wing starfighter utplassert som en jagerbomber, designet for å kjempe seg til sitt mål, levere sin nyttelast av høye eksplosiver og kjempe seg ut igjen. Våpenet inneholder to laserkanoner, to ionekanoner og to protontorpedokastere. En astromech droide, for eksempel en R2-enhet, kan plugges inn i en stikkontakt bak cockpiten for å fungere som en co-pilot og administrere skipets ulike systemer.",
+    "13": "En ganske god droide for å koordinere angrep. Ikke flink til å slåss, bare flink til å planlegge.",
+    "2": "Designet for å opprettholde podracere, er pitdroider rimelige, holdbare reparasjonsdroider. Pitdroider står i en høyde på 1,19 meter, men har muligheten til å brette seg inn i en kompakt form når den ikke er i bruk. Denne funksjonen kan slås av ved å trykke på nesen.",
+    "3": "2-1B droid-modellen er svært avansert og intelligent med sin programmering som blir ytterligere avansert av noen av de beste legene i galaksen ved Rhinnal State Medical Academy, som også integrerer heuristiske prosessorer. Den mest nyttige egenskapen til 2-1B-droidene er den enkle som eiere kan oppdatere programmering og vedlegg. En 2-1B droid kan lett bli spesialist i nevrokirurgi, podiatri, pediatri, cybernetisk lemutskifting og fremmed biologi med en tur til et sertifisert servicesenter.",
+    "4": "En ramponert krom krigsdroide, IG-88 står 1,96 meter i høyden. Hans stadige mål, sammen med hans evne til å spore mål med avanserte sensorer som ringer på hodet og lar ham se i alle retninger, tjener ham stor suksess. Disse sensorene inkluderer flere røde fotoreseptorer, en varmesensor, og en lydsensor IG-88 har også en vocoder ved foten av hodet. Hans torso er i stand til å rotere fullt ut på slagmarken, slik at han kan sprenge fiender på alle sider. Hans tøffe metallkropp gjør at han kan overleve de fleste angrep uten å ta noen skade og har syrefaste servoledninger.",
+    "5": "Flere nye funksjoner er lagt til den opprinnelige Sphyrna-strukturen, inkludert to ekstra moduler montert på havnen og styrbord på båten, seks escape pods i stedet for lasterommet, og en fjerde underlys stasjon montert på toppen av de primære tre, noe som gir den nok strøm til egenhendig å flytte en funksjonshemmet Star Destroyer. 315 meter i lengde med en maksimal akselerasjon på 900 kilometer i timen. Utstyrt med et hyper drivsystem.",
+    "6": "Den andre grads reparasjonsdroiden G2 er beregnet på å bistå med reparasjoner på skipsbord, og står 0,8 meter i høyden. Den er også knebøy, med et bredt, bunntungt standpunkt som tvinger den til å vrake når den gikk. Disse trekkene, kombinert med sin lange, flerleddete nakke og vidt adskilte, vektfordelende føtter, tjener det kallenavnet 'gåsedroid'. Hver G2-enhet har en nedstrippet, sølv- og messingfarget skjelettramme med synlige ledd og ledninger, med farget trim. Droidens tresifrede tunge manipulatorer kan gripe de fleste reparasjonsverktøy, mens splayed føtter hjelper til med å stabilisere sitt lave tyngdepunkt og gir G2 ekstra stabilitet når det gjelder stort, tungt utstyr.",
+    "7": "Den måler 150 meter i lengde, og har to doble og fire enkle turbolasertårn, og har evnen til å nå en maksimal hastighet på 950 kph. Ifølge Luke Skywalker kan enkelte kamputstyrte CR90-skip utstyres med seks doble turbolasere. I stand til å bære en hel diplomatisk eskorte, har den en passasjerkapasitet i hundrevis. Selv om skipene ikke er bygget som hangarskip, kan tre RZ-1 A-wing interceptorer festes til dokkingsringene, noe som åpner for en liten eskorte. De tjener som ryggraden i den tidlige opprøret og Alliansen. Selv om det ikke er spesielt tungt bevæpnet, har CR90-tallet nok ildkraft til å ødelegge en Gozanti-klasse krysser ganske enkelt.",
+    "8": "74-Z Speeder Bike er i stand til å nå hastigheter opp til og utover fem hundre kilometer i timen, og har et flytak på tjuefem meter. 74-Zs er den militære varianten av den sivile 74-Y. De styres av styret mot fronten av kjøretøyet, og fotpedaler slynget under justeringshastighet og høyde. De svært manøvrerbare kjøretøyene er utstyrt med sensor- og kommunikasjonsenheter mellom styret, inkludert en komlink og en komlink-jamming enhet. Speederen er utstyrt med terrain-følende sensorer som knytter seg sammen med HUD i førerhjelmen. De er bevæpnet med en fremoverroterende blasterkanon for kamp.",
+    "9": "ETA-2 måler 5,47 meter i lengde, og er en svært manøvrerbar kamporientert starfighter og er raskere enn sin Aethersprite forgjenger, med tvillingionemotorer som gir en maksimal akselerasjon på 5 200G og en maks hastighet på 1 500 km/h. Eta-2 har vinger med øvre og nedre radiatorpaneler, S-folier, som åpnes for å kaste ut overflødig varme fra skipets motorer. Radiatorvingene åpnes først og fremst under intens kamp. Til forsvar inneholdt skipet to laserkanoner og to ionekanoner. I motsetning til laserkanoner, skyter skipets ionekanoner sprengninger av plasma som forårsaker midlertidige elektriske forstyrrelser til målet ved støt."
+  },
+  "title": {
+    "1": "3P0-ambassadør Olivier",
+    "10": "R3-serien Droid",
+    "11": "T-70 X-fløyen",
+    "12": "Y-Wing fighter",
+    "13": "Super taktisk Droid",
+    "2": "Dum-serien Droid",
+    "3": "2-1B Kirurgisk Droid",
+    "4": "IG-88B Droid",
+    "5": "Sphyrna korvett",
+    "6": "G2 Reparasjon Droid",
+    "7": "CR90-korvett",
+    "8": "74-Z Speeder Sykkel",
+    "9": "ETA-2 Interceptor"
+  }
+}
