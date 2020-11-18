@@ -44,8 +44,7 @@
     },
     "Home": {
         "welcomeMessage": "Welcome to Rebel Outfitters!",
-        // "welcomeSubtitle": "We provide everything you need to take on the Empire (and win).",  
-        "welcomeSubtitle": "Rebels for Biden, 2020!",
+        "welcomeSubtitle": "We provide everything you need to take on the Empire (and win). -- Rebels for Biden, 2020!",
         "symbolAlt": "Imperial Credit currency symbol"
     },
     "Browse": {
