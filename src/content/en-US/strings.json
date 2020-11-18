@@ -2,7 +2,7 @@
     "title": {
         "1": "3P0 Worrying Droid",
         "2": "DUM-series Droid",
-        "3": "2-1B Surgical Droid",
+        "3": "2-1B Doctor Droid",
         "4": "IG-88B Droid",
         "5": "Sphyrna Corvette",
         "6": "G2 Repair Droid",
@@ -44,7 +44,7 @@
     },
     "Home": {
         "welcomeMessage": "Welcome to Rebel Outfitters!",
-        "welcomeSubtitle": "We provide everything you need to take on the Empire (and win). -- Rebels for Biden, 2020!",
+        "welcomeSubtitle": "We provide everything you need to take on the Empire (and win)!",
         "symbolAlt": "Imperial Credit currency symbol"
     },
     "Browse": {
