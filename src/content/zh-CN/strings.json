@@ -1,6 +1,6 @@
 {
     "title": {
-    "1": "3P0 令人担忧的机器人",
+    "1": "3P0 令人担忧的机器人和金神",
     "2": "DUM系列机器人",
     "3": "2-1B手术机器人",
     "4": "IG-88B Droid",
@@ -44,7 +44,7 @@
     },
     "Home": {
     "welcomeMessage": "欢迎来到Rebel Outfitters！",
-    "welcomeSubtitle": "我们提供您在帝国（和胜利）上所需的一切。",
+    "welcomeSubtitle": "我们提供一切你需要采取帝国（和胜利）！",
     "symbolAlt": "Imperial Credit currency symbol"
     },
     "Browse": {
