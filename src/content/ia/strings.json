@@ -53,16 +53,21 @@
     "githubLogoAlt": "45.3206 GitHub Logo",
     "learnLabel": "45.3222 Learn More",
     "lingoLogoAlt": "45.3207 Lingoport Logo",
+    "localeDE": "45.3231 German - Germany",
     "localeEN": "45.3213 English - United States",
     "localeEO": "45.3218 Esperanto",
+    "localeES": "45.3230 Spanish - Spain",
     "localeFR": "45.3214 French - France",
+    "localeIA": "45.3234 Linguistic Reviewer",
+    "localeJA": "45.3232 Japanese - Japan",
     "localeLabel": "45.3212 Locale: ",
+    "localeNO": "45.3233 Norwegian - Norway",
     "localeSI": "45.3217 Sith",
     "localeYO": "45.3216 Yoda",
     "localeZH": "45.3215 Chinese - China",
     "versionBad": "45.3209 Non-i18n Compliant",
     "versionGood": "45.3210 I18n Compliant",
-    "versionIQA": "45.3211 InContext Translation",
+    "versionIQA": "45.3211 InContext",
     "versionLabel": "45.3208 Version: "
   },
   "Home": {
@@ -74,14 +79,14 @@
     "arrowAlt": "45.3154 Drop Down Arrow",
     "cartAlt": "45.3155 show cart",
     "greetingText": "45.3152 Hi Han",
-    "historyLink": "45.3153 ORDER HISTORY",
+    "historyLink": "45.3153 ORDERS HISTORY",
     "logoAlt": "45.3150 Rebel Outfitters Logo",
     "navLinkDroids": "45.3157 DROIDS",
     "navLinkHome": "45.3156 HOME",
     "navLinkVehicles": "45.3158 VEHICLES",
     "searchButtonLabel": "45.3149 search products",
     "searchIconAlt": "45.3151 search icon",
-    "searchPlaceholder": "45.3148 What are you looking for?"
+    "searchPlaceholder": "45.3148 What are you searching for?"
   },
   "OrderHistory": {
     "dateHeading": "45.3200 Date",
@@ -116,19 +121,20 @@
     "9": "45.3143 Measuring 5.47 meters in length, the ETA-2 is a highly maneuverable combat-oriented starfighter and is faster than its Aethersprite predecessor, with twin ion engines providing a maximum acceleration of 5,200G and a max speed of 1,500 kph. The Eta-2 features wings with upper and lower radiator panels, S-foils, that are opened to shed excess heat from the ship's engines. The radiator wings are primarily opened during intense combat. For defense, the ship featured two laser cannons and two ion cannons. Unlike laser cannons, the ship's ion cannons fire bursts of plasma that cause temporary electrical disruptions to their target upon impact."
   },
   "title": {
-    "1": "45.3122 3P0 ambassador",
+    "1": "45.3122 3P0 Ambassador",
     "10": "45.3131 R3-Series Droid",
     "11": "45.3132 T-70 X-Wing",
-    "12": "45.3133 Y-Wing Fighter",
+    "12": "45.3133 Y-Wing Galactic Fighter",
     "13": "45.3134 Super Tactical Droid",
-    "14": "45.3227 Fourteen",
+    "17": "45.3228 Prime Numbers are so cool",
+    "18": "45.3229 Guess that number!!",
     "2": "45.3123 DUM-series Droid",
     "3": "45.3124 2-1B Surgical Droid",
     "4": "45.3125 IG-88B Droid",
-    "5": "45.3126 Sphyrna",
+    "5": "45.3126 Sphyrna Corvette",
     "6": "45.3127 G2 Repair Droid",
     "7": "45.3128 CR90 Corvette",
-    "8": "45.3129 74-Z Speeder Bike",
-    "9": "45.3130 ETA-2 Fast Interceptor"
+    "8": "45.3129 74-Z Super Bike",
+    "9": "45.3130 ETA-2 Interceptor"
   }
 }
