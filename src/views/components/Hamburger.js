@@ -18,11 +18,14 @@ let Hamburger = {
         let versionIQA = i18n.getString("Hamburger", "versionIQA");
         let localeLabel = i18n.getString("Hamburger", "localeLabel");
         let localeEN = i18n.getString("Hamburger", "localeEN");
-        let localeFR = i18n.getString("Hamburger", "localeFR");
         let localeZH = i18n.getString("Hamburger", "localeZH");
-        let localeYO = i18n.getString("Hamburger", "localeYO");
-        let localeSI = i18n.getString("Hamburger", "localeSI");
+        let localeFR = i18n.getString("Hamburger", "localeFR");
+        let localeES = i18n.getString("Hamburger", "localeES");
+        let localeDE = i18n.getString("Hamburger", "localeDE");
+        let localeJA = i18n.getString("Hamburger", "localeJA");
+        let localeNO = i18n.getString("Hamburger", "localeNO");
         let localeEO = i18n.getString("Hamburger", "localeEO")
+        let localeIA = i18n.getString("Hamburger", "localeIA")
         let githubLabel = i18n.getString("Hamburger", "githubLabel");
         let dashLabel = i18n.getString("Hamburger", "dashLabel");
         let contactLabel = i18n.getString("Hamburger", "contactLabel");
@@ -43,11 +46,14 @@ let Hamburger = {
                 <label for="locale"><h3>${localeLabel}</h3></label>
                 <select id="locale" class="hamDrop">
                     <option value="en-US">${localeEN}</option>
-                    <option value="fr-FR">${localeFR}</option>
                     <option value="zh-CN">${localeZH}</option>
-                    <option value="yo">${localeYO}</option>
-                    <option value="si">${localeSI}</option>
+                    <option value="fr-FR">${localeFR}</option>
+                    <option value="de-DE">${localeDE}</option>
+                    <option value="ja-JP">${localeJA}</option>
+                    <option value="no-NO">${localeNO}</option>
+                    <option value="es-SP">${localeES}</option>                   
                     <option value="eo">${localeEO}</option>
+                    <option value="ia">${localeIA}</option>
                 </select>
             </div>
             <div class="githubLink outsideLink block">

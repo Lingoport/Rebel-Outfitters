@@ -40,7 +40,7 @@ const i18n = {
             <h4>${formatted}</h4>`;
         }
         //psuedo locale
-        else if(locale == 'eo') {
+        else if(locale == 'eo' || locale == 'ia') {
             return `<h4>&#8375;${convertCurrency(price)}</h4>`
         }
         //format using actual symbol and conventions if it's a real locale
@@ -67,7 +67,11 @@ const i18n = {
 var currencyMap = {
     'en-US': 'USD',
     'fr-FR': 'EUR',
-    'zh-CN': 'CNY'
+    'zh-CN': 'CNY',
+    'es-SP': 'EUR',
+    'de-DE': 'EUR',
+    'ja-JP': 'JPY',
+    'no-NO': 'NOK'
 };
 
 //function to perform rough conversion from galactic credits to real currencies
