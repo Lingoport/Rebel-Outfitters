@@ -20,4 +20,14 @@ A single page Vanilla JS web app to demonstrate Lingoport's capabilities.
        else if(locale == 'eo' || locale == 'ia') {
 </pre>
 
-* 
+* Edit <code>src/views/components/Hamburger.js</code> to add the locale variabless based on their i18n display names. For instance, Norwegian and 'ia' Linguistic reviewer:
+<pre>
+        let localeNO = i18n.getString("Hamburger", "localeNO");
+        let localeIA = i18n.getString("Hamburger", "localeIA")
+</pre>
+and
+<pre>
+               <option value="no-NO">${localeNO}</option>
+               <option value="ia">${localeIA}</option>
+</pre>
+
