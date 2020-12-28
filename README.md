@@ -25,9 +25,9 @@ A single page Vanilla JS web app to demonstrate Lingoport's capabilities.
         let localeNO = i18n.getString("Hamburger", "localeNO");
         let localeIA = i18n.getString("Hamburger", "localeIA")
 </pre>
-and
+and in the option menu section (click edit to see code, does not show up even with 'pre')
 <pre>
-               \<option value="no-NO"\>${localeNO}\</option\>
-               \<option value="ia"\>${localeIA}\</option\>
+               <option value="no-NO">${localeNO}\</option>
+               <option value="ia">${localeIA}\</option>
 </pre>
 
