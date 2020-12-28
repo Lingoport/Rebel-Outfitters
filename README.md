@@ -1,7 +1,7 @@
 # Rebel-Outfitters
 A single page Vanilla JS web app to demonstrate Lingoport's capabilities.
 
-# To add a locale (or more) to an 'i18n' or 'IQA' version
+## To add a locale (or more) to an 'i18n' or 'IQA' version
 * Edit <code>src/content/en-US/strings.json</code> and add the locale(s). For instance Norwegian, 'ia' (Linguistic Reviewer special case):
 <pre>
         "localeNO": "Norwegian - Norway",
@@ -18,6 +18,6 @@ A single page Vanilla JS web app to demonstrate Lingoport's capabilities.
 </pre>
 <pre>
        else if(locale == 'eo' || locale == 'ia') {
-            return `<h4>&#8375;${convertCurrency(price)}</h4>`
-        }
 </pre>
+
+* 
