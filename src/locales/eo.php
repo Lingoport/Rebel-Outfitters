@@ -1,0 +1,7 @@
+<?php
+
+$Definition['All Groups'] = '[Åļļ Ĝŕöûþš------------- П國カ내]';
+$Definition['Ask questions about the biggest family history conference in the world.'] = '[Åšķ ǫûéšţîöñš åƀöûţ ţĥé ƀîĝĝéšţ ƒåɱîļý ĥîšţöŕý çöñƒéŕéñçé îñ ţĥé ŵöŕļð.-------------- П國カ내]';
+$Definition['Dollar Parameters ${username} $username Groups'] = '[Ðöļļåŕ Þåŕåɱéţéŕš ${ûšéŕñåɱé} $ûšéŕñåɱé Ĝŕöûþš-------------------- П國カ내]';
+$Definition['Percent Parameters %{username} %username Groups'] = '[Ðöļļåŕ Þåŕåɱéţéŕš %{ûšéŕñåɱé} %ûšéŕñåɱé Ĝŕöûþš-------------------- П國カ내]';
+$Definition['Welcome to FamilySearch Community!'] = '[Ŵéļçöɱé ţö ƑåɱîļýŠéåŕçĥ Çöɱɱûñîţý!------------- П國カ내]';
