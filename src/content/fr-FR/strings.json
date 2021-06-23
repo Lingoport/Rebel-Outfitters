@@ -91,7 +91,7 @@
     "noItemMsg": "Aucun objet dans le chariot.",
     "deleteAlt": "Supprimer l'élément du chariot",
     "totalTitle": "Total : ",
-    "checkoutLabel": "Caisse",
+    "checkoutLabel": "PAIEMENTS",
     "closeAlt": "Fermer le chariot"
     },
     "OrderHistory": {
