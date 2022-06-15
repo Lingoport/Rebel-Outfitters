@@ -1,0 +1,1 @@
+xmlstarlet sel -t -m 'LRMIssues/results/result' -v '@file' -o ', ' -v '@reason' -o ', ' -v '@lineNum' -nl  /var/lib/jenkins/Lingoport_Data/LRM/Demo/reports/VXRail-Test/ResourceIssues.xml  > ~/VXRail-Issue-Line-Numbers
