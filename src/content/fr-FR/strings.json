@@ -12,7 +12,11 @@
     "10": "Droid série R3",
     "11": "T-70 X-Wing",
     "12": "Combattant Y-Wing",
-    "13": "Droid Super tactique"
+    "13": "Droid Super tactique",
+    "14": "Droïde 14",
+    "15": "Droïde 15",
+    "16": "Droïde 16"
+        
     },
     "desc": {
     "1": "Chaque droïde est équipé d’un SyntheTech AA-1 VerboBrain les rendant capables de stocker d’énormes quantités d’informations; l’espace mémoire supplémentaire est souvent utilisé pour conserver les modules de communication dans la mémoire active, ce qui permet d’éviter les retards importants lors de la recherche d’informations linguistiques à la mi-parcours. -Traduction. Un module de communication TranLang III leur permet de s'exprimer couramment dans plus de six millions de formes de communication. Ils possèdent également les compétences nécessaires pour analyser rapidement de nouvelles langues non enregistrées et les traduire en langues plus connues.",
