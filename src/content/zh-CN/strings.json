@@ -58,7 +58,7 @@
     "Checkout": {
     "checkoutTitle": "查看",
     "shipSectionLabel": "送货信息",
-    "firstNameLabel": "名字",
+    "firstNameLabel":"name",
     "lastNameLabel": "姓",
     "coordinatesLabel": "坐标",
     "coordinatesHolder": "0,0,0",
@@ -89,7 +89,7 @@
     "addToCartLabel": "添加到购物车"
     },
     "Cart": {
-    "cartTitle": "购物车",
+    "cartTitle":"购物篮",
     "noItemMsg": "购物车中没有商品。",
     "deleteAlt": "从购物车中删除商品",
     "totalTitle": "总： ",
