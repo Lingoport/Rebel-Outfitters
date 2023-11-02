@@ -89,7 +89,7 @@
     "addToCartLabel": "添加到购物车"
     },
     "Cart": {
-    "cartTitle":"购物篮",
+    "cartTitle":"买东西篮",
     "noItemMsg": "购物车中没有商品。",
     "deleteAlt": "从购物车中删除商品",
     "totalTitle": "总： ",
