@@ -48,21 +48,21 @@ let OrderHistory = {
 
         //add gremlin tooltips
         tippy('.orderHistoryLocaleMethod', {
-            content: '<div class="gremTitle">DATE/TIME FORMAT</div> The formatting for this date is hard-coded. <a href="https://sandbox.lingoport.com/project/issues?id=RebelOutfitters.DarkSide%3Ascan&issues=AWxTqPpbegrPcY7hHadv&open=AWxTqPpbegrPcY7hHadv" target="_blank">View Source</a> <a href="https://wiki.lingoport.com/Gremlins#Locale_Sensitive_Method_-_e.g._Date.2FTime_Format" target="_blank">View Details</a>',
+            content: '<div class="gremTitle">DATE/TIME FORMAT</div> The formatting for this date is hard-coded. <a href="https://github.com/Lingoport/Rebel-Outfitters/blob/DarkSide/src/views/classes/Order.js#L18" target="_blank">View Source</a> <a href="https://wiki.lingoport.com/Gremlins#Locale_Sensitive_Method_-_e.g._Date.2FTime_Format" target="_blank">View Details</a>',
             theme: 'custom',
             arrow: true,
             interactive: true
         });
 
         tippy('.orderHistoryFormat', {
-            content: '<div class="gremTitle">CURRENCY FORMAT</div> The formatting for this currency is hard-coded. <a href="https://sandbox.lingoport.com/project/issues?id=RebelOutfitters.DarkSide%3Ascan&issues=AWw_A8jrnik4oCHIT0UH&open=AWw_A8jrnik4oCHIT0UH" target="_blank">View Source</a> <a href="https://wiki.lingoport.com/Gremlins#Locale_Sensitive_Method_-_e.g._Currency_Format" target="_blank">View Details</a>',
+            content: '<div class="gremTitle">CURRENCY FORMAT</div> The formatting for this currency is hard-coded. <a href="https://github.com/Lingoport/Rebel-Outfitters/blob/DarkSide/src/app.js#L143" target="_blank">View Source</a> <a href="https://wiki.lingoport.com/Gremlins#Locale_Sensitive_Method_-_e.g._Currency_Format" target="_blank">View Details</a>',
             theme: 'custom',
             arrow: true,
             interactive: true
         });
 
         tippy('.orderHistoryEmbedded', {
-            content: `<div class="gremTitle">EMBEDDED STRING</div> This string is embedded in the source code. <a href="https://sandbox.lingoport.com/project/issues?id=RebelOutfitters.DarkSide%3Ascan&issues=AWxTqPpeegrPcY7hHad1&open=AWxTqPpeegrPcY7hHad1" target="_blank">View Source</a> <a href="https://wiki.lingoport.com/Gremlins#Embedded_Strings" target="_blank">View Details</a>`,
+            content: `<div class="gremTitle">EMBEDDED STRING</div> This string is embedded in the source code. <a href="https://github.com/Lingoport/Rebel-Outfitters/blob/DarkSide/src/views/classes/Order.js#L40" target="_blank">View Source</a> <a href="https://wiki.lingoport.com/Gremlins#Embedded_Strings" target="_blank">View Details</a>`,
             theme: 'custom',
             arrow: true,
             interactive: true

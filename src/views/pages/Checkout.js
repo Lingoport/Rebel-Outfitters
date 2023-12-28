@@ -180,14 +180,14 @@ let Checkout = {
 
         //add tooltips to gremlins
         tippy('.checkoutEmbedded', {
-            content: `<div class="gremTitle">EMBEDDED STRING</div> This string is embedded in the source code. <a href="https://sandbox.lingoport.com/project/issues?id=RebelOutfitters.DarkSide%3Ascan&issues=AWw_A8mlnik4oCHIT0Vl&open=AWw_A8mlnik4oCHIT0Vl" target="_blank">View Source</a> <a href="https://wiki.lingoport.com/Gremlins#Embedded_Strings" target="_blank">View Details</a>`,
+            content: `<div class="gremTitle">EMBEDDED STRING</div> This string is embedded in the source code. <a href="https://github.com/Lingoport/Rebel-Outfitters/blob/DarkSide/src/views/pages/Checkout.js#L17" target="_blank">View Source</a> <a href="https://wiki.lingoport.com/Gremlins#Embedded_Strings" target="_blank">View Details</a>`,
             theme: 'custom',
             arrow: true,
             interactive: true
         });
 
         tippy('.checkoutStaticFile', {
-            content: '<div class="gremTitle">STATIC FILE</div> This links to a static HTML file. <a href="https://sandbox.lingoport.com/project/issues?id=RebelOutfitters.DarkSide%3Ascan&issues=AWw_A8mqnik4oCHIT0V1&open=AWw_A8mqnik4oCHIT0V1" target="_blank">View Source</a> <a href="https://wiki.lingoport.com/Gremlins#Static_Files" target="_blank">View Details</a>',
+            content: '<div class="gremTitle">STATIC FILE</div> This links to a static HTML file. <a href="https://github.com/Lingoport/Rebel-Outfitters/blob/DarkSide/src/views/pages/Checkout.js#L114" target="_blank">View Source</a> <a href="https://wiki.lingoport.com/Gremlins#Static_Files" target="_blank">View Details</a>',
             theme: 'custom',
             arrow: true,
             interactive: true
