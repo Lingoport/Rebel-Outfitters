@@ -54,14 +54,14 @@ let Home = {
 
         //add tooltips to gremlins with links to the specific issue on dashboard and a general description on wiki
         tippy('.homeEmbedded', {
-            content: '<div class="gremTitle">EMBEDDED STRING</div> This string is embedded in the source code. <a href="https://sandbox.lingoport.com/project/issues?id=RebelOutfitters.DarkSide%3Ascan&issues=AWw_A8m6nik4oCHIT0V7&open=AWw_A8m6nik4oCHIT0V7" target="_blank">View Source</a> <a href="https://wiki.lingoport.com/Gremlins#Embedded_Strings" target="_blank">View Details</a>',
+            content: '<div class="gremTitle">EMBEDDED STRING</div> This string is embedded in the source code. <a href="https://github.com/Lingoport/Rebel-Outfitters/blob/DarkSide/src/views/pages/Home.js#L7" target="_blank">View Source</a> <a href="https://wiki.lingoport.com/Gremlins#Embedded_Strings" target="_blank">View Details</a>',
             theme: 'custom',
             arrow: true,
             interactive: true
         });
 
         tippy('.homeFormat', {
-            content: '<div class="gremTitle">CURRENCY FORMAT</div> The formatting for this currency is hard-coded. <a href="https://sandbox.lingoport.com/project/issues?id=RebelOutfitters.DarkSide%3Ascan&issues=AWw_A8jrnik4oCHIT0UH&open=AWw_A8jrnik4oCHIT0UH" target="_blank">View Source</a> <a href="https://wiki.lingoport.com/Gremlins#Locale_Sensitive_Method_-_e.g._Currency_Format" target="_blank">View Details</a>',
+            content: '<div class="gremTitle">CURRENCY FORMAT</div> The formatting for this currency is hard-coded. <a href="https://github.com/Lingoport/Rebel-Outfitters/blob/DarkSide/src/app.js#L143" target="_blank">View Source</a> <a href="https://wiki.lingoport.com/Gremlins#Locale_Sensitive_Method_-_e.g._Currency_Format" target="_blank">View Details</a>',
             theme: 'custom',
             arrow: true,
             interactive: true
