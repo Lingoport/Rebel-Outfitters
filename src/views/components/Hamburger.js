@@ -8,7 +8,7 @@ let lingoLogoAlt = "Lingoport Logo";
 let versionLabel = "Version: ";
 let versionOptions = ["Non-i18n Compliant", "I18n Compliant", "InContext Translation"];
 let githubLabel = "View Source";
-let dashLabel = "View Lingoport Dashboard";
+let dashLabel = "View Command Center";
 let contactLabel = "Contact Us";
 let learnLabel = "Learn More";
 
@@ -34,7 +34,7 @@ let Hamburger = {
                 
             </div>
             <div class="dashLink outsideLink block">
-            <a target="_blank" href="https://sandbox.lingoport.com/project/extension/lingoport/overview_page?id=RebelOutfitters.DarkSide%3Ascan&qualifier=TRK" class="inline" rel="noreferrer">
+            <a target="_blank" href="https://poc.lingoport.io/command-center/project/globalyzer/9" class="inline" rel="noreferrer">
                     <img src="img/lingoport_thumb.png" class="logoThumb" alt="${lingoLogoAlt}">
                     ${dashLabel}</a>
                 
