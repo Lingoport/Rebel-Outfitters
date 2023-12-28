@@ -8,7 +8,7 @@ let lingoLogoAlt = "Lingoport Logo";
 let versionLabel = "Version: ";
 let versionOptions = ["Non-i18n Compliant", "I18n Compliant", "InContext Translation"];
 let githubLabel = "View Source";
-let dashLabel = "View Command Center";
+let dashLabel = "Command Center (demo/demo)";
 let contactLabel = "Contact Us";
 let learnLabel = "Learn More";
 
