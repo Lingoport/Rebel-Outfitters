@@ -45,7 +45,7 @@
     </scan>
 
     <scan>
-      <scan-name>JS Date Time RS</scan-name>
+      <scan-name>JS Date Time</scan-name>
       <ruleset-name>JS DT</ruleset-name>
       <ruleset-owner>demo@lingoport.com</ruleset-owner>
       <use-machine-learning>true</use-machine-learning>
