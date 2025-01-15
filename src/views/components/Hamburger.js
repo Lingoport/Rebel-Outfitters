@@ -18,11 +18,20 @@ let Hamburger = {
         let versionIQA = i18n.getString("Hamburger", "versionIQA");
         let localeLabel = i18n.getString("Hamburger", "localeLabel");
         let localeEN = i18n.getString("Hamburger", "localeEN");
-        let localeFR = i18n.getString("Hamburger", "localeFR");
         let localeZH = i18n.getString("Hamburger", "localeZH");
-        let localeYO = i18n.getString("Hamburger", "localeYO");
-        let localeSI = i18n.getString("Hamburger", "localeSI");
+        let localeES = i18n.getString("Hamburger", "localeES");
+        let localeFR = i18n.getString("Hamburger", "localeFR");
+        let localeDE = i18n.getString("Hamburger", "localeDE");
+        let localeIT = i18n.getString("Hamburger", "localeIT");
+        let localeJA = i18n.getString("Hamburger", "localeJA");
+        let localeKO = i18n.getString("Hamburger", "localeKO");
+        let localeNO = i18n.getString("Hamburger", "localeNO");
+        let localePL = i18n.getString("Hamburger", "localePL");
+        let localePT = i18n.getString("Hamburger", "localePT");
         let localeEO = i18n.getString("Hamburger", "localeEO");
+        let localeRU = i18n.getString("Hamburger", "localeRU");
+        let localeLA = i18n.getString("Hamburger", "localeLA");
+        let localeIA = i18n.getString("Hamburger", "localeIA");
         let githubLabel = i18n.getString("Hamburger", "githubLabel");
         let dashLabel = i18n.getString("Hamburger", "dashLabel");
         let contactLabel = i18n.getString("Hamburger", "contactLabel");
@@ -34,8 +43,8 @@ let Hamburger = {
             <div class="start">
                 <label for="version"><h3>${versionLabel}</h3></label>
                 <select id="version" class="hamDrop">
-                    <option value="good" disabled selected hidden>${versionGood}</option>
-                    <option value="IQA">${versionIQA}</option>
+                    <option value="IQA" disabled selected hidden>${versionIQA}</option>
+                    <option value="good">${versionGood}</option>
                     <option value="bad">${versionBad}</option>
                 </select>
             </div>
@@ -43,21 +52,29 @@ let Hamburger = {
                 <label for="locale"><h3>${localeLabel}</h3></label>
                 <select id="locale" class="hamDrop">
                     <option value="en-US">${localeEN}</option>
-                    <option value="fr-FR">${localeFR}</option>
                     <option value="zh-CN">${localeZH}</option>
-                    <option value="yo">${localeYO}</option>
-                    <option value="si">${localeSI}</option>
+                    <option value="fr-FR">${localeFR}</option>
+                    <option value="de-DE">${localeDE}</option>
+                    <option value="ja-JP">${localeJA}</option>
+                    <option value="it-IT">${localeIT}</option>
+                    <option value="ko-KO">${localeKO}</option>
+                    <option value="pl-PL">${localePL}</option>
+                    <option value="pt-PT">${localePT}</option>
+                    <option value="no-NO">${localeNO}</option>
+                    <option value="es-SP">${localeES}</option> 
+                    <option value="la">${localeIA}</option>
                     <option value="eo">${localeEO}</option>
+                    <option value="ia">${localeLA}</option>
                 </select>
             </div>
             <div class="githubLink outsideLink block">
-            <a target="_blank" rel="noreferrer" href="https://github.com/Lingoport/Rebel-Outfitters/tree/i18n">
+            <a target="_blank" rel="noreferrer" href="https://github.com/Lingoport/Rebel-Outfitters/tree/IQA">
                     <img src="img/github_logo.png" class="logoThumb" alt="${githubLogoAlt}">
                     ${githubLabel}</a>
                 
             </div>
             <div class="dashLink outsideLink block">
-            <a target="_blank" href="https://poc.lingoport.io/command-center/project/overview/10" class="inline" rel="noreferrer">
+            <a target="_blank" href="https://sandbox.lingoport.com/dashboard?id=RebelOutfitters.IQA:scan&name=Lingoport%20Overview" class="inline" rel="noreferrer">
                     <img src="img/lingoport_thumb.png" class="logoThumb" alt="${lingoLogoAlt}">
                     ${dashLabel}</a>
                 
@@ -112,8 +129,8 @@ var switchVersion = (e) => {
 
     let selectedOption = event.target.value;
 
-    if (selectedOption == "IQA") { //$NON-NLS-L$
-        window.location.href = `http://rebeloutfitters.lingoport.com/RebelOutfitters.IQA/${parsedURL}`;
+    if (selectedOption == "good") { //$NON-NLS-L$
+        window.location.href = `http://rebeloutfitters.lingoport.com/RebelOutfitters.i18n/${parsedURL}`;
     }
     else if (selectedOption == "bad") { //$NON-NLS-L$
         window.location.href = `http://rebeloutfitters.lingoport.com/RebelOutfitters.DarkSide/${parsedURL}`;
