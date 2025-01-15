@@ -1,0 +1,145 @@
+{
+    "title": {
+    "1": "3P0",
+    "2": "DUM-sarjan Droid",
+    "3": "2-1B Aivokirurgi Droid",
+    "4": "IG-88B Droid",
+    "5": "Sfyrna Corvette",
+    "6": "G2-mekaanikko Droid",
+    "7": "CR90 Corvette",
+    "8": "74-Z Super Bike",
+    "9": "ETA-2-torjuntahävittäjä",
+    "10": "R3-sarjan droidi",
+    "11": "T-70 X-siipi",
+    "12": "Y-siipinen galaktinen hävittäjä",
+    "13": "Supertaktinen droidi",
+    "17": "Prime Numerot ovat niin hienoja",
+    "18": "Arvaa tuo numero!"
+    },
+    "desc": {
+    "1": "Tämä droidi on varustettu SyntheTech AA-1 VerboBrain, joten ne pystyvät tallentamaan valtavia määriä tietoa. Lisämuistitilaa käytetään usein pitämään viestintämoduulit aktiivisessa muistissa, jotta pitkiä viiveitä voitaisiin välttää samalla, kun etsitään kielellistä tietoa puolivälissä käännös. TranLang III -viestintämoduulin avulla ne voivat sujuvasti käyttää yli kuusi miljoonaa viestintämuotoa. Heillä on myös tarvittavat taidot analysoida nopeasti uusia rekisteröimättömiä kieliä ja kääntää ne tunnetuimmille kielille.",
+    "2": "Suunniteltu ylläpitoon podracers, kuoppa droidit ovat edullisia, kestäviä korjausdroideja. Pit droidit ovat 1,19 metrin korkeudella, mutta niillä on kyky taittaa kompaktiin muotoon, kun niitä ei käytetä. Tätä ominaisuutta voidaan vaihtaa napauttamalla nenäänsä.",
+    "3": "2-1B-droidimalli on erittäin edistyksellinen ja älykäs, sillä sen ohjelmointia edistetään entisestään Rhinnal State Medical Academyn galaksin huippulääkäreillä, jotka integroivat myös heuristisia prosessoreita. 2-1B-droidien hyödyllisin ominaisuus on helppokäyttöisyys, jolla omistajat voivat päivittää ohjelmointiaan ja lisäkkeitään. 2-1B-droidi voi helposti tulla neurokirurgian, jalkaterapia, lastentautien, kyberneettisen raajan korvaamisen ja ulkomaalaisen biologian erikoislääkäri, jolla on matka sertifioituun palvelukeskukseen.",
+    "4": "Kromisotadroidi, IG-88, seisoo 1,96 metriä korkeudessa. Hänen vakaa tavoite, sekä hänen kyky seurata tavoitteita kehittyneillä antureilla, jotka rengas päätään ja anna hänen nähdä kaikkiin suuntiin, ansaitsee hänelle suurta menestystä. Näihin antureihin kuuluu useita punaisia fotoreseptoreita, lämpöanturi, ja äänianturi IG-88 on myös vokooderi pään tyvessä. Hänen vartalo pystyy täysin pyörimään taistelukentällä, jolloin hän voi räjäyttää vihollisia kaikilla puolilla. Hänen kova metallirunko antaa hänelle mahdollisuuden selvitä useimmat hyökkäykset ilman vaurioita ja sisältää haponkestäviä servojohtoja.",
+    "5": "Alkuperäiseen Sphyrna-rakenteeseen on lisätty useita uusia ominaisuuksia, mukaan lukien kaksi ylimääräistä moduulia, jotka on asennettu aluksen satamaan ja tyyrpuuriin, kuusi poistumiskapselia lastiruuvan tilalle ja neljäs alivaloasema, joka on asennettu ensisijaisen kolmen päälle, mikä antaa sille tarpeeksi virtaa liikuttamaan vammaista Star Destroyer. 315 metriä pitkä ja suurin kiihtyvyys 900 kilometriä tunnissa. Varustettu hyper-käyttöjärjestelmällä.",
+    "6": "Toisen asteen G2-korjausdroidi on tarkoitettu avustamaan laivojen korjauksissa, ja se on korkeudeltaan 0,8 metriä. Se on myös kyykky, jossa on laaja, pohja-raskas asento, joka pakottaa sen vaeltamaan kävellessään. Nämä piirteet yhdistettynä sen pitkään, moniniveliseen kaulaan ja laaja-alaisiin, painoa jakaviin jalkoihin, ansaitsevat sille lempinimen ”hanhi droidi”. Jokaisessa G2-yksikössä on riisuttu, hopea-ja messinki-värinen luurankokehys, jossa on paljaat liitokset ja johdotus, värillinen leikkaus. Droidin kolminumeroiset raskaat manipulaattorit voivat tarttua useimpiin korjaustyökaluihin, kun taas leikattuja jalkoja avustetaan sen matalan painopisteen vakauttamisessa ja antavat G2:lle lisävakauden suurten raskaiden laitteiden kanssa.",
+    "7": "Mittaus 150 metriä pitkä, se sisältää kaksi dual-ja neljä yksittäistä turbolaser torneineen, ja on kyky saavuttaa suurin nopeus 950 kph. Luke Skywalkerin mukaan jotkut taisteluvarustetut CR90-alukset voidaan varustaa kuudella kaksoisturbolaserilla. Se kykenee kuljettamaan kokonaisen diplomaattisen saattajan, sillä on matkustajakapasiteetti sadoissa. Vaikka aluksia ei rakenneta kuljetusaluksiksi, telakointirenkaisiin voidaan kiinnittää kolme RZ-1 A-siipistä torjuntahävittäjää, mikä mahdollistaa pienen saattajan. Ne toimivat varhaisen kapinan ja liittouman selkärankana. Vaikka CR90:t eivät ole erityisen raskaasti aseistettuja, niillä on tarpeeksi tulivoimaa tuhotakseen Gozanti-luokan risteilijän melko helposti.",
+    "8": "74-Z Speeder Bike pystyy saavuttamaan nopeudet jopa viisisataa kilometriä tunnissa, ja sen lentokatto on kaksikymmentäviisi metriä. 74-Zs ovat siviilien 74-Y sotilaallinen variantti. Niitä ohjataan ohjaustangolla, joka sijaitsee ajoneuvon etuosaa kohti, ja jalkapolkimet slung alla säätävät nopeutta ja korkeutta. Erittäin ohjattavissa olevat ajoneuvot on varustettu ohjaustangon välissä sijaitsevilla anturi- ja viestintälaitteilla, mukaan lukien komlinkki ja komlinkkihäirintälaite. Speeder on varustettu maanraiinia seuraavilla antureilla, jotka yhdistyvät kuljettajan kypärän HUD: n kanssa. He ovat aseistautuneet eteenpäin pyörivällä blaster-tykillä taisteluun.",
+    "9": "Pituudeltaan 5,47 metriä mittaava ETA-2 on erittäin ohjattava taistelupainotteinen tähtihävittäjä ja se on nopeampi kuin edeltäjänsä Aethersprite. Kaksoisionimoottorit tarjoavat maksimikiihtyvyyden 5 200G ja maksiminopeus 1 500 kph. Eta-2:ssa on siivet, joissa on ylemmät ja alemmat jäähdytinpaneelit, S-kalvot, jotka avautuvat ylimääräisen lämmön poistamiseksi aluksen moottoreista. Jäähdyttimen siivet avataan ensisijaisesti intensiivisen taistelun aikana. Puolustusta varten aluksella oli kaksi lasertykkiä ja kaksi ionitykkiä. Toisin kuin lasertykit, aluksen ionitykit ampuvat plasman purkauksia, jotka aiheuttavat tilapäisiä sähköhäiriöitä kohteeseensa törmäyksessä.",
+    "10": "R3-sarjan astromech-droidissa on paljon samaa laitteistoa kuin edeltäjänsä, R2-yksikkö. Siitä puuttuu vain aikaisemman droidin laajennettavissa oleva videotunnistin. R3:n alusta on suurelta osin lieriömäinen. Se esiintyy pystyputkena, jonka tyvessä on lyhyt, katkaistu kartio. Droidin pystyssä pitäminen on kaksi kapeaa jalkaa, joista jokainen päättyy puolisuunnikkaan prismojen muotoiseen puristimaan jalkaan. Kolmas jalka sijaitsee droidirungon sisällä ja sitä voitaisiin tarvittaessa laajentaa, jotta vakaus olisi suurempi. Laitteen rakenne on kestävä, pyörivä, plastex tai läpinäkyvä kupoli. Astromech on suljettu, jotta se mahdollistaa toimivuuden tilan tyhjiössä.",
+    "11": "T-70 X-siipinen tähtihävittäjä on ristinmuotoinen tähtihävittäjä, jonka pituus on 12,48 metriä. Sen maksimikapasiteetti on yksi lentäjä ja pohjalle ladattu astromech-droidi. Se sopii pistorasiaan ja se voidaan konfiguroida vaihtelevasti eri malleihin. Droidi voi tarvittaessa lentää tähtihävittäjää ilman lentäjän apua, ja voi tehdä sen jopa etänä. Aluksen kohdetietokone, lennonohjaus ja muut olennaiset ohjaamokojeet sijaitsevat panssaroidun ohjaamomoduulin sisällä, jonka alla irrotettava nestejäähdytteinen lentotietokone avustaa ohjaajaa edelleen laivapohjaisissa toiminnoissa. Aluksen ”nokan” sisällä on tietokoneelle pääsyä ja varastointia varten käytettäviä käyttöpaneeleja sekä apugeneraattori ja varastointialue, jota tyypillisesti käytetään selviytymispyydysten tallentamiseen. Pieni anturiikkuna merkitsee alusten ensisijaisen anturijärjestelmän sijainnin noseconin kärjessä, joka sijaitsee hätämajakan takana. Lentäjän takana sisäänrakennettu elämää ylläpitävä järjestelmä mahdollistaa asukkaan hengittämisen hapekkaassa ilmakehässä.",
+    "12": "Tunnetaan hellästi nimellä ”toiveluu” Rebel Alliancen ja Uuden tasavallan lentäjille, Y-siipinen tähtihävittäjä otetaan käyttöön taistelija-pommittajana, suunniteltu taistelemaan tiensä tavoitteeseensa, toimittaa hyötykuormansa korkeita räjähteitä, ja taistella tiensä ulos uudelleen. Sen aseisiin kuuluu kaksi lasertykkiä, kaksi ionitykkiä, ja kaksi protonitorpedonheittimiä. Astromech-droidi, kuten R2-yksikkö, voidaan kytkeä ohjaamon alla olevaan pistorasiaan toimimaan perämiehenä ja hallitsemaan aluksen erilaisia järjestelmiä.",
+    "13": "Aika hyvä droidi hyökkäysten koordinointiin. Ei hyvä taistelemaan, vain hyvä suunnittelemaan."
+    },
+    "Navbar": {
+    "searchPlaceholder": "Mitä etsit?",
+    "searchButtonLabel": "hae tuotteita",
+    "logoAlt": "Kapinallisten Outfitters Logo",
+    "searchIconAlt": "hakukuvake",
+    "greetingText": "Hei, Han",
+    "historyLink": "TILAUSTEN HISTORIA",
+    "arrowAlt": "Pudotusnuoli",
+    "cartAlt": "näytä ostoskori",
+    "navLinkHome": "KOTI",
+    "navLinkDroids": "DROIDEJA",
+    "navLinkVehicles": "AJONEUVOJA"
+    },
+    "Home": {
+    "welcomeMessage": "Tervetuloa Rebel Outfitters!",
+    "welcomeSubtitle": "Tarjoamme kaiken, mitä tarvitset valtakuntaan (ja murskata ne).",
+    "symbolAlt": "Imperial Credit valuuttasymboli"
+    },
+    "Browse": {
+    "droidTitle": "Kaikki droidit",
+    "vehicleTitle": "Kaikki ajoneuvot"
+    },
+    "Checkout": {
+    "checkoutTitle": "Kassalle",
+    "shipSectionLabel": "Toimitustiedot",
+    "firstNameLabel": "Etunimi",
+    "lastNameLabel": "Sukunimi",
+    "coordinatesLabel": "Koordinaatit",
+    "coordinatesHolder": "0,0,0",
+    "sectorLabel": "Ala/kvadrantti",
+    "methodLabel": "Toimitusmenetelmä",
+    "shipLightspeed": "Valonopeus",
+    "shipOvernight": "Yön yli",
+    "shipStandard": "Vakio",
+    "paySectionLabel": "Maksu",
+    "payNameLabel": "Nimi kortissa",
+    "payNameHolder": "Ensimmäinen viimeinen",
+    "accountLabel": "Imperiumin luotonumero",
+    "accountHolder": "1234567-9876-00",
+    "securityLabel": "Suojauskoodi",
+    "securityHolder": "123456",
+    "expDateLabel": "Vanhentumispäivä",
+    "cartTitle": "Ostoskori",
+    "deleteAlt": "poista tuote ostoskorista",
+    "totalLabel": "Yhteensä: ",
+    "orderLabel": "PAIKKA JÄRJESTYS",
+    "termsStatement": "Olen lukenut ja hyväksyn käyttöehdot",
+    "termsLink": "(Näkymä)",
+    "successMessage": "Tilaus onnistuneesti!",
+    "noItemMessage": "Lisää kohteita ostoskoriin kassalle."
+    },
+    "ProductShow": {
+    "qtyLabel": "Määrä: ",
+    "addToCartLabel": "LISÄÄ OSTOSKORIIN"
+    },
+    "Cart": {
+    "cartTitle": "Ostoskori",
+    "noItemMsg": "Ei tuotteita ostoskorissa.",
+    "deleteAlt": "Poista tuote ostoskorista",
+    "totalTitle": "Yhteensä: ",
+    "checkoutLabel": "KASSALLE",
+    "closeAlt": "Sulje ostoskori"
+    },
+    "OrderHistory": {
+    "historyTitle": "Tilaushistoria",
+    "dateHeading": "Treffi",
+    "numberHeading": "Tilausnumero",
+    "totalHeading": "Yhteensä",
+    "statusHeading": "Tila"
+    },
+    "Error404": {
+    "errorMessage": "404 Virhe: Sivua ei löytynyt."
+    },
+    "Bottombar": {
+    "menuAlt": "avaa sivupalkin valikko"
+    },
+    "Hamburger": {
+    "githubLogoAlt": "GitHubin logo",
+    "lingoLogoAlt": "Lingoport-logo",
+    "versionLabel": "Versio: ",
+    "versionBad": "Ei-I18n-yhteensopiva",
+    "versionGood": "i18n-yhteensopiva",
+    "versionIQA": "InContext",
+    "localeLabel": "Paikkakakaala: ",
+    "localeEN": "Finnish - United States",
+    "localeFR": "Ranska - Ranska",
+    "localeZH": "Kiina - Kiina",
+    "localeES": "Espanja - Espanja",
+    "localeDE": "Saksa - Saksa",
+    "localeJA": "japani - Japani",
+    "localeRU": "Venäjä - Venäjä",
+    "localeIT": "Italia - Italia",
+    "localeKO": "Korea - Korea",
+    "localePL": "Puola - Puola",
+    "localePT": "Portugali - Portugali",
+    "localeNO": "Norja - Norja",
+    "localeYO": "Yoda",
+    "localeSI": "Sith",
+    "localeEO": "Esperanto",
+    "localeIA": "Kielikatselija",
+    "githubLabel": "Näytä lähde",
+    "dashLabel": "Näytä Lingoport Dashboard",
+    "contactLabel": "Ota yhteyttä",
+    "learnLabel": "Lue lisää"
+    },
+    "Order": {
+    "statusProcessing": "Käsittely",
+    "statusShipped": "Toimitettu",
+    "statusDelivered": "Toimitettu"
+    },
+  "Special": "Erityinen"
+}

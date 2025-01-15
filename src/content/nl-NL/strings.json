@@ -1,0 +1,144 @@
+{
+    "title": {
+    "1": "Context P30",
+    "2": "Droid uit de DUM-serie",
+    "3": "2-1B Hersenchirurg Droid",
+    "4": "IG-88B Droid",
+    "5": "Sphyrna Corvette",
+    "6": "G2 Mechanic Droid",
+    "7": "CR90 Corvette",
+    "8": "Superfiets 74-Z",
+    "9": "ETA-2 Interceptor",
+    "10": "Droid uit de R3-serie",
+    "11": "T-70 X-Wing",
+    "12": "Galactische gevechtsvliegtuig met Y-vleugel",
+    "13": "Super tactische droid"
+    },
+    "desc": {
+    "1": "Deze droid is uitgerust met een SyntheTech AA-1 VerboBrain waardoor ze enorme hoeveelheden informatie kunnen opslaan. De extra geheugenruimte wordt vaak gebruikt om communicatiemodules in het actieve geheugen te houden, zodat lange vertragingen kunnen worden voorkomen bij het zoeken naar taalkundige informatie halverwege de vertaling. Met een TranLang III-communicatiemodule kunnen ze vloeiend meer dan zes miljoen vormen van communicatie beheersen. Ze beschikken ook over de vaardigheden die nodig zijn om snel nieuwe niet-geregistreerde talen te analyseren en te vertalen naar bekendere talen.",
+    "2": "Pit droids zijn ontworpen voor het onderhoud van podracers en zijn betaalbare, duurzame reparatiedroids. Pit droids staan op een hoogte van 1,19 meter, maar kunnen worden opgevouwen tot een compacte vorm wanneer ze niet worden gebruikt. Deze functie kan worden ingeschakeld door op hun neus te tikken.",
+    "3": "Het 2-1B droid-model is zeer geavanceerd en intelligent en de programmering is verder ontwikkeld door enkele van de beste artsen in de Melkweg van de Rhinnal State Medical Academy, die ook heuristische processors integreren. Het handigste kenmerk van de 2-1B-droids is het gemak waarmee eigenaren hun programmering en appendages kunnen bijwerken. Een 2-1B-droid kan gemakkelijk een specialist worden in neurochirurgie, podotherapie, kindergeneeskunde, cybernetische ledemaatvervanging en buitenaardse biologie door naar een gecertificeerd servicecentrum te gaan.",
+    "4": "De IG-88, een gehavende chromen oorlogsdroid, is 1,96 meter hoog. Zijn constante doel en zijn vermogen om doelen te volgen met geavanceerde sensoren die zijn hoofd laten rinkelen en hem in staat stellen om in alle richtingen te kijken, leveren hem veel succes op. Deze sensoren bevatten meerdere rode fotoreceptoren, een warmtesensor en een geluidssensor IG-88 heeft ook een vocoder aan de basis van zijn hoofd. Zijn romp kan volledig draaien op het slagveld, waardoor hij vijanden aan alle kanten kan neerschieten. Dankzij zijn stevige metalen behuizing overleeft hij de meeste aanvallen zonder schade op te lopen en is hij voorzien van zuurbestendige servokabels.",
+    "5": "Er zijn verschillende nieuwe functies toegevoegd aan de originele Sphyrna-structuur, waaronder twee extra modules die aan bakboord en stuurboord van het vaartuig zijn gemonteerd, zes ontsnappingscapsules in plaats van de laadruimte en een vierde sublight drive die bovenop de primaire drie is gemonteerd, waardoor het voldoende vermogen heeft om in zijn eentje een uitgeschakelde Star Destroyer te verplaatsen. 315 meter lang met een maximale acceleratie van 900 kilometer per uur. Uitgerust met een hyperaandrijfsysteem.",
+    "6": "De tweedegraads G2-reparatiedroid is bedoeld om te helpen bij reparaties aan boord en is klein van gestalte en is 0,8 meter hoog. Het is ook gehurkt, met een brede, aan de onderkant zware houding waardoor hij tijdens het lopen moet waggelen. Deze eigenschappen, gecombineerd met zijn lange nek met meerdere gewrichten en ver uit elkaar geplaatste, gewichtsverdelende voeten, leveren hem de bijnaam 'ganzendroid' op. Elke G2-eenheid heeft een uitgekleed, zilver- en messingkleurig skeletframe met zichtbare verbindingen en bedrading, met een gekleurde rand. De driecijferige zware manipulators van de droid kunnen de meeste reparatiegereedschappen vastpakken, terwijl gespreide voeten helpen om het lage zwaartepunt te stabiliseren en de G2 extra stabiliteit geven bij het omgaan met grote, zware apparatuur.",
+    "7": "Met een lengte van 150 meter beschikt hij over twee dubbele en vier enkele turbolasertorentjes en kan hij een maximale snelheid van 950 km/u bereiken. Volgens Luke Skywalker kunnen sommige CR90-schepen met gevechtsuitrusting worden uitgerust met zes dubbele turbolasers. Het kan een volledige diplomatieke escorte vervoeren en heeft een passagierscapaciteit van honderden. Hoewel de schepen niet als vliegdekschepen zijn gebouwd, kunnen er drie RZ-1 A-wing interceptors aan de dokringen worden bevestigd, waardoor een kleine escorte mogelijk is. Ze vormen de ruggengraat van de vroege opstand en de Alliantie. Hoewel ze niet bijzonder zwaar bewapend zijn, beschikken CR90's over voldoende voorwaartse vuurkracht om een cruiser van de Gozanti-klasse vrij gemakkelijk te vernietigen.",
+    "8": "De 74-Z Speeder Bike kan snelheden bereiken tot en boven vijfhonderd kilometer per uur en heeft een vliegplafond van vijfentwintig meter. 74-Z's zijn de militaire variant van de civiele 74-Y. Ze worden bediend met een stuur dat zich aan de voorkant van het voertuig bevindt, en de voetpedalen die eronder zijn gehangen, passen de snelheid en hoogte aan. De zeer wendbare voertuigen zijn uitgerust met sensor- en communicatieapparatuur die zich tussen het stuur bevinden, waaronder een comlink- en een comlink-jamming-apparaat. De speeder is uitgerust met terreinvolgende sensoren die verbinding maken met de HUD in de bestuurdershelm. Ze zijn bewapend met een naar voren draaiend blasterkanon voor de strijd.",
+    "9": "Met een lengte van 5,47 meter is de ETA-2 een zeer wendbare gevechtsgerichte starfighter die sneller is dan zijn Aethersprite-voorganger, met twee-ionenmotoren die zorgen voor een maximale acceleratie van 5.200 G en een maximale snelheid van 1.500 km/u. De Eta-2 heeft vleugels met radiatorpanelen aan de boven- en onderkant, S-folies, die worden geopend om overtollige warmte van de scheepsmotoren af te voeren. De radiatorvleugels worden voornamelijk geopend tijdens intense gevechten. Ter verdediging had het schip twee laserkanonnen en twee ionenkanonnen. In tegenstelling tot laserkanonnen vuren de ionenkanonnen van het schip plasma-uitbarstingen af die bij een botsing tijdelijke elektrische storingen op hun doel veroorzaken.",
+    "10": "De astromech droid uit de R3-serie beschikt over veel van dezelfde hardware als zijn voorganger, de R2-eenheid, waarbij alleen de uitschuifbare videosensor van de eerdere droid ontbreekt. Het chassis van de R3 is grotendeels cilindrisch en ziet eruit als een rechtopstaande buis met een korte, afgeknotte kegel aan de basis. Om de droid rechtop te houden, zijn er twee smalle poten, die elk eindigen in een voet met een profiel in de vorm van trapeziumvormige prisma's. Een derde been bevindt zich in het lichaam van de droid en kan indien nodig worden verlengd om meer stabiliteit te bieden. Het ontwerp van de unit wordt afgedekt door een stevige, roterende koepel van kunststof of transparant staal. De astromech is verzegeld om functionaliteit in het vacuüm van de ruimte mogelijk te maken.",
+    "11": "De T-70 X-wing starfighter is een kruisvormige starfighter met een lengte van 12,48 meter met een maximale capaciteit van een enkele piloot en een astromech-droid met bodembelasting, die in een stopcontact past en variabel kan worden geconfigureerd voor verschillende modellen. Indien nodig kan de droid de starfighter besturen zonder hulp van een piloot, en zelfs op afstand. De doelcomputer van het schip, de vluchtbedieningen en andere essentiële stuurinstrumenten bevinden zich in een gepantserde cockpitmodule, waaronder een verwijderbare vloeistofgekoelde vluchtcomputer de piloot verder helpt bij operaties op schepen. In de 'neus' van het schip bevinden zich toegangspanelen voor computertoegang en -opslag, samen met een hulpgenerator en een opslagruimte die doorgaans wordt gebruikt voor het opbergen van overlevingsuitrusting. Een klein sensorvenster markeert de locatie van de primaire sensorreeks van het schip helemaal aan het uiteinde van de neuskegel, achter een noodbaken. Achter de piloot zorgt een ingebouwd levensondersteuningssysteem ervoor dat de inzittende een zuurstofrijke atmosfeer kan inademen.",
+    "12": "De Y-wing starfighter, die door de piloten van de Rebel Alliance en de New Republic liefkozend een 'draagarm' wordt genoemd, wordt ingezet als jachtbommenwerper, ontworpen om zich een weg te banen naar zijn doel, zijn lading explosieven af te leveren en zich weer een weg naar buiten te vechten. De wapens omvatten twee laserkanonnen, twee ionenkanonnen en twee protontorpedolanceerders. Een astromech-droid, zoals een R2-eenheid, kan worden aangesloten op een stopcontact onder de cockpit om als copiloot op te treden en de verschillende systemen van het schip te beheren.",
+    "13": "Een redelijk goede droid voor het coördineren van aanvallen. Niet goed in vechten, gewoon goed in plannen."
+    },
+    "Navbar": {
+    "searchPlaceholder": "Waar ben je naar op zoek?",
+    "searchButtonLabel": "producten zoeken",
+    "logoAlt": "Logo van Rebel Outfitters",
+    "searchIconAlt": "zoekpictogram",
+    "greetingText": "Hallo Han",
+    "historyLink": "GESCHIEDENIS VAN BESTELLINGEN",
+    "arrowAlt": "Pijl omlaag laten vallen",
+    "cartAlt": "winkelmand tonen",
+    "navLinkHome": "THUIS",
+    "navLinkDroids": "DROIDS",
+    "navLinkVehicles": "VOERTUIGEN"
+    },
+    "Home": {
+    "welcomeMessage": "Welkom bij Rebel Outfitters v. Capture!",
+    "welcomeSubtitle": "We bieden alles wat je nodig hebt om het op te nemen tegen het Rijk (en ze te vernietigen).",
+    "symbolAlt": "Imperial Credit valutasymbool"
+    },
+    "Browse": {
+    "droidTitle": "Alle gevangen droids",
+    "vehicleTitle": "Alle voertuigen"
+    },
+    "Checkout": {
+    "checkoutTitle": "Checkout",
+    "shipSectionLabel": "Informatie over verzending",
+    "firstNameLabel": "Voornaam",
+    "lastNameLabel": "Achternaam",
+    "coordinatesLabel": "Coördinaten",
+    "coordinatesHolder": "0,0,0",
+    "sectorLabel": "Sector/kwadrant",
+    "methodLabel": "Wijze van verzending",
+    "shipLightspeed": "Lichtsnelheid",
+    "shipOvernight": "Overnachting",
+    "shipStandard": "Standaard",
+    "paySectionLabel": "Betaling",
+    "payNameLabel": "Naam op kaart",
+    "payNameHolder": "Eerste en laatste",
+    "accountLabel": "Imperial Credit-nummer",
+    "accountHolder": "1234567-9876-00",
+    "securityLabel": "Beveiligingscode",
+    "securityHolder": "123456",
+    "expDateLabel": "Vervaldatum",
+    "cartTitle": "Winkelwagentje",
+    "deleteAlt": "item uit winkelwagen verwijderen",
+    "totalLabel": "Totaal: ",
+    "orderLabel": "BESTELLING PLAATSEN",
+    "termsStatement": "Ik heb de algemene voorwaarden gelezen en ga ermee akkoord",
+    "termsLink": "(Bekijken)",
+    "successMessage": "Bestelling succesvol geplaatst!",
+    "noItemMessage": "Voeg artikelen toe aan de winkelwagen om af te rekenen."
+    },
+    "ProductShow": {
+    "qtyLabel": "Aantal: ",
+    "addToCartLabel": "AAN WINKELWAGEN TOEVOEGEN"
+    },
+    "Cart": {
+    "cartTitle": "Winkelwagentje",
+    "noItemMsg": "Geen artikelen in de winkelwagen.",
+    "deleteAlt": "Artikel uit winkelwagentje verwijderen",
+    "totalTitle": "Totaal: ",
+    "checkoutLabel": "UITCHECKEN",
+    "closeAlt": "Winkelwagen sluiten"
+    },
+    "OrderHistory": {
+    "historyTitle": "Bestelgeschiedenis",
+    "dateHeading": "Datum",
+    "numberHeading": "Bestelnummer",
+    "totalHeading": "Totaal",
+    "statusHeading": "Status"
+    },
+    "Error404": {
+    "errorMessage": "404-fout: pagina niet gevonden."
+    },
+    "Bottombar": {
+    "menuAlt": "zijbalkmenu openen"
+    },
+    "Hamburger": {
+    "githubLogoAlt": "GitHub-logo",
+    "lingoLogoAlt": "Logo van Lingoport",
+    "versionLabel": "Versie: ",
+    "versionBad": "Niet compatibel met i18N",
+    "versionGood": "Voldoet aan i18n",
+    "versionIQA": "InContext",
+    "localeLabel": "Lokaal: ",
+    "localeEN": "Engels - Verenigde Staten",
+    "localeFR": "Frans - Frankrijk",
+    "localeZH": "Chinees - China",
+    "localeES": "Spaans - Spanje",
+    "localeDE": "Duits - Duitsland",
+    "localeJA": "Japans - Japan",
+    "localeRU": "Russisch - Rusland",
+    "localeIT": "Italiaans - Italië",
+    "localeKO": "Koreaans - Korea",
+    "localePL": "Pools - Polen",
+    "localePT": "Portugees - Portugal",
+    "localeNO": "Noors - Noorwegen",
+    "localeYO": "Yoda",
+    "localeSI": "sith",
+    "localeEO": "Esperanto",
+    "localeLA": "Vastleggen",
+    "localeIA": "Taalkundige recensent",
+    "githubLabel": "Bron bekijken",
+    "dashLabel": "Bekijk het Lingoport-dashboard",
+    "contactLabel": "Neem contact met ons op",
+    "learnLabel": "Meer informatie"
+    },
+    "Order": {
+    "statusProcessing": "Verwerking",
+    "statusShipped": "Verzonden",
+    "statusDelivered": "Bezorgd"
+    },
+  "Special": "Speciaal"
+}
