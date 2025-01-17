@@ -1,8 +1,8 @@
 {
     "title": {
-    "1":"Du contexte pour 3P0",
+    "1": "Du contexte pour 3P0",
     "2": "Droïde - Séries DUM",
-    "3":"Droïde boucher du cerveau 2-1B",
+    "3": "Droïde boucher du cerveau 2-1B",
     "4": "IG-88B Droïde",
     "5": "Frégate Sphyrna",
     "6": "Droïde garagiste G2",
@@ -103,7 +103,7 @@
     "errorMessage": "404 Erreur : Page introuvable."
     },
     "Bottombar": {
-    "menuAlt":"ouvrir le menu1 de la barre latérale"
+    "menuAlt": "ouvrir le menu1 de la barre latérale"
     },
     "Hamburger": {
     "githubLogoAlt": "Logo GitHub",
@@ -140,5 +140,7 @@
     "statusShipped": "Expédié",
     "statusDelivered": "Livré"
     },
-  "Special": "Spécial"
+  "Special": "Spécial",
+  "CanceledOrder": "Commandes annulées",
+  "ReturnedOrder": "Commande retournée #{0}"
 }
