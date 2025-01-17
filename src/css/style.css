@@ -113,7 +113,7 @@ header section h2 {
 .searchTerm {
   background-color: #2d2d2a;
   width: 75%;
-  border: 1px solid #fff200;
+  border: 1px solid #db8523;
   border-right: none;
   padding: 3px;
   padding-left: 5px;
@@ -133,7 +133,7 @@ header section h2 {
   height: 28px;
   padding: 0;
   border: none;
-  background: #fff200;
+  background: #db8523;
   border-radius: 0 5px 5px 0;
   transition: opacity 0.3s ease;
   cursor: pointer;
@@ -198,7 +198,7 @@ header section h2 {
   padding-bottom: 10px;
 }
 .dropdown .dropdown-content a:hover, .dropdown .dropdown-content h3:hover {
-  color: #fff200;
+  color: #db8523;
 }
 .dropdown:hover .dropbtn {
   background-color: #6d7275;
@@ -229,7 +229,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .cartQty {
   background-color: #2d2d2a;
-  border: solid 1px #fff200;
+  border: solid 1px #db8523;
   color: white;
   border-radius: 5px;
   padding: 3px;
@@ -241,7 +241,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .cartQty:focus {
   outline: none;
-  box-shadow: 0 0 3px 0 #fff200;
+  box-shadow: 0 0 3px 0 #db8523;
 }
 
 .cartIcon {
@@ -314,7 +314,7 @@ input[type=number]::-webkit-outer-spin-button {
   display: block;
   text-decoration: none;
   color: #2d2d2a;
-  background-color: #fff200;
+  background-color: #db8523;
   padding: 5px;
   width: 50%;
   border: 1px solid #2d2d2a;
@@ -665,14 +665,14 @@ label {
   font-size: 95%;
   display: block;
   background-color: #2d2d2a;
-  border: 1px solid #fff200;
+  border: 1px solid #db8523;
   padding: 5px;
   border-radius: 5px;
   padding-left: 5px;
 }
 .checkoutInput:focus {
   outline: none;
-  box-shadow: 0 0 2px 0 #fff200;
+  box-shadow: 0 0 2px 0 #db8523;
 }
 
 .orderHistory {
@@ -711,7 +711,7 @@ label {
 
 button {
   color: #2d2d2a;
-  background-color: #fff200;
+  background-color: #db8523;
   padding: 5px;
   width: 50%;
   border: 1px solid #2d2d2a;
@@ -753,13 +753,13 @@ button:focus {
 }
 
 h1 {
-  color: #fff200;
+  color: #db8523;
   font-family: "Audiowide", cursive;
   font-size: 160%;
 }
 
 h2 {
-  color: #fff200;
+  color: #db8523;
   font-family: "Audiowide", cursive;
   font-weight: 500;
   font-size: 140%;

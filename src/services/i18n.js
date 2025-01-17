@@ -40,7 +40,7 @@ const i18n = {
             <h4>${formatted}</h4>`;
         }
         //psuedo locale
-        else if(locale == 'eo') {
+        else if(locale == 'eo' || locale == 'ia' ||  locale == 'la'  ||  locale == 'sa') {
             return `<h4>&#8375;${convertCurrency(price)}</h4>`
         }
         //format using actual symbol and conventions if it's a real locale
@@ -68,6 +68,15 @@ var currencyMap = {
     'en-US': 'USD',
     'fr-FR': 'EUR',
     'zh-CN': 'CNY',
+    'es-SP': 'EUR',
+    'de-DE': 'EUR',
+    'ru-RU': 'RUB',
+    'ja-JP': 'JPY',
+    'pt-PT': 'EUR',
+    'pl-PL': 'EUR',
+    'it-IT': 'EUR',
+    'ko-KO': 'KRW',
+    'no-NO': 'NOK'
 };
 
 //function to perform rough conversion from galactic credits to real currencies
@@ -75,12 +84,20 @@ var convertCurrency = (price) => {
     switch (locale) {
         case 'en-US':
             return price * 0.62;
+        case 'pl-PL':
+            return price * 0.55;
+        case 'pt-PT':
+            return price * 0.55;
+        case 'it-IT':
+            return price * 0.55;
         case 'fr-FR':
             return price * 0.55;
         case 'zh-CN':
             return price * 4.27;
-        case 'eo':
-        return price * 2;
+        case 'ko-KO':
+            return price * 1927;
+        case 'ru-RU':
+            return price * 17.77;
         default:
             return price;
     }
