@@ -23,7 +23,7 @@ import Products from './content/products.js';
 var shoppingCart = {};
 
 var orderHistory = [];
-//adds some dummy orders to the history on startup
+//adds some dummy orders to the history on startup; comment to scan this file again
 let dummyOrders = () => {
     let now = new Date();
     var twoDays = now - 1000 * 60 * 60 * 24 * 2;
