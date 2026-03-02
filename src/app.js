@@ -88,7 +88,7 @@ var readCart = () => {
                 shoppingCart[productAr[0]] = product;
             }
             else {
-                let product = vehicleMap.get(parseInt(productAr[0]));
+                let product = vehicleMap.get(parseInt(productAr[0])); // $NON_NLS_L$
                 product.qty = parseInt(productAr[2]);
                 shoppingCart[productAr[0]] = product;
             }
