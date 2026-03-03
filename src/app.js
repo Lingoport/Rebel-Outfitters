@@ -19,6 +19,7 @@ import Utils from './services/Utils.js';
 import Products from './content/products.js';
 
 //global variables//
+//global variables//
 
 var shoppingCart = {};
 
