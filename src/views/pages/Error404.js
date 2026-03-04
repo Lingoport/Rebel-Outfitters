@@ -1,5 +1,6 @@
 let errorMessage = "404 Error: Page not found";
 
+
 let Error404 = {
     render : async () => {
         let view = `<div>
