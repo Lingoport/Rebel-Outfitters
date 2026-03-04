@@ -1,0 +1,55 @@
+{
+  "navbar": {
+    "home": "HOME",
+    "droids": "DROIDS",
+    "vehicles": "VEHICLES",
+    "orderHistory": "ORDER HISTORY",
+    "greeting": "Hi, Han",
+    "searchPlaceholder": "What are you looking for?",
+    "searchAriaLabel": "search products"
+  },
+  "home": {
+    "heading": "Welcome to Rebel Outfitters!",
+    "subtitle": "We provide everything you need to take on the Empire (and win)."
+  },
+  "browse": {
+    "all": "All",
+    "droids": "Droids",
+    "vehicles": "Vehicles"
+  },
+  "product": {
+    "qty": "Qty:",
+    "addToCart": "ADD TO CART"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "shippingInfo": "Shipping Info",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "coordinates": "Coordinates",
+    "sector": "Sector",
+    "shippingMethod": "Shipping Method",
+    "shippingOptions": ["Lightspeed", "Overnight", "Standard"],
+    "payment": "Payment",
+    "nameOnCard": "Name on Card",
+    "creditNumber": "Imperial Credit Number",
+    "securityCode": "Security Code",
+    "expirationDate": "Expiration Date",
+    "cart": "Shopping Cart",
+    "total": "Total: ",
+    "orderSuccess": "Order #{number} placed successfully!"
+  },
+  "cart": {
+    "heading": "Shopping Cart",
+    "empty": "No Items in Cart.",
+    "total": "Total: ",
+    "checkout": "CHECKOUT"
+  },
+  "orderHistory": {
+    "title": "Order History",
+    "columns": ["Date", "Order Number", "Total", "Status"]
+  },
+  "error404": {
+    "message": "404 Error: Page not found"
+  }
+}

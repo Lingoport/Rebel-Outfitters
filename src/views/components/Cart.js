@@ -1,21 +1,23 @@
-import {shoppingCart, router, formatCurrencyWithCommas} from "../../app.js";
-
-//static strings to hold all the text (to be used within the HTML template literal)
-let noItemMsg = "No Items in Cart.";
-let symbolAlt = "Imperial Credit currency symbol";
-let deleteAlt = "Delete item from cart";
-let totalTitle = "Total: ";
-let checkoutLabel = "CHECKOUT";
-let closeAlt = "Close cart";
+import {shoppingCart, router} from "../../app.js";
+import i18n from "../../services/i18n.js";
 
 let Cart = {
     render: async () => {
         let total = 0;
 
+        const heading       = await i18n.t('cart.heading', 'Shopping Cart');
+        const noItemMsg     = await i18n.t('cart.empty', 'No Items in Cart.');
+        const totalTitle    = await i18n.t('cart.total', 'Total: ');
+        const checkoutLabel = await i18n.t('cart.checkout', 'CHECKOUT');
+
+        let symbolAlt = "Imperial Credit currency symbol";
+        let deleteAlt = "Delete item from cart";
+        let closeAlt  = "Close cart";
+
         //view is solely for HTML markup, contains no static text
         let view = `
                 <div class="cartHead">
-                    <h1>Shopping Cart</h1>
+                    <h1>${heading}</h1>
                     <img src="img/close.svg" class="cartIcon" alt="${closeAlt}">
                 </div>
                 `;
@@ -28,7 +30,7 @@ let Cart = {
                     view += `<div class="cartContents">`;
                     //create row for each item in title and addup the total
                     shoppingCart.forEach((value, key) => {
-                        
+
                         total += value.price * value.qty;
                         view += `
                                 <div class="cartItem">
@@ -39,7 +41,7 @@ let Cart = {
                                     <div class="cartPrice">
                                         <div class="gridPrice">
                                             <img src="../../img/wSymbol.svg" class="symbol" alt="${symbolAlt}">
-                                            <h4>${formatCurrencyWithCommas(value.price * value.qty)}</h4>
+                                            <h4>${i18n.formatCurrency(value.price * value.qty)}</h4>
                                         </div>
                                         <img src="img/delete.svg" class="delete" id="${key}" alt="${deleteAlt}">
                                     </div>
@@ -51,7 +53,7 @@ let Cart = {
                                 <h3>${totalTitle}</h3>
                                 <div class="totalPrice">
                                     <img src="../../img/wSymbol.svg" class="symbol" alt="${symbolAlt}">
-                                    <h3>${formatCurrencyWithCommas(total)}</h3>
+                                    <h3>${i18n.formatCurrency(total)}</h3>
                                 </div>
                             </div>
                             <a class="checkoutButt" href="/#/checkout">${checkoutLabel}</a>
@@ -70,7 +72,7 @@ let Cart = {
         for(let icon of deleteIcons) {
             icon.addEventListener('click', deleteItem, false);
         }
-        
+
     }
 }
 

@@ -1,13 +1,18 @@
-import {orderHistory, formatCurrencyWithCommas} from "../../app.js";
+import {orderHistory} from "../../app.js";
+import i18n from "../../services/i18n.js";
 
-//static strings to hold all the text (to be used within the HTML template literal)
-let historyTitle = "Order History";
-let headings =["Date", "Order Number", "Total", "Status"];
 let symbolAlt = "Imperial Credit Currency symbol";
 
 let OrderHistory = {
 
     render: async () => {
+        const historyTitle = await i18n.t('orderHistory.title', 'Order History');
+        const headings = [
+            await i18n.t('orderHistory.columns.0', 'Date'),
+            await i18n.t('orderHistory.columns.1', 'Order Number'),
+            await i18n.t('orderHistory.columns.2', 'Total'),
+            await i18n.t('orderHistory.columns.3', 'Status'),
+        ];
 
         //view is solely for HTML markup, contains no static text
         let view = `
@@ -19,15 +24,15 @@ let OrderHistory = {
                 <h3>${headings[2]}</h3>
                 <h3>${headings[3]}</h3>
             </div>`;
-            
+
             orderHistory.forEach((order, key) => {
                 view += `
                 <article class="orderItem">
-                    <h3>${order.formatDate()}</h3>
+                    <h3>${i18n.formatDate(order.orderDate)}</h3>
                     <h3>${order.orderNumber}</h3>
                     <div class="gridPrice">
                         <img src="../../img/bSymbol.svg" class="symbol" alt="${symbolAlt}">
-                        <h3>${formatCurrencyWithCommas(order.total)}</h3>
+                        <h3>${i18n.formatCurrency(order.total)}</h3>
                     </div>
                     <h3>${order.status}</h3>
                 </article>`

@@ -1,20 +1,17 @@
-import {formatCurrencyWithCommas, featuredProducts} from "../../app.js";
-
-
-
-//static strings to hold all the text (to be used within the HTML template literal)
-let welcomeMessage = "Welcome to Rebel Outfitters!";
-let welcomeSubtitle = "We provide everything you need to take on the Empire (and win)."
-let symbolAlt = "Imperial Credit currency symbol";
+import {featuredProducts} from "../../app.js";
+import i18n from "../../services/i18n.js";
 
 let Home = {
     render : async () => {
+        const heading  = await i18n.t('home.heading', 'Welcome to Rebel Outfitters!');
+        const subtitle = await i18n.t('home.subtitle', 'We provide everything you need to take on the Empire (and win).');
+        let symbolAlt = "Imperial Credit currency symbol";
 
         //view is solely for HTML markup, contains no static text
         let view = `
                     <section class="welcome">
-                        <h1 class="center">${welcomeMessage}</h1>
-                        <h3 class="center white">${welcomeSubtitle}</h3>
+                        <h1 class="center">${heading}</h1>
+                        <h3 class="center white">${subtitle}</h3>
                     </section>
                     <div class="browseGrid homeGrid">`;
 
@@ -31,12 +28,12 @@ let Home = {
                             <h3>${product.title}</h3>
                             <div class="gridPrice">
                                 <img src="../../img/bSymbol.svg" class="symbol" alt="${symbolAlt}">
-                                <h4>${formatCurrencyWithCommas(product.price)}</h4>
+                                <h4>${i18n.formatCurrency(product.price)}</h4>
                             </div>
                         </div>
                     </article>`;
         });
-            
+
         view += "</div>";
 
         //return generated markup

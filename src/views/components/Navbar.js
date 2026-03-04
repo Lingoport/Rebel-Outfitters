@@ -1,19 +1,22 @@
 import Utils from "../../services/Utils.js";
 import { showCart} from "../../app.js";
-
-//static strings to hold all the text (to be used within the HTML template literal)
-let searchPlaceholder = "What are you looking for?";
-let searchButtonLabel = "search products";
-let logoAlt = "Rebel Outfitters Logo";
-let searchIconAlt = "search icon";
-let greetingText = "Hi, Han";
-let historyLink = "ORDER HISTORY";
-let arrowAlt = "Drop Down Arrow";
-let cartAlt = "Show cart";
-let navLinksText = ["HOME", "DROIDS", "VEHICLES"];
+import i18n from "../../services/i18n.js";
 
 let Navbar = {
     render: async () => {
+        const home       = await i18n.t('navbar.home', 'HOME');
+        const droids     = await i18n.t('navbar.droids', 'DROIDS');
+        const vehicles   = await i18n.t('navbar.vehicles', 'VEHICLES');
+        const history    = await i18n.t('navbar.orderHistory', 'ORDER HISTORY');
+        const greeting   = await i18n.t('navbar.greeting', 'Hi, Han');
+        const searchPlaceholder = await i18n.t('navbar.searchPlaceholder', 'What are you looking for?');
+        const searchAriaLabel   = await i18n.t('navbar.searchAriaLabel', 'search products');
+
+        //static alt text (not translatable in this pass)
+        let logoAlt = "Rebel Outfitters Logo";
+        let searchIconAlt = "search icon";
+        let arrowAlt = "Drop Down Arrow";
+        let cartAlt = "Show cart";
 
         //view is solely for HTML markup, contains no static text
         let view =
@@ -24,8 +27,8 @@ let Navbar = {
         </section>
         <section id="search">
             <div id="bar">
-                <input type="text" class="searchTerm" placeholder="${searchPlaceholder}" aria-label="${searchButtonLabel}">
-                <button type="submit" class="searchButton" aria-label="${searchButtonLabel}">
+                <input type="text" class="searchTerm" placeholder="${searchPlaceholder}" aria-label="${searchAriaLabel}">
+                <button type="submit" class="searchButton" aria-label="${searchAriaLabel}">
                     <img src="img/search.svg" id="searchIcon" alt="${searchIconAlt}">
                 </button>
              </div>
@@ -33,11 +36,11 @@ let Navbar = {
         <section id="headOptions">
             <div class="dropdown">
                 <div class="dropbtn">
-                    <h2 id="greetingText">${greetingText}</h2>
+                    <h2 id="greetingText">${greeting}</h2>
                     <img src="img/arrow-down.svg" id="downArrow" alt="${arrowAlt}">
                 </div>
                 <div class="dropdown-content">
-                    <a href="/#/history" class=".historyButt">${historyLink}</a>
+                    <a href="/#/history" class=".historyButt">${history}</a>
                 </div>
             </div>
             <img src="img/cart.svg" class="cartIcon" alt="${cartAlt}">
@@ -46,9 +49,9 @@ let Navbar = {
     <nav>
         <!-- nav links here -->
         <ul>
-            <li><a href="/#/" class="navLink" id="">${navLinksText[0]}</a></li>
-            <li><a href="/#/droids" class="navLink" id="droids">${navLinksText[1]}</a></li>
-            <li><a href="/#/vehicles" class="navLink" id="vehicles">${navLinksText[2]}</a></li>
+            <li><a href="/#/" class="navLink" id="">${home}</a></li>
+            <li><a href="/#/droids" class="navLink" id="droids">${droids}</a></li>
+            <li><a href="/#/vehicles" class="navLink" id="vehicles">${vehicles}</a></li>
         </ul>
     </nav>
     `;
@@ -74,7 +77,7 @@ let Navbar = {
         }, false);
 
 
-        
+
 
         //underline active link
         //figure out what resource path we're at and add the activeLink class so it can be styled in css

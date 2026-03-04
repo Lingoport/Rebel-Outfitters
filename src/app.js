@@ -34,6 +34,13 @@ var updateLocale = (newLocale) => {
     router();
 }
 
+//used to toggle between non-i18n and i18n compliant modes
+var i18nMode = "non-i18n";
+var updateI18nMode = (mode) => {
+    i18nMode = mode;
+    router();
+}
+
 //map of maps to hold both vehicles and droids
 var productList = new Map();
 productList.set("droids", new Map());
@@ -139,7 +146,7 @@ let getFeaturedProducts = async () => {
     featuredProducts.push(droidMap.get(3));
 }
 
-export { shoppingCart, addToCart, showCart, router, locale, productList, updateLocale, orderHistory, formatCurrencyWithCommas, featuredProducts };
+export { shoppingCart, addToCart, showCart, router, locale, productList, updateLocale, orderHistory, formatCurrencyWithCommas, featuredProducts, i18nMode, updateI18nMode };
 
 // List of supported routes. Any url other than these routes will throw a 404 error
 const routes = {

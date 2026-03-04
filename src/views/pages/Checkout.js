@@ -1,35 +1,10 @@
-import {shoppingCart, orderHistory, formatCurrencyWithCommas} from "../../app.js";
-
+import {shoppingCart, orderHistory, i18nMode} from "../../app.js";
 import {Order} from "../classes/Order.js";
+import i18n from "../../services/i18n.js";
 
 //TODO: add click listeners for updating qty or deleting items from cart
 
 var total;
-
-//static string to hold all the text (to be used within the HTML template literal)
-let checkoutTitle = "Checkout";
-let shipSectionLabel = "Shipping Info";
-let firstNameLabel = "First Name";
-let lastNameLabel = "Last Name";
-let coordinatesLabel = "Coordinates";
-let coordinatesHolder = "0,0,0";
-let sectorLabel = "Sector";
-let methodLabel = "Shipping Method";
-let methodOptions = ["Lightspeed", "Overnight", "Standard"];
-let paySectionLabel = "Payment";
-let payNameLabel = "Name on Card";
-let payNameHolder = "First Last";
-let accountLabel = "Imperial Credit Number";
-let accountHolder = "1234567-9876-00";
-let securityLabel = "Security Code";
-let securityHolder = "123456";
-let expDateLabel = "Expiration Date";
-let cartTitle = "Shopping Cart";
-let symbolAlt = "Imperial Credit currency symbol";
-let deleteAlt = "remove item from cart";
-let totalLabel = "Total: ";
-
-
 
 let Checkout = {
 
@@ -40,6 +15,33 @@ let Checkout = {
         slider.classList.remove('showCart');
         let overlayBG = document.querySelector('.bg');
         overlayBG.classList.remove('overlay');
+
+        const checkoutTitle     = await i18n.t('checkout.title', 'Checkout');
+        const shipSectionLabel  = await i18n.t('checkout.shippingInfo', 'Shipping Info');
+        const firstNameLabel    = await i18n.t('checkout.firstName', 'First Name');
+        const lastNameLabel     = await i18n.t('checkout.lastName', 'Last Name');
+        const coordinatesLabel  = await i18n.t('checkout.coordinates', 'Coordinates');
+        const sectorLabel       = await i18n.t('checkout.sector', 'Sector');
+        const methodLabel       = await i18n.t('checkout.shippingMethod', 'Shipping Method');
+        const paySectionLabel   = await i18n.t('checkout.payment', 'Payment');
+        const payNameLabel      = await i18n.t('checkout.nameOnCard', 'Name on Card');
+        const accountLabel      = await i18n.t('checkout.creditNumber', 'Imperial Credit Number');
+        const securityLabel     = await i18n.t('checkout.securityCode', 'Security Code');
+        const expDateLabel      = await i18n.t('checkout.expirationDate', 'Expiration Date');
+        const cartTitle         = await i18n.t('checkout.cart', 'Shopping Cart');
+        const totalLabel        = await i18n.t('checkout.total', 'Total: ');
+
+        // Shipping options (array key)
+        const shippingOpts = i18nMode === 'i18n'
+            ? (await i18n.t('checkout.shippingOptions', null) || ["Lightspeed", "Overnight", "Standard"])
+            : ["Lightspeed", "Overnight", "Standard"];
+
+        let coordinatesHolder = "0,0,0";
+        let payNameHolder = "First Last";
+        let accountHolder = "1234567-9876-00";
+        let securityHolder = "123456";
+        let symbolAlt = "Imperial Credit currency symbol";
+        let deleteAlt = "remove item from cart";
 
         //view is solely for HTML markup, contains no static text
         let view = `
@@ -70,13 +72,13 @@ let Checkout = {
                                 <input type="text" id="sector" name="sector" class="checkoutInput" placeholder="${sectorLabel}">
                             </div>
                         </div>
-                        
+
                         <div class="formElement">
                             <label for="shipMethod">${methodLabel}</label>
                             <select id="shipMethod" class="checkoutInput">
-                                <option value="lightspeed">${methodOptions[0]}</option>
-                                <option value="overnight">${methodOptions[1]}</option>
-                                <option value="standard">${methodOptions[2]}</option>
+                                <option value="lightspeed">${shippingOpts[0]}</option>
+                                <option value="overnight">${shippingOpts[1]}</option>
+                                <option value="standard">${shippingOpts[2]}</option>
                             </select>
                         </div>
                     </div>
@@ -88,7 +90,7 @@ let Checkout = {
                             <label for="cardName">${payNameLabel}</label>
                             <input type="text" id="cardName" name="cardName" class="checkoutInput" placeholder="${payNameHolder}">
                         </div>
-                        
+
                         <div class="formInline">
                             <div class="formElement">
                                 <label for="account">${accountLabel}</label>
@@ -126,7 +128,7 @@ let Checkout = {
                     <div class="cartPrice">
                         <div class="gridPrice">
                             <img src="../../img/wSymbol.svg" class="symbol" alt="${symbolAlt}">
-                            <h4>${formatCurrencyWithCommas(value.price * value.qty)}</h4>
+                            <h4>${i18n.formatCurrency(value.price * value.qty)}</h4>
                         </div>
                         <img src="img/delete.svg" class="delete" id="${key}" alt="${deleteAlt}">
                     </div>
@@ -137,11 +139,11 @@ let Checkout = {
                     <h3>${totalLabel}</h3>
                     <div class="totalPrice">
                         <img src="../../img/wSymbol.svg" class="symbol" alt="${symbolAlt}">
-                        <h3>${formatCurrencyWithCommas(total)}</h3>
+                        <h3>${i18n.formatCurrency(total)}</h3>
                     </div>
                 </div>
             </div>
-            
+
         </section>`
 
         return view;
@@ -156,7 +158,7 @@ let Checkout = {
 
 //handle order placement
 //NEED TO CLEAR ALL THE QUANTITIES
-var placeOrder = () => {
+var placeOrder = async () => {
     let order = new Order(new Date(), total, "Processing");
     orderHistory.unshift(order);
     //zero out the qty for each item before removing it
@@ -165,7 +167,8 @@ var placeOrder = () => {
     });
     shoppingCart.clear();
     //construct success message
-    let message = "Order #" + order.orderNumber + " placed successfully!";
+    const successTemplate = await i18n.t('checkout.orderSuccess', 'Order #{number} placed successfully!');
+    let message = successTemplate.replace('{number}', order.orderNumber);
     window.alert(message);
     location.href="/#/history";
 }

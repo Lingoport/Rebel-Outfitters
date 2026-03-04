@@ -1,28 +1,30 @@
 import Utils from '../../services/Utils.js'
-import {productList, formatCurrencyWithCommas} from "../../app.js";
+import {productList} from "../../app.js";
+import i18n from "../../services/i18n.js";
 
 let type;
-
-//static string to hold all the text (to be used within the HTML template literal)
 
 let symbolAlt = "Imperial Credit currency symbol";
 
 let Browse = {
-    
+
     render : async () => {
         let request = Utils.parseRequestURL();
         type = request.resource;
 
         let productMap = null;
-        let title = "All";
+        let titleAll  = await i18n.t('browse.all', 'All');
+        let titleDroids   = await i18n.t('browse.droids', 'Droids');
+        let titleVehicles = await i18n.t('browse.vehicles', 'Vehicles');
+        let title = titleAll;
 
         if(type == "droids") {
             productMap = productList.get('droids');
-            title += " Droids";
+            title += " " + titleDroids;
         }
         else if(type == "vehicles") {
             productMap = productList.get('vehicles');
-            title += " Vehicles";
+            title += " " + titleVehicles;
         }
 
         //view is solely for HTML markup, contains no static text
@@ -38,7 +40,7 @@ let Browse = {
                             <h3>${product.title}</h3>
                             <div class="gridPrice">
                                 <img src="../../img/bSymbol.svg" class="symbol" alt="${symbolAlt}">
-                                <h4>${formatCurrencyWithCommas(product.price)}</h4>
+                                <h4>${i18n.formatCurrency(product.price)}</h4>
                             </div>
                         </div>
                     </article>`;
@@ -46,7 +48,7 @@ let Browse = {
                 view += `
                 </div>
             </section>
-            `;   
+            `;
         return view;
     },
     after_render: async () => {
@@ -62,7 +64,7 @@ let Browse = {
             }, false);
             curProduct.classList.add("zoom");
         }
-    } 
+    }
 }
 
 export { Browse };

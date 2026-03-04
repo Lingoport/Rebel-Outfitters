@@ -1,5 +1,4 @@
-//TODO: add event listeners for i18n dropdown changes
-import { locale, updateLocale } from "../../app.js";
+import { locale, updateLocale, i18nMode, updateI18nMode } from "../../app.js";
 
 //global dropdown element reference
 let drop;
@@ -25,9 +24,9 @@ let Hamburger = {
             <a target="_blank" rel="noreferrer" href="https://lingoport.com/" class="lingoLogo"><img src="../../img/lingoport_logo.png" class="lingoLogo" alt="${lingoLogoAlt}"></a>
             <div class="start">
                 <label for="version"><h3>${versionLabel}</h3></label>
-                <select id="version" class="hamDrop">
-                    <option value="bad">${versionOptions[0]}</option>
-                    <option value="good">${versionOptions[1]}</option>
+                <select id="versionSelect" class="hamDrop">
+                    <option value="Non-i18n Compliant">${versionOptions[0]}</option>
+                    <option value="I18n Compliant">${versionOptions[1]}</option>
                 </select>
             </div>
             <div class="start">
@@ -63,13 +62,23 @@ let Hamburger = {
     after_render: async () => {
         var overlayBG = document.querySelector('.bg');
         overlayBG.addEventListener('click', hideHam, false);
-        
+
         drop = document.querySelector('#locale');
         //show selected locale in dropdown
         drop.value = locale;
 
         //listen for locale changes
         drop.addEventListener("input", changeLocale, false);
+
+        //show selected version in dropdown
+        let versionDrop = document.getElementById('versionSelect');
+        versionDrop.value = i18nMode === 'i18n' ? 'I18n Compliant' : 'Non-i18n Compliant';
+
+        //listen for version changes
+        versionDrop.addEventListener('change', (e) => {
+            hideHam();
+            updateI18nMode(e.target.value === 'I18n Compliant' ? 'i18n' : 'non-i18n');
+        });
     }
 
 }

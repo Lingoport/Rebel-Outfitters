@@ -1,0 +1,55 @@
+{
+  "navbar": {
+    "home": "ACCUEIL",
+    "droids": "DROÏDES",
+    "vehicles": "VÉHICULES",
+    "orderHistory": "HISTORIQUE DES COMMANDES",
+    "greeting": "Bonjour, Han",
+    "searchPlaceholder": "Que cherchez-vous ?",
+    "searchAriaLabel": "rechercher des produits"
+  },
+  "home": {
+    "heading": "Bienvenue chez Rebel Outfitters !",
+    "subtitle": "Nous vous fournissons tout ce dont vous avez besoin pour affronter l'Empire (et gagner)."
+  },
+  "browse": {
+    "all": "Tous les",
+    "droids": "Droïdes",
+    "vehicles": "Véhicules"
+  },
+  "product": {
+    "qty": "Qté :",
+    "addToCart": "AJOUTER AU PANIER"
+  },
+  "checkout": {
+    "title": "Paiement",
+    "shippingInfo": "Informations de livraison",
+    "firstName": "Prénom",
+    "lastName": "Nom de famille",
+    "coordinates": "Coordonnées",
+    "sector": "Secteur",
+    "shippingMethod": "Mode de livraison",
+    "shippingOptions": ["Vitesse Lumière", "Nuit", "Standard"],
+    "payment": "Paiement",
+    "nameOnCard": "Nom sur la carte",
+    "creditNumber": "Numéro de Crédit Impérial",
+    "securityCode": "Code de sécurité",
+    "expirationDate": "Date d'expiration",
+    "cart": "Panier",
+    "total": "Total : ",
+    "orderSuccess": "Commande n°{number} passée avec succès !"
+  },
+  "cart": {
+    "heading": "Panier",
+    "empty": "Panier vide.",
+    "total": "Total : ",
+    "checkout": "COMMANDER"
+  },
+  "orderHistory": {
+    "title": "Historique des commandes",
+    "columns": ["Date", "Numéro de commande", "Total", "Statut"]
+  },
+  "error404": {
+    "message": "Erreur 404 : Page introuvable"
+  }
+}

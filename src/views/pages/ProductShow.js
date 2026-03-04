@@ -1,19 +1,19 @@
 import Utils        from '../../services/Utils.js';
-import {productList, addToCart, formatCurrencyWithCommas} from '../../app.js';
+import {productList, addToCart} from '../../app.js';
+import i18n from '../../services/i18n.js';
 
 let product;
 let productID;
 let type;
 
-//static strings to hold all the text (to be used within the HTML template literal)
-let qtyLabel = "Qty:";
 let qtyOptions = [1, 2, 3, 4];
 let symbolAlt = "Imperial Credit Currency symbol";
-let addToCartLabel = "ADD TO CART";
 
 let ProductShow = {
 
     render : async () => {
+        const qtyLabel      = await i18n.t('product.qty', 'Qty:');
+        const addToCartLabel = await i18n.t('product.addToCart', 'ADD TO CART');
 
         //get the id
         let request = Utils.parseRequestURL();
@@ -34,7 +34,7 @@ let ProductShow = {
                     <h1>${product.title}</h1>
                     <div class="gridPrice">
                         <img src="../../img/bSymbol.svg" class="symbol" alt="${symbolAlt}">
-                        <h4>${formatCurrencyWithCommas(product.price)}</h4>
+                        <h4>${i18n.formatCurrency(product.price)}</h4>
                     </div>
                     <div class="qty">
                         <h3>${qtyLabel}</h3>
