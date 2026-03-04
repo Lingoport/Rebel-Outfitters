@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<project name="master" default="genwar" xmlns:sonar="antlib:org.sonar.ant">
+
+    <property name="war-file-name" value="RebelOutfitters"/>
+   
+    <target name="genwar">
+        <echo>Building war: ${war-file-name}.war</echo>
+        <war destfile="${war-file-name}.war" needxmlfile="false" update="true">
+            <fileset dir="src"/>
+        </war>
+    </target>
+
+</project>
