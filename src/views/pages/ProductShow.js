@@ -1,6 +1,9 @@
 import Utils        from '../../services/Utils.js';
 import {productList, addToCart, formatCurrencyWithCommas} from '../../app.js';
 
+
+
+
 let product;
 let productID;
 let type;
