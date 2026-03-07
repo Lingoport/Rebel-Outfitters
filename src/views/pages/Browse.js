@@ -3,30 +3,6 @@ import {productList, formatCurrencyWithCommas} from "../../app.js";
 
 let type;
 
-//static string to hold all the text (to be used within the HTML template literal)
-let title;
-let symbolAlt = "Imperial Credit currency symbol";
-let gremConcatDashLink;
-let gremEmbedDashLink;
-
-let Browse = {
-    
-    render : async () => {
-        let request = Utils.parseRequestURL();
-        type = request.resource;
-
-        let productMap = null;
-
-        title = "All";
-
-        if(type == "droids") {
-            productMap = productList.get('droids');
-            title += " Droids";
-            gremConcatDashLink = 'https://github.com/Lingoport/Rebel-Outfitters/blob/DarkSide/src/views/pages/Browse.js#L24';
-            gremEmbedDashLink = 'https://github.com/Lingoport/Rebel-Outfitters/blob/DarkSide/src/content/products.js#L5';
-        }
-        else if(type == "vehicles") {
-            productMap = productList.get('vehicles');
             title += " Vehicles";
             gremConcatDashLink = 'https://github.com/Lingoport/Rebel-Outfitters/blob/DarkSide/src/views/pages/Browse.js#L30';
             gremEmbedDashLink = 'https://github.com/Lingoport/Rebel-Outfitters/blob/DarkSide/src/content/products.js#L43';
