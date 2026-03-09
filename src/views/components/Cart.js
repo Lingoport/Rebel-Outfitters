@@ -1,8 +1,9 @@
 import {shoppingCart, router, formatCurrencyWithCommas, saveCart} from "../../app.js";
 
+// Comment so the file is modified and will be re-analyzed.
 //static strings to hold all the text (to be used within the HTML template literal)
 let shoppingCartTitle = "Shopping Cart"
-let noItemMsg = "No Items in Cart.";
+let noItemMsg = "No Items in Cart";
 let symbolAlt = "Imperial Credit currency symbol";
 let deleteAlt = "Delete item from cart";
 let totalTitle = "Total: ";
