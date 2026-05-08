@@ -1,6 +1,6 @@
 "use strict";
 
-let Browse = "Browse.js";//$NON-NLS-L$
+let Browse = "Browse.js";//$NON-NLS-L$ mm
 let Error404 = "Error404.js";//$NON-NLS-L$
 let Home = "Home.js";//$NON-NLS-L$
 let ProductShow = "ProductShow.js";//$NON-NLS-L$
